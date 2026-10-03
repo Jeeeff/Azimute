@@ -52,6 +52,8 @@ step
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     home
+    note-enUS Set your Hearthstone to Crossroads
+    note-ptBR Defina sua pedra de regresso em Crossroads
 step
     goto 1413 @-2595.75,-468.43
     note-enUS Talk to Thork
@@ -61,6 +63,8 @@ step
 step
     goto 1413 @-2595.75,-441.4
     fp
+    note-enUS Get the The Crossroads flight path
+    note-ptBR Pegue o ponto de voo de The Crossroads
 step
     only Troll Mage
     goto 1413 @-2595.75,-434.64
@@ -97,9 +101,13 @@ step
     note-enUS Kill some Plainstriders en route if you have time on Flawed Power Stone. Loot them for Beaks |only !Scourge
     note-ptBR Mate alguns Plainstriders pelo caminho se tiver tempo sobrando na Flawed Power Stone. Saqueie-os para obter bicos |only !Scourge
     objective 844/1 |only !Scourge |opt
+    note-enUS Run up the mountain here
+    note-ptBR Suba a montanha correndo aqui
 step
     only !Scourge
     goto 1413 @-2200.55,315.3 20
+    note-enUS Go to the cave surrounded by Burning Blade orcs
+    note-ptBR Vá até a caverna cercada por orcs Burning Blade
 step
     only !Scourge
     goto 1413 @-2241.08,322.06
@@ -181,6 +189,8 @@ step
 step
     goto 1413 @-3771.22,-894.07
     fp
+    note-enUS Get the Ratchet flight path
+    note-ptBR Pegue o ponto de voo de Ratchet
 step
     goto 1413 @-3761.08,-900.83
     note-enUS Talk to Sputtervalve
@@ -237,6 +247,8 @@ step
 step
     goto 1413 @-3769.19,-898.12
     fp
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
 step
     goto 1413 @-2595.75,-468.43
     note-enUS Talk to Thork
@@ -318,6 +330,8 @@ step
     note-enUS If you still didn't get the Heavy Spiked Mace consider try to buy it from Vrang Wildgore |only Druid Warrior
     note-ptBR Se ainda não conseguiu a Heavy Spiked Mace, tente comprá-la de Vrang Wildgore |only Druid Warrior
     vendor |opt
+    note-enUS Go vendor at this guy if needed
+    note-ptBR Venda itens para este NPC se precisar
     note-enUS Kill Plainstriders. Loot them for their Kidneys
     note-ptBR Mate Plainstriders. Saqueie-os para obter os rins
     objective 821/2 |opt
@@ -368,6 +382,8 @@ step
     note-enUS Grinding to level 16 here is important, due to the next 3 quests being quite hard.
     note-ptBR Fazer grind até o nível 16 aqui é importante, pois as próximas 3 missões são bem difíceis.
     level 16
+    note-enUS Grind to 16
+    note-ptBR Mate monstros até o nível 16
 step
     goto 1413 @-3082.15,1031.46
     note-enUS Kill Supervisor Lugwizzle (He patrols all over the tower). Loot him for the Ignition Key
@@ -394,7 +410,11 @@ step
 step
     path seq 1454 @-3841.9,1647.15
     goto 1454 @-4224.67,1472.41
+    note-enUS Run to the west entrance of Orgrimmar
+    note-ptBR Corra até a entrada oeste de Orgrimmar
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Troll Mage
     goto 1454 @-4440.81,1632.18
@@ -406,6 +426,8 @@ step
     note-enUS Run up to the Flight Master. Do NOT fly anywhere
     note-ptBR Vá até o mestre de voo. NÃO voe para lugar nenhum
     fp |only Scourge
+    note-enUS Get the Orgrimmar flight path |only Scourge
+    note-ptBR Pegue o ponto de voo de Orgrimmar |only Scourge
     note-enUS Talk to Doras
     note-ptBR Fale com Doras
     turnin 6385 |only Troll Mage
@@ -421,6 +443,8 @@ step
     only Troll Mage
     goto 1413 @-2707.22,-407.62
     hearth |opt
+    note-enUS Hearth to Crossroads
+    note-ptBR Use a pedra de regresso para Crossroads
     note-enUS Talk to Zargh
     note-ptBR Fale com Zargh
     turnin 6386
@@ -473,6 +497,8 @@ step
 step
     goto 1413 @-2595.75,-434.64
     fp
+    note-enUS Fly to Ratchet
+    note-ptBR Voe para Ratchet
 step
     goto 1413 @-3761.08,-900.83
     note-enUS Talk to Sputtervalve
@@ -560,6 +586,8 @@ step
 step
     goto 1413 @-1997.88,-2373.69
     home
+    note-enUS Set your Hearthstone to Camp Taurajo
+    note-ptBR Defina sua pedra de regresso em Camp Taurajo
 step
     goto 1413 @-1886.42,-2387.2
     note-enUS Talk to Mangletooth
@@ -568,7 +596,11 @@ step
 step
     goto 1413 @-1886.42,-2387.2
     fp
+    note-enUS Get the Camp Taurajo flight path
+    note-ptBR Pegue o ponto de voo de Camp Taurajo
     fp
+    note-enUS Fly to Crossroads
+    note-ptBR Voe para Crossroads
 step
     goto 1413 @-2636.28,-434.64
     note-enUS Talk to Gazrog
@@ -762,6 +794,8 @@ step
     accept 1094
 step
     hearth
+    note-enUS Hearth to Camp Taurajo
+    note-ptBR Use a pedra de regresso para Camp Taurajo
 step
     goto 1413 @-1926.95,-2380.44
     note-enUS Talk to Jorn Skyseer
@@ -833,6 +867,8 @@ step
 step
     goto 1413 @-3771.22,-894.07
     fp
+    note-enUS Fly to Crossroads
+    note-ptBR Voe para Crossroads
 step
     note-enUS Talk to Tonga Runetotem
     note-ptBR Fale com Tonga Runetotem
@@ -863,6 +899,8 @@ step
 step
     goto 1413 @-2595.75,-434.64
     fp
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
 step
     goto 1413 @-2747.75,-1907.51
     note-enUS Kill Quilboars for a Blood Shard
@@ -942,9 +980,13 @@ step
     note-enUS Talk to Mangletooth
     note-ptBR Fale com Mangletooth
     turnin 889 |opt
+    note-enUS Run to the lift and take it into Thunder Bluff
+    note-ptBR Corra até o elevador e suba para Thunder Bluff
 step
     goto 1456 @38.48,-1300.28
     home
+    note-enUS Set your Hearthstone to Thunder Bluff
+    note-ptBR Defina sua pedra de regresso em Thunder Bluff
 step
     goto 1456 @-125.64,-1413.06
     note-enUS Talk to Melor Stonehoof
@@ -961,6 +1003,8 @@ step
 step
     goto 1456 @254.06,-995.78
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     note-enUS Don't respec to AoE yet (if you've gone fire spec)
     note-ptBR Não mude a especialização para AoE ainda (se estiver com especialização de fogo)
 step
@@ -971,7 +1015,11 @@ step
 step
     goto 1456 @26.07,-1196.75
     fp
+    note-enUS Get the Thunder Bluff flight path
+    note-ptBR Pegue o ponto de voo de Thunder Bluff
     fp
+    note-enUS Fly to Crossroads
+    note-ptBR Voe para Crossroads
 step
     goto 1413 @-1349.35,788.24
     note-enUS Kill Serena Bloodfeather. Loot her for her Head
@@ -1006,9 +1054,13 @@ step
 step
     goto 1442 @1042.47,968.13
     fp
+    note-enUS Get the Sun Rock Retreat flight path
+    note-ptBR Pegue o ponto de voo de Sun Rock Retreat
 step
     goto 1456 @-213.96,-1065.01
     hearth |opt
+    note-enUS Hearth to Thunder Bluff
+    note-ptBR Use a pedra de regresso para Thunder Bluff
     note-enUS Talk to Magatha Grimtotem
     note-ptBR Fale com Magatha Grimtotem
     turnin 1063
@@ -1033,10 +1085,14 @@ step
 step
     goto 1456 @254.06,-995.78
     trainer
+    note-enUS Train your class spells if needed
+    note-ptBR Treine your class spells if needed
     note-enUS Respec to Frost AoE if you haven't already
     note-ptBR Troque para a especialização Frost AoE se ainda não trocou
 step
     fp
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
 step
     goto 1413 @-2605.88,-475.18
     note-enUS Go upstairs
@@ -1047,4 +1103,6 @@ step
 step
     goto 1413 @-2595.75,-437.35
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 ]==])

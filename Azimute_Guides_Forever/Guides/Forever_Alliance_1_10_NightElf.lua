@@ -39,6 +39,8 @@ step
     note-enUS Loot the mobs you kill, make sure you have at least 10 copper worth of vendor trash, you will need it to train [Battle Shout]<< Warrior
     note-ptBR Saqueie os inimigos que matar, tenha pelo menos 10 cobres em lixo para vender, você vai precisar para treinar [Battle Shout]<< Warrior
     level 2
+    note-enUS Grind to level 2
+    note-ptBR Mate monstros até o nível 2
 step
     only Druid
     goto 1438 @669.5,10387.3
@@ -62,6 +64,8 @@ step
     note-enUS Talk to Dellylah
     note-ptBR Fale com Dellylah
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     note-enUS Buy 15 [Refreshing Spring Water]
     note-ptBR Compre 15 [Refreshing Spring Water]
     collect 159 15
@@ -78,16 +82,22 @@ step
     note-enUS Talk to Keina
     note-ptBR Fale com Keina
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
 step
     only Warrior
     goto 1438 @778.07,10526.62
     note-enUS Talk to Alyissia
     note-ptBR Fale com Alyissia
     trainer
+    note-enUS Train [Battle Shout]
+    note-ptBR Treine [Battle Shout]
 step
     only Hunter Warrior
     goto 1438 @769.77,10673.98
     level 4
+    note-enUS Grind until you are 610xp away from level 4 (790/1400)
+    note-ptBR Mate monstros até faltarem 610xp para o nível 4 (790/1400)
 step
     only Hunter Warrior
     goto 1438 @1034.89,10711.58
@@ -99,6 +109,8 @@ step
     only Hunter Warrior
     goto 1438 @866.51,10300.67
     hearth |only Hunter Warrior |opt
+    note-enUS Hearth to Shadowglen |only Hunter Warrior
+    note-ptBR Use a pedra de regresso para Shadowglen |only Hunter Warrior
     note-enUS Talk to Tarindrella
     note-ptBR Fale com Tarindrella
     turnin 458
@@ -112,6 +124,8 @@ step
     note-ptBR Venda todo o seu equipamento e seu cajado! Compre um [Short Staff] dele
     collect 2132 1
     use 2132
+    note-enUS equip the Short Staff
+    note-ptBR equipe o Short Staff
 step
     only !Priest !Rogue
     goto 1438 @826.03,10328.97
@@ -138,6 +152,8 @@ step
     only !Hunter !Warrior
     goto 1438 @866.51,10300.67
     hearth |only !Hunter !Druid !Warrior |opt
+    note-enUS Hearth to Shadowglen |only !Hunter !Druid !Warrior
+    note-ptBR Use a pedra de regresso para Shadowglen |only !Hunter !Druid !Warrior
     note-enUS Talk to Tarindrella
     note-ptBR Fale com Tarindrella
     turnin 458
@@ -176,6 +192,8 @@ step
     only Druid
     goto 1438 @871.6,10300.67
     hearth |only Druid |opt
+    note-enUS Hearth to Shadowglen |only Druid
+    note-ptBR Use a pedra de regresso para Shadowglen |only Druid
     note-enUS Talk to Tarindrella
     note-ptBR Fale com Tarindrella
     turnin 459 |reward 1
@@ -198,17 +216,25 @@ step
     note-enUS Make sure that you have 1 silver leftover after leaving the vendor to be able to afford [Serpent Sting] |only Hunter
     note-ptBR Certifique-se de sobrar 1 prata ao sair do vendedor para poder pagar o [Serpent Sting] |only Hunter
     vendor |only Hunter |opt
+    note-enUS Buy 2 stacks of [Rough Arrows] |only Hunter
+    note-ptBR Compre 2 pilhas de [Rough Arrows] |only Hunter
     vendor |only Hunter Druid Warrior |opt
+    note-enUS Vendor your trash |only Hunter Druid Warrior
+    note-ptBR Venda seu lixo |only Hunter Druid Warrior
     note-enUS Talk to Alyissia
     note-ptBR Fale com Alyissia
     turnin 3116
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1438 59.6,40.7
     note-enUS Talk to Dellylah
     note-ptBR Fale com Dellylah
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     note-enUS Buy up to 25 [Refreshing Spring Water]
     note-ptBR Compre até 25 [Refreshing Spring Water]
     collect 159 25
@@ -232,6 +258,8 @@ step
     note-ptBR Fale com Mardant Strongoak
     turnin 3120
     train 8921
+    note-enUS Train [Moonfire]
+    note-ptBR Treine [Moonfire]
 step
     only Hunter
     path seq 1438 @871.6,10440.83
@@ -242,6 +270,8 @@ step
     note-ptBR Fale com Ayanna Everstride
     turnin 3117
     train 1978
+    note-enUS Train Serpent Sting
+    note-ptBR Treine Serpent Sting
 step
     path seq 1438 @863.96,10534.84 @873.64,10566.4 @850.72,10595.92 @820.17,10547.39
     goto 1438 @863.96,10534.84
@@ -298,6 +328,8 @@ step
     note-enUS Talk to Dellylah
     note-ptBR Fale com Dellylah
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     note-enUS Buy up to 25 [Refreshing Spring Water]
     note-ptBR Compre até 25 [Refreshing Spring Water]
     collect 159 25
@@ -307,7 +339,11 @@ step
     note-enUS Talk to Keina
     note-ptBR Fale com Keina
     vendor |only !Hunter
+    note-enUS Vendor trash |only !Hunter
+    note-ptBR Venda o lixo |only !Hunter
     vendor |only Hunter
+    note-enUS Buy 3 or 4 stacks of [Rough Arrows] |only Hunter
+    note-ptBR Compre 3 ou 4 pilhas de [Rough Arrows] |only Hunter
 step
     goto 1438 @871.24,10417.65
     note-enUS Talk to Gilshalan Windwalker
@@ -328,6 +364,8 @@ step
 step
     path seq 1438 @926.08,10773.42
     goto 1438 @912.33,10935.3
+    note-enUS Enter the Shadowthread Cave
+    note-ptBR Entre na Shadowthread Cave
     note-enUS Kill Githyiss the Vile loot it for it's [Fang]
     note-ptBR Mate Githyiss the Vile e saqueie-a para obter a [Fang]
     note-enUS Loot a Webwood Egg on the ground at the back of the Cave
@@ -336,6 +374,8 @@ step
     objective 917/1
 step
     goto 1438 @871.24,10417.65
+    note-enUS Die and respawn at the Spirit Healer
+    note-ptBR Morra e renasça no Spirit Healer
     note-enUS Use the [Fang of Githyiss] to accept the quest
     note-ptBR Use o [Fang of Githyiss] para aceitar a missão
     note-enUS Talk to Gilshalan Windwalker
@@ -357,6 +397,8 @@ step
 step
     goto 1438 @764.68,10711.31
     use 5185
+    note-enUS Use the [Crystal Phial] at the Moonwell
+    note-ptBR Use o [Crystal Phial] no Moonwell
     objective 921/1
 step
     only Hunter Druid Warrior Priest
@@ -368,6 +410,8 @@ step
 step
     only Hunter Druid
     goto 1438 @826.03,10328.97
+    note-enUS Die and respawn at the Spirit Healer
+    note-ptBR Morra e renasça no Spirit Healer
     note-enUS Talk to Conservator Ilthalaine
     note-ptBR Fale com Conservator Ilthalaine
     turnin 457 |reward 2
@@ -392,12 +436,16 @@ step
     note-enUS Talk to Janna Brightmoon up stairs |only Priest
     note-ptBR Fale com Janna Brightmoon no andar de cima |only Priest
     vendor |only Priest |opt
+    note-enUS Vendor trash |only Priest
+    note-ptBR Venda o lixo |only Priest
     note-enUS Talk to Shanda up stairs
     note-ptBR Fale com Shanda no andar de cima
     turnin 3119
     accept 97979
     accept 5622
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     note-enUS Cast [Shadowmeld] and [Elune's Light]
@@ -498,6 +546,8 @@ step
     turnin 5622
     accept 5621
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1438 @988.3,9891.89
@@ -505,6 +555,8 @@ step
     note-ptBR Fale com Aldia no andar de cima
     accept 87288
     vendor
+    note-enUS Buy and equip a [Balanced Throwing Dagger]
+    note-ptBR Compre e equipe um [Balanced Throwing Dagger]
 step
     only !Rogue
     goto 1438 @988.3,9891.89
@@ -531,6 +583,8 @@ step
     note-enUS Talk to Jeena Featherbow
     note-ptBR Fale com Jeena Featherbow
     vendor
+    note-enUS Buy [Rough Arrows] until your Quiver is full
+    note-ptBR Compre [Rough Arrows] até encher sua Aljava
 step
     goto 1438 @963,9811.6
     note-enUS Equip the [Hornwood Recurve Bow] |only Hunter
@@ -556,12 +610,16 @@ step
     note-enUS Talk to Kyra Windblade
     note-ptBR Fale com Kyra Windblade
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1438 @943.85,9790.28
     note-enUS Talk to Jannok Breezesong
     note-ptBR Fale com Jannok Breezesong
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1438 @947.57,9812.38
@@ -591,7 +649,11 @@ step
     turnin 2159 |reward 2 |only Hunter
     turnin 2159 |only !Hunter
     vendor |only Priest
+    note-enUS Buy 10 Ice Cold Milk or as much as you can afford |only Priest
+    note-ptBR Compre 10 Ice Cold Milk ou o máximo que puder pagar |only Priest
     home
+    note-enUS Set your Hearthstone to Dolanaar
+    note-ptBR Defina sua pedra de regresso em Dolanaar
 step
     only Hunter
     goto 1438 @928.83,9812.34
@@ -605,6 +667,8 @@ step
     note-enUS Skip training [Wrath] if you can't afford it. Prioritize [Thorns]
     note-ptBR Não treine [Wrath] se não tiver dinheiro. Priorize [Thorns]
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1438 @956.02,9736.83
     note-enUS Talk to Corithras Moonrage
@@ -616,6 +680,8 @@ step
     note-enUS Talk to Zarrin
     note-ptBR Fale com Zarrin
     train 2550
+    note-enUS Train Cooking
+    note-ptBR Treine Cooking
     accept 4161
     turnin 96634
 step
@@ -696,6 +762,8 @@ step
     note-enUS You need these for a later quest
     note-ptBR Você vai precisar destes para uma missão futura
     collect 5465 7 |quest 4161 |q 4161/1 |opt
+    note-enUS Travel to Starbreeze Village
+    note-ptBR Vá até Starbreeze Village
     note-enUS Open Tallonkai's Dresser. Loot it for the Emerald Dreamcatcher
     note-ptBR Abra o Tallonkai's Dresser. Saqueie-o para obter o Emerald Dreamcatcher
     note-enUS Try to finish looting the Owl Feathers on the owls next to the furlbogs
@@ -764,6 +832,8 @@ step
     note-ptBR Fale com Laurna Morninglight
     turnin 5621
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifcomplete 87288
     goto 1438 @988.3,9891.89
@@ -788,6 +858,8 @@ step
     note-enUS Talk to Jeena Featherbow
     note-ptBR Fale com Jeena Featherbow
     vendor
+    note-enUS Buy up to 800 [Rough Arrows]
+    note-ptBR Compre até 800 [Rough Arrows]
 step
     only Hunter
     goto 1438 @928.83,9812.34
@@ -797,12 +869,16 @@ step
     note-enUS Talk to Dazalar
     note-ptBR Fale com Dazalar
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1438 @943.85,9790.28
     note-enUS Talk to Jannok Breezesong
     note-ptBR Fale com Jannok Breezesong
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1438 @947.57,9812.38
@@ -820,6 +896,8 @@ step
     note-enUS Talk to Kyra Windblade
     note-ptBR Fale com Kyra Windblade
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1438 @947.57,9812.38
@@ -855,6 +933,8 @@ step
     note-enUS Talk to Kal
     note-ptBR Fale com Kal
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     path seq 1438 @1030.46,10037.99 |only Druid
@@ -863,6 +943,8 @@ step
     note-enUS Kill Nightsabers. Loot them for their Fangs and Pelts |only Druid
     note-ptBR Mate Nightsabers. Saqueie-os para obter presas e peles |only Druid
     objective 87288/1 |only Druid |opt
+    note-enUS Travel to Fel Rock |only Druid
+    note-ptBR Vá até Fel Rock |only Druid
     note-enUS Kill Lord Melenas. Loot him for his Head
     note-ptBR Mate Lord Melenas. Saqueie-o para obter a cabeça dele
     note-enUS Lord Melenas may be located in many different spawn locations throughout Fel Rock
@@ -894,6 +976,12 @@ step
     note-enUS You need these for a later quest
     note-ptBR Você vai precisar destes para uma missão futura
     collect 5465 7 |quest 4161 |q 4161/1 |opt
+    note-enUS Next to a small tree
+    note-ptBR Ao lado de uma árvore pequena
+    note-enUS On the small hill
+    note-ptBR Na colina pequena
+    note-enUS Next to the massive tree
+    note-ptBR Ao lado da árvore enorme
     note-enUS Loot the 3 Fel Cones from the locations marked on your map.
     note-ptBR Saqueie os 3 Fel Cones nos locais marcados no seu mapa.
     note-enUS Skip this step if any of them is not there and you're unable to complete the objective
@@ -920,6 +1008,8 @@ step
     note-enUS Kill Ferocitas the Dream Eater. Loot him for the [Gnarlpine Necklace]. Be careful as he can [Thrash] hitting you up to three times at once
     note-ptBR Mate Ferocitas the Dream Eater. Saqueie-o para obter o [Gnarlpine Necklace]. Cuidado, ele pode usar [Thrash] e acertar você até três vezes de uma vez
     use 8049
+    note-enUS Use the [Gnarlpine Necklace] to loot Tallonkai's Jewel
+    note-ptBR Use o [Gnarlpine Necklace] para saquear Tallonkai's Jewel
     objective 2459/2
 step
     path seq 1438 @332.9,10064.46
@@ -930,10 +1020,15 @@ step
     note-ptBR Se não houver muitos Gnarlpine Mystics, talvez você precise matar Gnarlpine Warriors para fazê-los surgir
     objective 2459/1
 step
+    note-enUS Die and respawn at the Spirit Healer
+    note-ptBR Morra e renasça no Spirit Healer
+step
     goto 1438 @953.07,9788.21
     note-enUS Talk to Brannol Eaglemoon
     note-ptBR Fale com Brannol Eaglemoon
     vendor
+    note-enUS Vendor and repair if necessary
+    note-ptBR Venda e repare se necessário
 step
     goto 1438 @956.02,9736.83
     note-enUS Kill Nightsabers. Loot them for their Fangs and Pelts
@@ -965,7 +1060,11 @@ step
     note-enUS You need these for a later quest
     note-ptBR Você vai precisar destes para uma missão futura
     collect 5465 7 |quest 4161 |q 4161/1 |opt
+    note-enUS Travel to the Pools of Arlithrien
+    note-ptBR Vá até Pools of Arlithrien
     use 5621
+    note-enUS Use the [Tourmaline Phial] at the Pools of Arlithrien moonwell
+    note-ptBR Use o [Tourmaline Phial] no moonwell de Pools of Arlithrien
     objective 933/1
 step
     path seq 1438 @1539.12,9437.98
@@ -975,12 +1074,16 @@ step
     collect 5465 7 |quest 4161 |q 4161/1
 step
     goto 1438 @1645.02,9245.89 50
+    note-enUS Travel to southwestern Teldrassil
+    note-ptBR Vá até o sudoeste de Teldrassil
     note-enUS Click the Strange Fruited Plant
     note-ptBR Clique na Strange Fruited Plant
     accept 930
 step
     path seq 1438 @1599.71,9509.25
     goto 1438 @956.02,9736.83
+    note-enUS Die and respawn at the Dolanaar graveyard
+    note-ptBR Morra e renasça no cemitério de Dolanaar
     note-enUS Talk to Corithras Moonrage
     note-ptBR Fale com Corithras Moonrage
     turnin 933
@@ -993,11 +1096,15 @@ step
     note-enUS Skip this step if you already trained level 8 spells
     note-ptBR Pule este passo se já treinou os feitiços de nível 8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1438 @906.17,9751.02
     note-enUS Talk to Zarrin
     note-ptBR Fale com Zarrin
     train 2550
+    note-enUS Train Cooking
+    note-ptBR Treine Cooking
     turnin 96634
     accept 4161
     turnin 4161
@@ -1020,6 +1127,8 @@ step
     note-enUS Skip this step if you already trained level 8 spells
     note-ptBR Pule este passo se já treinou os feitiços de nível 8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1438 @943.85,9790.28
@@ -1028,6 +1137,8 @@ step
     note-enUS Skip this step if you already trained level 8 spells
     note-ptBR Pule este passo se já treinou os feitiços de nível 8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1438 @952,9822.22
@@ -1036,6 +1147,8 @@ step
     note-enUS Skip this step if you already trained level 8 spells
     note-ptBR Pule este passo se já treinou os feitiços de nível 8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path seq 1438 @448.99,10051.91 @660.3,9758.69 @803.37,9764.12 @448.99,10051.91 @586.98,9651.78 @803.37,9764.12 @705.61,9976.23 @750.93,9807.9
     goto 1438 @850.22,9919.89
@@ -1073,6 +1186,8 @@ step
     note-enUS Talk to Byancie
     note-ptBR Fale com Byancie
     train 3273
+    note-enUS Train [First Aid]
+    note-ptBR Treine [First Aid]
 step
     only Priest
     goto 1438 @985.45,9905.43
@@ -1081,12 +1196,16 @@ step
     note-enUS Skip this step if you already trained level 8 spells
     note-ptBR Pule este passo se já treinou os feitiços de nível 8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path seq 1438 @1030.46,10037.99 @1043.7,10093.99
     goto 1438 @1207.65,10114.01
     note-enUS Kill Nightsabers. Loot them for their Fangs and Pelts
     note-ptBR Mate Nightsabers. Saqueie-os para obter presas e peles
     objective 87288/1 |opt
+    note-enUS Travel to Fel Rock
+    note-ptBR Vá até Fel Rock
     note-enUS Kill Lord Melenas. Loot him for his Head
     note-ptBR Mate Lord Melenas. Saqueie-o para obter a cabeça dele
     note-enUS You can use the [Severed Voodoo Claws] on him to severely reduce his damage!
@@ -1104,6 +1223,12 @@ step
 step
     ifonquest 489
     path closest 1438 @854.4,9952.5 @822.2,9948.5 @809.8,9926.4
+    note-enUS Next to a small tree
+    note-ptBR Ao lado de uma árvore pequena
+    note-enUS On the small hill
+    note-ptBR Na colina pequena
+    note-enUS Next to the massive tree
+    note-ptBR Ao lado da árvore enorme
     note-enUS Loot the 3 Fel Cones from the locations marked on your map.
     note-ptBR Saqueie os 3 Fel Cones nos locais marcados no seu mapa.
     objective 489/1
@@ -1154,6 +1279,8 @@ step
 step
     path seq 1438 @1863.46,10665.16
     goto 1438 @1899.7,10582.9
+    note-enUS Travel to The Oracle Glade
+    note-ptBR Vá até The Oracle Glade
     note-enUS Talk to Sentinel Eralya Leafshadow
     note-ptBR Fale com Sentinel Eralya Leafshadow
     turnin 99046
@@ -1166,6 +1293,8 @@ step
 step
     goto 1438 @1857.86,10676.36
     use 18152
+    note-enUS Use the [Amethyst Phial] at The Oracle Glade moonwell
+    note-ptBR Use o [Amethyst Phial] no moonwell de The Oracle Glade
     objective 7383/1
 step
     only Druid Priest
@@ -1246,6 +1375,8 @@ step
 step
     only Druid Priest
     level 10
+    note-enUS Grind until you are 900 xp off level 10 (5600/6500)
+    note-ptBR Mate monstros até faltarem 900 xp para o nível 10 (5600/6500)
 step
     only Hunter
     goto 1438 @2208.67,10758.15 |only Hunter
@@ -1255,6 +1386,8 @@ step
     note-ptBR Isto iniciará uma missão de escolta |only Hunter
     accept 938 |only Hunter |opt
     level 9
+    note-enUS Grind until you are 2250 into level 9 (2250/6500)
+    note-ptBR Mate monstros até ter 2250 no nível 9 (2250/6500)
     note-enUS Once you reach this xp breakpoint, skip the harpy/escort quest and go straight to Darnassus. You will have another opportunity to finish those quests later
     note-ptBR Ao atingir este ponto de XP, pule a missão da harpia/escolta e vá direto para Darnassus. Você terá outra oportunidade de concluir essas missões depois
 step
@@ -1269,15 +1402,21 @@ step
     note-enUS Talk to Sentinel Arynia Cloudsbreak |only Hunter
     note-ptBR Fale com Sentinel Arynia Cloudsbreak |only Hunter
     turnin 937 |only Hunter |opt
+    note-enUS Die and respawn at the Spirit Healer in Darnassus |only !Rogue
+    note-ptBR Morra e renasça no Spirit Healer em Darnassus |only !Rogue
     note-enUS Talk to Ariyell Skyshadow
     note-ptBR Fale com Ariyell Skyshadow
     vendor
+    note-enUS Sell your vendor trash
+    note-ptBR Venda seu lixo de vendedor
 step
     only Hunter
     goto 1457 57.56,46.73
     note-enUS Talk to Ilyenia Moonfire
     note-ptBR Fale com Ilyenia Moonfire
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
     note-enUS If you have a Staff in your bags, equip it
     note-ptBR Se tiver um Cajado nas bolsas, equipe-o
 step
@@ -1286,6 +1425,8 @@ step
     note-enUS Talk to Lalina Summermoon
     note-ptBR Fale com Lalina Summermoon
     train 7411
+    note-enUS Train [Enchanting]. You will need it to craft a [Wand]
+    note-ptBR Treine [Enchanting]. Você vai precisar dele para criar uma [Wand]
 step
     only Priest
     ifskillbelow enchanting 10
@@ -1314,6 +1455,8 @@ step
     note-enUS Talk to Lalina Summermoon
     note-ptBR Fale com Lalina Summermoon
     train 14293
+    note-enUS Train [Lesser Magic Wand] from her
+    note-ptBR Treine [Lesser Magic Wand] com ela
 step
     only Priest
     note-enUS Use [Enchanting] in your profession tab to craft a [Lesser Magic Wand]
@@ -1346,6 +1489,8 @@ step
     note-ptBR Fale com Mathrengyl Bearwalker no nível do meio
     accept 5921
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only !Rogue
     note-enUS Talk to Sentinel Dalia Sunblade
@@ -1368,6 +1513,8 @@ step
 step
     only Druid Nightelf
     goto 1450 @-2678.76,8019.94
+    note-enUS Cast Teleport: Moonglade |only Druid Nightelf
+    note-ptBR Lance Teleport: Moonglade |only Druid Nightelf
     note-enUS It will be in your spellbook |only Druid Nightelf
     note-ptBR Estará no seu grimório |only Druid Nightelf
     note-enUS Talk to Dendrite Starblaze up stairs
@@ -1384,6 +1531,8 @@ step
 step
     only Druid Nightelf
     goto 1450 @-2678.76,8019.94
+    note-enUS Cast Teleport: Moonglade |only Druid Nightelf
+    note-ptBR Lance Teleport: Moonglade |only Druid Nightelf
     note-enUS This will make you return faster |only Druid Nightelf
     note-ptBR Isto fará você voltar mais rápido |only Druid Nightelf
     note-enUS Talk to Dendrite Starblaze up stairs
@@ -1392,6 +1541,8 @@ step
     accept 5931
 step
     hearth
+    note-enUS Hearth to Dolanaar
+    note-ptBR Use a pedra de regresso para Dolanaar
 step
     goto 1438 @997.2,9903.6
     note-enUS Talk to Byancie
@@ -1445,6 +1596,8 @@ step
     turnin 488
 step
     abandon 488
+    note-enUS Abandon Zenn's Bidding
+    note-ptBR Abandone Zenn's Bidding
 step
     ifturnedin 488
     goto 1438 @959.28,9872.28
@@ -1454,6 +1607,12 @@ step
 step
     ifonquest 489
     path closest 1438 @854.4,9952.5 @822.2,9948.5 @809.8,9926.4
+    note-enUS Next to a small tree
+    note-ptBR Ao lado de uma árvore pequena
+    note-enUS On the small hill
+    note-ptBR Na colina pequena
+    note-enUS Next to the massive tree
+    note-ptBR Ao lado da árvore enorme
     note-enUS Loot the 3 Fel Cones from the locations marked on your map.
     note-ptBR Saqueie os 3 Fel Cones nos locais marcados no seu mapa.
     objective 489/1
@@ -1476,6 +1635,8 @@ step
     note-enUS Talk to Jeena Featherbow
     note-ptBR Fale com Jeena Featherbow
     vendor
+    note-enUS Buy 4 stacks of [Sharp Arrows]. Equip them as soon as you reach level 10
+    note-ptBR Compre 4 pilhas de [Sharp Arrows]. Equipe-as assim que chegar ao nível 10
 step
     only Hunter Warrior Rogue
     goto 1438 @1172.01,9917.17
@@ -1492,7 +1653,11 @@ step
     note-ptBR Fale com Dazalar |only Hunter
     accept 6063 |only Hunter |opt
     train 13165 |only Hunter |opt
+    note-enUS Train your level 10 spells |only Hunter
+    note-ptBR Treine your level 10 spells |only Hunter
     use 15921 |only Hunter |opt
+    note-enUS Use the [Taming Rod] on a Webwood Lurker |only Hunter
+    note-ptBR Use a [Taming Rod] em um Webwood Lurker |only Hunter
     objective 6063/1 |only Hunter |opt
     note-enUS Talk to Dazalar |only Hunter
     note-ptBR Fale com Dazalar |only Hunter
@@ -1534,6 +1699,8 @@ step
     ifonquest 6101
     goto 1438 @627.2,9380.96
     use 15922
+    note-enUS Use the [Taming Rod] on a Nightsaber Stalker
+    note-ptBR Use a [Taming Rod] em um Nightsaber Stalker
     note-enUS You must right click your Pet Frame and Dismiss your pet before you can tame another one
     note-ptBR Clique com o botão direito no quadro do ajudante e dispense-o antes de domar outro
     objective 6101/1
@@ -1579,14 +1746,22 @@ step
     note-ptBR Fale com Kyra Windblade
     accept 1684
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1438 @943.85,9790.28
     note-enUS Talk to Jannok Breezesong
     note-ptBR Fale com Jannok Breezesong
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 5171
+    note-enUS Train [Slice and Dice]
+    note-ptBR Treine [Slice e Dice]
     train 921
+    note-enUS Train [Pick Pocket] as well which is needed for your level 10 Rogue quest
+    note-ptBR Treine também [Pick Pocket], necessário para a missão de Rogue de nível 10
 step
     only Hunter
     goto 1438 @928.83,9812.34
@@ -1594,10 +1769,14 @@ step
     note-ptBR Fale com Dazalar
     accept 6063
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1438 @764.68,9835.73
     use 15921
+    note-enUS Use the [Taming Rod] on a Webwood Lurker
+    note-ptBR Use a [Taming Rod] em um Webwood Lurker
     objective 6063/1
 step
     only Hunter
@@ -1613,6 +1792,8 @@ step
     note-ptBR Mate todos os Lasher Sproutlings que vir a caminho do felino. Saqueie-os para obter [Dewy Lasher Fronds] |only Hunter
     objective 99050/1 |only Hunter |opt
     use 15922
+    note-enUS Use the [Taming Rod] on a Nightsaber Stalker
+    note-ptBR Use a [Taming Rod] em um Nightsaber Stalker
     note-enUS You must right click your Pet Frame and Dismiss your pet before you can tame another one
     note-ptBR Clique com o botão direito no quadro do ajudante e dispense-o antes de domar outro
     objective 6101/1
@@ -1634,6 +1815,8 @@ step
     only Hunter
     goto 1438 @520.28,9567.62
     use 15923
+    note-enUS Use the [Taming Rod] on a Strigid Screecher
+    note-ptBR Use a [Taming Rod] em um Strigid Screecher
     note-enUS You must right click your Pet Frame and Dismiss your pet before you can tame another one
     note-ptBR Clique com o botão direito no quadro do ajudante e dispense-o antes de domar outro
     objective 6102/1
@@ -1674,6 +1857,8 @@ step
     note-enUS Talk to Laurna Morninglight
     note-ptBR Fale com Laurna Morninglight
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     path seq 1438 @947.57,9812.38
@@ -1699,10 +1884,14 @@ step
     turnin 487
 step
     abandon 87288
+    note-enUS Abandon Soft Saber Pelts you won't be returning to Dolnaar
+    note-ptBR Abandone Soft Saber Pelts, você não vai voltar a Dolnaar
 step
     only Rogue
     goto 1438 @1574.25,9978.26 |only Rogue
     goto 1457 @2534.29,10085.6
+    note-enUS Once you get past the furbolg area, die on purpose and respawn at the Darnassus graveyard |only Rogue
+    note-ptBR Depois de passar da área dos furbolgs, morra de propósito e renasça no cemitério de Darnassus |only Rogue
     note-enUS Talk to Rellian Greenspyre
     note-ptBR Fale com Rellian Greenspyre
     turnin 922
@@ -1741,6 +1930,8 @@ step
     note-enUS Cast [Tame Beast] on a Strigid Hunter to tame it - .tame 1997
     note-ptBR Lance [Tame Beast] em um Strigid Hunter para domesticá-lo - .tame 1997
     train 2981
+    note-enUS Attack mobs with it to learn [Claw (Rank 2)]
+    note-ptBR Ataque monstros com ele para aprender [Claw (Rank 2)]
 step
     goto 1438 @1691.36,10412.66
     note-enUS Kill Timberling Tramplers, Timberling Mire Beasts and Elder Timberlings. Loot them for their Tumors
@@ -1834,6 +2025,9 @@ step
     turnin 98398
     accept 940
 step
+    note-enUS Die and respawn at the Darnassus graveyard
+    note-ptBR Morra e renasça no cemitério de Darnassus
+step
     only !Warrior
     goto 1457 @2009.1,9986.6
     note-enUS Go to the Gates of Darnassus and use the [Lunar Pendant]
@@ -1849,8 +2043,12 @@ step
 step
     goto 1457 @2070.42,9979.31
     zone 1457
+    note-enUS Travel to Darnassus
+    note-ptBR Vá até Darnassus
 step
     abandon 927
+    note-enUS Abandon The Moss-twined Heart. You never have an opportunity to turn it in
+    note-ptBR Abandone The Moss-twined Heart. Você nunca terá oportunidade de entregá-la
 step
     only Warrior
     goto 1457 @2331.89,9994.09
@@ -1875,6 +2073,8 @@ step
     only Warrior
     goto 1438 @1334.94,9720.34 18 |only Warrior
     goto 1438 @1411.32,9669.43
+    note-enUS Travel toward Vorlus Vilehoof |only Warrior
+    note-ptBR Vá em direção a Vorlus Vilehoof |only Warrior
     note-enUS Kill Vorlus Vilehoof. Loot him for his Horn
     note-ptBR Mate Vorlus Vilehoof. Saqueie-o para obter o chifre dele
     objective 1683/1
@@ -1882,6 +2082,8 @@ step
     only Warrior
     goto 1438 @1594.62,9988.44 |only Warrior
     goto 1457 @2331.89,9994.09
+    note-enUS Die on purpose after you get past the furbolg area and respawn at Darnassus |only Warrior
+    note-ptBR Morra de propósito depois de passar da área dos furbolgs e renasça em Darnassus |only Warrior
     note-enUS Talk to Elanaria
     note-ptBR Fale com Elanaria
     turnin 1683
@@ -1923,6 +2125,8 @@ step
     note-enUS Talk to Silvaria
     note-ptBR Fale com Silvaria
     trainer
+    note-enUS Train pet spells
+    note-ptBR Treine pet spells
 step
     goto 1457 @2579.3,10129
     note-enUS Go to the Cenarion Hold entrance and use the [Lunar Pendant]
@@ -1961,6 +2165,8 @@ step
 step
     goto 1457 @2518.2,9632.8
     use 8155
+    note-enUS Use [Sathrah's Sacrifice] at the fountain
+    note-ptBR Use [Sathrah's Sacrifice] na fonte
     objective 2520/1
 step
     path seq 1457 @2517.99,9584.25
@@ -1987,6 +2193,8 @@ step
     note-enUS Talk to Ariyell Skyshadow
     note-ptBR Fale com Ariyell Skyshadow
     vendor
+    note-enUS Buy [Sharp Arrows]
+    note-ptBR Compre [Sharp Arrows]
 step
     only Warrior
     goto 1457 @2316.49,9924.41
@@ -2030,6 +2238,8 @@ step
     goto 1457 @2636.53,9956.8
     goto 1438 @950.52,8694.07
     zone 1438 |opt
+    note-enUS Travel through the purple portal to Rut'theran Village
+    note-ptBR Atravesse o portal roxo até Rut'theran Village
     note-enUS Talk to Nessa Shadowsong
     note-ptBR Fale com Nessa Shadowsong
     turnin 6344
@@ -2051,4 +2261,6 @@ step
     note-enUS Talk to Vesprystus
     note-ptBR Fale com Vesprystus
     fly 1439
+    note-enUS Fly to Darkshore
+    note-ptBR Voe para Darkshore
 ]==])

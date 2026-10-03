@@ -49,9 +49,13 @@ step
 step
     goto 1429 @-68.11,-8874.67
     vendor
+    note-enUS Kill wolves until you have 50c worth of vendor trash. Vendor, then buy x10 water from Brother Danil.
+    note-ptBR Mate lobos até ter 50c em itens para vender. Venda e depois compre 10 águas de Brother Danil.
     collect 159 10
 step
     level 2
+    note-enUS Grind to 2
+    note-ptBR Mate monstros até o nível 2
 step
     goto 1429 @-161.82,-8870.05
     note-enUS Talk to Eagan Peltskinner
@@ -78,6 +82,8 @@ step
 step
     goto 1429 @-116.7,-8900.14
     vendor
+    note-enUS vendor trash, then buy x10 more water from Brother Danil
+    note-ptBR venda o lixo e depois compre mais 10 águas de Brother Danil
 step
     goto 1429 @-162.62,-8902.59
     note-enUS Talk to Marshal McBride
@@ -87,6 +93,8 @@ step
     accept 3104
 step
     level 3
+    note-enUS Grind to 3
+    note-ptBR Mate monstros até o nível 3
 step
     path seq 1429 @-113.23,-8779.78 @-81.99,-8684.88 @-151.41,-8726.54 @-113.23,-8779.78 @-81.99,-8684.88
     goto 1429 @-151.41,-8726.54 40
@@ -96,9 +104,13 @@ step
 step
     goto 1429 @-120.17,-8897.82
     level 3
+    note-enUS Grind to 1110+/1400xp on your way back to town
+    note-ptBR Mate monstros até 1110+/1400xp na volta para a cidade
 step
     goto 1429 @-120.17,-8897.82
     vendor
+    note-enUS vendor trash
+    note-ptBR venda o lixo
 step
     goto 1429 @-162.62,-8902.59
     note-enUS Talk to Marshal McBride
@@ -114,6 +126,8 @@ step
     note-ptBR Fale com Khelden Bremen
     turnin 3104
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1429 @-136.52,-8933.53
     note-enUS Talk to Deputy Willem
@@ -135,6 +149,8 @@ step
 step
     goto 1429 @-120.17,-8897.82
     vendor
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
 step
     path seq 1429 @-363.13,-8909.39 @-120.17,-8673.31 @-213.88,-8564.52 @-120.17,-8673.31 @-213.88,-8564.52 @-120.17,-8673.31 @-213.88,-8564.52 @-120.17,-8673.31
     goto 1429 @-213.88,-8564.52 60
@@ -143,6 +159,8 @@ step
     objective 21/1
 step
     level 5
+    note-enUS Grind to 5
+    note-ptBR Mate monstros até o nível 5
 step
     goto 1429 @-224.3,-8846.9
     note-enUS Talk to Milly Osworth
@@ -162,6 +180,8 @@ step
 step
     goto 1429 @-224.3,-8846.9
     level 5
+    note-enUS Grind on your way back to 1175+/2800xp
+    note-ptBR Mate monstros na volta até 1175+/2800xp
 step
     goto 1429 @-224.3,-8846.9
     note-enUS Talk to Milly Osworth
@@ -195,7 +215,11 @@ step
 step
     path seq 1429 @164.44,-9339.91
     goto 1429 @88.08,-9464.89
+    note-enUS Die and respawn at the Spirit Healer, or run to Goldshire
+    note-ptBR Morra e renasça no Spirit Healer, ou corra até Goldshire
     vendor
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
 step
     goto 1429 @74.02,-9465.52
     note-enUS Talk to Marshal Dughan
@@ -216,12 +240,18 @@ step
     note-ptBR Fale com Innkeeper Farley
     turnin 2158
     home
+    note-enUS Set your Hearthstone to Goldshire
+    note-ptBR Defina sua pedra de regresso em Goldshire
 step
     level 6
+    note-enUS Grind to 6
+    note-ptBR Mate monstros até o nível 6
 step
     path seq 1429 @18.66,-9476.47
     goto 1429 @36.02,-9471.84
     trainer
+    note-enUS Go Upstairs. Train your class spells
+    note-ptBR Suba as escadas. Treine suas magias de classe
 step
     goto 1429 @74.2,-9497.3
     note-enUS Talk to Remy "Two Times"
@@ -260,6 +290,8 @@ step
 step
     goto 1429 @63.78,-10008.82
     vendor
+    note-enUS Vendor, buy as much milk as you can
+    note-ptBR Venda, compre o máximo de leite que puder
 step
     note-enUS Kill boars you see for Boar Meat
     note-ptBR Mate os javalis que vir para obter Boar Meat
@@ -312,6 +344,8 @@ step
     objective 87/1
 step
     level 7
+    note-enUS Grind until 1600+/4500xp
+    note-ptBR Mate monstros até 1600+/4500xp
 step
     goto 1429 @338.47,-9889.69
     note-enUS Talk to "Auntie" Bernice Stonefield
@@ -322,6 +356,8 @@ step
     note-enUS Grind some mobs back to Goldshire
     note-ptBR Faça grind de alguns mobs no caminho de volta a Goldshire
     level 7
+    note-enUS Grind until 2690+/4500xp
+    note-ptBR Mate monstros até 2690+/4500xp
 step
     goto 1429 @74.2,-9497.3
     note-enUS Talk to Remy "Two Times"
@@ -331,6 +367,8 @@ step
 step
     goto 1429 @88.08,-9464.89
     vendor
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
 step
     goto 1429 @74.02,-9465.52
     note-enUS Talk to Marshal Dughan
@@ -342,6 +380,8 @@ step
 step
     goto 1429 @88.08,-9464.89
     vendor
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
 step
     goto 1429 @33.14,-9460.75
     note-enUS Talk to William Pestle
@@ -350,18 +390,28 @@ step
     accept 61
     turnin 107
     accept 112
+    note-enUS Collecting Kelp
+    note-ptBR Collecting Kelp
 step
     level 8
+    note-enUS Grind to 8
+    note-ptBR Mate monstros até o nível 8
 step
     goto 1429 @8.25,-9464.89
     vendor
+    note-enUS Buy a 6 slot bag from Brog
+    note-ptBR Compre uma bolsa de 6 espaços de Brog
 step
     path seq 1429 @18.66,-9476.47
     goto 1429 @36.02,-9471.84
     trainer
+    note-enUS Go Upstairs. Train your class spells
+    note-ptBR Suba as escadas. Treine suas magias de classe
 step
     goto 1429 @16.2,-9462.65
     vendor
+    note-enUS Buy level 5 Water up to 40
+    note-ptBR Compre água de nível 5 até 40
 step
     path seq 1429 @-116.7,-9404.71 @-248.59,-9434.8 @-463.78,-9393.14 @-422.13,-9481.1
     goto 1429 @-331.89,-9485.73 50
@@ -399,11 +449,15 @@ step
 step
     goto 1429 @-1355.79,-9469.52
     vendor
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
 step
     goto 1429 @-1234.31,-9224.18 60
     note-enUS Keep an eye out for the bundles of logs at the base of the trees
     note-ptBR Fique atento aos feixes de toras na base das árvores
     collect 13872 8 |opt
+    note-enUS Go toward the guard's corpse
+    note-ptBR Vá em direção ao cadáver do guarda
 step
     goto 1429 @-1234.31,-9224.18
     note-enUS Kill mobs surrounding the corpse. Pull the 2 mobs in front of the huts, move away and sheep one whilst killing the other, then kill the sheeped mob. Loot the carcass on the ground
@@ -425,6 +479,8 @@ step
     turnin 5545
 step
     level 9
+    note-enUS Grind to 9
+    note-ptBR Mate monstros até o nível 9
 step
     goto 1429 @-1222.4,-9531.76
     note-enUS Talk to Sara Timberlain
@@ -469,12 +525,16 @@ step
     ifcomplete 83
     path seq 1429 @-1366.2,-9552.85
     goto 1429 @-1223.9,-9534.33
+    note-enUS Die and respawn at the Spirit Healer if you're low health, otherwise just run back and handin
+    note-ptBR Morra e renasça no Spirit Healer se estiver com pouca vida; senão, apenas corra de volta e entregue
     note-enUS Talk to Sara Timberlain
     note-ptBR Fale com Sara Timberlain
     turnin 83
 step
     goto 1433 @-1741.68,-9644.29
     zone 1433
+    note-enUS Grind en route to Redridge
+    note-ptBR Mate monstros no caminho até Redridge
 step
     path seq 1433 @-1813.97,-9710.17
     goto 1433 @-2022.37,-9394.52 100
@@ -482,11 +542,17 @@ step
     note-ptBR Morra para os mobs daqui
     note-enUS Respawn at the Spirit Healer
     note-ptBR Ressuscite no Curandeiro Espiritual
+    note-enUS Respawn at the Spirit Healer
+    note-ptBR Ressuscite no Curandeiro Espiritual
 step
     goto 1433 @-2235.11,-9435.06
     fp
+    note-enUS Get the Redridge Mountains flight path
+    note-ptBR Pegue o ponto de voo de Redridge Mountains
 step
     hearth
+    note-enUS Hearth to Goldshire
+    note-ptBR Use a pedra de regresso para Goldshire
 step
     goto 1429 @33.14,-9460.75
     note-enUS Don't wait for his rp event
@@ -509,6 +575,8 @@ step
 step
     goto 1429 @88.08,-9464.89
     vendor
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
 step
     goto 1429 @33.14,-9460.75
     note-enUS Talk to William Pestle
@@ -549,26 +617,36 @@ step
 step
     path seq 1436 @1207.17,-10552.67
     goto 1436 @1045.22,-10508.8
+    note-enUS Die and respawn at the Spirit Healer, or run to Sentinel Hill
+    note-ptBR Morra e renasça no Spirit Healer, ou corra até Sentinel Hill
     note-enUS Talk to Gryan Stoutmantle
     note-ptBR Fale com Gryan Stoutmantle
     turnin 109
 step
     goto 1436 @1021.6,-10500.61
     vendor
+    note-enUS vendor trash
+    note-ptBR venda o lixo
     note-enUS Talk to Quartermaster Lewis
     note-ptBR Fale com Quartermaster Lewis
     accept 6181
 step
     goto 1436 @1042.11,-10112.11
     level 11
+    note-enUS Grind to 3750+/8800xp
+    note-ptBR Mate monstros até 3750+/8800xp
 step
     goto 1436 @1035.67,-10627.33
     fp
+    note-enUS Get the Sentinel Hill flight path
+    note-ptBR Pegue o ponto de voo de Sentinel Hill
     note-enUS Talk to Thor
     note-ptBR Fale com Thor
     turnin 6181
     accept 6281
     fly 1453
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
 step
     goto 1453 @625.49,-8857.89
     note-enUS Choose rockets. These have very good damage, and can be used for splitpulling
@@ -579,6 +657,8 @@ step
 step
     goto 1453 @613.39,-8796.05
     trainer
+    note-enUS Train 1h Swords
+    note-ptBR Treine 1h Swords
 step
     goto 1453 @382.18,-8701.93
     note-enUS Talk to Osric Strang
@@ -596,6 +676,8 @@ step
     accept 353
 step
     goto 1453 @521.98,-8353.25 20
+    note-enUS Enter the Deeprun Tram
+    note-ptBR Entre no Deeprun Tram
     note-enUS Take the tram when it arrives, then get off when it arrives on the other side
     note-ptBR Pegue o bonde quando ele chegar e desça quando chegar ao outro lado
     note-enUS Talk to Monty
@@ -611,21 +693,31 @@ step
     turnin 6661
 step
     goto 1455 @-1322.37,-4838.32 30
+    note-enUS Enter Ironforge
+    note-ptBR Entre em Ironforge
 step
     goto 1455 @-1152.4,-4821.13
     fp
+    note-enUS Get the Ironforge flight path
+    note-ptBR Pegue o ponto de voo de Ironforge
 step
     goto 1455 @-928.4,-4614.46
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path seq 1426 @-832.79,-5022.97 @-1157.84,-5604.12
     goto 1426 @-1305.59,-5512.18
+    note-enUS Run out of Ironforge
+    note-ptBR Saia correndo de Ironforge
     note-enUS Talk to Rudra Amberstill
     note-ptBR Fale com Rudra Amberstill
     accept 314
 step
     path seq 1426 @-1266.19,-5528.6 @-1261.27,-5499.05 @-1280.97,-5390.7
     goto 1426 @-1289.83,-5669.78
+    note-enUS Run up this part of the mountain
+    note-ptBR Suba correndo esta parte da montanha
     note-enUS Kill Vagash. Loot him for his Fang
     note-ptBR Mate Vagash. Saqueie-o para obter a presa dele
     note-enUS Kite him to the guard south of the ranch. Make sure you do 51%+ damage to him
@@ -643,6 +735,8 @@ step
     note-enUS Grind a little en route
     note-ptBR Faça um pouco de grind no caminho
     vendor
+    note-enUS Vendor, buy food+water
+    note-ptBR Venda, compre comida+água
 step
     goto 1426 @-1581.39,-5715.75
     note-enUS Talk to Senator Mehr Stonehallow
@@ -662,6 +756,8 @@ step
     objective 433/1
 step
     level 10
+    note-enUS Grind until 6350+/7600
+    note-ptBR Mate monstros até 6350+/7600
 step
     goto 1426 @-1600.3,-5726.59
     note-enUS Talk to Foreman Stonebrow
@@ -671,6 +767,8 @@ step
     path seq 1426 @-1591.24,-5712.47
     goto 1426 @-1581.39,-5715.75
     vendor |opt
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
     note-enUS Talk to Senator Mehr Stonehallow
     note-ptBR Fale com Senator Mehr Stonehallow
     turnin 433
@@ -679,7 +777,11 @@ step
 step
     goto 1426 @-1576.47,-5673.07
     vendor
+    note-enUS vendor trash, buy x30 level 5 drink from Kazan
+    note-ptBR venda o lixo, compre 30 bebidas de nível 5 de Kazan
     trainer
+    note-enUS Train Cooking from Ghilm. You'll need this to pick up 2 extra quests later
+    note-ptBR Treine Cooking com Ghilm. Você vai precisar disso para pegar 2 missões extras depois
 step
     goto 1426 @-2329.6,-5163.76
     note-enUS Talk to Pilot Hammerfoot
@@ -701,6 +803,8 @@ step
     turnin 417
 step
     goto 1426 @-2354.62,-4898.2 25
+    note-enUS Go through the tunnel to Loch Modan
+    note-ptBR Atravesse o túnel até Loch Modan
 ]==])
 
 register([==[
@@ -745,6 +849,8 @@ step
     objective 179/1
 step
     level 2
+    note-enUS Grind to 2
+    note-ptBR Mate monstros até o nível 2
 step
     goto 1426 @324.58,-6224.67
     note-enUS vendor trash. Buy 15 Water. Grind extra wolves if you don't have enough money
@@ -793,6 +899,8 @@ step
     path seq 1426 @669.33,-6339.58 @610.23,-6257.5 @437.86,-6382.27 @669.33,-6339.58 @610.23,-6257.5
     goto 1426 @437.86,-6382.27 40
     level 3
+    note-enUS Grind to 860+/1400xp
+    note-ptBR Mate monstros até 860+/1400xp
 step
     goto 1426 @567.09,-6362.99
     note-enUS Talk to Grelin Whitebeard
@@ -827,12 +935,16 @@ step
     turnin 3364
     accept 3365
     vendor
+    note-enUS vendor trash
+    note-ptBR venda o lixo
 step
     goto 1426 @388.17,-6056.1
     note-enUS Talk to Marryk Nurribit
     note-ptBR Fale com Marryk Nurribit
     turnin 3114
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1426 @339.36,-6214.82
     note-enUS Run back out the bunker
@@ -843,6 +955,8 @@ step
 step
     goto 1426 @324.58,-6224.67
     vendor
+    note-enUS Vendor, buy 10 water
+    note-ptBR Venda, compre 10 águas
     collect 159 10
 step
     path seq 1426 @506.81,-6477.48 @684.11,-6480.77 @772.76,-6362.57 @684.11,-6480.77 @772.76,-6362.57 @684.11,-6480.77
@@ -891,6 +1005,8 @@ step
 step
     path seq 1426 @122.66,-6227.95
     goto 1426 @43.86,-6044.08 20
+    note-enUS Go through the tunnel
+    note-ptBR Atravesse o túnel
 step
     path seq 1426 @9.38,-5942.3 @-54.64,-5863.5
     goto 1426 @-359.99,-5705.9
@@ -903,8 +1019,12 @@ step
     note-enUS grind boars north-east to Kharanos
     note-ptBR Farme javalis a nordeste até Kharanos
     level 5
+    note-enUS Grind to 2415/+2800xp
+    note-ptBR Mate monstros até 2415/+2800xp
 step
     goto 1426 @-512.67,-5686.2 120
+    note-enUS Die and respawn at the Spirit Healer, or run to Kharanos. Make sure your subzone is NOT Coldridge Pass
+    note-ptBR Morra e renasça no Spirit Healer, ou corra até Kharanos. Certifique-se de que sua subzona NÃO seja Coldridge Pass
 step
     goto 1426 @-499.17,-5644.37
     note-enUS Talk to Senir Whitebeard
@@ -914,12 +1034,16 @@ step
     path seq 1426 @-497.89,-5633.67
     goto 1426 @-502.82,-5597.55
     vendor |opt
+    note-enUS vendor trash
+    note-ptBR venda o lixo
     note-enUS Talk to Ragnar Thunderbrew
     note-ptBR Fale com Ragnar Thunderbrew
     accept 384
 step
     goto 1426 @-576.69,-5748.58
     level 6
+    note-enUS Grind to 6
+    note-ptBR Mate monstros até o nível 6
 step
     goto 1426 @-523.35,-5590.82
     note-enUS Talk to Tannok Frosthammer
@@ -930,10 +1054,16 @@ step
     note-enUS Upstairs
     note-ptBR No andar de cima
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1426 @-532.37,-5600.83
     home
+    note-enUS Set your Hearthstone to Thunderbrew Distillery
+    note-ptBR Defina sua pedra de regresso em Thunderbrew Distillery
     vendor
+    note-enUS Buy as much level 5 drink as you can afford
+    note-ptBR Compre o máximo de bebida de nível 5 que puder pagar
 step
     goto 1426 @-464.45,-5573.78
     note-enUS Talk to Tharek Blackstone
@@ -980,6 +1110,8 @@ step
     note-enUS Go back to the Inn
     note-ptBR Volte para a estalagem
     vendor
+    note-enUS Buy as much level 5 drink as you can afford
+    note-ptBR Compre o máximo de bebida de nível 5 que puder pagar
     note-enUS You can buy a Skinning Knife outside the inn if you want, it's better than a staff until you get a +stats weapon
     note-ptBR Você pode comprar uma Skinning Knife fora da estalagem se quiser, é melhor que um cajado até conseguir uma arma com atributos
 step
@@ -1000,8 +1132,12 @@ step
     note-ptBR Fale com Hegnar Rumbleshot
     turnin 5541
     vendor
+    note-enUS Vendor and repair
+    note-ptBR Venda e repare
 step
     level 7
+    note-enUS Grind to 7
+    note-ptBR Mate monstros até o nível 7
 step
     path seq 1426 @68.48,-5728.88 @29.08,-5584.42
     goto 1426 @98.03,-5574.57
@@ -1013,6 +1149,8 @@ step
 step
     goto 1426 @299.96,-5387.42
     vendor
+    note-enUS Vendor. Buy up to 20 level 5 drink
+    note-ptBR Venda. Compre até 20 bebidas de nível 5
 step
     goto 1426 @314.73,-5380.85
     note-enUS Talk to Rejold Barleybrew
@@ -1046,10 +1184,16 @@ step
 step
     ifturnedin 384
     level 7
+    note-enUS Grind until 4360+/4500xp
+    note-ptBR Mate monstros até 4360+/4500xp
 step
     level 7
+    note-enUS Grind until 3735+/4500xp
+    note-ptBR Mate monstros até 3735+/4500xp
 step
     hearth
+    note-enUS Hearth to Kharanos
+    note-ptBR Use a pedra de regresso para Kharanos
 step
     goto 1426 @-532.37,-5600.83
     note-enUS Buy a Rhapsody Malt and Thunder Ale from Belm
@@ -1074,14 +1218,20 @@ step
     note-ptBR Venda a receita na próxima vez que for a um vendedor
 step
     level 8
+    note-enUS Grind to 8
+    note-ptBR Mate monstros até o nível 8
 step
     goto 1426 @-537.29,-5587.7
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     note-enUS Make sure you train Polymorph
     note-ptBR Treine Polymorph
 step
     goto 1426 @-532.37,-5600.83
     vendor
+    note-enUS Buy up to 30 level 5 drink from the innkeeper
+    note-ptBR Compre até 30 bebidas de nível 5 do estalajadeiro
 step
     goto 1426 @-499.17,-5644.37
     note-enUS Talk to Senir Whitebeard
@@ -1107,6 +1257,8 @@ step
 step
     path seq 1426 @-320.59,-5354.58
     goto 1426 @-271.34,-5367.72 25
+    note-enUS Run up the ramp to Shimmerweed
+    note-ptBR Suba a rampa correndo até Shimmerweed
 step
     path seq 1426 @-212.24,-5364.43 @-241.79,-5308.62 @-153.14,-5190.42
     goto 1426 @-271.34,-5003.27 30
@@ -1128,6 +1280,8 @@ step
 step
     goto 1426 @304.88,-5380.85
     vendor
+    note-enUS Buy up to 20 more level 5 drink
+    note-ptBR Compre até mais 20 bebidas de nível 5
 step
     goto 1426 @315.28,-5378.39
     note-enUS Talk to Rejold Barleybrew
@@ -1148,8 +1302,12 @@ step
     objective 412/1
 step
     level 9
+    note-enUS Grind to 9
+    note-ptBR Mate monstros até o nível 9
 step
     goto 1426 @595.46,-5545.02 35
+    note-enUS Enter the cave
+    note-ptBR Entre na caverna
 step
     path seq 1426 @713.66,-5528.6
     goto 1426 @753.06,-5613.97 40
@@ -1158,11 +1316,16 @@ step
     objective 287/1
 step
     goto 1426 @649.63,-5568 15
+    note-enUS Go back up the cave
+    note-ptBR Volte subindo pela caverna
 step
     goto 1426 @669.33,-5590.98
     note-enUS Jump down, you die after
     note-ptBR Pule para baixo, você morre em seguida
     objective 287/2
+step
+    note-enUS Die and respawn at the Spirit Healer
+    note-ptBR Morra e renasça no Spirit Healer
 step
     goto 1426 @-499.17,-5644.37
     note-enUS Talk to Senir Whitebeard
@@ -1183,6 +1346,8 @@ step
 step
     path seq 1426 @-1266.19,-5528.6 @-1261.27,-5499.05
     goto 1426 @-1280.97,-5390.7
+    note-enUS Run up this part of the mountain
+    note-ptBR Suba correndo esta parte da montanha
     note-enUS Kill Vagash. Loot him for his Fang
     note-ptBR Mate Vagash. Saqueie-o para obter a presa dele
     note-enUS Kite him to the guard south of the ranch. Make sure you do 51%+ damage to him
@@ -1200,6 +1365,8 @@ step
     note-enUS Grind a little en route
     note-ptBR Faça um pouco de grind no caminho
     vendor
+    note-enUS vendor trash. Buy some food/water if needed
+    note-ptBR venda o lixo. Compre comida/água se precisar
 step
     goto 1426 @-1581.39,-5715.75
     note-enUS Talk to Senator Mehr Stonehallow
@@ -1209,6 +1376,8 @@ step
     path seq 1426 @-1591.24,-5712.47
     goto 1426 @-1600.3,-5726.59
     vendor |opt
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
     note-enUS Talk to Foreman Stonebrow
     note-ptBR Fale com Foreman Stonebrow
     accept 432
@@ -1228,6 +1397,8 @@ step
     path seq 1426 @-1591.24,-5712.47
     goto 1426 @-1581.39,-5715.75
     vendor |opt
+    note-enUS vendor trash, repair
+    note-ptBR venda o lixo, repare
     note-enUS Talk to Senator Mehr Stonehallow
     note-ptBR Fale com Senator Mehr Stonehallow
     turnin 433
@@ -1235,10 +1406,16 @@ step
     path seq 1426 @-1502.59,-5837.23 @-1679.89,-5787.98
     goto 1426 @-1694.67,-5646.8 40
     level 10
+    note-enUS Grind to 10 at the troggs
+    note-ptBR Mate monstros até o nível 10 nos troggs
 step
     goto 1426 @-1576.47,-5673.07
     vendor
+    note-enUS vendor trash, buy up to 30 level 5 drink from Kazan
+    note-ptBR venda o lixo, compre até 30 bebidas de nível 5 de Kazan
     trainer
+    note-enUS Train Cooking from Ghilm. You'll need this to pick up 2 extra quests later
+    note-ptBR Treine Cooking com Ghilm. Você vai precisar disso para pegar 2 missões extras depois
 step
     goto 1426 @-2325.07,-5164.15
     note-enUS Talk to Pilot Hammerfoot
@@ -1312,6 +1489,8 @@ step
 step
     only Gnome
     goto 1432 @-2818.49,-5742.1 45
+    note-enUS Run to the Troggs Entrance
+    note-ptBR Corra até a Troggs Entrance
 step
     only Gnome
     path seq 1432 @-2821.25,-5819.36 @-2950.89,-5804.64 @-2846.07,-5979.4 @-2821.25,-5819.36 @-2950.89,-5804.64
@@ -1341,6 +1520,8 @@ step
     only Human
     goto 1432 @-2658.51,-4822.3
     vendor
+    note-enUS Vendor and repair
+    note-ptBR Venda e repare
 step
     only Human
     goto 1432 @-2676.82,-4825.93
@@ -1360,6 +1541,8 @@ step
     note-enUS Kill Boars in the zone for Boar Intestines |only Human
     note-ptBR Mate javalis na zona para obter Boar Intestines |only Human
     collect 3172 3 |only Human |opt
+    note-enUS Grind mobs en route for cooking quest later
+    note-ptBR Mate monstros no caminho para a missão de culinária mais tarde
 step
     goto 1432 @-2954.42,-5394.1
     note-enUS Run up to Thelsamar. do NOT set your hearth |only Gnome
@@ -1370,12 +1553,18 @@ step
 step
     only Human
     abandon 1338
+    note-enUS Abandon Stormpike's Order. This is to unlock Mountaineer Stormpike's Task
+    note-ptBR Abandone Stormpike's Order. Isso serve para liberar Mountaineer Stormpike's Task
 step
     goto 1432 @-2953.65,-5381.54
     vendor
+    note-enUS Buy 1-2 6 slot bags to fill your bag slots
+    note-ptBR Compre 1-2 bolsas de 6 espaços para preencher seus espaços de bolsa
 step
     goto 1432 @-2972.96,-5377.86
     vendor
+    note-enUS Buy food/water (try to have 40 level 5 drink, 20 level 5 food)
+    note-ptBR Compre comida/água (tente ter 40 bebidas de nível 5 e 20 comidas de nível 5)
 step
     path seq 1432 @-2892.97,-5405.45 @-3019.85,-5335.55
     goto 1432 @-3006.06,-5252.77
@@ -1398,6 +1587,8 @@ step
     note-ptBR Mate javalis na zona para obter Thelsamar Blood Sausages
     collect 3172 3 |quest 418 |q 418/1 |opt
     vendor
+    note-enUS Vendor and repair
+    note-ptBR Venda e repare
 step
     only Gnome
     goto 1432 @-2676.82,-4825.93
@@ -1409,14 +1600,20 @@ step
 step
     only Gnome
     goto 1432 @-2923.58,-4803.91 130
+    note-enUS Grind some mobs for Boar Intestines, Bear Meat and Spider Ichor en route
+    note-ptBR Mate alguns monstros no caminho para conseguir Boar Intestines, Bear Meat e Spider Ichor
 step
     only Human
     goto 1432 @-3077.77,-4984.19 130
+    note-enUS Grind some mobs for Boar Intestines, Bear Meat and Spider Ichor en route
+    note-ptBR Mate alguns monstros no caminho para conseguir Boar Intestines, Bear Meat e Spider Ichor
 step
     goto 1432 @-2972.96,-4822.3 45
     note-enUS Kill Tunnel Rats. Loot them for their Ears
     note-ptBR Mate Tunnel Rats. Saqueie-os para obter as orelhas
     objective 416/1 |opt
+    note-enUS Go to the entrance of the cave whilst killing rats
+    note-ptBR Vá até a entrada da caverna matando ratos
 step
     path seq 1432 @-2972.96,-4853.58 @-2997.78,-4868.29 @-2967.44,-4892.21 @-2983.99,-4894.05 @-2995.02,-4941.88 @-2978.47,-4934.52 @-2956.41,-4945.56 @-2978.47,-4934.52 @-2995.02,-4941.88 @-2983.99,-4894.05 @-2967.44,-4892.21 @-2997.78,-4868.29
     goto 1432 @-2972.96,-4853.58 12
@@ -1443,9 +1640,13 @@ step
     note-enUS Kill Boars in the zone for Thelsamar Blood Sausages
     note-ptBR Mate javalis na zona para obter Thelsamar Blood Sausages
     collect 3172 3 |quest 418 |q 418/1 |opt
+    note-enUS Run back to the bunker, grinding en route
+    note-ptBR Volte correndo para o bunker, matando monstros no caminho
 step
     goto 1432 @-2658.51,-4822.3
     vendor
+    note-enUS vendor and repair
+    note-ptBR venda e repare
 step
     goto 1432 @-2675.06,-4824.14
     note-enUS Talk to Mountaineer Stormpike
@@ -1487,21 +1688,29 @@ step
 step
     goto 1432 @-2952.55,-5381.91
     vendor
+    note-enUS Buy 6 slots until your bag containers are full. Also buy 1 Flint and Tinder, and 2 Simple Wood
+    note-ptBR Compre bolsas de 6 espaços até encher seus slots de bolsa. Compre também 1 Flint and Tinder e 2 Simple Wood
     collect 4470 2
     collect 4471 1
 step
     level 12
+    note-enUS Grind to 12
+    note-ptBR Mate monstros até o nível 12
 step
     only Gnome
     goto 1432 @-3781.7,-5702.36 |only Gnome
     goto 1432 @-3812.59,-5694.63
     vendor |only Gnome |opt
+    note-enUS Check Aldren for a Wise Man's Belt. Buy it if you can afford it. Save it for later |only Gnome
+    note-ptBR Procure Aldren por um Wise Man's Belt. Compre se puder pagar. Guarde para depois |only Gnome
     note-enUS Talk to Prospector Ironband
     note-ptBR Fale com Prospector Ironband
     accept 298
 step
     only Gnome
     goto 1432 @-3872.73,-5646.07
+    note-enUS Die and respawn back in Thelsamar
+    note-ptBR Morra e renasça em Thelsamar
 step
     only Gnome
     path seq 1432 @-3018.75,-5350.08
@@ -1518,18 +1727,26 @@ step
 step
     goto 1432 @-2929.93,-5424.95
     fp
+    note-enUS Get the Thelsamar flight path
+    note-ptBR Pegue o ponto de voo de Thelsamar
     note-enUS Talk to Thorgrum Borrelson
     note-ptBR Fale com Thorgrum Borrelson
     turnin 6387 |only Gnome
     accept 6391 |only Gnome
     fly 1455
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
 step
     only Human
     goto 1455 @-928.25,-4614.46
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Human
     goto 1455 @-810.36,-5039.71 120
+    note-enUS Exit Ironforge
+    note-ptBR Saia de Ironforge
 step
     only Gnome
     goto 1455 @-1303.79,-4631.18
@@ -1561,6 +1778,8 @@ step
     turnin 6388
     accept 6392
     fp
+    note-enUS Fly to Thelsamar
+    note-ptBR Voe para Thelsamar
 step
     only Gnome
     path seq 1432 @-3018.75,-5350.08
@@ -1576,33 +1795,55 @@ step
 step
     only Gnome
     hearth
+    note-enUS Hearth to Kharanos
+    note-ptBR Use a pedra de regresso para Kharanos
 step
     only Gnome
     goto 1426 @-537.29,-5587.04
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1426 @309.81,-5108.33 50
+    note-enUS Run to here
+    note-ptBR Corra até aqui
 step
     goto 1426 @280.26,-4963.87 15
+    note-enUS Run up the mountain north
+    note-ptBR Suba a montanha correndo para o norte
 step
     goto 1426 @206.38,-4832.53 15
+    note-enUS Follow it up to here
+    note-ptBR Siga por ele até aqui
 step
     path seq 1426 @176.83,-4770.15
     goto 1426 @176.83,-4704.48 15
     goto 1437 @-869.29,-3344.13 60
+    note-enUS Keep running straight north, drop down and die, then respawn
+    note-ptBR Continue correndo reto para o norte, pule e morra, depois renasça
 step
     path seq 1437 @-914.78,-3435.09 @-819.67,-3691.42 @-807.26,-3716.22 @-827.94,-3724.49
     goto 1437 10.76,56.72
+    note-enUS Swim to shore
+    note-ptBR Nade até a margem
     vendor
+    note-enUS If you have 8s, Check for Bronze Tube from Neal Allen and buy it if it's there
+    note-ptBR Se tiver 8 de prata, veja se Neal Allen tem um Bronze Tube e compre se tiver
 step
     goto 1437 @-724.55,-3699.69
     vendor
+    note-enUS Check Dewin for Heal Potions, buy down to 1s
+    note-ptBR Procure Dewin por Heal Potions, compre até ficar com 1 de prata
 step
     goto 1437 @-782.45,-3793.4
     fp
+    note-enUS Get the Menethil Harbor flight path
+    note-ptBR Pegue o ponto de voo de Menethil Harbor
 step
     goto 1437 @-583.95,-3727.25
     note-enUS Wait here for the boat. Make a Campfire from your spellbook and start cooking the chunks of boar meat you saved from earlier. You need at least 10 skill now, and 50 later (so cook all of it)
     note-ptBR Espere o barco aqui. Faça uma fogueira pelo grimório e cozinhe os pedaços de carne de javali que você guardou. Você precisa de pelo menos 10 de habilidade agora e 50 depois (então cozinhe tudo)
     zone 1439
+    note-enUS Get onto the boat when it comes. Take it to Darkshore. If you've finished cooking food, start conjuring as much level 5 water as possible
+    note-ptBR Entre no barco quando ele chegar. Leve-o até Darkshore. Se já terminou de cozinhar, comece a conjurar o máximo de água de nível 5 possível
 ]==])

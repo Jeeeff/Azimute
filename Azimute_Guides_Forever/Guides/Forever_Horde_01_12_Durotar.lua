@@ -48,6 +48,8 @@ step
     note-enUS Talk to Duokna
     note-ptBR Fale com Duokna
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     goto 1411 @-4198.05,-605.59 12 |only !Warrior !Shaman
     goto 1411 @-4198.58,-602.41 12 |only Warrior Shaman
@@ -66,21 +68,33 @@ step
     note-enUS Talk to Shikrik |only Shaman
     note-ptBR Fale com Shikrik |only Shaman
     train 6673 |only Warrior
+    note-enUS Train [Battle Shout] |only Warrior
+    note-ptBR Treine [Battle Shout] |only Warrior
     train 8017 |only Shaman
+    note-enUS Train [Rockbiter Weapon] |only Shaman
+    note-ptBR Treine [Rockbiter Weapon] |only Shaman
 step
     only Warlock
     path seq 1411 @-4157.87,-601.36 @-4143.06,-594.31 @-4120.86,-589.72 @-4111.87,-607 @-4157.87,-601.36 @-4143.06,-594.31 @-4120.86,-589.72 |only Warlock
     goto 1411 @-4107.11,-604.18 12 |only Warlock
     goto 1411 @-4107.11,-604.18
+    note-enUS Travel toward Nartok |only Warlock
+    note-ptBR Vá em direção a Nartok |only Warlock
+    note-enUS Travel toward Hraug |only Warlock
+    note-ptBR Vá em direção a Hraug |only Warlock
     note-enUS Talk to Hraug
     note-ptBR Fale com Hraug
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     only Warlock
     goto 1411 @-4111.87,-607
     note-enUS Talk to Nartok
     note-ptBR Fale com Nartok
     train 348
+    note-enUS Train [Immolate]
+    note-ptBR Treine [Immolate]
 step
     only Hunter Mage Priest
     goto 1411 @-4214.45,-565.4
@@ -110,6 +124,8 @@ step
     note-enUS Try to get to level 2 before getting there |only Warlock
     note-ptBR Tente chegar ao nível 2 antes de ir para lá |only Warlock
     objective 788/1 |only Warlock |opt
+    note-enUS Travel toward the Burning Blade Coven
+    note-ptBR Vá em direção a Burning Blade Coven
 step
     only Warlock
     path closest 1411 @-4282.13,-250.97 @-4317.02,-258.02 @-4351.39,-250.97 @-4385.76,-256.96 @-4383.65,-216.07 @-4419.07,-221.01 @-4457.67,-205.15 @-4405.85,-189.99 @-4409.55,-169.54 @-4376.24,-197.39 @-4360.38,-176.95 @-4329.71,-196.33 @-4319.67,-169.19 @-4303.28,-186.46 @-4281.07,-148.75
@@ -146,6 +162,8 @@ step
     only Warlock
     path closest 1411 @-4146.24,-483.97 @-4179.02,-473.75 @-4218.15,-480.1 @-4252.52,-483.62 @-4283.71,-516.76 @-4317.55,-516.76 @-4350.33,-510.06 @-4379.94,-515.7 @-4379.94,-484.33 @-4352.98,-445.9 @-4385.76,-412.77 @-4384.7,-383.16 @-4383.12,-346.85 @-4349.81,-313.72 @-4315.44,-287.28 @-4281.6,-321.82 @-4239.83,-315.13 @-4213.92,-309.84 @-4184.31,-348.61 @-4184.31,-382.45 @-4183.25,-409.6 @-4182.72,-448.72
     level 3
+    note-enUS Grind to 685+/1400xp
+    note-ptBR Mate monstros até 685+/1400xp
 step
     only Rogue
     goto 1411 @-4214.45,-565.4
@@ -154,6 +172,8 @@ step
     note-enUS Talk to Duokna
     note-ptBR Fale com Duokna
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     only Warlock
     goto 1411 @-4214.4,-624
@@ -164,6 +184,8 @@ step
 step
     only Warlock
     goto 1411 @-4228.19,-629.2
+    note-enUS Cast [Summon Imp] |only Warlock
+    note-ptBR Lance [Summon Imp] |only Warlock
     note-enUS Talk to Zureetha
     note-ptBR Fale com Zureetha
     turnin 1499
@@ -195,11 +217,15 @@ step
     path seq 1411 @-4157.87,-601.36 |only Rogue
     goto 1411 @-4144.65,-588.67 12 |only Rogue
     goto 1411 @-4144.65,-588.67
+    note-enUS Travel toward Rwag |only Rogue
+    note-ptBR Vá em direção a Rwag |only Rogue
     note-enUS Talk to Rwag
     note-ptBR Fale com Rwag
     turnin 3083 |only Troll Rogue
     turnin 3088 |only Orc Rogue
     train 53
+    note-enUS Train [Backstab]
+    note-ptBR Treine [Backstab]
 step
     only Rogue
     goto 1411 @-4144.65,-588.67
@@ -213,6 +239,8 @@ step
     note-enUS Talk to Kzan
     note-ptBR Fale com Kzan
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Short Staff] (97c)
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Short Staff] (97c)
 step
     only Shaman
     note-enUS Talk to Kzan
@@ -228,6 +256,8 @@ step
     note-enUS Buy a [Mining Pick] from him
     note-ptBR Compre uma [Mining Pick] dele
     train 2575
+    note-enUS Train [Mining]
+    note-ptBR Treine [Mining]
     collect 2901 1 |quest 792 |q 792/1
     note-enUS This will allow you to find [Rough Stones] from nodes in order to craft [Sharpening Stones] (+2 Weapon Damage for 30 minutes)
     note-ptBR Isto permitirá obter [Rough Stones] dos veios para criar [Sharpening Stones] (+2 de dano da arma por 30 minutos)
@@ -237,6 +267,8 @@ step
     note-enUS Talk to Hraug
     note-ptBR Fale com Hraug
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     only Warlock
     goto 1411 @-4111.87,-607
@@ -244,6 +276,8 @@ step
     note-ptBR Fale com Nartok
     turnin 3090
     train 172
+    note-enUS Train [Corruption]
+    note-ptBR Treine [Corruption]
 step
     goto 1411 @-4221.85,-561.52
     note-enUS Talk to Galgar
@@ -261,6 +295,8 @@ step
     collect 159 15 |quest 6394 |q 6394/1 |only !Rogue !Warrior !Hunter !Shaman
     collect 2512 1000 |quest 6394 |q 6394/1 |only Hunter
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     only Shaman
     goto 1411 @-4203.87,-623.92
@@ -275,6 +311,8 @@ step
     note-ptBR Fale com Mai'ah
     turnin 3086 |only Troll
     train 1459
+    note-enUS Train [Arcane Intellect]
+    note-ptBR Treine [Arcane Intellect]
 step
     only !Warlock
     goto 1411 @-4228.19,-629.2
@@ -330,6 +368,8 @@ step
 step
     path closest 1411 @-4146.24,-483.97 @-4179.02,-473.75 @-4218.15,-480.1 @-4252.52,-483.62 @-4283.71,-516.76 @-4317.55,-516.76 @-4350.33,-510.06 @-4379.94,-515.7 @-4379.94,-484.33 @-4352.98,-445.9 @-4385.76,-412.77 @-4384.7,-383.16 @-4383.12,-346.85 @-4349.81,-313.72 @-4315.44,-287.28 @-4281.6,-321.82 @-4239.83,-315.13 @-4213.92,-309.84 @-4184.31,-348.61 @-4184.31,-382.45 @-4183.25,-409.6 @-4182.72,-448.72
     level 4
+    note-enUS Grind to level 4
+    note-ptBR Mate monstros até o nível 4
 step
     ifcomplete 4402
     goto 1411 @-4221.85,-561.52
@@ -347,6 +387,8 @@ step
     collect 159 5 |quest 6394 |q 6394/1 |only !Rogue !Warrior !Hunter !Shaman
     collect 2512 1000 |quest 6394 |q 6394/1 |only Hunter
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path seq 1411 @-4198.58,-602.41
     goto 1411 @-4186.42,-599.95
@@ -361,6 +403,8 @@ step
     note-enUS Talk to Shikrik and Canaga
     note-ptBR Fale com Shikrik e Canaga
     train 8042
+    note-enUS Train [Earth Shock]
+    note-ptBR Treine [Earth Shock]
     accept 1516
 step
     only Mage
@@ -368,25 +412,35 @@ step
     note-enUS Talk to Mai'ah
     note-ptBR Fale com Mai'ah
     train 116
+    note-enUS Train [Frostbolt]
+    note-ptBR Treine [Frostbolt]
 step
     only Priest
     goto 1411 @-4202.28,-617.22
     note-enUS Talk to Ken'jai
     note-ptBR Fale com Ken'jai
     train 1243
+    note-enUS Train [Power Word: Fortitude]
+    note-ptBR Treine [Power Word: Fortitude]
     train 589
+    note-enUS Train [Shadow Word: Pain]
+    note-ptBR Treine [Shadow Word: Pain]
 step
     only Priest
     goto 1411 @-4202.28,-617.22
     note-enUS Talk to Ken'jai
     note-ptBR Fale com Ken'jai
     train 589
+    note-enUS Train [Shadow Word: Pain]
+    note-ptBR Treine [Shadow Word: Pain]
 step
     only Priest
     goto 1411 @-4202.28,-617.22
     note-enUS Talk to Ken'jai
     note-ptBR Fale com Ken'jai
     train 589
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     turnin 3085
 step
     only Priest
@@ -394,7 +448,11 @@ step
     note-enUS Talk to Ken'jai
     note-ptBR Fale com Ken'jai
     train 1243
+    note-enUS Train [Power Word: Fortitude]
+    note-ptBR Treine [Power Word: Fortitude]
     train 589
+    note-enUS Train [Shadow Word: Pain]
+    note-ptBR Treine [Shadow Word: Pain]
     turnin 3085
 step
     only Priest
@@ -402,6 +460,8 @@ step
     note-enUS Talk to Ken'jai
     note-ptBR Fale com Ken'jai
     train 589
+    note-enUS Train [Shadow Word: Pain]
+    note-ptBR Treine [Shadow Word: Pain]
     turnin 3085
 step
     only !Warlock
@@ -416,13 +476,19 @@ step
     note-enUS Talk to Jen'shan
     note-ptBR Fale com Jen'shan
     train 1978
+    note-enUS Train [Serpent Sting]
+    note-ptBR Treine [Serpent Sting]
 step
     only Warrior
     goto 1411 @-4230.31,-639.43
     note-enUS Talk to Frang
     note-ptBR Fale com Frang
     train 100
+    note-enUS Train [Charge]
+    note-ptBR Treine [Charge]
     train 772
+    note-enUS Train [Rend]
+    note-ptBR Treine [Rend]
     train 772
 step
     only Warrior
@@ -430,12 +496,16 @@ step
     note-enUS Talk to Frang
     note-ptBR Fale com Frang
     train 772
+    note-enUS Train [Rend]
+    note-ptBR Treine [Rend]
 step
     only Warrior
     goto 1411 @-4230.31,-639.43
     note-enUS Talk to Frang
     note-ptBR Fale com Frang
     train 100
+    note-enUS Train [Charge]
+    note-ptBR Treine [Charge]
 step
     goto 1411 @-4322.31,-611.58
     note-enUS Talk to Thazz'ril
@@ -445,6 +515,8 @@ step
 step
     path closest 1411 @-4324.43,-480.1 @-4259.92,-411.01 @-4279.48,-402.55 @-4333.94,-360.95 @-4335.53,-294.68 @-4321.25,-243.22 @-4366.2,-253.44 @-4391.05,-328.52 @-4440.75,-319.36 @-4462.43,-405.37 @-4398.98,-411.71 @-4324.43,-480.1
     level 4 |opt
+    note-enUS Grind to 1720+/2100xp
+    note-ptBR Mate monstros até 1720+/2100xp
     note-enUS Loot the Cactus Apples near the Cacti
     note-ptBR Saqueie as Cactus Apples perto dos cactos
     objective 4402/1
@@ -453,14 +525,22 @@ step
     ifonquest 4402
     path closest 1411 @-4282.13,-250.97 @-4317.02,-258.02 @-4351.39,-250.97 @-4385.76,-256.96 @-4383.65,-216.07 @-4419.07,-221.01 @-4457.67,-205.15 @-4405.85,-189.99 @-4409.55,-169.54 @-4376.24,-197.39 @-4360.38,-176.95 @-4329.71,-196.33 @-4319.67,-169.19 @-4303.28,-186.46 @-4281.07,-148.75
     level 4
+    note-enUS Grind to 1720+/2100xp
+    note-ptBR Mate monstros até 1720+/2100xp
 step
     only !Warrior !Rogue !Shaman
     ifturnedin 4402
     path closest 1411 @-4282.13,-250.97 @-4317.02,-258.02 @-4351.39,-250.97 @-4385.76,-256.96 @-4383.65,-216.07 @-4419.07,-221.01 @-4457.67,-205.15 @-4405.85,-189.99 @-4409.55,-169.54 @-4376.24,-197.39 @-4360.38,-176.95 @-4329.71,-196.33 @-4319.67,-169.19 @-4303.28,-186.46 @-4281.07,-148.75
     level 5
+    note-enUS Grind to level 5
+    note-ptBR Mate monstros até o nível 5
 step
     path seq 1411 @-4360.38,-175.18 @-4361.44,-144.16 @-4311.74,-113.14
     goto 1411 @-4274.19,-87.76 10
+    note-enUS Enter the cave
+    note-ptBR Entre na caverna
+    note-enUS Travel toward Thazz'ril's Pick
+    note-ptBR Vá em direção a Thazz'ril's Pick
     note-enUS Kill Felstalkers. Loot them for Felstalker Hooves |only Shaman
     note-ptBR Mate Felstalkers. Saqueie-os para obter Felstalker Hooves |only Shaman
     objective 1516/1 |only Shaman |opt
@@ -482,15 +562,25 @@ step
     ifturnedin 4402
     path closest 1411 @-4220.26,-59.56 @-4234.54,5.65 @-4265.73,-26.43 @-4275.25,-47.58 @-4295.87,-54.63 @-4332.36,-42.64 @-4332.89,-74.02 @-4330.24,-115.26 @-4349.28,-131.12 @-4368.84,-138.52 @-4349.28,-131.12 @-4315.97,-131.47 @-4300.1,-99.4 @-4284.77,-105.74 @-4282.13,-138.17 @-4260.45,-150.16 @-4238.77,-138.88 @-4203.34,-102.92 @-4211.27,-76.84 @-4250.4,-88.82
     level 5 |only !Shaman
+    note-enUS Grind to 1680+/2800xp |only !Shaman
+    note-ptBR Mate monstros até 1680+/2800xp |only !Shaman
     level 5 |only Shaman
+    note-enUS Grind to 690+/2800xp |only Shaman
+    note-ptBR Mate monstros até 690+/2800xp |only Shaman
 step
     ifonquest 4402
     path closest 1411 @-4220.26,-59.56 @-4234.54,5.65 @-4265.73,-26.43 @-4275.25,-47.58 @-4295.87,-54.63 @-4332.36,-42.64 @-4332.89,-74.02 @-4330.24,-115.26 @-4349.28,-131.12 @-4368.84,-138.52 @-4349.28,-131.12 @-4315.97,-131.47 @-4300.1,-99.4 @-4284.77,-105.74 @-4282.13,-138.17 @-4260.45,-150.16 @-4238.77,-138.88 @-4203.34,-102.92 @-4211.27,-76.84 @-4250.4,-88.82
     level 5 |only !Shaman
+    note-enUS Grind to 1300+/2800xp |only !Shaman
+    note-ptBR Mate monstros até 1300+/2800xp |only !Shaman
     level 5 |only Shaman
+    note-enUS Grind to 310+/2800xp |only Shaman
+    note-ptBR Mate monstros até 310+/2800xp |only Shaman
 step
     path seq 1411 @-4326.01,-41.23
     goto 1411 @-4709.36,274.96
+    note-enUS Die and respawn at the Spirit Healer near the arrow
+    note-ptBR Morra e renasça no Spirit Healer perto da seta
     note-enUS Talk to Gar'thok
     note-ptBR Fale com Gar'thok
     note-enUS You can talk to him from outside or on top of the bunker
@@ -504,6 +594,10 @@ step
 step
     path seq 1411 @-4617.88,290.47 @-4611.01,293.64 @-4616.82,317.26 @-4604.13,364.49 @-4588.8,383.53 @-4593.03,384.94 @-4594.09,389.87 @-4589.86,390.93 @-4589.33,387.76 @-4594.62,386.35 @-4595.15,399.74 @-4585.1,396.92
     goto 1411 @-4600.43,384.59
+    note-enUS Travel toward the tower
+    note-ptBR Vá em direção à torre
+    note-enUS Travel up the tower toward Furl
+    note-ptBR Suba a torre em direção a Furl
     note-enUS Talk to Furl
     note-ptBR Fale com Furl
     accept 791
@@ -513,6 +607,8 @@ step
     note-enUS Talk to Krunn
     note-ptBR Fale com Krunn
     train 2575
+    note-enUS Train [Mining]
+    note-ptBR Treine [Mining]
     note-enUS This will allow you to find [Rough Stones] from nodes in order to craft [Sharpening Stones] (+2 Weapon Damage for 30 minutes)
     note-ptBR Isto permitirá obter [Rough Stones] dos veios para criar [Sharpening Stones] (+2 de dano da arma por 30 minutos)
 step
@@ -530,6 +626,8 @@ step
     note-enUS Talk to Dwukk
     note-ptBR Fale com Dwukk
     train 2018
+    note-enUS Train [Blacksmithing]
+    note-ptBR Treine [Blacksmithing]
 step
     goto 1411 @-4815.2,306.8
     note-enUS Talk to Turroc
@@ -538,6 +636,8 @@ step
 step
     goto 1411 @-4322.31,-611.58
     hearth |opt
+    note-enUS Hearth to the Valley of Trials
+    note-ptBR Use a pedra de regresso para Valley of Trials
     use 6948 |opt
     note-enUS Talk to Thazz'ril
     note-ptBR Fale com Thazz'ril
@@ -553,6 +653,8 @@ step
     note-enUS Talk to Duokna
     note-ptBR Fale com Duokna
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     only Shaman
     path seq 1411 @-4203.87,-623.92
@@ -560,6 +662,8 @@ step
     note-enUS Talk to Shikrik and Canaga
     note-ptBR Fale com Shikrik e Canaga
     train 332
+    note-enUS Train [Healing Wave]
+    note-ptBR Treine [Healing Wave]
     turnin 1516
     accept 1517
 step
@@ -588,66 +692,98 @@ step
     note-ptBR Fale com Ken'jai
     accept 5649
     train 591
+    note-enUS Train [Smite]
+    note-ptBR Treine [Smite]
     train 17
+    note-enUS Train [Power Word: Shield]
+    note-ptBR Treine [Power Word: Shield]
 step
     only Mage
     goto 1411 @-4210.22,-625.33
     note-enUS Talk to Mai'ah
     note-ptBR Fale com Mai'ah
     train 143
+    note-enUS Train [Fireball]
+    note-ptBR Treine [Fireball]
     train 2136
+    note-enUS Train [Fire Blast]
+    note-ptBR Treine [Fire Blast]
 step
     only Hunter
     goto 1411 @-4227.66,-635.2
     note-enUS Talk to Jen'shan
     note-ptBR Fale com Jen'shan
     train 1130
+    note-enUS Train [Hunter's Mark]
+    note-ptBR Treine [Hunter's Mark]
     train 3044
+    note-enUS Train [Arcane Shot]
+    note-ptBR Treine [Arcane Shot]
 step
     only Hunter
     goto 1411 @-4227.66,-635.2
     note-enUS Talk to Jen'shan
     note-ptBR Fale com Jen'shan
     train 3044
+    note-enUS Train [Arcane Shot]
+    note-ptBR Treine [Arcane Shot]
 step
     only Warrior
     goto 1411 @-4230.31,-639.43
     note-enUS Talk to Frang
     note-ptBR Fale com Frang
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
     train 6343
+    note-enUS Train [Thunder Clap]
+    note-ptBR Treine [Thunder Clap]
 step
     only Warrior
     goto 1411 @-4230.31,-639.43
     note-enUS Talk to Frang
     note-ptBR Fale com Frang
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
 step
     only Rogue
     path seq 1411 @-4190.12,-603.12 @-4157.87,-601.36 |only Rogue
     goto 1411 @-4144.65,-588.67 12 |only Rogue
     goto 1411 @-4144.65,-588.67
+    note-enUS Travel toward Rwag |only Rogue
+    note-ptBR Vá em direção a Rwag |only Rogue
     note-enUS Talk to Rwag
     note-ptBR Fale com Rwag
     train 1757
+    note-enUS Train [Sinister Strike]
+    note-ptBR Treine [Sinister Strike]
     train 1776
+    note-enUS Train [Gouge]
+    note-ptBR Treine [Gouge]
 step
     only Rogue
     goto 1411 @-4144.65,-588.67
     note-enUS Talk to Rwag
     note-ptBR Fale com Rwag
     train 1757
+    note-enUS Train [Sinister Strike]
+    note-ptBR Treine [Sinister Strike]
 step
     only Warlock
     path seq 1411 @-4190.12,-603.12 @-4157.87,-601.36 @-4143.06,-594.31 @-4120.86,-589.72 |only Warlock
     goto 1411 @-4107.11,-604.18 12 |only Warlock
     goto 1411 @-4107.11,-604.18
+    note-enUS Travel toward Hraug |only Warlock
+    note-ptBR Vá em direção a Hraug |only Warlock
     note-enUS Talk to Hraug
     note-ptBR Fale com Hraug
     note-enUS Buy the [Grimoire of Blood Pact] from him
     note-ptBR Compre o [Grimoire of Blood Pact] dele
     collect 16321 1 |quest 817 |q 817/1
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     train 6307
 step
     only Warlock
@@ -655,18 +791,28 @@ step
     note-enUS Talk to Nartok
     note-ptBR Fale com Nartok
     train 695
+    note-enUS Train [Shadow Bolt]
+    note-ptBR Treine [Shadow Bolt]
     train 1454
+    note-enUS Train [Life Tap]
+    note-ptBR Treine [Life Tap]
 step
     only Warlock
     goto 1411 @-4111.87,-607
     note-enUS Talk to Nartok
     note-ptBR Fale com Nartok
     train 695
+    note-enUS Train [Shadow Bolt]
+    note-ptBR Treine [Shadow Bolt]
 step
     only Shaman
     path seq 1411 @-4255.16,-645.07 @-4245.64,-691.95 @-4146.77,-787.12 @-4120.86,-813.21 @-4220.79,-841.76 @-4266.26,-853.39 |only Shaman
     goto 1411 @-4295.87,-883.36 25 |only Shaman
     goto 1411 @-4290.59,-878.07
+    note-enUS Travel toward the Shaman Shrine |only Shaman
+    note-ptBR Vá em direção a Shaman Shrine |only Shaman
+    note-enUS Use the [Earth Sapta] |only Shaman
+    note-ptBR Use o [Earth Sapta] |only Shaman
     use 6635 |only Shaman |opt
     note-enUS Talk to the Manifestation
     note-ptBR Fale com a Manifestation
@@ -684,10 +830,14 @@ step
     note-enUS Talk to Shikrik
     note-ptBR Fale com Shikrik
     train 332
+    note-enUS Train [Healing Wave]
+    note-ptBR Treine [Healing Wave]
 step
     ifonquest 805
     path seq 1411 @-4452.38,-631.32 @-4554.43,-628.5
     goto 1411 @-4600.96,-603.82 25
+    note-enUS Exit the Valley of Trials
+    note-ptBR Saia do Valley of Trials
 ]==])
 
 register([==[
@@ -715,6 +865,8 @@ step
     accept 2161
 step
     path closest 1411 @-4828.32,-777.61 @-4822.51,-881.59 @-4845.24,-829.42 @-4828.32,-777.61
+    note-enUS Travel to Sen'Jin Village
+    note-ptBR Vá até Sen'Jin Village
     note-enUS Talk to Lar
     note-ptBR Fale com Lar
     note-enUS He patrols a little
@@ -742,11 +894,15 @@ step
     only !Rogue !Warrior
     path seq 1411 @-4931.96,-815.32 @-4939.89,-793.12
     goto 1411 @-4960,-791.3
+    note-enUS Enter the big hut
+    note-ptBR Entre na cabana grande
     note-enUS Talk to Pa'zula
     note-ptBR Fale com Pa'zula
     note-enUS This will unlock a quest. Skip this step if you already have 2 professions
     note-ptBR Isto desbloqueará uma missão. Pule esta etapa se já tiver 2 profissões
     train 7411
+    note-enUS Train [Enchanting]
+    note-ptBR Treine [Enchanting]
 step
     only !Rogue !Warrior
     goto 1411 @-4960,-791.3
@@ -781,6 +937,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Walking Stick] (4s 79c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Walking Stick] (4s 79c). Você volta depois se ainda não tiver o suficiente
 step
     only Shaman
     goto 1411 @-4948.35,-769.15
@@ -793,6 +951,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Stiletto] (3s 81c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Stiletto] (3s 81c). Você volta depois se ainda não tiver o suficiente
 step
     only Rogue
     goto 1411 @-4948.35,-769.15
@@ -805,6 +965,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Large Axe] (4s 60c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Large Axe] (4s 60c). Você volta depois se ainda não tiver o suficiente
 step
     only Orc Warrior
     goto 1411 @-4948.35,-769.15
@@ -817,6 +979,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Tomahawk] (5s 13c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Tomahawk] (5s 13c). Você volta depois se ainda não tiver o suficiente
 step
     only Troll Warrior
     goto 1411 @-4948.35,-769.15
@@ -829,6 +993,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Hornwood Recurve Bow] (2s 71c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Hornwood Recurve Bow] (2s 71c). Você volta depois se ainda não tiver o suficiente
 step
     only Hunter
     goto 1411 @-4948.35,-769.15
@@ -859,7 +1025,11 @@ step
     note-enUS Talk to Un'Thuwa
     note-ptBR Fale com Un'Thuwa
     train 143
+    note-enUS Train [Fireball]
+    note-ptBR Treine [Fireball]
     train 2136
+    note-enUS Train [Fire Blast]
+    note-ptBR Treine [Fire Blast]
 step
     ifonquest 818
     path seq 1411 @-5057.8,-866.79 @-5014.97,-937.99 @-4908.69,-998.27 @-4829.91,-1091.33
@@ -872,12 +1042,16 @@ step
     note-ptBR Desça pela praia. Mate Crawlers e Makruras. Saqueie-os para obter Mucus e Eyes. Não precisa terminar este passo aqui.
     objective 818/2 |opt
     objective 818/1 |opt
+    note-enUS Reach the end of the beach
+    note-ptBR Chegue ao fim da praia
 step
     ifonquest 786
     goto 1411 @-4653.84,-983.47 30
     note-enUS Kill Kolkar Drudges and Kolkar Outrunners. Loot them for their Canvas Scraps
     note-ptBR Mate Kolkar Drudges e Kolkar Outrunners. Saqueie-os para obter Canvas Scraps
     objective 791/1 |opt
+    note-enUS Enter the Kolkar base
+    note-ptBR Entre na base dos Kolkar
 step
     goto 1411 @-4596.2,-1057.14
     note-enUS Start collecting 3 stacks of [Linen Cloth] as you quest throughout Durotar. This will be used to make your wand later |only Priest
@@ -936,6 +1110,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Walking Stick] (4s 79c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Walking Stick] (4s 79c). Você volta depois se ainda não tiver o suficiente
 step
     only Shaman
     goto 1411 @-4948.35,-769.15
@@ -948,6 +1124,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Stiletto] (3s 81c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Stiletto] (3s 81c). Você volta depois se ainda não tiver o suficiente
 step
     only Rogue
     goto 1411 @-4948.35,-769.15
@@ -960,6 +1138,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Large Axe] (4s 60). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Large Axe] (4s 60). Você volta depois se ainda não tiver o suficiente
 step
     only Orc Warrior
     goto 1411 @-4948.35,-769.15
@@ -972,6 +1152,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Tomahawk] (5s 13c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Tomahawk] (5s 13c). Você volta depois se ainda não tiver o suficiente
 step
     only Troll Warrior
     goto 1411 @-4948.35,-769.15
@@ -984,6 +1166,8 @@ step
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Hornwood Recurve Bow] (2s 71c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Hornwood Recurve Bow] (2s 71c). Você volta depois se ainda não tiver o suficiente
 step
     only Hunter
     goto 1411 @-4948.35,-769.15
@@ -1022,6 +1206,8 @@ step
     note-enUS Buy [Refreshing Spring Water] from her -Refreshing Spring Water (20)
     note-ptBR Compre [Refreshing Spring Water] dela -Refreshing Spring Water (20)
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     collect 159 20 |quest 784 |q 784/1
 step
     only !Warlock !Mage !Priest
@@ -1031,6 +1217,8 @@ step
     note-enUS Buy [Haunch of Meat] from him if you can afford it |only Warrior Rogue
     note-ptBR Compre [Haunch of Meat] dele se tiver dinheiro |only Warrior Rogue
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
 step
     path closest 1411 @-4828.32,-777.61 @-4822.51,-881.59 @-4845.24,-829.42 @-4828.32,-777.61
     note-enUS Talk to Lar
@@ -1060,6 +1248,8 @@ step
 step
     ifonquest 784
     goto 1411 @-4979.2,-232.8
+    note-enUS Travel to Tiragarde Keep
+    note-ptBR Vá até Tiragarde Keep
 step
     goto 1411 @-4992.7,-234.4
     note-enUS Kill Kul Tiras Sailors and Kul Tiras Marines. Loot them for their Canvas Scraps
@@ -1080,6 +1270,8 @@ step
     goto 1411 @-5121.78,-245.68
     note-enUS Be careful if Watch Commander Zalaphil is up, as he is a level 9 rare. You may have to use a [Minor Healing Potion] if you have one
     note-ptBR Cuidado se Watch Commander Zalaphil estiver presente, ele é um raro de nível 9. Talvez você precise usar uma [Minor Healing Potion] se tiver uma
+    note-enUS Move toward the second floor of the keep
+    note-ptBR Vá em direção ao segundo andar do forte
     note-enUS Kill Lieutenant Benedict. Loot him for his Key
     note-ptBR Mate Lieutenant Benedict. Saqueie-o para obter a chave dele
     objective 784/3
@@ -1124,21 +1316,29 @@ step
     ifnotonquest 823
     path closest 1411 @-5083.18,37.37 @-5025.55,126.56 @-5092.7,246.76 @-5027.13,311.62 @-4948.35,276.72 @-4897.06,82.14
     level 7
+    note-enUS Grind to 2520+/4500xp
+    note-ptBR Mate monstros até 2520+/4500xp
 step
     only !Priest !Mage
     ifonquest 823
     path closest 1411 @-5083.18,37.37 @-5025.55,126.56 @-5092.7,246.76 @-5027.13,311.62 @-4948.35,276.72 @-4897.06,82.14
     level 7
+    note-enUS Grind to 2200+/4500xp
+    note-ptBR Mate monstros até 2200+/4500xp
 step
     only Priest
     ifnotonquest 823
     path closest 1411 @-5083.18,37.37 @-5025.55,126.56 @-5092.7,246.76 @-5027.13,311.62 @-4948.35,276.72 @-4897.06,82.14
     level 7
+    note-enUS Grind to 2070+/4500xp
+    note-ptBR Mate monstros até 2070+/4500xp
 step
     only Priest
     ifonquest 823
     path closest 1411 @-5083.18,37.37 @-5025.55,126.56 @-5092.7,246.76 @-5027.13,311.62 @-4948.35,276.72 @-4897.06,82.14
     level 7
+    note-enUS Grind to 1750+/4500xp
+    note-ptBR Mate monstros até 1750+/4500xp
 step
     ifonquest 96652
     goto 1411 @-4713,140.6
@@ -1166,6 +1366,8 @@ step
 step
     path seq 1411 @-4724.69,287.3 @-4709.36,274.96
     goto 1411 @-4663.88,310.56
+    note-enUS Travel to Razor Hill
+    note-ptBR Vá até Razor Hill
     note-enUS Talk to Orgnil, Gar'Thok and Torka
     note-ptBR Fale com Orgnil, Gar'Thok e Torka
     turnin 823
@@ -1182,10 +1384,16 @@ step
     note-enUS Talk to Torka
     note-ptBR Fale com Torka
     train 2550
+    note-enUS Train Cooking
+    note-ptBR Treine Cooking
     turnin 96655
 step
     path seq 1411 @-4617.88,290.47 @-4611.01,293.64 @-4616.82,317.26 @-4604.13,364.49 @-4588.8,383.53 @-4593.03,384.94 @-4594.09,389.87 @-4589.86,390.93 @-4589.33,387.76 @-4594.62,386.35 @-4595.15,399.74 @-4585.1,396.92
     goto 1411 @-4600.43,384.59
+    note-enUS Travel toward the tower
+    note-ptBR Vá em direção à torre
+    note-enUS Travel up the tower toward Furl
+    note-ptBR Suba a torre em direção a Furl
     note-enUS Talk to Furl
     note-ptBR Fale com Furl
     turnin 791
@@ -1195,6 +1403,8 @@ step
     note-enUS Talk to Krunn
     note-ptBR Fale com Krunn
     train 2575
+    note-enUS Train [Mining]
+    note-ptBR Treine [Mining]
     note-enUS This will allow you to find [Rough Stones] from nodes in order to craft [Sharpening Stones] (+2 Weapon Damage for 30 minutes)
     note-ptBR Isto permitirá obter [Rough Stones] dos veios para criar [Sharpening Stones] (+2 de dano da arma por 30 minutos)
 step
@@ -1212,12 +1422,16 @@ step
     note-enUS Talk to Dwukk
     note-ptBR Fale com Dwukk
     train 2018
+    note-enUS Train [Blacksmithing]
+    note-ptBR Treine [Blacksmithing]
 step
     only Shaman
     goto 1411 @-4713.06,382.12
     note-enUS Talk to Uhgar
     note-ptBR Fale com Uhgar
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Walking Stick] (4s 79c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Walking Stick] (4s 79c). Você volta depois se ainda não tiver o suficiente
 step
     only Shaman
     goto 1411 @-4713.06,382.12
@@ -1230,6 +1444,8 @@ step
     note-enUS Talk to Uhgar
     note-ptBR Fale com Uhgar
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Stiletto] (3s 81c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Stiletto] (3s 81c). Você volta depois se ainda não tiver o suficiente
 step
     only Rogue
     goto 1411 @-4713.06,382.12
@@ -1242,6 +1458,8 @@ step
     note-enUS Talk to Uhgar
     note-ptBR Fale com Uhgar
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Large Axe] (4s 60c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Large Axe] (4s 60c). Você volta depois se ainda não tiver o suficiente
 step
     only Orc Warrior
     goto 1411 @-4713.06,382.12
@@ -1254,6 +1472,8 @@ step
     note-enUS Talk to Uhgar
     note-ptBR Fale com Uhgar
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Tomahawk] (5s 13c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Tomahawk] (5s 13c). Você volta depois se ainda não tiver o suficiente
 step
     only Troll Warrior
     goto 1411 @-4713.06,382.12
@@ -1281,6 +1501,8 @@ step
     note-enUS Talk to Ghrawt
     note-ptBR Fale com Ghrawt
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Hornwood Recurve Bow] (2s 83c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Hornwood Recurve Bow] (2s 83c). Você volta depois se ainda não tiver o suficiente
 step
     only Hunter
     goto 1411 @-4763.29,361.67
@@ -1301,6 +1523,8 @@ step
     note-enUS Talk to Innkeeper Grosk
     note-ptBR Fale com Innkeeper Grosk
     home
+    note-enUS Set your Hearthstone to Razor Hill
+    note-ptBR Defina sua pedra de regresso em Razor Hill
 step
     goto 1411 @-4686.09,340.52
     note-enUS Talk to Innkeeper Grosk
@@ -1314,6 +1538,8 @@ step
     note-enUS Save 2 silver for your class spells! |only Priest
     note-ptBR Guarde 2 pratas para os feitiços da sua classe! |only Priest
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     turnin 2161
     train 6760 |only Rogue
     train 139 |only Priest
@@ -1330,6 +1556,8 @@ step
     note-enUS Buy [Haunch of Meat] from him |only Rogue Warrior
     note-ptBR Compre [Haunch of Meat] dele |only Rogue Warrior
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     turnin 2161
     train 6760 |only Rogue
     train 139 |only Priest
@@ -1347,18 +1575,24 @@ step
     note-enUS Talk to Tarshaw
     note-ptBR Fale com Tarshaw
     train 284
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1411 @-4839.96,307.04
     note-enUS Talk to Swart
     note-ptBR Fale com Swart
     train 8044
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1411 @-4837.31,356.03
     note-enUS Talk to Dhugru
     note-ptBR Fale com Dhugru
     train 1120
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1411 @-4854.76,345.81
@@ -1374,12 +1608,16 @@ step
     note-enUS Talk to Thotar inside
     note-ptBR Fale com Thotar lá dentro
     train 5116
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1411 @-4710.94,268.26
     note-enUS Talk to Kaplak
     note-ptBR Fale com Kaplak
     train 6760
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1411 @-4831.5,295.05
@@ -1388,6 +1626,8 @@ step
     turnin 5649
     accept 5648
     train 2052
+    note-enUS Train [Lesser Heal Rank 2]
+    note-ptBR Treine [Lesser Heal Rank 2]
 step
     only Priest
     goto 1411 @-4770.16,170.62
@@ -1401,12 +1641,16 @@ step
     note-ptBR Fale com Tai'jin
     turnin 5648
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue Warrior
     goto 1411 @-4826.74,330.3
     note-enUS Talk to Rawrk
     note-ptBR Fale com Rawrk
     train 3273
+    note-enUS Train [First Aid]
+    note-ptBR Treine [First Aid]
 step
     goto 1411 @-4838.37,321.49
     note-enUS Talk to Jark
@@ -1428,6 +1672,8 @@ step
 step
     path seq 1411 @-5510.41,-634.14
     goto 1411 @-5599.5,-716.7
+    note-enUS Swim to the Island
+    note-ptBR Nade até a ilha
     note-enUS Loot the Taillasher Eggs on the ground
     note-ptBR Saqueie os Taillasher Eggs no chão
     note-enUS They're usually guarded by a Bloodtalon Taillasher
@@ -1448,6 +1694,8 @@ step
 step
     ifonquest 826
     goto 1411 @-5501.95,-1167.12 150
+    note-enUS Swim to the main island
+    note-ptBR Nade até a ilha principal
 step
     goto 1411 @-5526.27,-1286.62
     note-enUS Kill Hexed Trolls and Voodoo Trolls. Loot them for Hexed Pendants
@@ -1544,11 +1792,15 @@ step
     ifonquest 808
     path seq 1411 @-5002.81,-774.08
     goto 1411 @-4948.88,-768.79
+    note-enUS Die and respawn at the Spirit Healer, or run back
+    note-ptBR Morra e renasça no Spirit Healer, ou corra de volta
     note-enUS Talk to Trayexir
     note-ptBR Fale com Trayexir
     note-enUS Jump into the hut
     note-ptBR Pule para dentro da cabana
     vendor
+    note-enUS Vendor trash and repair
+    note-ptBR Venda o lixo e repare
 step
     ifcomplete 96873
     goto 1411 @-4960.1,-791.4
@@ -1561,6 +1813,8 @@ step
     note-enUS Talk to Un'Thuwa
     note-ptBR Fale com Un'Thuwa
     train 118
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path seq 1411 @-4920.86,-825.9 @-4920.86,-813.91
     goto 1411 @-4920.86,-797.7
@@ -1609,6 +1863,8 @@ step
     only Hunter
     path closest 1411 @-4475.12,92.72 @-4401.09,205.52 @-4270.49,260.51 @-4166.33,233.01 @-4130.37,182.25 @-4208.1,98.71 @-4300.1,57.11 @-4456.61,65.57
     level 9
+    note-enUS Grind to 4470+/6500xp
+    note-ptBR Mate monstros até 4470+/6500xp
 step
     only Hunter
     path seq 1411 @-4665.47,311.62
@@ -1628,6 +1884,8 @@ step
     note-ptBR Fale com Thotar lá dentro
     accept 6062
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1411 @-4724.9,287.3
@@ -1651,6 +1909,8 @@ step
     ifonquest 6062
     path closest 1411 @-4693.49,-183.64 @-4699.31,101.88 @-4696.14,37.73 @-4693.49,-1.4 @-4701.42,-66.26 @-4649.61,-82.83
     use 15917
+    note-enUS Use your [Taming Rod] on a Dire Mottled Boar at max range
+    note-ptBR Use sua [Taming Rod] em um Dire Mottled Boar à distância máxima
     objective 6062/1
 step
     only Hunter
@@ -1680,6 +1940,8 @@ step
     note-enUS Don't kill the Armored Scorpids you see. You'll need them later
     note-ptBR Não mate os Armored Scorpids que encontrar. Você vai precisar deles depois
     use 15919
+    note-enUS Use your [Taming Rod] on a Surf Crawler at max range
+    note-ptBR Use sua [Taming Rod] em um Surf Crawler à distância máxima
     objective 6083/1
 step
     only Hunter
@@ -1729,6 +1991,8 @@ step
     note-enUS Dismiss your Surf Crawler by right clicking its unit frame and clicking dismiss, otherwise you'll be unable to tame an Armored Scorpid |only Hunter
     note-ptBR Dispense seu Surf Crawler clicando com o botão direito no quadro dele e escolhendo dispensar, senão você não conseguirá domesticar um Armored Scorpid |only Hunter
     use 15920
+    note-enUS Use your [Taming Rod] on an Armored Scorpid at max range
+    note-ptBR Use sua [Taming Rod] em um Armored Scorpid à distância máxima
     objective 6082/1
 step
     only Hunter
@@ -1752,6 +2016,8 @@ step
     note-enUS Buy [Tough Jerky] from him. You will use this to feed your pet later
     note-ptBR Compre [Tough Jerky] dele. Você vai usar isso para alimentar seu mascote depois
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 117 5 |quest 828 |q 828/1
 step
     only Hunter
@@ -1767,6 +2033,8 @@ step
     accept 816
 step
     goto 1411 @-4414.31,999.7 50
+    note-enUS Travel to Rezlak
+    note-ptBR Vá até Rezlak
     note-enUS Talk to Rezlak
     note-ptBR Fale com Rezlak
     accept 834
@@ -1787,6 +2055,10 @@ step
     goto 1411 @-4165.27,903.11 20 |only !Hunter !Warlock
     goto 1411 @-4165.27,903.11 20 |only Warlock
     goto 1411 @-4190.12,868.22
+    note-enUS Jump into Thunder Ridge |only !Hunter !Warlock
+    note-ptBR Pule em Thunder Ridge |only !Hunter !Warlock
+    note-enUS Dismiss your [Imp] by right clicking its unit frame and clicking dismiss |only Warlock
+    note-ptBR Dispense seu [Imp] clicando com o botão direito no quadro de unidade dele e em dispensar |only Warlock
     note-enUS Kill Fizzle Darkstorm and loot him for his Claw
     note-ptBR Mate Fizzle Darkstorm e saqueie-o para obter a garra dele
     note-enUS Be careful. Kill the patrolling Burning Blade Fanatic and the Lightning Hides in the back before you pull him
@@ -1812,10 +2084,14 @@ step
     only Hunter Shaman
     ifcomplete 806
     goto 1411 @-4449.74,1188.64
+    note-enUS Die and respawn at the Spirit Healer
+    note-ptBR Morra e renasça no Spirit Healer
 step
     only Hunter Shaman
     ifcomplete 806
     goto 1411 @-4035.2,679.63 60
+    note-enUS Fight your way out of Thunder Ridge
+    note-ptBR Abra caminho lutando para sair de Thunder Ridge
 step
     only Hunter Shaman
     goto 1411 @-4158.93,1153.04
@@ -1828,6 +2104,8 @@ step
     only Shaman
     path closest 1411 @-4265.73,1276.76 @-4297.46,1131.89 @-4295.87,1208.38 @-4265.73,1276.76
     level 9
+    note-enUS Grind to 2520+/6500 into level 9
+    note-ptBR Mate monstros até 2520+/6500 rumo ao nível 9
 step
     only Shaman
     path closest 1411 @-4265.73,1276.76 @-4297.46,1131.89 @-4295.87,1208.38 @-4265.73,1276.76
@@ -1839,6 +2117,8 @@ step
     path seq 1454 @-4460.6,1584.3
     goto 1454 @-4460,1598.6
     zone 1454 |only Hunter Shaman |opt
+    note-enUS Enter Orgrimmar |only Hunter Shaman
+    note-ptBR Entre em Orgrimmar |only Hunter Shaman
     note-enUS Talk to Thatog
     note-ptBR Fale com Thatog
     note-enUS He is upstairs in the building
@@ -1868,6 +2148,8 @@ step
     only Hunter Shaman
     path closest 1454 @-4560,1908.5 @-4587,1918.3 @-4608,1897.4 @-4632.3,1911.6 |only Hunter Shaman
     path closest 1454 @-4653.9,1950.3 @-4677.7,1971.6 @-4667.4,1997 @-4609.8,2013.5 @-4630.6,1968.1
+    note-enUS Travel to the Valley of Honor |only Hunter Shaman
+    note-ptBR Vá até Valley of Honor |only Hunter Shaman
     note-enUS Loot the Handful of Cattails and Speargrass Cuttings in the water
     note-ptBR Saqueie o Handful of Cattails e as Speargrass Cuttings na água
     objective 97242/1
@@ -1884,6 +2166,8 @@ step
     note-enUS Talk to Xao'tsu
     note-ptBR Fale com Xao'tsu
     train 24547
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Hunter
     goto 1454 @-4819.1,2099.05
@@ -1973,14 +2257,24 @@ step
     note-enUS Abandon Need for a Cure. This will remove the timer on the quest but you will still be able to do it |only Hunter Shaman
     note-ptBR Abandone Need for a Cure. Isso remove o cronômetro da missão, mas você ainda poderá fazê-la |only Hunter Shaman
     abandon 812 |only Hunter Shaman |opt
+    note-enUS Abandon Need for a Cure |only Hunter Shaman
+    note-ptBR Abandone Need for a Cure |only Hunter Shaman
     level 9
+    note-enUS Grind to 3150+/6500 into level 9
+    note-ptBR Mate monstros até 3150+/6500 rumo ao nível 9
 step
     goto 1411 @-4686.09,340.52
     hearth |opt
+    note-enUS Hearth to Razor Hill
+    note-ptBR Use a pedra de regresso para Razor Hill
     use 6948 |opt
+    note-enUS Travel to Razor Hill
+    note-ptBR Vá até Razor Hill
     note-enUS Talk to Innkeeper Grosk
     note-ptBR Fale com Innkeeper Grosk
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     note-enUS Buy [Ice Cold Milk] from him |only Mage Warlock Priest Shaman
     note-ptBR Compre [Ice Cold Milk] dele |only Mage Warlock Priest Shaman
     note-enUS Buy [Haunch of Meat] from him |only Rogue Warrior
@@ -2013,6 +2307,8 @@ step
     note-enUS Talk to Tarshaw
     note-ptBR Fale com Tarshaw
     train 6546
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     ifnotonquest 1522
@@ -2020,6 +2316,8 @@ step
     note-enUS Talk to Swart
     note-ptBR Fale com Swart
     train 8050
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 2983
 step
     only Shaman
@@ -2027,12 +2325,16 @@ step
     note-enUS Talk to Swart
     note-ptBR Fale com Swart
     train 8050
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1411 @-4837.31,356.03
     note-enUS Talk to Dhugru
     note-ptBR Fale com Dhugru
     train 1120
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1411 @-4854.76,345.81
@@ -2048,6 +2350,8 @@ step
     accept 5654 |only Troll
     accept 5660 |only Scourge
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1411 @-4704.07,275.31
@@ -2056,12 +2360,16 @@ step
     note-enUS Talk to Thotar inside
     note-ptBR Fale com Thotar lá dentro
     train 13549
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1411 @-4710.94,268.26
     note-enUS Talk to Kaplak
     note-ptBR Fale com Kaplak
     train 674
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 ]==])
 
 register([==[
@@ -2092,6 +2400,8 @@ step
     only Shaman
     ifonquest 840 2983 1522 2984 1523
     goto 1413 @-3686.1,303.14 40
+    note-enUS Travel to Far Watch Post
+    note-ptBR Vá até Far Watch Post
 step
     only Shaman
     goto 1413 @-3687.11,303.14
@@ -2114,6 +2424,8 @@ step
     note-enUS Kill Dreadmaw Crocolisks on the way. Loot them for Kron's Amulet |only Shaman
     note-ptBR Mate Dreadmaw Crocolisks pelo caminho. Saqueie-os para obter o Kron's Amulet |only Shaman
     objective 816/1 |only Shaman |opt
+    note-enUS Travel the path up the mountain toward Telf |only Shaman
+    note-ptBR Siga o caminho montanha acima em direção a Telf |only Shaman
     note-enUS Be careful to not fall of the mountain, the path is very narrow. You could die if you fall |only Shaman
     note-ptBR Cuidado para não cair da montanha, o caminho é muito estreito. Você pode morrer se cair |only Shaman
     note-enUS Talk to Telf
@@ -2157,6 +2469,8 @@ step
     note-enUS Tame a Venomtail Scorpid |only Hunter
     note-ptBR Dome um Venomtail Scorpid |only Hunter
     train 16828 |only Hunter |opt
+    note-enUS Travel toward Dustwind Cave |only Shaman
+    note-ptBR Vá em direção a Dustwind Cave |only Shaman
     note-enUS Kill Burning Blade Cultists. Loot them for a Reagent Pouch
     note-ptBR Mate Burning Blade Cultists. Saqueie-os para obter uma Reagent Pouch
     objective 1525/2
@@ -2166,6 +2480,8 @@ step
     path seq 1411 @-4939.36,824.51 |only !Shaman !Hunter
     goto 1411 @-4945.18,1101.92 50 |only !Shaman !Hunter
     goto 1411 @-4945.18,1101.92
+    note-enUS Travel to Margoz |only !Shaman !Hunter
+    note-ptBR Vá até Margoz |only !Shaman !Hunter
     note-enUS Talk to Margoz
     note-ptBR Fale com Margoz
     turnin 828
@@ -2175,14 +2491,20 @@ step
     ifturnedin 828
     path closest 1411 @-4949.41,925.67 @-4929.32,823.45 @-4774.39,780.8 |only !Shaman !Hunter
     path closest 1411 @-4774.39,780.8 @-4749.01,822.39 @-4767.52,825.92 @-4772.28,848.12 @-4756.41,863.63 @-4715.7,861.87 @-4749.01,822.39
+    note-enUS Travel toward Dustwind Cave |only !Shaman !Hunter
+    note-ptBR Vá em direção a Dustwind Cave |only !Shaman !Hunter
     note-enUS Kill Burning Blade Orcs. Loot them for their Collars
     note-ptBR Mate Burning Blade Orcs. Saqueie-os para obter as coleiras
     objective 827/1
 step
     path closest 1411 @-4816.69,972.91 @-4818.81,848.48 @-4755.36,952.82 @-4704.07,964.1 @-4818.28,975.38 @-4718.87,1076.19 @-4672.87,1131.89 @-4816.69,972.91
+    note-enUS Drop down into Drygulch Ravine
+    note-ptBR Desça para Drygulch Ravine
     note-enUS Kill Dustwind Savages and Dustwind Storm Witches
     note-ptBR Mate Dustwind Savages e Dustwind Storm Witches
     use 277661
+    note-enUS Loot Dustwind Storm Witches for a [Dull Storm Orb]. Use it to accept the quest
+    note-ptBR Saqueie Dustwind Storm Witches para pegar um [Dull Storm Orb]. Use-o para aceitar a missão
     objective 835/1
     objective 835/2
     collect 277661 1 |quest 97281
@@ -2190,6 +2512,8 @@ step
 step
     path seq 1411 @-4804.53,830.5 @-4698.78,842.48
     goto 1411 @-4414.31,999.7 60
+    note-enUS Travel through the cave toward Rezlak
+    note-ptBR Atravesse a caverna em direção a Rezlak
     note-enUS Talk to Rezlak
     note-ptBR Fale com Rezlak
     turnin 835
@@ -2229,6 +2553,8 @@ step
     ifturnedin 806
     goto 1411 @-4945.18,1101.92 50 |only Shaman Hunter
     goto 1411 @-4945.18,1101.92
+    note-enUS Travel to Margoz |only Shaman Hunter
+    note-ptBR Vá até Margoz |only Shaman Hunter
     note-enUS Talk to Margoz
     note-ptBR Fale com Margoz
     turnin 828
@@ -2238,6 +2564,8 @@ step
     path seq 1411 @-4876.97,1452.31 @-4855.82,1498.84 @-4833.08,1494.96 @-4805.59,1495.67 @-4784.44,1535.85 @-4750.6,1531.62 @-4734.21,1505.54 @-4693.49,1519.64 @-4679.75,1501.31 |only Shaman Hunter
     goto 1411 @-4684.5,1466.06 15 |only Shaman Hunter
     goto 1411 @-4701.42,1455.83
+    note-enUS Travel toward Skull Rock |only Shaman Hunter
+    note-ptBR Vá em direção a Skull Rock |only Shaman Hunter
     note-enUS Kill Venomtail Scorpids. Loot them for their Poison Sacs |only Shaman Hunter
     note-ptBR Mate Venomtail Scorpids. Saqueie-os para obter as bolsas de veneno |only Shaman Hunter
     objective 813/1 |only Shaman Hunter |opt
@@ -2283,9 +2611,13 @@ step
     path seq 1454 @-4367.46,1405.44
     goto 1454 @-4355.53,1520.68
     zone 1454 |opt
+    note-enUS Enter Orgrimmar
+    note-ptBR Entre em Orgrimmar
     note-enUS Talk to Trak'gen
     note-ptBR Fale com Trak'gen
     vendor
+    note-enUS Vendor your trash
+    note-ptBR Venda seu lixo
 step
     only Rogue
     goto 1454 @-4355.53,1520.68
@@ -2293,6 +2625,8 @@ step
     note-ptBR Fale com Trak'gen. Compre [Sharp Throwing Axe] dele
     collect 3135 1 |quest 354 |q 354/1
     vendor
+    note-enUS Vendor your trash
+    note-ptBR Venda seu lixo
 step
     only Troll Priest
     ifonquest 5654
@@ -2304,6 +2638,8 @@ step
     note-ptBR Fale com Ur'kyo
     turnin 5654
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Troll Priest
     goto 1454 @-4179.79,1452.58
@@ -2311,6 +2647,8 @@ step
     note-ptBR Fale com Ur'kyo
     turnin 5652
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path seq 1454 @-4460,1598.6
     goto 1454 @-4460.6,1584.3 10
@@ -2347,6 +2685,8 @@ step
     accept 97242
 step
     path closest 1454 @-4560,1908.5 @-4587,1918.3 @-4608,1897.4 @-4632.3,1911.6 @-4653.9,1950.3 @-4677.7,1971.6 @-4667.4,1997 @-4609.8,2013.5 @-4630.6,1968.1
+    note-enUS Travel to the Valley of Honor
+    note-ptBR Vá até Valley of Honor
     note-enUS Loot the Handful of Cattails and Speargrass Cuttings in the water
     note-ptBR Saqueie o Handful of Cattails e as Speargrass Cuttings na água
     objective 97242/1
@@ -2357,12 +2697,16 @@ step
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 14281
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4611.09,2135.15
     note-enUS Talk to Xao'tsu
     note-ptBR Fale com Xao'tsu
     train 24556
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     goto 1454 @-4466.9,1954.5
     note-enUS Talk to Kor'geld
@@ -2433,12 +2777,16 @@ step
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 8050
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 829
     goto 1454 @-4320.7,1750.3
     note-enUS Talk to Kareth
     note-ptBR Fale com Kareth
     vendor
+    note-enUS Repair your gear
+    note-ptBR Repare seu equipamento
 step
     only Rogue
     goto 1454 @-4280.21,1773.15
@@ -2457,6 +2805,8 @@ step
     note-enUS Talk to Mirket
     note-ptBR Fale com Mirket
     train 1120
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman Hunter
     ifturnedin 827
@@ -2478,7 +2828,11 @@ step
     only Shaman Hunter
     goto 1411 @-4158.93,1153.04
     zone 1411 |only !Shaman !Hunter |opt
+    note-enUS Leave Orgrimmar |only !Shaman !Hunter
+    note-ptBR Saia de Orgrimmar |only !Shaman !Hunter
     zone 1411 |only Shaman Hunter |opt
+    note-enUS Leave Orgrimmar |only Shaman Hunter
+    note-ptBR Saia de Orgrimmar |only Shaman Hunter
     note-enUS Talk to Rhinag
     note-ptBR Fale com Rhinag
     accept 812
@@ -2504,6 +2858,8 @@ step
 step
     only Shaman Hunter
     goto 1413 @-3686.1,303.14 40
+    note-enUS Travel to Far Watch Post
+    note-ptBR Vá até Far Watch Post
 step
     only Hunter
     goto 1413 @-3687.11,303.14
@@ -2529,11 +2885,17 @@ step
 step
     only Rogue Mage Priest Warlock Warrior
     goto 1411 @-4648.55,1321.88 40
+    note-enUS Go up the Zeppelin Tower
+    note-ptBR Suba a torre do Zepelim
     zone 1420
+    note-enUS Take the Zeppelin to Tirisfal Glades
+    note-ptBR Pegue o zepelim para Tirisfal Glades
     note-enUS Conjure water while waiting |only Mage
     note-ptBR Conjure água enquanto espera |only Mage
 step
     abandon 816
+    note-enUS Abandon Lost But Not Forgotten
+    note-ptBR Abandone Lost But Not Forgotten
 ]==])
 
 register([==[
@@ -2558,6 +2920,8 @@ register([==[
 step
     path seq 1420 @253.4,2234.85
     goto 1420 @254.6,2225.8
+    note-enUS Travel to Brill
+    note-ptBR Vá até Brill
     note-enUS Talk to Deathguard Terrence
     note-ptBR Fale com Deathguard Terrence
     accept 96895
@@ -2565,10 +2929,14 @@ step
     only Warrior
     ifonquest 1505
     abandon 1505
+    note-enUS Abandon Veteran Uzzek
+    note-ptBR Abandone Veteran Uzzek
 step
     only Warrior
     ifonquest 1498
     abandon 1498
+    note-enUS Abandon Path of Defense
+    note-ptBR Abandone Path of Defense
 step
     only Warrior
     ifnotturnedin 1498
@@ -2629,30 +2997,40 @@ step
     note-enUS Talk to Beryl on the second floor
     note-ptBR Fale com Beryl no segundo andar
     train 588
+    note-enUS Train [Inner Fire]
+    note-ptBR Treine [Inner Fire]
 step
     only Mage
     goto 1420 @233.06,2256.84
     note-enUS Talk to Cain on the second floor
     note-ptBR Fale com Cain no segundo andar
     train 145
+    note-enUS Train [Fireball Rank 3]
+    note-ptBR Treine [Fireball Rank 3]
 step
     only Warrior
     goto 1420 @238.49,2255.03
     note-enUS Talk to Austil
     note-ptBR Fale com Austil
     train 7384
+    note-enUS Train [Overpower]
+    note-ptBR Treine [Overpower]
 step
     only Rogue
     goto 1420 @243.01,2271
     note-enUS Talk to Marion on the second floor
     note-ptBR Fale com Marion no segundo andar
     train 1766
+    note-enUS Train [Kick]
+    note-ptBR Treine [Kick]
 step
     only Warlock
     goto 1420 @250.24,2259.25
     note-enUS Talk to Rupert
     note-ptBR Fale com Rupert
     train 755
+    note-enUS Train [Health Funnel]
+    note-ptBR Treine [Health Funnel]
 step
     only !Mage
     goto 1420 @244.81,2269.19
@@ -2665,6 +3043,8 @@ step
     note-enUS Buy [Ice Cold Milk] and [Red-speckled Mushroom] from her |only Warlock Hunter
     note-ptBR Compre [Ice Cold Milk] e [Red-speckled Mushroom] dela |only Warlock Hunter
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 1179 20 |quest 96897 |q 96897/1 |only Mage Priest Shaman
     collect 4605 20 |quest 96897 |q 96897/1 |only Rogue Warrior
     collect 1179 15 |quest 96897 |q 96897/1 |only Warlock Hunter
@@ -2717,9 +3097,15 @@ step
     path seq 1458 @239.14,1749.54 @255.64,1724.7 @240.68,1706.97 @241.06,1660.12 @257.08,1623.38 @244.51,1598.73
     goto 1458 @266.39,1567.11
     zone 1458 |opt
+    note-enUS Enter Undercity
+    note-ptBR Entre em Undercity
+    note-enUS Take the lift down to the Undercity
+    note-ptBR Pegue o elevador descendo até Undercity
     note-enUS Talk to Michael
     note-ptBR Fale com Michael
     fp
+    note-enUS Get the Undercity flight path
+    note-ptBR Pegue o ponto de voo de Undercity
 step
     only Scourge Rogue
     ifonquest 1885
@@ -2734,6 +3120,8 @@ step
     note-enUS Talk to Archibald in the War Quarter
     note-ptBR Fale com Archibald no War Quarter
     train 201
+    note-enUS Train 1h Swords
+    note-ptBR Treine 1h Swords
 step
     only Troll Warrior Scourge Warrior Tauren Shaman Troll Shaman Orc Shaman
     goto 1458 @308.89,1667.8
@@ -2761,6 +3149,8 @@ step
     goto 1458 @663.19,1600.46 35
     goto 1420 @724.25,1682.66 50
     zone 1420
+    note-enUS Leave Undercity through the Sewers
+    note-ptBR Saia de Undercity pelos Sewers
 step
     only Warlock
     ifnotturnedin 1504
@@ -2779,6 +3169,8 @@ step
     goto 1458 @435.05,1598.86 10 |only Warlock
     goto 1458 @57.05,1711.77
     zone 1458 |only Warlock |opt
+    note-enUS Travel back into the Undercity through the sewers |only Warlock
+    note-ptBR Volte para Undercity pelos sewers |only Warlock
     note-enUS Talk to Carendin in the Magic Quarter
     note-ptBR Fale com Carendin no Magic Quarter
     turnin 1473
@@ -2788,6 +3180,8 @@ step
     ifnotturnedin 1504
     goto 1458 @41.99,1704.48 |only Warlock
     goto 1458 @41.99,1704.48
+    note-enUS Use the [Runes of Summoning] at the Summoning Circle |only Warlock
+    note-ptBR Use as [Runes of Summoning] no Summoning Circle |only Warlock
     use 6284 |only Warlock |opt
     note-enUS Kill the Summoned Voidwalker
     note-ptBR Mate o Summoned Voidwalker
@@ -2806,12 +3200,16 @@ step
     note-enUS Talk to Lavinia
     note-ptBR Fale com Lavinia
     train 7411
+    note-enUS Train [Enchanting]
+    note-ptBR Treine [Enchanting]
 step
     only Priest
     goto 1458 @194.24,1681.5
     note-enUS Talk to Josef
     note-ptBR Fale com Josef
     train 3908
+    note-enUS Train [Tailoring]
+    note-ptBR Treine [Tailoring]
 step
     only Priest
     goto 1458 @194.34,1681.63
@@ -2824,6 +3222,8 @@ step
     note-enUS Talk to Josef
     note-ptBR Fale com Josef
     train 7623
+    note-enUS Train [Brown Linen Robe]
+    note-ptBR Treine [Brown Linen Robe]
 step
     only Priest
     goto 1458 @196.16,1684.83
@@ -2854,6 +3254,8 @@ step
     note-enUS Talk to Malcomb
     note-ptBR Fale com Malcomb
     train 14293
+    note-enUS Train [Lesser Magic Wand]
+    note-ptBR Treine [Lesser Magic Wand]
 step
     only Priest
     note-enUS Create a [Lesser Magic Wand]
@@ -2870,45 +3272,67 @@ step
     note-enUS Talk to Carolyn
     note-ptBR Fale com Carolyn
     train 1766
+    note-enUS Train [Kick]
+    note-ptBR Treine [Kick]
 step
     only Mage
     goto 1458 @56.38,1813.81
     note-enUS Talk to Anastasia
     note-ptBR Fale com Anastasia
     train 145
+    note-enUS Train [Fireball Rank 3]
+    note-ptBR Treine [Fireball Rank 3]
 step
     only Warlock
     goto 1458 @20.02,1776.42
     note-enUS Talk to Richard
     note-ptBR Fale com Richard
     train 755
+    note-enUS Train [Health Funnel]
+    note-ptBR Treine [Health Funnel]
 step
     only Priest
     goto 1458 @416.91,1757.03
     note-enUS Talk to Lazarus
     note-ptBR Fale com Lazarus
     train 588
+    note-enUS Train [Inner Fire]
+    note-ptBR Treine [Inner Fire]
 step
     only Warrior
     goto 1458 @418.35,1767.02
     note-enUS Talk to Baltus Fowler
     note-ptBR Fale com Baltus Fowler
     train 7384
+    note-enUS Train [Overpower]
+    note-ptBR Treine [Overpower]
 step
     abandon 806
+    note-enUS Abandon Dark Storms
+    note-ptBR Abandone Dark Storms
 step
     abandon 408
+    note-enUS Abandon The Family Crypt
+    note-ptBR Abandone The Family Crypt
 step
     only Warrior
     abandon 1821
+    note-enUS Abandon Agamand Heirlooms
+    note-ptBR Abandone Agamand Heirlooms
 step
     abandon 375
+    note-enUS Abandon The Chill of Death
+    note-ptBR Abandone The Chill of Death
 step
     path seq 1458 @419.89,1627.54 @428.52,1597.2 @439.17,1626.06 @476.78,1632.15 @482.34,1660.63 @539.33,1665.49 @610.42,1684.44
     goto 1458 @663.19,1600.46 35
     goto 1420 @724.25,1682.66 50
     zone 1420
+    note-enUS Leave Undercity through the Sewers
+    note-ptBR Saia de Undercity pelos Sewers
 step
     goto 1420 @629.36,1553.42
     zone 1421
+    note-enUS Travel to Silverpine Forest
+    note-ptBR Vá até Silverpine Forest
 ]==])

@@ -51,6 +51,8 @@ step
 step
     only Shaman
     level 2
+    note-enUS Grind to 480+/900xp to reach level 3 after turn ins for the totem quest.
+    note-ptBR Mate monstros até 480+/900xp para chegar ao nível 3 depois das entregas da missão do totem.
 step
     goto 2521 43.44,24.78
     note-enUS Talk to Elatrell Featherlight.
@@ -61,6 +63,8 @@ step
     goto 2521 43.66,24.13
     note-enUS Talk to Blademaster Ren.
     train 6673
+    note-enUS Train [Battle Shout]
+    note-ptBR Treine [Battle Shout]
     train 5242
 step
     path seq 2521 43.53,24.34 43.83,24.13 43.78,24.38 43.66,24.25 43.75,24.09 43.84,24.3 43.66,24.23 43.83,24.18 43.83,24.32
@@ -108,6 +112,8 @@ step
     note-enUS Talk to Xyton Silverwind.
     note-ptBR Fale com Xyton Silverwind.
     train 1126
+    note-enUS Train [Mark of the Wild]
+    note-ptBR Treine [Mark of the Wild]
 step
     only Mage
     goto 2521 41.55,23.67
@@ -118,6 +124,8 @@ step
     goto 2521 41.55,23.67
     note-enUS Talk to Dorii Brightwhisper.
     train 1459
+    note-enUS Train [Arcane Intellect]
+    note-ptBR Treine [Arcane Intellect]
 step
     only Shaman
     goto 2521 42.79,23.57
@@ -130,6 +138,8 @@ step
     goto 2521 42.79,23.57
     note-enUS Talk to Windshaper Boro.
     train 8017
+    note-enUS Train [Rockbiter]
+    note-ptBR Treine [Rockbiter]
 step
     only Hunter
     goto 2521 42.47,23.73
@@ -152,6 +162,8 @@ step
     note-enUS Buy [Rough Arrows] from her |only Hunter
     note-ptBR Compre [Rough Arrows] dela |only Hunter
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     collect 159 20 |only !Hunter !Shaman
     collect 2512 1000 |only Hunter
 step
@@ -169,7 +181,11 @@ step
     objective 93552/1 |only Horde |opt
     note-enUS Talk to Dalia the Collector.
     collect 2131 1
+    note-enUS Buy a [Shortsword]
+    note-ptBR Compre uma [Shortsword]
     collect 1194 1
+    note-enUS Buy a [Bastard Sword]
+    note-ptBR Compre uma [Bastard Sword]
 step
     only Alliance !Hunter !Mage !Druid
     goto 2521 43.41,23.51 |only Alliance Rogue Alliance Warrior
@@ -178,8 +194,14 @@ step
     note-enUS Talk to Dalia the Collector. |only Alliance !Hunter !Mage !Druid
     accept 93552 |only Alliance !Hunter !Mage !Druid |opt
     collect 2131 1 |only Rogue |opt
+    note-enUS Buy a [Shortsword] |only Rogue
+    note-ptBR Compre uma [Shortsword] |only Rogue
     collect 1194 1 |only Warrior |opt
+    note-enUS Buy a [Bastard Sword] |only Warrior
+    note-ptBR Compre uma [Bastard Sword] |only Warrior
     vendor |only Alliance !Hunter !Mage !Druid |opt
+    note-enUS Vendor trash |only Alliance !Hunter !Mage !Druid
+    note-ptBR Venda o lixo |only Alliance !Hunter !Mage !Druid
     note-enUS Talk to Dalia the Collector.
     accept 93552
 step
@@ -234,6 +256,8 @@ step
     only Shaman
     goto 2521 42.79,23.57
     hearth |only Shaman |opt
+    note-enUS Hearth to Thendal Village |only Shaman
+    note-ptBR Use a pedra de regresso para Thendal Village |only Shaman
     note-enUS Talk to Windshaper Boro
     note-ptBR Fale com Windshaper Boro
     turnin 92466
@@ -292,6 +316,7 @@ step
     ifcomplete 93552
     ifonquest 93552
     goto 2521 48.84,21.47
+    note-enUS Die and respawn at the Spirit Healer.
 step
     only Shaman
     path closest 2521 48.29,25.69 47.17,23.55 46.95,20.93 44.19,22.29 42.83,22.27 43.47,23.84 43.81,25.42
@@ -319,6 +344,8 @@ step
 step
     only !Shaman
     level 3
+    note-enUS Grind to 300+/1400xp
+    note-ptBR Mate monstros até 300+/1400xp
 step
     only !Shaman
     goto 2521 47.29,21.9
@@ -329,21 +356,31 @@ step
     path seq 2521 43.89,22.27
     goto 2521 43.37,23.98 60
     hearth |only !Shaman |opt
+    note-enUS Hearth to Thendal Village |only !Shaman
+    note-ptBR Use a pedra de regresso para Thendal Village |only !Shaman
     note-enUS Talk to Dalia the Collector.
     turnin 93552 |opt
+    note-enUS 1
+    note-ptBR 1
     note-enUS Talk to Dalia the Collector.
     turnin 93552
 step
     goto 2521 43.44,24.8
     train 2575
+    note-enUS Use [Mining for Dummies] while walking towards the questgiver.
+    note-ptBR Use [Mining for Dummies] enquanto caminha até o NPC da missão.
     use 247840
 step
     goto 2521 43.44,24.8
     train 2366
+    note-enUS Use [Wild Harvest] while walking towards the questgiver.
+    note-ptBR Use [Wild Harvest] enquanto caminha até o NPC da missão.
     use 247841
 step
     goto 2521 43.44,24.8
     train 8613
+    note-enUS Use [Pelt Collecting for Beginners] while walking towards the questgiver.
+    note-ptBR Use [Pelt Collecting for Beginners] enquanto caminha até o NPC da missão.
     use 247846
 step
     only Rogue
@@ -357,8 +394,12 @@ step
     train 6546
     note-enUS Talk to Blademaster Ren.
     train 100
+    note-enUS Train [Charge]
+    note-ptBR Treine [Charge]
     train 6178
     train 772
+    note-enUS Train [Rend]
+    note-ptBR Treine [Rend]
 step
     only Warrior
     goto 2521 43.66,24.14
@@ -375,12 +416,18 @@ step
     turnin 92597
 step
     train 2575
+    note-enUS Use [Mining for Dummies].
+    note-ptBR Use [Mining for Dummies].
     use 247840
 step
     train 2366
+    note-enUS Use [Wild Harvest].
+    note-ptBR Use [Wild Harvest].
     use 247841
 step
     train 8613
+    note-enUS Use [Pelt Collecting for Beginners].
+    note-ptBR Use [Pelt Collecting for Beginners].
     use 247846
 step
     only Warrior
@@ -389,8 +436,12 @@ step
     train 6546
     note-enUS Talk to Blademaster Ren.
     train 100
+    note-enUS Train [Charge]
+    note-ptBR Treine [Charge]
     train 6178
     train 772
+    note-enUS Train [Rend]
+    note-ptBR Treine [Rend]
 step
     only Warrior
     goto 2521 43.66,24.14
@@ -402,7 +453,11 @@ step
     note-enUS Talk to Tai'ree Farsight
     note-ptBR Fale com Tai'ree Farsight
     train 13163
+    note-enUS Train [Aspect of the Monkey]
+    note-ptBR Treine [Aspect of the Monkey]
     train 1978
+    note-enUS Train [Serpent Sting]
+    note-ptBR Treine [Serpent Sting]
 step
     only Horde
     goto 2521 42.07,23.49
@@ -415,7 +470,11 @@ step
     note-enUS Talk to Xyton Silverwind.
     note-ptBR Fale com Xyton Silverwind.
     train 8921
+    note-enUS Train [Moonfire]
+    note-ptBR Treine [Moonfire]
     train 774
+    note-enUS Train [Rejuvenation]
+    note-ptBR Treine [Rejuvenation]
 step
     only Horde
     goto 2521 42.76,23.65
@@ -427,6 +486,8 @@ step
     goto 2521 42.79,23.57
     note-enUS Talk to Windshaper Boro.
     train 8042
+    note-enUS Train [Earth Shock]
+    note-ptBR Treine [Earth Shock]
 step
     only Horde
     goto 2521 42.61,24.39
@@ -439,7 +500,11 @@ step
     note-enUS Talk to Tai'ree Farsight
     note-ptBR Fale com Tai'ree Farsight
     train 13163
+    note-enUS Train [Aspect of the Monkey]
+    note-ptBR Treine [Aspect of the Monkey]
     train 1978
+    note-enUS Train [Serpent Sting]
+    note-ptBR Treine [Serpent Sting]
 step
     only Alliance
     goto 2521 42.07,23.49
@@ -452,12 +517,18 @@ step
     note-enUS Talk to Xyton Silverwind.
     note-ptBR Fale com Xyton Silverwind.
     train 8921
+    note-enUS Train [Moonfire]
+    note-ptBR Treine [Moonfire]
     train 774
+    note-enUS Train [Rejuvenation]
+    note-ptBR Treine [Rejuvenation]
 step
     only Mage
     goto 2521 41.55,23.67
     note-enUS Talk to Dorii Brightwhisper.
     train 116
+    note-enUS Train [Frostbolt]
+    note-ptBR Treine [Frostbolt]
 step
     only Alliance
     goto 2521 42.76,23.65
@@ -473,18 +544,32 @@ step
     note-enUS Talk to Uualia Suncrest
     note-ptBR Fale com Uualia Suncrest
     collect 277113 1 |opt
+    note-enUS Buy an [Apprentice's Herb Pouch]
+    note-ptBR Compre uma [Apprentice's Herb Pouch]
     train 2575 |opt
     note-enUS Talk to Uualia Suncrest
     note-ptBR Fale com Uualia Suncrest
     collect 2901 1 |opt
+    note-enUS Buy a [Mining Pick]
+    note-ptBR Compre uma [Mining Pick]
     collect 277115 1 |opt
+    note-enUS Buy an [Apprentice's Mining Pack]
+    note-ptBR Compre uma [Apprentice's Mining Pack]
     train 8613 |opt
     note-enUS Talk to Uualia Suncrest
     note-ptBR Fale com Uualia Suncrest
     collect 7005 1 |opt
+    note-enUS Buy a [Skinning Knife]
+    note-ptBR Compre uma [Skinning Knife]
     collect 277114 1 |opt
+    note-enUS Buy an [Apprentice's Skinning Satchel]
+    note-ptBR Compre uma [Apprentice's Skinning Satchel]
     vendor |opt
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     collect 159 20 |only Mage |opt
+    note-enUS Buy [Refreshing Spring Water] |only Mage
+    note-ptBR Compre [Refreshing Spring Water] |only Mage
     note-enUS Talk to Valreaa Valewind.
     accept 92473
 step
@@ -492,7 +577,11 @@ step
     note-enUS Manually drag the reagent bag into the reagent bag slot. Right-clicking it will place it in an empty general bag slot instead
     note-ptBR Arraste manualmente a bolsa de reagentes para o espaço de bolsa de reagentes. Clicar com o botão direito a colocará em um espaço de bolsa comum vazio
     train 2366 |opt
+    note-enUS Cast [Find Herbs] to track nearby herbs
+    note-ptBR Lance [Find Herbs] para rastrear ervas próximas
     train 2656 |opt
+    note-enUS Cast [Find Minerals] to track nearby ore deposits
+    note-ptBR Lance [Find Minerals] para rastrear depósitos de minério próximos
     train 8613 |opt
     note-enUS You can skin along the way to start working toward 20 Skinning for a later quest. This is optional, especially at launch, so do it at your own risk
     note-ptBR Você pode esfolar pelo caminho para começar a chegar a 20 de Skinning para uma missão futura. Isso é opcional, principalmente no lançamento, então faça por sua conta e risco
@@ -518,6 +607,8 @@ step
     turnin 92470 |reward 3 |only Mage |opt
     turnin 92470 |reward 4 |only Rogue |opt
     turnin 92470 |reward 5 |only Hunter |opt
+    note-enUS Die to mobs and resurrect at the graveyard
+    note-ptBR Morra para os mobs e ressuscite no cemitério
     note-enUS Talk to Aetheen of the Gales.
     turnin 92470 |reward 1 |only Warrior
     turnin 92470 |reward 2 |only Druid Shaman
@@ -532,12 +623,16 @@ step
     note-enUS Talk to Valreaa Valewind.
     turnin 92473 |reward 1 |opt
     vendor |opt
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     note-enUS Talk to Valreaa Valewind.
     turnin 92473 |reward 1
 step
     goto 2521 38.31,30.17 100
     note-enUS Talk to Hanaa Nightwind.
     accept 92544 |opt
+    note-enUS Kill mobs along the way if you can do so without losing time.
+    note-ptBR Mate mobs no caminho se puder fazer isso sem perder tempo.
     note-enUS Talk to Hanaa Nightwind.
     accept 92544
 step
@@ -548,16 +643,22 @@ step
     objective 92544/2 |opt
     note-enUS Kill Malduko Cloudcrush.
     objective 92544/3 |opt
+    note-enUS Head to the upper level of the temple
+    note-ptBR Vá até o nível superior do templo
     note-enUS Kill Malduko Cloudcrush atop the temple.
     objective 92544/3
 step
     only Horde
     ifonquest 92544
     goto 2521 35.91,33.6
+    note-enUS Use [Skysight] for the 10% movement speed buff.
+    note-ptBR Use [Skysight] para o buff de 10% de velocidade de movimento.
 step
     only Alliance
     ifonquest 92544
     goto 2521 35.57,33.84
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration.
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida.
 step
     path closest 2521 35.33,34.19 36.34,31.56 37.3,32.89 37.16,34.72 38.08,35.01 35.33,34.19 36.34,31.56 37.3,32.89 37.16,34.72 38.08,35.01
     note-enUS 1
@@ -567,6 +668,8 @@ step
     objective 92544/2
 step
     level 5
+    note-enUS Grind to level 5 1740+/2800xp to reach level 6 after turn ins in the next village to be able to train new spells.
+    note-ptBR Mate monstros até o nível 5 e 1740+/2800xp para chegar ao nível 6 após as entregas na próxima vila e poder treinar novas magias.
 step
     goto 2521 38.32,30.18
     note-enUS Talk to Hanaa Nightwind.
@@ -590,7 +693,11 @@ step
     note-enUS Save 2 silver for your class spells! |only Shaman Druid
     note-ptBR Guarde 2 pratas para os feitiços da sua classe! |only Shaman Druid
     vendor |only !Rogue !Warrior |opt
+    note-enUS Vendor trash. |only !Rogue !Warrior
+    note-ptBR Venda o lixo. |only !Rogue !Warrior
     vendor |only Rogue Warrior |opt
+    note-enUS Vendor trash. |only Rogue Warrior
+    note-ptBR Venda o lixo. |only Rogue Warrior
     note-enUS Talk to Constable Aonda.
     turnin 92472
 step
@@ -603,8 +710,14 @@ step
     goto 2521 45.1,45.87
     note-enUS Talk to Dorii Brightwhisper.
     train 143
+    note-enUS Train [Fireball (Rank 2)]
+    note-ptBR Treine [Fireball (Rank 2)]
     train 2136
+    note-enUS Train [Fire Blast]
+    note-ptBR Treine [Fire Blast]
     train 1296017
+    note-enUS Train [Comprehend Scroll]
+    note-ptBR Treine [Comprehend Scroll]
 step
     only Alliance
     goto 2521 45.04,46.49
@@ -651,6 +764,8 @@ step
     note-enUS Talk to Aarnor Galestrike
     note-ptBR Fale com Aarnor Galestrike
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 2521 43.02,43.24
     note-enUS Talk to Coriella Calmbreeze.
@@ -660,18 +775,26 @@ step
     goto 2521 43.02,43.24
     note-enUS Talk to Coriella Calmbreeze.
     home
+    note-enUS Set your Hearthstone to Shen'dar Village
+    note-ptBR Defina sua pedra de regresso em Shen'dar Village
 step
     only Horde Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
     train 1776
+    note-enUS Train [Gouge]
+    note-ptBR Treine [Gouge]
     train 1777
 step
     only Horde Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
 step
     only Horde Mage
     ifonquest 92514
@@ -687,6 +810,8 @@ step
     note-enUS Talk to Nasalanna Windsinger
     note-ptBR Fale com Nasalanna Windsinger
     train 7411
+    note-enUS Train [Enchanting] for an immediate wand
+    note-ptBR Treine [Enchanting] para ter uma varinha imediata
 step
     only Horde Mage
     ifonquest 92514
@@ -703,13 +828,19 @@ step
     note-ptBR Abandone Enchanting ou continue com ela. |only Horde Mage
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
     train 1776
+    note-enUS Train [Gouge]
+    note-ptBR Treine [Gouge]
     train 1777
 step
     only Alliance Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
 step
     only Alliance Mage
     ifonquest 93461
@@ -725,6 +856,8 @@ step
     note-enUS Talk to Nasalanna Windsinger
     note-ptBR Fale com Nasalanna Windsinger
     train 7411
+    note-enUS Train [Enchanting] for immediate wand
+    note-ptBR Treine [Enchanting] para ter uma varinha imediata
 step
     only Alliance Mage
     ifonquest 93461
@@ -746,25 +879,37 @@ step
     goto 2521 43.02,43.24
     note-enUS Talk to Coriella Calmbreeze.
     home
+    note-enUS Set your Hearthstone to Shen'dar Village
+    note-ptBR Defina sua pedra de regresso em Shen'dar Village
 step
     only Warrior
     goto 2521 44.95,45.1
     note-enUS Talk to Corsan Earthrazer
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
 step
     only Hunter
     path seq 2521 45.07,45.27
     goto 2521 45.26,44.24
     note-enUS Talk to Elayaa Easewind inside the house.
     train 3044
+    note-enUS Train [Arcane Shot]
+    note-ptBR Treine [Arcane Shot]
     train 1130
+    note-enUS Train [Hunter's Mark]
+    note-ptBR Treine [Hunter's Mark]
 step
     only Druid
     path seq 2521 45.07,45.27
     goto 2521 45.15,44.22
     note-enUS Talk to Naeluna Swiftmend inside the house.
     train 467
+    note-enUS Train [Thorns]
+    note-ptBR Treine [Thorns]
     train 5177
+    note-enUS Train [Wrath (Rank 2)]
+    note-ptBR Treine [Wrath (Rank 2)]
 step
     goto 2521 45.67,45.5
     note-enUS Talk to Constable Aonda.
@@ -777,14 +922,22 @@ step
     note-enUS Talk to Elayaa Easewind.
     note-ptBR Fale com Elayaa Easewind.
     train 3044
+    note-enUS Train [Arcane Shot]
+    note-ptBR Treine [Arcane Shot]
     train 1130
+    note-enUS Train [Hunter's Mark]
+    note-ptBR Treine [Hunter's Mark]
 step
     only Druid
     goto 2521 45.15,44.22
     note-enUS Talk to Naeluna Swiftmend
     note-ptBR Fale com Naeluna Swiftmend
     train 467
+    note-enUS Train [Thorns]
+    note-ptBR Treine [Thorns]
     train 5177
+    note-enUS Train [Wrath (Rank 2)]
+    note-ptBR Treine [Wrath (Rank 2)]
 step
     goto 2521 44.47,44.98
     note-enUS Talk to Teeri Wellwind.
@@ -831,25 +984,37 @@ step
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
     train 1776
+    note-enUS Train [Gouge]
+    note-ptBR Treine [Gouge]
     train 1777
 step
     only Horde Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
 step
     only Alliance Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
     train 1776
+    note-enUS Train [Gouge]
+    note-ptBR Treine [Gouge]
     train 1777
 step
     only Alliance Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
 step
     ifturnedin 92553
     ifnotturnedin 92517
@@ -872,6 +1037,8 @@ step
     only Horde
     ifonquest 92517
     goto 2521 48.5,55.83
+    note-enUS Use [Skysight] for the 10% movement speed buff.
+    note-ptBR Use [Skysight] para o buff de 10% de velocidade de movimento.
 step
     path seq 2521 48.81,36.43 49.35,35.79 49.54,34.33
     goto 2521 50.68,34.21
@@ -880,12 +1047,16 @@ step
     objective 93319/1 |opt
     note-enUS Kill "Badwind" Bennic.
     objective 92517/2 |opt
+    note-enUS Enter the cave
+    note-ptBR Entre na caverna
     note-enUS Kill "Badwind" Bennic.
     objective 92517/2
 step
     only Alliance
     ifonquest 92517
     goto 2521 50.59,33.51
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration.
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida.
 step
     path closest 2521 50.27,33.41 49.69,34.05 49.64,34.66 49.93,35.22 49.79,35.97 49.26,35.91 48.82,36.47 49.43,38.66 48.02,38.41 47.75,36.19 48.93,36.38
     note-enUS Kill Galestrider. Loot them for [Strider Meat] and [Small Eggs].
@@ -905,55 +1076,85 @@ step
     note-enUS Kill Prideclaws. Loot them for the [Prideclaw Pelts].
     objective 92515/1 |opt
     train 2550 |opt
+    note-enUS Train [Apprentice Cook]
+    note-ptBR Treine [Apprentice Cook]
     note-enUS Talk to the Zerril Softbreeze.
     vendor |opt
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     note-enUS Talk to Zerril Softbreeze
     note-ptBR Fale com Zerril Softbreeze
     train 2550
+    note-enUS Train [Apprentice Cook]
+    note-ptBR Treine [Apprentice Cook]
 step
     only Mage
     goto 2521 45.1,45.87
     note-enUS Talk to Dorii Brightwhisper.
     train 143
+    note-enUS Train [Fireball (Rank 2)]
+    note-ptBR Treine [Fireball (Rank 2)]
     train 2136
+    note-enUS Train [Fire Blast]
+    note-ptBR Treine [Fire Blast]
     train 1296017
+    note-enUS Train [Comprehend Scroll]
+    note-ptBR Treine [Comprehend Scroll]
 step
     only Shaman
     goto 2521 43.45,44.87
     note-enUS Talk to Aarnor Galestrike
     note-ptBR Fale com Aarnor Galestrike
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
     train 1776
+    note-enUS Train [Gouge]
+    note-ptBR Treine [Gouge]
     train 1777
 step
     only Rogue
     goto 2521 43.16,43.26
     note-enUS Talk to Miriaan Mistblade
     train 1757
+    note-enUS Train [Sinister Strike (Rank 2)]
+    note-ptBR Treine [Sinister Strike (Rank 2)]
 step
     only Warrior
     goto 2521 44.95,45.1
     note-enUS Talk to Corsan Earthrazer
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
 step
     only Hunter
     goto 2521 45.26,44.24
     note-enUS Talk to Elayaa Easewind.
     note-ptBR Fale com Elayaa Easewind.
     train 3044
+    note-enUS Train [Arcane Shot]
+    note-ptBR Treine [Arcane Shot]
     train 1130
+    note-enUS Train [Hunter's Mark]
+    note-ptBR Treine [Hunter's Mark]
 step
     only Druid
     goto 2521 45.15,44.22
     note-enUS Talk to Naeluna Swiftmend
     note-ptBR Fale com Naeluna Swiftmend
     train 467
+    note-enUS Train [Thorns]
+    note-ptBR Treine [Thorns]
     train 5177
+    note-enUS Train [Wrath (Rank 2)]
+    note-ptBR Treine [Wrath (Rank 2)]
 step
     goto 2521 44.47,44.97
     note-enUS Talk to Teeri Wellwind
@@ -966,6 +1167,8 @@ step
     note-enUS Talk to Veena Vericloud
     note-ptBR Fale com Veena Vericloud
     vendor
+    note-enUS Buy a [Small Brown Pouches] as needed.
+    note-ptBR Compre [Small Brown Pouches] conforme precisar.
 step
     only Horde
     goto 2521 43.52,44.78
@@ -983,6 +1186,8 @@ step
     note-enUS Talk to Naleeia Tattermend.
     note-ptBR Fale com Naleeia Tattermend.
     train 3273
+    note-enUS Train First Aid
+    note-ptBR Treine First Aid
 step
     goto 2521 41.67,44.79
     note-enUS Talk to Raan Wildwind.
@@ -1080,6 +1285,8 @@ step
     objective 92553/1 |opt
     note-enUS Kill the Windshaper Novice Seer. |only Alliance
     objective 94413/1 |only Alliance |opt
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration.
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida.
 step
     only Alliance
     path closest 2521 37.96,46.86 38.75,48.72 38.99,47.24
@@ -1088,6 +1295,8 @@ step
 step
     ifonquest 92516
     goto 2521 36.44,50.93
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the waypoint.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao waypoint.
 step
     path seq 2521 36.44,50.93 35.16,51.07 34.12,51.6 34.52,52.76 35.12,54.08 35.86,53.01 36.02,54.28 35.71,55.57 35.63,57.34 34.6,57.11 35.51,58.08 36.61,58.64 37.13,56.6 38.61,56.89 39.88,57.56 39.1,55.85 33.1,54.67 34.7,52.68 |only Alliance
     goto 2521 34.25,51.19 40 |only Alliance
@@ -1151,6 +1360,8 @@ step
     note-enUS Talk to Zerril Softbreeze and buy 5 [Mild Spices]
     note-ptBR Fale com Zerril Softbreeze e compre 5 [Mild Spices]
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 2678 5
 step
     ifcomplete 92553
@@ -1244,9 +1455,15 @@ step
     goto 2521 44.95,45.1
     note-enUS Talk to Corsan Earthrazer
     train 284
+    note-enUS Train [Heroic Strike (Rank 2)]
+    note-ptBR Treine [Heroic Strike (Rank 2)]
     train 1715
+    note-enUS Train [Hamstring]
+    note-ptBR Treine [Hamstring]
     train 7372
     train 6343
+    note-enUS Train [Thunder Clap]
+    note-ptBR Treine [Thunder Clap]
     train 8198
 step
     ifonquest 93318
@@ -1257,21 +1474,33 @@ step
     turnin 93318
 step
     abandon 93318
+    note-enUS Abandon WANTED: Vulgara the Insatiable
+    note-ptBR Abandone WANTED: Vulgara the Insatiable
 step
     only Alliance Druid
     goto 2521 45.15,44.23
     note-enUS Talk to Naeluna Swiftmend.
     note-ptBR Fale com Naeluna Swiftmend.
     train 339
+    note-enUS Train [Entangling Roots]
+    note-ptBR Treine [Entangling Roots]
     train 5186
+    note-enUS Train [Healing Touch (Rank 2)]
+    note-ptBR Treine [Healing Touch (Rank 2)]
 step
     only Alliance Hunter
     goto 2521 45.26,44.24
     note-enUS Talk to Elayaa Easewind.
     note-ptBR Fale com Elayaa Easewind.
     train 5116
+    note-enUS Train [Concussive Shot]
+    note-ptBR Treine [Concussive Shot]
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
     train 14260
+    note-enUS Train [Raptor Strike (Rank 2)]
+    note-ptBR Treine [Raptor Strike (Rank 2)]
 step
     goto 2521 45.67,45.5
     note-enUS Talk to Constable Aonda
@@ -1284,14 +1513,22 @@ step
     note-enUS Talk to Elayaa Easewind.
     note-ptBR Fale com Elayaa Easewind.
     train 5116
+    note-enUS Train [Concussive Shot]
+    note-ptBR Treine [Concussive Shot]
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
     train 14260
+    note-enUS Train [Raptor Strike (Rank 2)]
+    note-ptBR Treine [Raptor Strike (Rank 2)]
 step
     only Horde Druid
     goto 2521 45.15,44.23
     note-enUS Talk to Naeluna Swiftmend.
     note-ptBR Fale com Naeluna Swiftmend.
     trainer
+    note-enUS Train your spells
+    note-ptBR Treine your spells
 step
     goto 2521 44.83,45.52
     note-enUS Talk to Sania Silverstream
@@ -1304,6 +1541,8 @@ step
     note-enUS Talk to Veena Vericloud
     note-ptBR Fale com Veena Vericloud
     vendor
+    note-enUS Buy up to three [Small Brown Pouches] as needed.
+    note-ptBR Compre até três [Small Brown Pouches] conforme precisar.
     note-enUS Buy [Ice Cold Milk] from him |only Druid
     note-ptBR Compre [Ice Cold Milk] dele |only Druid
     note-enUS Buy [Ice Cold Milk] from him |only Mage
@@ -1318,19 +1557,29 @@ step
 step
     ifonquest 92529
     goto 2521 44.83,45.52
+    note-enUS Talk to Sania Silverstream
+    note-ptBR Fale com Sania Silverstream
 step
     only Shaman
     goto 2521 43.45,44.87
     note-enUS Talk to Aarnor Galestrike
     note-ptBR Fale com Aarnor Galestrike
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 2521 45.1,45.86
     note-enUS Talk to Shenaan Spellwind
     train 5143
+    note-enUS Train [Arcane Missiles]
+    note-ptBR Treine [Arcane Missiles]
     train 205
+    note-enUS Train [Frostbolt (Rank 2)]
+    note-ptBR Treine [Frostbolt (Rank 2)]
     train 118
+    note-enUS Train [Polymorph]
+    note-ptBR Treine [Polymorph]
 step
     only Alliance
     goto 2521 44.98,46.37
@@ -1355,6 +1604,8 @@ step
     objective 92515/1 |only Horde |opt
     note-enUS Kill Prideclaws. Loot them for the [Prideclaw Pelts]. |only Alliance
     objective 92515/1 |only Alliance |opt
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     path seq 2521 45.41,53.48
     goto 2521 46.88,56.24
@@ -1366,16 +1617,22 @@ step
 step
     ifonquest 92528
     goto 2521 46.89,56.24
+    note-enUS Talk to Sania Silverstream
+    note-ptBR Fale com Sania Silverstream
 step
     only Horde
     ifonquest 92528
     goto 2521 48.5,55.83
+    note-enUS Use [Skysight] for the 10% movement speed buff.
+    note-ptBR Use [Skysight] para o buff de 10% de velocidade de movimento.
 step
     path seq 2521 48.8,53.89 48.93,53.55 48.85,53.91 48.6,54.69
     goto 2521 46.44,51.34 30
     note-enUS After clicking on the Wardrobe, return to the city.
     note-ptBR Depois de clicar no Wardrobe, volte para a cidade.
     objective 92528/1 |opt
+    note-enUS Click on the Wardrobe on the second floor.
+    note-ptBR Clique no Wardrobe no segundo andar.
     note-enUS Return to the city and wait for the roleplay.
     note-ptBR Volte à cidade e aguarde a cena.
     objective 92528/1
@@ -1383,6 +1640,8 @@ step
     ifonquest 92528
     path seq 2521 46.86,51.54
     goto 2521 44.37,46.69
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     only Rogue
     ifnotturnedin 92528
@@ -1390,7 +1649,11 @@ step
     goto 2521 43.15,43.27
     note-enUS Talk to Miriaan Mistblade
     train 5277
+    note-enUS Train [Evasion]
+    note-ptBR Treine [Evasion]
     train 6760
+    note-enUS Train [Eviscerate (Rank 2)]
+    note-ptBR Treine [Eviscerate (Rank 2)]
 step
     path seq 2521 44.37,46.69 44.49,45.95 44.93,46.85 45.21,46.63 |only !Rogue
     goto 2521 45.04,46.23 15 |only !Rogue
@@ -1409,6 +1672,8 @@ step
     path seq 2521 45.35,46.79 44.05,49.98 43.02,49.86
     goto 2521 42.32,62.03
     objective 93926/1 |opt
+    note-enUS Die southwest of Shen'dar Village and respawn at the Spirit Healer
+    note-ptBR Morra a sudoeste de Shen'dar Village e renasça no Spirit Healer
     note-enUS Talk to Piecekeeper Vaniel.
     note-ptBR Fale com Piecekeeper Vaniel.
     objective 93926/1
@@ -1441,6 +1706,8 @@ step
 step
     ifonquest 92551
     goto 2521 50.29,56.95
+    note-enUS Jump off the tower and use [Walk on Air] to fly towards the waypoint location.
+    note-ptBR Pule da torre e use [Walk on Air] para voar em direção ao local do waypoint.
 step
     only Alliance
     ifonquest 92550
@@ -1456,6 +1723,8 @@ step
     objective 92553/1 |only Alliance |opt
     note-enUS Kill Prideclaws. Loot them for the [Prideclaw Pelts]. |only Alliance
     objective 92515/1 |only Alliance |opt
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration.
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida.
 step
     path seq 2521 49.78,57.33 49.89,56.5
     goto 2521 50.38,56.93
@@ -1492,6 +1761,8 @@ step
     only Horde
     ifonquest 92528
     goto 2521 48.5,55.83
+    note-enUS Use [Skysight] for the 10% movement speed buff.
+    note-ptBR Use [Skysight] para o buff de 10% de velocidade de movimento.
 step
     path seq 2521 42.88,63.42 42.97,49.81 44.12,50.46 38.28,42.29
     goto 2521 42.05,40.94 35
@@ -1517,6 +1788,8 @@ step
 step
     ifnotturnedin 92551
     goto 2521 44.11,45.84 40
+    note-enUS Follow the way up the mountain.
+    note-ptBR Siga o caminho montanha acima.
 step
     ifcomplete 97965
     ifnotturnedin 92550
@@ -1629,6 +1902,8 @@ step
     note-enUS Talk to Veena Vericloud
     note-ptBR Fale com Veena Vericloud
     vendor
+    note-enUS Vendor Trash. If you need bags, buy up to three [Small Brown Pouches]
+    note-ptBR Venda o lixo. Se precisar de bolsas, compre até três [Small Brown Pouches]
     collect 2512 600 |only Hunter
     collect 2515 1000 |only Hunter
 step
@@ -1645,9 +1920,13 @@ step
     accept 93948
 step
     goto 2521 49.4,58.76
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the waypoint location.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao local do waypoint.
 step
     ifnotturnedin 93948
     goto 2521 49.4,58.76
+    note-enUS Die at the exact waypoint location and respawn at the Spirit Healer
+    note-ptBR Morra exatamente no local do waypoint e renasça no Spirit Healer
 step
     only Hunter
     ifnotonquest 93317
@@ -1658,6 +1937,8 @@ step
     note-ptBR Compre e equipe um [Zephrali Bow]
     collect 277110 1
     vendor
+    note-enUS Vendor trash and repair if you need
+    note-ptBR Venda o lixo e repare se precisar
 step
     path seq 2521 60.6,73.16
     goto 2521 60.64,72.66
@@ -1675,12 +1956,16 @@ step
     note-enUS Talk to Donaal Downbreeze.
     note-ptBR Fale com Donaal Downbreeze.
     home
+    note-enUS Set your Hearthstone to Valanaar
+    note-ptBR Defina sua pedra de regresso em Valanaar
 step
     ifnotturnedin 93948
     goto 2521 62.18,72.62
     note-enUS Talk to Donaal Downbreeze.
     note-ptBR Fale com Donaal Downbreeze.
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     collect 1179 20 |only Mage Druid Shaman
 step
     path seq 2521 61.95,72.84
@@ -1688,6 +1973,8 @@ step
     note-enUS Talk to Alvarion Windfield on the second floor.
     note-ptBR Fale com Alvarion Windfield no segundo andar.
     accept 92679 |opt
+    note-enUS Go upstairs
+    note-ptBR Suba as escadas
     note-enUS Talk to Alvarion Windfield on the second floor.
     note-ptBR Fale com Alvarion Windfield no segundo andar.
     accept 92679
@@ -1696,17 +1983,25 @@ step
     ifnotturnedin 93948
     path seq 2521 63.33,73.65
     goto 2521 63.97,75.09 25
+    note-enUS Go over the mountain
+    note-ptBR Passe por cima da montanha
 step
     only Alliance
     ifnotturnedin 93948
     path seq 2521 63.33,73.65 |only Alliance
     goto 2521 63.97,75.09 30 |only Alliance
     goto 2521 63.81,74.32
+    note-enUS Go over the mountain |only Alliance
+    note-ptBR Passe por cima da montanha |only Alliance
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration.
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida.
 step
     only Horde
     ifnotturnedin 93948
     path seq 2521 63.33,73.65
     goto 2521 63.97,75.09 25
+    note-enUS Go over the mountain
+    note-ptBR Passe por cima da montanha
 step
     goto 2521 63.97,75.09
     note-enUS Talk to Lotheluum Starbreeze.
@@ -1723,6 +2018,8 @@ step
     goto 2521 66.17,76.51
     note-enUS Talk to Talaanis Shadowsong.
     turnin 93948 |opt
+    note-enUS Climb the tower
+    note-ptBR Suba a torre
     note-enUS Talk to Talaanis Shadowsong.
     turnin 93948
 step
@@ -1741,11 +2038,15 @@ step
     goto 2521 61.49,76.89 |only !Hunter
     note-enUS Kill Skyhopper. |only Horde
     objective 93949/1 |only Horde |opt
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     only Alliance
     ifonquest 92699
     path seq 2521 66.47,76.68
     goto 2521 66.63,79.94
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     only Alliance
     goto 2521 66.63,79.94
@@ -1785,6 +2086,8 @@ step
     only Horde
     ifonquest 92708
     goto 2521 59.15,79.78
+    note-enUS Use [Skysight] for the 10% movement speed buff.
+    note-ptBR Use [Skysight] para o buff de 10% de velocidade de movimento.
 step
     only Horde
     goto 2521 58.13,78.31
@@ -1814,6 +2117,8 @@ step
     note-enUS Click on the Construct Parts inside the cave on the bottom floor. |only Horde
     note-ptBR Clique nas Construct Parts dentro da caverna, no andar de baixo. |only Horde
     objective 93737/2 |only Horde |opt
+    note-enUS Enter the cave |only Horde
+    note-ptBR Entre na caverna |only Horde
     note-enUS Click on the Construct Parts inside the cave on the bottom floor.
     note-ptBR Clique nas Construct Parts dentro da caverna, no andar de baixo.
     objective 93737/2
@@ -1834,6 +2139,7 @@ step
     only Alliance
     ifonquest 92849
     goto 2521 50.7,65.36
+    note-enUS Click on Fillion Flamebreeze inside the cave.
 step
     only Alliance
     path seq 2521 50.71,66.38 52.04,66.66 51.44,66.25 51.03,67.15 51.55,69.2
@@ -1854,12 +2160,16 @@ step
     goto 2521 52.02,65.51
     note-enUS Kill Shriekling Matriarch. Loot it for [Shriekling Matriarch's Head]. |only Alliance
     objective 92850/1 |only Alliance |opt
+    note-enUS Enter the cave |only Alliance
+    note-ptBR Entre na caverna |only Alliance
     note-enUS Kill Shriekling Matriarch. Loot it for [Shriekling Matriarch's Head].
     objective 92850/1
 step
     only Alliance
     path seq 2521 52.37,66.5 51.75,66.33 51.05,66.66 51.16,67.53 51.49,69.08
     goto 2521 51.5,69.11 25
+    note-enUS Leave the Cave
+    note-ptBR Saia da Cave
 step
     goto 2521 51.4,68.64 15 |only Horde
     goto 2521 46.71,81.95
@@ -1868,6 +2178,8 @@ step
     note-enUS Talk to Aamelia Windfield. |only Horde
     note-ptBR Fale com Aamelia Windfield. |only Horde
     objective 92679/1 |only Horde |opt
+    note-enUS Leave the cave |only Horde
+    note-ptBR Saia da caverna |only Horde
     note-enUS Talk to Aamelia Windfield.
     note-ptBR Fale com Aamelia Windfield.
     objective 92679/1
@@ -1897,6 +2209,8 @@ step
     only Horde
     ifonquest 92684
     goto 2521 48.5,55.83
+    note-enUS Use [Skysight] for the 10% movement speed buff.
+    note-ptBR Use [Skysight] para o buff de 10% de velocidade de movimento.
 step
     path closest 2521 49.09,78.36 48.62,78.39
     note-enUS Kill Ornery Galestrider. Loot them for [Lowlands Galestrider Tenderloins].
@@ -1925,10 +2239,14 @@ step
     note-enUS Kill Ornery Galestrider. Loot them for [Lowlands Galestrider Tenderloins]. |only Shaman
     objective 92684/1 |only Shaman |opt
     level 10
+    note-enUS 1
+    note-ptBR 1
 step
     only Shaman
     goto 2521 58.31,78.5
     hearth |only Shaman |opt
+    note-enUS Hearth to Valanaar |only Shaman
+    note-ptBR Use a pedra de regresso para Valanaar |only Shaman
     note-enUS Talk to Sessaria Skystride.
     note-ptBR Fale com Sessaria Skystride.
     accept 97243
@@ -1938,6 +2256,8 @@ step
     note-enUS Talk to Sessaria Skystride.
     note-ptBR Fale com Sessaria Skystride.
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     path seq 2521 54.4,77.33
@@ -2002,6 +2322,8 @@ step
     path closest 2521 44.81,74.4 45.62,72.36 43.55,75 45.76,78.42
     note-enUS Kill Bandit Highwaymen. Loot them for the [Blood-Stained Bandit Masks].
     objective 92685/1 |opt
+    note-enUS Make your way up the mountain
+    note-ptBR Suba a montanha
     note-enUS Kill Bandit Highwaymen. Loot them for the [Blood-Stained Bandit Masks].
     objective 92685/1
 step
@@ -2037,6 +2359,9 @@ step
     note-ptBR Fale com Aamelia Windfield. |only Alliance
     turnin 92685 |only Alliance |opt
     accept 92693 |only Alliance |opt
+    note-enUS Jump off the mountain and use [Walk on Air] in midair to fly towards the waypoint location. |only !Shaman
+    note-ptBR Pule da montanha e use [Walk on Air] no ar para voar em direção ao local do waypoint. |only !Shaman
+    note-enUS Return to the Highlands Bandit mountain, then jump and use [Walk on Air] while in midair to fly toward the waypoint. |only Shaman
 step
     path closest 2521 47.51,78.49 46.71,81.94
     note-enUS Talk to Aamelia Windfield.
@@ -2062,10 +2387,14 @@ step
     only Horde
     ifonquest 92703
     goto 2521 48.45,80.59
+    note-enUS Use [Skysight] for the 10% movement speed buff.
+    note-ptBR Use [Skysight] para o buff de 10% de velocidade de movimento.
 step
     only !Shaman
     ifnotturnedin 92703
     hearth
+    note-enUS Hearth to Valanaar
+    note-ptBR Use a pedra de regresso para Valanaar
 step
     only !Shaman
     ifnotturnedin 92703
@@ -2073,7 +2402,11 @@ step
     note-enUS Talk to Donaal Downbreeze.
     note-ptBR Fale com Donaal Downbreeze.
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     collect 1179 15 |only Mage Druid
+    note-enUS Buy [Ice Cold Milk] |only Mage Druid
+    note-ptBR Compre [Ice Cold Milk] |only Mage Druid
 step
     only Shaman
     goto 2521 51.24,86.19
@@ -2110,6 +2443,8 @@ step
     note-enUS Talk to Donaal Downbreeze.
     note-ptBR Fale com Donaal Downbreeze.
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
 step
     only Hunter
     ifnotturnedin 92703
@@ -2142,7 +2477,11 @@ step
     note-enUS Talk to Seena Skybreaker.
     note-ptBR Fale com Seena Skybreaker.
     train 6546
+    note-enUS Train [Rend (Rank 2)]
+    note-ptBR Treine [Rend (Rank 2)]
     train 2687
+    note-enUS Train [Bloodrage]
+    note-ptBR Treine [Bloodrage]
 step
     only Druid
     path seq 2521 63.33,73.65 |only Alliance Druid
@@ -2150,6 +2489,12 @@ step
     path seq 2521 63.33,73.65 |only Horde Druid
     goto 2521 63.97,75.09 25 |only Horde Druid
     goto 2521 63.98,75.09
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration. |only Alliance Druid
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida. |only Alliance Druid
+    note-enUS Go over the mountain |only Alliance Druid
+    note-ptBR Passe por cima da montanha |only Alliance Druid
+    note-enUS Go over the mountain |only Horde Druid
+    note-ptBR Passe por cima da montanha |only Horde Druid
     note-enUS Talk to Lotheluum Starbreeze.
     note-ptBR Fale com Lotheluum Starbreeze.
     accept 94006
@@ -2159,19 +2504,35 @@ step
     note-enUS Talk to Lotheluum Starbreeze.
     note-ptBR Fale com Lotheluum Starbreeze.
     train 16689
+    note-enUS Train [Nature's Grasp]
+    note-ptBR Treine [Nature's Grasp]
     train 1058
+    note-enUS Train [Rejuvenation (Rank 2)]
+    note-ptBR Treine [Rejuvenation (Rank 2)]
     train 5232
+    note-enUS Train [Mark of the Wild (Rank 2)]
+    note-ptBR Treine [Mark of the Wild (Rank 2)]
     train 8924
+    note-enUS Train [Moonfire (Rank 2)]
+    note-ptBR Treine [Moonfire (Rank 2)]
 step
     only Rogue
     goto 2521 59.9,72.48
     note-enUS Talk to Eltheen Nightbreeze.
     train 674
+    note-enUS Train [Dual Wield]
+    note-ptBR Treine [Dual Wield]
     train 6770
+    note-enUS Train [Sap]
+    note-ptBR Treine [Sap]
     train 2070
     train 5171
+    note-enUS Train [Slice and Dice]
+    note-ptBR Treine [Slice e Dice]
     train 6774
     train 2983
+    note-enUS Train [Sprint]
+    note-ptBR Treine [Sprint]
     train 8696
 step
     only Hunter
@@ -2179,7 +2540,11 @@ step
     note-enUS Talk to Quel'ana Quickgale.
     note-ptBR Fale com Quel'ana Quickgale.
     train 13165
+    note-enUS Train [Aspect of the Hawk]
+    note-ptBR Treine [Aspect of the Hawk]
     train 13549
+    note-enUS Train [Serpent Sting (Rank 2)]
+    note-ptBR Treine [Serpent Sting (Rank 2)]
 step
     only Hunter
     goto 2521 59.57,72.64
@@ -2194,6 +2559,8 @@ step
     note-enUS Buy [Sharp Arrow]
     note-ptBR Compre [Sharp Arrow]
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     collect 2515 1000
 step
     only Alliance
@@ -2212,6 +2579,7 @@ step
     only Horde Hunter
     path closest 2521 54.46,78.81 51.97,73.08 53.13,73.5 51.27,69.76
     use 267272
+    note-enUS Use your [Taming Rod] on a Windsong Crawler at max range.
     objective 94978/1
 step
     only Horde Hunter
@@ -2225,6 +2593,7 @@ step
     path closest 2521 60.91,69.41 58.34,68.48 53.8,72.16
     note-enUS Dismiss your Windsong Crawler by right clicking its unit frame and clicking dismiss, otherwise you'll be unable to tame an Armored Scorpid |only Horde Hunter
     use 267298
+    note-enUS Use your [Taming Rod] on an Ornery Galestrider at max range.
     objective 94979/1
 step
     only Horde Hunter
@@ -2237,6 +2606,7 @@ step
     only Horde Hunter
     path closest 2521 56.95,67.89 54.08,74.72 52.62,77.86 53.02,81.57 51.65,80.14 48.98,82.67
     use 264163
+    note-enUS Use your [Taming Rod] on a Vuldren at max range.
     objective 94013/1
 step
     only Horde Hunter
@@ -2255,13 +2625,19 @@ step
     goto 2521 59.6,72.53
     note-enUS Talk to Quel'dora Quickgale.
     train 4195
+    note-enUS Train [Great Stamina]
+    note-ptBR Treine [Great Stamina]
     train 24547
+    note-enUS Train [Natural Armor]
+    note-ptBR Treine [Natural Armor]
 step
     only Horde Hunter
     path seq 2521 60.91,69.41 58.34,68.48
     goto 2521 53.8,72.16 35
     note-enUS Cast [Tame Beast] on a Windsong Crawler to tame it - .tame 1997
     train 2981
+    note-enUS Attack mobs with it to learn [Claw (Rank 2)]
+    note-ptBR Ataque monstros com ele para aprender [Claw (Rank 2)]
 step
     only Mage
     goto 2521 62.89,77.32
@@ -2275,16 +2651,27 @@ step
     goto 2521 65.91,80.58
     note-enUS Talk to Anathamaas Aetherwind
     train 168
+    note-enUS Train [Frost Armor]
+    note-ptBR Treine [Frost Armor]
     train 122
+    note-enUS Train [Frost Nova]
+    note-ptBR Treine [Frost Nova]
     train 5504
+    note-enUS Train [Conjure Water]
+    note-ptBR Treine [Conjure Water]
     train 587
+    note-enUS Train [Conjure Food]
+    note-ptBR Treine [Conjure Food]
     train 5505
+    note-enUS Train [Conjure Water (Rank 2)]
+    note-ptBR Treine [Conjure Water (Rank 2)]
 step
     only Alliance
     path closest 2521 51.56,71.28 50.94,69.46 |only Alliance Hunter
     path closest 2521 50.06,72.96 48.83,73.54 47.16,72.34 46.55,71.7 46.52,70.33 |only Alliance
     path closest 2521 47.77,70.04 47.32,68.68 48.25,69 48.68,69.06 48.13,70.15
     use 267272 |only Alliance Hunter |opt
+    note-enUS Use your [Taming Rod] on a Windsong Crawler at max range. |only Alliance Hunter
     objective 94978/1 |only Alliance Hunter |opt
     note-enUS Kill Windsong Crawlers. Loot them for [Windsong Crawler Meat]. |only Alliance !Hunter
     objective 93317/1 |only Alliance !Hunter |opt
@@ -2292,6 +2679,8 @@ step
     note-ptBR Clique nos Crystals |only Alliance
     objective 92840/1 |only Alliance |opt
     use 254584 |only Alliance |opt
+    note-enUS Go around the Mountain. |only Alliance
+    note-ptBR Contorne a montanha. |only Alliance
     note-enUS Click on the Crystals
     note-ptBR Clique nos Crystals
     objective 92840/1
@@ -2302,6 +2691,7 @@ step
     path seq 2521 49.47,65.13 50.07,67.39 50.98,69.45 52.05,71.71 51.82,72.95
     goto 2521 52.81,75.82 40
     use 267272
+    note-enUS Use your [Taming Rod] on a Windsong Crawler at max range.
     objective 94978/1
 step
     only Alliance Hunter
@@ -2311,12 +2701,16 @@ step
     ifcomplete 92840
     path seq 2521 50.57,68.18
     goto 2521 52.73,71.12
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     only Alliance !Hunter
     ifonquest 92840
     ifcomplete 92840
     path seq 2521 49.46,70.12
     goto 2521 65.58,76.65
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     goto 2521 42.97,43.54
     train 2366 |opt
@@ -2353,6 +2747,7 @@ step
     path closest 2521 60.91,69.41 58.34,68.48 53.8,72.16
     note-enUS Dismiss your Windsong Crawler by right clicking its unit frame and clicking dismiss, otherwise you'll be unable to tame an Armored Scorpid |only Alliance Hunter
     use 267298
+    note-enUS Use your [Taming Rod] on an Ornery Galestrider at max range.
     objective 94979/1
 step
     only Alliance Hunter
@@ -2367,6 +2762,7 @@ step
     note-enUS Kill Skyhopper. |only Alliance Hunter
     objective 93949/1 |only Alliance Hunter |opt
     use 264163
+    note-enUS Use your [Taming Rod] on a Vuldren at max range.
     objective 94013/1
 step
     only Alliance Hunter
@@ -2385,7 +2781,11 @@ step
     goto 2521 59.6,72.53
     note-enUS Talk to Quel'dora Quickgale.
     train 4195
+    note-enUS Train [Great Stamina]
+    note-ptBR Treine [Great Stamina]
     train 24547
+    note-enUS Train [Natural Armor]
+    note-ptBR Treine [Natural Armor]
 step
     only Alliance
     path closest 2521 58.85,75.49 59.05,76.35 59.8,75.68 61.4,74.76 62.61,76.14 63.1,77.59 62.67,77.77 63.13,77.32 62.97,76.91 63.8,78.01 63.16,78.97 65.37,78.53
@@ -2412,6 +2812,8 @@ step
     turnin 92860 |only Alliance |opt
     turnin 93949 |only Alliance |opt
     accept 93320 |only Alliance |opt
+    note-enUS Climb the tower |only Alliance
+    note-ptBR Suba a torre |only Alliance
     note-enUS Talk to Valennia Stormfist.
     turnin 92860 |only Alliance
     turnin 93949
@@ -2420,6 +2822,8 @@ step
     only Alliance
     goto 2521 66.47,76.64 10 |only Alliance
     goto 2521 65.96,74.31
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver. |only Alliance
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão. |only Alliance
     note-enUS Talk to Ealaane Nimbuswalker.
     note-ptBR Fale com Ealaane Nimbuswalker.
     accept 94896
@@ -2439,6 +2843,8 @@ step
     ifonquest 92834
     path seq 2521 69.01,65.86
     goto 2521 69.84,61.73
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     only Alliance Druid
     goto 2521 69.78,61.61
@@ -2457,6 +2863,8 @@ step
     objective 92642/2 |only Alliance Druid |opt
     note-enUS Kill Commander Belguilos on the second floor inside the house. |only Alliance Druid
     objective 92645/1 |only Alliance Druid |opt
+    note-enUS Go over the mountain |only Alliance Druid
+    note-ptBR Passe por cima da montanha |only Alliance Druid
     note-enUS Kill Commander Belguilos on the second floor inside the house.
     objective 92645/1
 step
@@ -2498,6 +2906,8 @@ step
     turnin 92880 |reward 2 |only Alliance Rogue |opt
     turnin 92880 |reward 3 |only Alliance Hunter Alliance Mage Alliance Druid |opt
     accept 92881 |only Alliance |opt
+    note-enUS Go around the mountain then climb the tower |only Alliance
+    note-ptBR Contorne a montanha e depois suba a torre |only Alliance
     note-enUS Talk to Valennia Stormfist.
     turnin 92880 |reward 1 |only Alliance Warrior
     turnin 92880 |reward 2 |only Alliance Rogue
@@ -2516,6 +2926,8 @@ step
     goto 2521 65.4,80.22
     note-enUS Talk to Daeann Steelwind outside the house.
     vendor
+    note-enUS Vendor trash and repair if needed
+    note-ptBR Venda o lixo e repare se necessário
 step
     only Horde
     ifonquest 93949
@@ -2525,11 +2937,15 @@ step
     goto 2521 66.18,76.66
     note-enUS Talk to Valennia Stormfist. |only Horde
     turnin 93949 |only Horde |opt
+    note-enUS Climb the tower |only Horde
+    note-ptBR Suba a torre |only Horde
     note-enUS Talk to Valennia Stormfist.
     turnin 93949
 step
     only Horde
     abandon 93949
+    note-enUS Abandon Bugged
+    note-ptBR Abandone Bugged
 step
     only Horde Druid
     goto 2521 69.78,61.61
@@ -2580,6 +2996,8 @@ step
     path closest 2521 53.56,59.17 52.91,58.56 52.08,59.23 52.49,57.3 53.55,55.55 54.3,57.94
     note-enUS Kill Windsong Crawlers. Loot them for [Windsong Crawler Meat]. |only Alliance Druid
     objective 93317/1 |only Alliance Druid |opt
+    note-enUS Go around the mountains |only Alliance Druid
+    note-ptBR Contorne as montanhas |only Alliance Druid
     note-enUS Kill Windsong Crawlers. Loot them for [Windsong Crawler Meat].
     objective 93317/1
 step
@@ -2602,15 +3020,23 @@ step
     goto 2521 56.56,50.36
     note-enUS Kill Zaal Stormshield. Loot him for the [Skybreaker Bulwark]. |only Warrior Horde
     objective 94003/1 |only Warrior Horde |opt
+    note-enUS Go up |only Warrior Horde
+    note-ptBR Suba |only Warrior Horde
     note-enUS Kill Zaal Stormshield. Loot him for the [Skybreaker Bulwark]. |only Warrior Alliance
     objective 94003/1 |only Warrior Alliance |opt
+    note-enUS Go around the mountain |only Warrior Alliance
+    note-ptBR Contorne a montanha |only Warrior Alliance
     note-enUS Kill Zaal Stormshield. Loot him for the [Skybreaker Bulwark].
     objective 94003/1
 step
     goto 2521 57.44,50.15 30 |only !Warrior
     goto 2521 57.77,52.06
+    note-enUS Go around the mountain |only !Warrior
+    note-ptBR Contorne a montanha |only !Warrior
     note-enUS Talk to Brother Zendraas.
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
 step
     goto 2521 53.95,38.9
     note-enUS Kill Shadowgale Shrieklings. |only Alliance
@@ -2654,6 +3080,8 @@ step
     note-enUS Click on the Crates |only Alliance
     note-ptBR Clique nas Crates |only Alliance
     objective 94896/1 |only Alliance |opt
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration.
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida.
 step
     path seq 2521 59.08,34.75 57.26,33.48 56.8,33.93 56.78,33.33 59.12,32.27 58.28,32.56 57.59,32.02 58.32,31.59 58.23,30.56 56.61,29.26
     goto 2521 59.02,31.82 30
@@ -2789,6 +3217,8 @@ step
     objective 94489/1
 step
     path closest 2521 64.7,30.07 65.55,31.9 66.13,32.18 65.79,33 65.93,33.55
+    note-enUS 1
+    note-ptBR 1
     note-enUS Click on the Druids, do not move while clicking them or it can bug.
     note-ptBR Clique nos Druids, não se mova enquanto clica neles ou pode bugar.
     objective 94489/1
@@ -2798,6 +3228,8 @@ step
     note-enUS Talk to Elegael Thornpaw.
     note-ptBR Fale com Elegael Thornpaw.
     turnin 94489 |opt
+    note-enUS Leave the cave
+    note-ptBR Saia da caverna
     note-enUS Talk to Elegael Thornpaw.
     note-ptBR Fale com Elegael Thornpaw.
     turnin 94489
@@ -2806,6 +3238,8 @@ step
     accept 94491
 step
     hearth
+    note-enUS Hearth to Shen'dar Village
+    note-ptBR Use a pedra de regresso para Shen'dar Village
     use 6948
 step
     only Warrior Alliance
@@ -2820,10 +3254,16 @@ step
     note-enUS Talk to Seena Skybreaker.
     note-ptBR Fale com Seena Skybreaker.
     train 1160
+    note-enUS Train [Demoralizing Shout]
+    note-ptBR Treine [Demoralizing Shout]
     train 6190
     train 6572
+    note-enUS Train [Revenge]
+    note-ptBR Treine [Revenge]
     train 6574
     train 1310185
+    note-enUS Train [Tactical Mastery]
+    note-ptBR Treine [Tactical Mastery]
 step
     only Alliance
     goto 2521 60.64,72.66
@@ -2834,22 +3274,34 @@ step
     goto 2521 59.9,72.48
     note-enUS Talk to Eltheen Nightbreeze.
     train 1766
+    note-enUS Train [Kick]
+    note-ptBR Treine [Kick]
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
 step
     only Alliance Hunter
     goto 2521 59.57,72.64
     note-enUS Talk to Quel'ana Quickgale.
     note-ptBR Fale com Quel'ana Quickgale.
     train 14281
+    note-enUS Train [Arcane Shot (Rank 2)]
+    note-ptBR Treine [Arcane Shot (Rank 2)]
 step
     only Alliance Warrior
     goto 2521 59.89,72.87
     note-enUS Talk to Seena Skybreaker.
     note-ptBR Fale com Seena Skybreaker.
     train 5242
+    note-enUS Train [Battle Shout (Rank 2)]
+    note-ptBR Treine [Battle Shout (Rank 2)]
     train 7384
+    note-enUS Train [Overpower]
+    note-ptBR Treine [Overpower]
     train 7887
     train 72
+    note-enUS Train [Shield Bash]
+    note-ptBR Treine [Shield Bash]
     train 1671
 step
     only Alliance
@@ -2864,7 +3316,11 @@ step
     note-enUS Talk to Naeluna Swiftmend.
     note-ptBR Fale com Naeluna Swiftmend.
     train 5229
+    note-enUS Train [Enrage]
+    note-ptBR Treine [Enrage]
     train 8936
+    note-enUS Train [Regrowth]
+    note-ptBR Treine [Regrowth]
 step
     goto 2521 65.95,74.31
     note-enUS Talk to Ealaane Nimbuswalker.
@@ -2879,6 +3335,8 @@ step
     note-enUS Talk to Talaanis Shadowsong. |only Alliance
     turnin 92644 |only Alliance |opt
     accept 94568 |only Alliance |opt
+    note-enUS Climb the tower |only Alliance
+    note-ptBR Suba a torre |only Alliance
     note-enUS Talk to Talaanis Shadowsong.
     turnin 92644
     accept 94568
@@ -2889,6 +3347,7 @@ step
     note-enUS Wait for the Roleplay. |only Alliance
     note-ptBR Espere a encenação. |only Alliance
     objective 94568/1 |only Alliance |opt
+    note-enUS Talk to Talaanis Shadowsong. |only Alliance
     note-enUS Wait for the Roleplay.
     note-ptBR Espere a encenação.
     objective 94568/1
@@ -2908,6 +3367,8 @@ step
     ifonquest 92640
     path seq 2521 66.49,76.64
     goto 2521 63.33,78.16
+    note-enUS Jump off the mountain and use [Walk on Air] to fly towards the questgiver.
+    note-ptBR Pule da montanha e use [Walk on Air] para voar em direção ao NPC da missão.
 step
     only Alliance
     path seq 2521 63.33,78.16 63.04,77.53 62.31,78.27 62.13,79.02 60.68,80.11
@@ -2930,12 +3391,16 @@ step
     note-enUS Talk to Valennia Stormfist. |only Alliance
     turnin 92640 |only Alliance |opt
     accept 93065 |only Alliance |opt
+    note-enUS Climb the tower |only Alliance
+    note-ptBR Suba a torre |only Alliance
     note-enUS Talk to Valennia Stormfist.
     turnin 92640
     accept 93065
 step
     only Alliance
     goto 2521 63.9,74.16
+    note-enUS Use [Read Ley Line] for 100% increased passive Mana and Health regeneration.
+    note-ptBR Use [Read Ley Line] para 100% mais regeneração passiva de Mana e Vida.
 step
     only Alliance
     path seq 2521 63.99,74.1
@@ -2950,9 +3415,17 @@ step
     note-ptBR Entre no grande salão de pedra ao lado do ferreiro, continue até a câmara superior e vire à direita.
     note-enUS Talk to Anathamaas Aetherwind.
     train 145
+    note-enUS Train [Fireball (Rank 3)]
+    note-ptBR Treine [Fireball (Rank 3)]
     train 604
+    note-enUS Train [Dampen Magic]
+    note-ptBR Treine [Dampen Magic]
     train 597
+    note-enUS Train [Conjure Food (Rank 2)]
+    note-ptBR Treine [Conjure Food (Rank 2)]
     train 130
+    note-enUS Train [Slow Fall]
+    note-ptBR Treine [Slow Fall]
 step
     only Alliance
     goto 2521 66.34,79.51
@@ -2966,6 +3439,8 @@ step
     note-enUS The zeppelin can arrive anytime within its 6-minute cycle. prioritize cooking and gaining campfire buffs for later. |only Alliance
     note-ptBR O zepelim pode chegar a qualquer momento dentro do ciclo de 6 minutos. Priorize cozinhar e ganhar bônus de fogueira para depois. |only Alliance
     turnin 94946 |only Alliance |opt
+    note-enUS Take the Zeppelin to Dalaran City |only Alliance
+    note-ptBR Pegue o zepelim para Dalaran City |only Alliance
     note-enUS Do not jump off the zeppelin early you may be pushed off the platform.
     note-ptBR Não pule do zepelim cedo demais, você pode ser empurrado para fora da plataforma.
     turnin 94946
@@ -3019,9 +3494,15 @@ step
     note-enUS Talk to Seena Skybreaker.
     note-ptBR Fale com Seena Skybreaker.
     train 5242
+    note-enUS Train [Battle Shout (Rank 2)]
+    note-ptBR Treine [Battle Shout (Rank 2)]
     train 7384
+    note-enUS Train [Overpower]
+    note-ptBR Treine [Overpower]
     train 7887
     train 72
+    note-enUS Train [Shield Bash]
+    note-ptBR Treine [Shield Bash]
     train 1671
 step
     only Warrior Horde
@@ -3030,16 +3511,26 @@ step
     note-enUS Talk to Seena Skybreaker.
     note-ptBR Fale com Seena Skybreaker.
     train 1160
+    note-enUS Train [Demoralizing Shout]
+    note-ptBR Treine [Demoralizing Shout]
     train 6190
     train 6572
+    note-enUS Train [Revenge]
+    note-ptBR Treine [Revenge]
     train 6574
     train 1310185
+    note-enUS Train [Tactical Mastery]
+    note-ptBR Treine [Tactical Mastery]
 step
     only Horde Rogue
     goto 2521 59.9,72.48
     note-enUS Talk to Eltheen Nightbreeze.
     train 1766
+    note-enUS Train [Kick]
+    note-ptBR Treine [Kick]
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
 step
     only Horde
     goto 2521 59.07,72.99
@@ -3051,6 +3542,8 @@ step
     goto 2521 58.99,75.46
     note-enUS Talk to Railee Thriceforged.
     vendor
+    note-enUS Vendor trash.
+    note-ptBR Venda o lixo.
 step
     only Horde
     goto 2521 58.13,78.31
@@ -3069,6 +3562,8 @@ step
     only Horde
     ifnotturnedin 95350
     goto 2521 57.92,80.78
+    note-enUS Take the airship to Mulgore.
+    note-ptBR Pegue o dirigível para Mulgore.
 step
     only Horde Druid Skyborne
     goto 1412 @423.4,-659
@@ -3088,6 +3583,10 @@ step
     note-enUS Talk to Turak Runetotem. |only Horde Druid Skyborne
     turnin 94911 |only Horde Druid Skyborne |opt
     accept 94913 |only Horde Druid Skyborne |opt
+    note-enUS Enter Thunder Bluff |only Horde Druid Skyborne
+    note-ptBR Entre em Thunder Bluff |only Horde Druid Skyborne
+    note-enUS Cross the bridge. |only Horde Druid Skyborne
+    note-ptBR Atravesse a ponte. |only Horde Druid Skyborne
     note-enUS Talk to Turak Runetotem.
     turnin 94911
     accept 94913
@@ -3096,11 +3595,15 @@ step
     goto 1456 @-281.5,-1039.9
     note-enUS Talk to Turak Runetotem.
     train 8936
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Druid Skyborne
     goto 1456 @-281.5,-1039.9
     note-enUS Talk to Turak Runetotem.
     train 5178
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde
     ifonquest 95350
@@ -3110,14 +3613,22 @@ step
     note-enUS Talk to Tal. |only Horde !Druid
     note-ptBR Fale com Tal. |only Horde !Druid
     fly 1454 |only Horde !Druid |opt
+    note-enUS Fly to Orgrimmar |only Horde !Druid
+    note-ptBR Voe para Orgrimmar |only Horde !Druid
+    note-enUS Enter Thunder Bluff |only Horde !Druid
+    note-ptBR Entre em Thunder Bluff |only Horde !Druid
     note-enUS Talk to Tal.
     note-ptBR Fale com Tal.
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Horde
     goto 1454 54.1,68.42
     note-enUS Talk to Innkeeper Gryshka
     home
+    note-enUS Set your Hearthstone to Orgrimmar
+    note-ptBR Defina sua pedra de regresso em Orgrimmar
 step
     only Horde
     path seq 1454 @-4460.6,1584.3
@@ -3141,6 +3652,8 @@ step
     only Horde
     path closest 1454 @-4560,1908.5 @-4587,1918.3 @-4608,1897.4 @-4632.3,1911.6 |only Horde
     path closest 1454 @-4653.9,1950.3 @-4677.7,1971.6 @-4667.4,1997 @-4609.8,2013.5 @-4630.6,1968.1
+    note-enUS Travel to the Valley of Honor |only Horde
+    note-ptBR Vá até Valley of Honor |only Horde
     note-enUS Loot the Handful of Cattails and Speargrass Cuttings in the water
     note-ptBR Saqueie o Handful of Cattails e as Speargrass Cuttings na água
     objective 97242/1
@@ -3150,21 +3663,29 @@ step
     goto 1454 @-4607.02,2100.64
     note-enUS Talk to Ormak Grimshot
     train 13795
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Hunter
     goto 1454 @-4611.09,2135.15
     note-enUS Talk to Xao'tsu
     train 24556
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Horde Warrior
     goto 1454 @-4801.42,1980.53
     note-enUS Talk to Grezz Ragefist
     train 7384
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Warrior
     goto 1454 @-4801.42,1980.53
     note-enUS Talk to Grezz Ragefist
     train 1160
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde
     goto 1454 @-4466.9,1954.5
@@ -3224,42 +3745,62 @@ step
     goto 1454 @-4225.09,1933.29
     note-enUS Talk to Kardris Dreamseeker
     train 408341
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Shaman
     goto 1454 @-4225.09,1933.29
     note-enUS Talk to Kardris Dreamseeker
     train 8045
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Rogue
     goto 1454 @-4296.34,1762.67
     note-enUS Talk to Ormok
     train 1766
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Rogue
     goto 1454 @-4296.34,1762.67
     note-enUS Talk to Ormok
     train 1758
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Mage
     goto 1454 @-4218.64,1473.72
     note-enUS Talk to Pephredo
     train 145
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde Mage
     goto 1454 @-4218.64,1473.72
     note-enUS Talk to Pephredo
     train 1449
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Horde
     goto 1411 @-4648.55,1321.88 40
     zone 1411 |only Horde |opt
+    note-enUS Leave Orgrimmar |only Horde
+    note-ptBR Saia de Orgrimmar |only Horde
+    note-enUS Go up the Zeppelin Tower
+    note-ptBR Suba a torre do Zepelim
     zone 1420
+    note-enUS Take the Zeppelin to Tirisfal Glades
+    note-ptBR Pegue o zepelim para Tirisfal Glades
     note-enUS Conjure water while waiting |only Mage
     note-ptBR Conjure água enquanto espera |only Mage
 step
     only Horde
     goto 1420 @253.4,2234.85 80 |only Horde
     goto 1420 @254.6,2225.8
+    note-enUS Travel to Brill |only Horde
+    note-ptBR Vá até Brill |only Horde
     note-enUS Talk to Deathguard Terrence
     accept 96895
 step
@@ -3300,16 +3841,24 @@ step
     path seq 1458 @239.14,1749.54 @255.64,1724.7 @240.68,1706.97 @241.06,1660.12 @257.08,1623.38 |only Horde
     goto 1458 @244.51,1598.73 15 |only Horde
     goto 1458 @266.39,1567.11
+    note-enUS Take the lift down to the Undercity |only Horde
+    note-ptBR Pegue o elevador descendo até Undercity |only Horde
     note-enUS Talk to Michael Garrett
     fp
+    note-enUS Get the Undercity flight path
+    note-ptBR Pegue o ponto de voo de Undercity
 step
     only Horde
     path seq 1458 @419.89,1627.54 @428.52,1597.2 @439.17,1626.06 @476.78,1632.15 @482.34,1660.63 @539.33,1665.49 @610.42,1684.44
     goto 1458 @663.19,1600.46 35
     goto 1420 @724.25,1682.66 50
     zone 1420
+    note-enUS Leave Undercity through the Sewers
+    note-ptBR Saia de Undercity pelos Sewers
 step
     only Horde
     goto 1420 @629.36,1553.42
     zone 1421
+    note-enUS Travel to Silverpine Forest
+    note-ptBR Vá até Silverpine Forest
 ]==])

@@ -30,6 +30,8 @@ step
     path seq 1439 @533.23,6399.77
     goto 1439 @519.48,6405.89
     vendor |opt
+    note-enUS You can purchase extremely cheap level 5 food from Laird (fish vendor)
+    note-ptBR Você pode comprar comida de nível 5 extremamente barata de Laird (vendedor de peixe)
     note-enUS Go upstairs to the top floor
     note-ptBR Suba até o último andar
     note-enUS Talk to Wizbang Cranktoggle
@@ -40,6 +42,8 @@ step
     note-enUS Jump down to the 1st floor
     note-ptBR Pule para o 1º andar
     home
+    note-enUS Set your Hearthstone to Auberdine
+    note-ptBR Defina sua pedra de regresso em Auberdine
 step
     goto 1439 @497.21,6427.72
     note-enUS Talk to Barithras Moonshade
@@ -68,6 +72,8 @@ step
 step
     goto 1439 @561.4,6343.01
     fp
+    note-enUS Get the Auberdine flight path
+    note-ptBR Pegue o ponto de voo de Auberdine
 step
     goto 1439 @558.78,6111.57
     note-enUS Kill Crawlers along the coast
@@ -122,6 +128,8 @@ step
     note-enUS Kill darkshore threshers in the sea
     note-ptBR Mate darkshore threshers no mar
     objective 1001/1 |opt
+    note-enUS Run up to the docks then jump in the water at the intersection
+    note-ptBR Corra até as docas e depois pule na água no cruzamento
     note-enUS Click on the sea turtle head underwater
     note-ptBR Clique na cabeça da tartaruga marinha debaixo d'água
     objective 4681/1
@@ -300,6 +308,8 @@ step
     accept 4728
 step
     hearth
+    note-enUS Hearth to Auberdine
+    note-ptBR Use a pedra de regresso para Auberdine
 step
     goto 1439 @397.65,6437.33
     note-enUS Talk to Tharnariun Treetender
@@ -312,6 +322,8 @@ step
     note-ptBR Fale com Gorbold Steelhand
     turnin 982
     vendor
+    note-enUS Buy some Mild Spices from Gorbold until you have enough to cook all your eggs
+    note-ptBR Compre Mild Spices de Gorbold até ter o suficiente para cozinhar todos os seus ovos
 step
     goto 1439 @472.97,6557.85
     note-enUS Make sure you have 10 points in cooking or you cant accept/turnin the quest
@@ -350,6 +362,8 @@ step
     goto 1439 @529.3,6415.93
     goto 1448 @600.92,6424.93
     vendor |opt
+    note-enUS Buy level 15 drink from Taldan
+    note-ptBR Compre bebida de nível 15 de Taldan
     note-enUS Go back to the dock
     note-ptBR Volte para a doca
     note-enUS Talk to Cerellean Whiteclaw
@@ -417,6 +431,8 @@ step
 step
     path seq 1439 @-659.52,6901.5
     goto 1439 @-704.06,6809.8
+    note-enUS Head to the cave above the waterfall
+    note-ptBR Vá até a caverna acima da cachoeira
     note-enUS Stay on the upper part of the cave. If theres no Death Cap at the end of the top side, then drop down and get one from below
     note-ptBR Fique na parte de cima da caverna. Se não houver Death Cap no fim do lado de cima, desça e pegue um lá embaixo
     note-enUS The first blue one at the mouth of the cave should've respawned by the time you've looted the Death Cap
@@ -456,6 +472,9 @@ step
     note-enUS Leave some of the nearby murlocs alive, you're gonna die to them after you accept this quest
     note-ptBR Deixe alguns murlocs próximos vivos, você vai morrer para eles depois de aceitar esta missão
     accept 4725
+step
+    note-enUS Die and respawn in Auberdine
+    note-ptBR Morra e renasça em Auberdine
 step
     goto 1439 @491.97,6582.3
     note-enUS Equip your new wand
@@ -514,6 +533,8 @@ step
     path seq 1439 @79.97,4986.72
     goto 1439 @585.63,5237.37
     vendor |opt
+    note-enUS Buy level 15 water from Tiyani
+    note-ptBR Compre água de nível 15 de Tiyani
     note-enUS Loot the remains
     note-ptBR Saqueie os restos
     accept 4728
@@ -649,6 +670,8 @@ step
     path seq 1439 @79.97,4987.16
     goto 1439 @33.47,4996.33
     vendor |opt
+    note-enUS Buy food/drink from Tiyani if needed
+    note-ptBR Compre comida/bebida de Tiyani se precisar
     note-enUS Accept the Kerlonian escort quest. If he's not there, skip this step
     note-ptBR Aceite a missão de escolta de Kerlonian. Se ele não estiver lá, pule esta etapa
     note-enUS Talk to Kerlonian Evershade
@@ -686,6 +709,8 @@ step
     turnin 945
 step
     hearth
+    note-enUS Hearth to Auberdine
+    note-ptBR Use a pedra de regresso para Auberdine
 step
     goto 1439 @577.77,6371.39
     note-enUS Talk to Gubber Blump
@@ -732,9 +757,13 @@ step
     note-enUS Run back to the dock. Wait for the boat to Darnassus to arrive
     note-ptBR Volte correndo para o cais. Espere o barco para Darnassus chegar
     zone 1438
+    note-enUS Take the boat to Darnassus
+    note-ptBR Pegue o barco para Darnassus
 step
     ifonquest 741
     goto 1438 @965.8,8781.63 30
+    note-enUS Go through the purple portal
+    note-ptBR Atravesse o portal roxo
 step
     ifonquest 741
     goto 1457 @2607.74,9642.04
@@ -745,10 +774,16 @@ step
 step
     goto 1438 @841.05,8641.12
     fp
+    note-enUS Get the Teldrassil Flight Path
+    note-ptBR Pegue o ponto de voo de Teldrassil
     fp
+    note-enUS Fly to Auberdine
+    note-ptBR Voe para Auberdine
 step
     goto 1439 @818.16,6422.92 50
     zone 1437
+    note-enUS Take the boat to Menethil
+    note-ptBR Pegue o barco para Menethil
 step
     path seq 1437 @-819.67,-3691.42 @-807.26,-3716.22 @-827.94,-3724.49 10.76,56.72
     goto 1437 @-782.03,-3793.12
@@ -756,20 +791,30 @@ step
     note-ptBR Se tiver 8s, verifique se Neal Allen tem o Bronze Tube e compre-o se estiver disponível. Caso contrário, pule esta etapa
     collect 4371 1 |quest 175 |q 175/1 |opt
     fly 1455
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
 step
     zone 1453
+    note-enUS Take the tram to Stormwind City
+    note-ptBR Pegue o bonde para Stormwind City
 step
     only Human
     goto 1453 @638.8,-8341.95
     goto 1429 @409.13,-9100.58
     vendor |opt
+    note-enUS Buy a Bronze Tube if you haven't
+    note-ptBR Compre um Bronze Tube se ainda não tiver
     note-enUS This is a limited supply item, skip this step if the npc doesn't have it
     note-ptBR Este é um item de estoque limitado, pule esta etapa se o NPC não o tiver
     zone 1429
+    note-enUS Travel to Elwynn Forest
+    note-ptBR Vá até Elwynn Forest
 step
     only Gnome
     goto 1429 @622.93,-8830.7
     zone 1453
+    note-enUS Travel to Stormwind City
+    note-ptBR Vá até Stormwind City
 step
     only Gnome
     path seq 1453 @606.4,-8812
@@ -777,19 +822,27 @@ step
     note-enUS Run into Stormwind and get the Flight Path
     note-ptBR Entre em Stormwind e pegue o caminho de voo
     fp
+    note-enUS Get the Stormwind City flight path
+    note-ptBR Pegue o ponto de voo de Stormwind City
 step
     only Gnome
     path seq 1453 @493.08,-8867.22
     goto 1453 @507.6,-8885.59 18
+    note-enUS Drop down to the small ledge by running into the white wall. Be careful. Run along it toward the exit of Stormwind
+    note-ptBR Desça até a pequena plataforma correndo contra a parede branca. Cuidado. Corra por ela em direção à saída de Stormwind
 step
     path seq 1429 @44,-9459.11 @14.84,-9477.86
     goto 1429 @34.28,-9471.61
     note-enUS Run into the upstairs of the Goldshire Inn
     note-ptBR Suba para o andar de cima da Goldshire Inn
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1429 @-1637.62,-9642.89 125
     zone 1433
+    note-enUS Run all the way east to Redridge Mountains. Sort out your keybinds en route, making sure you have your spells comfortably on your bars
+    note-ptBR Corra todo o caminho para o leste até Redridge Mountains. Ajuste suas teclas de atalho no caminho, garantindo que suas magias fiquem confortáveis nas barras
 ]==])
 
 register([==[
@@ -833,6 +886,8 @@ step
 step
     goto 1433 @-2234.89,-9435.06
     fp
+    note-enUS Get the Redridge Mountains flight path
+    note-ptBR Pegue o ponto de voo de Redridge Mountains
 step
     goto 1433 @-2298.28,-9283.9
     note-enUS Talk to Marshal Marris
@@ -880,6 +935,8 @@ step
 step
     goto 1433 @-2157.18,-9223.96
     home
+    note-enUS Set your Hearth to Lakeshire
+    note-ptBR Defina sua pedra de regresso em Lakeshire
 step
     goto 1433 @-2207.32,-9351.66
     note-enUS Talk to Shawn
@@ -903,11 +960,15 @@ step
 step
     goto 1433 @-2234.89,-9435.21
     fly 1453
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
 step
     goto 1453 @612.99,-8796.14
     note-enUS Go into Stormwind. Go to the weapon trainer
     note-ptBR Vá para Stormwind. Vá até o instrutor de armas
     trainer
+    note-enUS Train 1h Swords and Daggers
+    note-ptBR Treine 1h Swords e Daggers
 step
     path seq 1453 @660.17,-8814.51
     goto 1453 @638.26,-8342.31
@@ -942,8 +1003,14 @@ step
     goto 1436 @1037.42,-10628.5
     goto 1433 @-2243.14,-9259.43
     hearth |opt
+    note-enUS Hearth to Lakeshire if it's up
+    note-ptBR Use a pedra de regresso para Lakeshire, se estiver disponível
     fp |only Gnome |opt
+    note-enUS Get the Westfall flight path |only Gnome
+    note-ptBR Pegue o ponto de voo de Westfall |only Gnome
     fp |opt
+    note-enUS Fly to Redridge
+    note-ptBR Voe para Redridge
     note-enUS Talk to Verner Osgood
     note-ptBR Fale com Verner Osgood
     turnin 119
@@ -1102,6 +1169,8 @@ step
     note-enUS If you get unlucky after clearing the close groups, you have another opportunity later
     note-ptBR Se não tiver sorte após limpar os grupos próximos, terá outra oportunidade mais tarde
     objective 20/1 |opt
+    note-enUS Run toward the spiders
+    note-ptBR Corra em direção às aranhas
     note-enUS Kill Spiders. Loot them for the meat
     note-ptBR Mate aranhas. Saqueie-as para obter a carne
     note-enUS Be careful as their poison can do some damage
@@ -1138,6 +1207,8 @@ step
 step
     goto 1433 @-2157.18,-9223.81
     vendor
+    note-enUS Buy level 15 drink
+    note-ptBR Compre bebida de nível 15
 step
     goto 1433 @-2063.61,-9212.08
     note-enUS Exit the Inn. Go west then into the building
@@ -1154,4 +1225,6 @@ step
     note-enUS If you don't have enough meat, grind some boars en route to Darkshire
     note-ptBR Se não tiver carne suficiente, faça grind de alguns javalis no caminho para Darkshire
     zone 1431
+    note-enUS Travel to Duskwood
+    note-ptBR Vá até Duskwood
 ]==])

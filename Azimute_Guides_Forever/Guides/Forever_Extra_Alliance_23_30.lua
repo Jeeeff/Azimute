@@ -25,16 +25,26 @@ step
     only !Human
     goto 1453 66.4,62.1
     fp
+    note-enUS Learn the Stormwind Flight Path
+    note-ptBR Aprenda o ponto de voo de Stormwind
 step
     only Rogue
     goto 1453 78.3,57
     train 1804
+    note-enUS Make sure to train lockpicking
+    note-ptBR Lembre-se de treinar lockpicking
 step
     only Hunter Warrior Paladin Shaman Rogue
     goto 1455 61.34,89.25
     train 197 |only !Rogue
+    note-enUS Train 2H Axes |only !Rogue
+    note-ptBR Treine 2H Axes |only !Rogue
     train 266 |only Hunter Warrior Rogue
+    note-enUS Train Guns |only Hunter Warrior Rogue
+    note-ptBR Treine Guns |only Hunter Warrior Rogue
     train 199 |only Warrior Shaman
+    note-enUS Train 2H Maces |only Warrior Shaman
+    note-ptBR Treine 2H Maces |only Warrior Shaman
 step
     goto 1437 8.31,58.53
     note-enUS Talk to Karl Boran
@@ -74,6 +84,8 @@ step
     only Hunter
     goto 1437 11.1,58.3
     vendor
+    note-enUS Repair and restock on arrows
+    note-ptBR Repare e reabasteça flechas
 step
     goto 1437 11.7,58
     note-enUS Talk to Sida
@@ -83,6 +95,8 @@ step
     path seq 1437 10.6,56.8
     goto 1437 9.9,57.4
     vendor |opt
+    note-enUS Head to the keep and buy a Bronze Tube from Neal Allen (limited supply), skip this step if he doesn't have it or if you already have one
+    note-ptBR Vá até o forte e compre um Bronze Tube de Neal Allen (estoque limitado). Pule esta etapa se ele não tiver ou se você já tiver um
     collect 4371 1 |quest 175 |q 175/1 |opt
     note-enUS Go upstairs inside the keep
     note-ptBR Suba as escadas dentro da fortaleza
@@ -108,6 +122,8 @@ step
     path seq 1437 26.4,25.8 34.3,41.2
     goto 1437 38.18,50.89
     vendor |opt
+    note-enUS Buy a Bronze Tube from Fradd Swiftgear (limited supply), skip this step if he doesn't have it or if you already have one
+    note-ptBR Compre um Bronze Tube de Fradd Swiftgear (estoque limitado). Pule esta etapa se ele não tiver ou se você já tiver um
     collect 4371 1 |quest 175 |q 175/1 |opt
     note-enUS Talk to Ormer Ironbraid
     note-ptBR Fale com Ormer Ironbraid
@@ -176,6 +192,8 @@ step
     goto 1437 50.2,37.8 |only Warrior
     goto 1437 56.37,40.4
     vendor |only Warrior |opt
+    note-enUS Check the herb vendor and buy some Liferoot, you will need 8 for a quest later, skip this step if you already have it |only Warrior
+    note-ptBR Procure o vendedor de ervas e compre um pouco de Liferoot, você vai precisar de 8 para uma missão depois. Pule esta etapa se já tiver |only Warrior
     collect 3357 8 |only Warrior |opt
     note-enUS Talk to Rethiel the Greenwarden
     note-ptBR Fale com Rethiel the Greenwarden
@@ -234,6 +252,8 @@ step
     note-enUS Hearth if your hearthstone is set to Stormwind
     note-ptBR Use a Pedra de Regresso se ela estiver marcada em Stormwind
     fly 1453
+    note-enUS Fly to Stormwind City
+    note-ptBR Voe para Stormwind City
 ]==])
 
 register([==[
@@ -262,10 +282,14 @@ step
     note-ptBR Verifique a Casa de Leilões, a floricultura no distrito comercial e a loja de alquimia no distrito dos magos e compre um pouco de Liferoot, você vai precisar de 8 para uma missão depois. Pule esta etapa se já tiver |only Warrior
     collect 3357 8 |only Warrior |opt
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1453 38.5,26.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Paladin
     goto 1453 40.1,30
@@ -280,6 +304,8 @@ step
     only Warlock
     goto 1453 25.3,78.7
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     ifonquest 1738
@@ -306,35 +332,51 @@ step
     only Mage
     goto 1453 39.6,79.6
     train 3561
+    note-enUS Train Teleport: Stormwind
+    note-ptBR Treine Teleport: Stormwind
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1453 74.6,52.8
     note-enUS Make sure you train lockpicking and pickpocketing
     note-ptBR Não deixe de treinar arrombamento (lockpicking) e punguista (pickpocketing)
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1453 78.6,45.8
     trainer
+    note-enUS Go upstairs. Train your class spells
+    note-ptBR Suba as escadas. Treine suas magias de classe
 step
     only Hunter
     goto 1453 61.7,15.4
     train 14323
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path seq 1453 53.62,59.76
     goto 1453 55.25,7.08
     vendor
+    note-enUS Check Billibub in the Dwarven District for a Bronze Tube. Buy one if it's available
+    note-ptBR Procure Billibub no Dwarven District por um Bronze Tube. Compre um se estiver disponível
     collect 4371 1 |quest 175 |q 175/1
 step
     only Shaman
     goto 1453 61.9,84
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Human Paladin Human Warlock
     path seq 1453 62.5,62.3
     goto 1453 66.3,62.1
     fp
+    note-enUS Fly to Redridge Mountains
+    note-ptBR Voe para Redridge Mountains
 step
     only !Human
     goto 1429 65.2,69.8
@@ -353,6 +395,8 @@ step
 step
     goto 1433 30.5,59.4
     fp
+    note-enUS Get the Redridge Mountains flight path
+    note-ptBR Pegue o ponto de voo de Redridge Mountains
 step
     goto 1433 30.8,60.1
     note-enUS Talk to Deputy Feldon
@@ -375,6 +419,8 @@ step
     only Hunter
     goto 1433 28.8,47.3
     vendor
+    note-enUS Restock on arrows, note you will get level 25 arrows soon.
+    note-ptBR Reabasteça flechas; note que você vai receber flechas de nível 25 em breve.
 step
     goto 1433 27.72,47.38
     note-enUS Talk to Dockmaster Baren
@@ -457,6 +503,8 @@ step
 step
     goto 1431 77.8,48.2
     vendor
+    note-enUS Buy a bronze tube from Herble Baubbletump (limited supply) if you don't have one
+    note-ptBR Compre um Bronze Tube de Herble Baubbletump (estoque limitado) se você não tiver um
 step
     goto 1431 79.8,47.9
     note-enUS Talk to Viktori Prism'Antras
@@ -467,6 +515,8 @@ step
     only Rogue
     goto 1431 77.5,44.4
     fp
+    note-enUS Get the Duskwood flight point
+    note-ptBR Pegue o ponto de voo de Duskwood
 step
     ifturnedin 174
     goto 1431 79.8,47.9
@@ -477,6 +527,8 @@ step
     ifturnedin 174
     goto 1431 82,59
     use 2794 |opt
+    note-enUS Keep an eye out for the book (zone-wide drop). You'll need this for later
+    note-ptBR Fique de olho no livro (drop em toda a zona). Você vai precisar dele depois
     collect 2794 1 |quest 337 |opt
     accept 337 |opt
     note-enUS Talk to Blind Mary
@@ -537,6 +589,8 @@ step
     only Rogue Druid
     goto 1436 56.6,52.6
     fp
+    note-enUS Get the Sentinel Hill flight path
+    note-ptBR Pegue o ponto de voo de Sentinel Hill
 step
     only Rogue Druid
     goto 1436 41.5,66.8
@@ -546,6 +600,8 @@ step
     only !Rogue !Druid !Priest !Warlock
     goto 1431 60.8,29.7
     hearth |only Rogue Druid |opt
+    note-enUS Hearth back to town |only Rogue Druid
+    note-ptBR Use a pedra de regresso de volta para a cidade |only Rogue Druid
     note-enUS Grind your way back to eastern Duskwood. If killing Shadow Weavers is too difficult right now skip this step, you will complete it later
     note-ptBR Faça grind no caminho de volta para o leste de Duskwood. Se matar Shadow Weavers estiver difícil demais agora, pule esta etapa, você vai completá-la depois
     objective 173/1
@@ -580,6 +636,8 @@ step
     accept 228
 step
     goto 1431 75.7,45.3
+    note-enUS You can delete "The Story of Morgan Ladimore" from your inventory, as it's not needed
+    note-ptBR Você pode apagar "The Story of Morgan Ladimore" do seu inventário, pois não é necessário
     note-enUS Talk to Madame Eva
     note-ptBR Fale com Madame Eva
     turnin 148
@@ -660,6 +718,8 @@ step
     only !Rogue !Druid
     goto 1436 56.6,52.6
     fp
+    note-enUS Get the Sentinel Hill flight path
+    note-ptBR Pegue o ponto de voo de Sentinel Hill
 step
     only !Rogue !Druid
     goto 1436 41.5,66.8
@@ -684,6 +744,8 @@ step
     only Rogue Druid
     goto 1431 60.8,29.7
     hearth |only !Rogue !Druid |opt
+    note-enUS Hearth back to Duskwood |only !Rogue !Druid
+    note-ptBR Use a pedra de regresso de volta para Duskwood |only !Rogue !Druid
     note-enUS Grind your way back to eastern Duskwood
     note-ptBR Faça grind no caminho de volta para o leste de Duskwood
     objective 173/1
@@ -721,6 +783,8 @@ step
 step
     goto 1431 73.9,44.4
     vendor |opt
+    note-enUS Remember to buy level 25 food and water
+    note-ptBR Lembre-se de comprar comida e água de nível 25
     note-enUS Talk to Tavernkeep Smitts
     note-ptBR Fale com Tavernkeep Smitts
     turnin 158
@@ -770,6 +834,8 @@ step
 step
     goto 1431 77.5,44.3
     fp
+    note-enUS Fly to Redridge
+    note-ptBR Voe para Redridge
 step
     goto 1433 31.54,57.85
     note-enUS Talk to Guard Howe
@@ -853,7 +919,11 @@ step
     goto 1433 30.5,59.3
     goto 1431 18.4,56.5
     fly 1436 |opt
+    note-enUS Fly to Westfall
+    note-ptBR Voe para Westfall
     use 2794 |opt
+    note-enUS Keep an eye out for Old History book (zone-wide drop). You'll need this for later
+    note-ptBR Fique de olho no Old History book (drop em toda a zona). Você vai precisar dele depois
     collect 2794 1 |quest 337 |opt
     accept 337 |opt
     note-enUS Talk to Jitters
@@ -907,6 +977,8 @@ step
 step
     goto 1431 23.8,35
     level 27
+    note-enUS Grind to 12000+/32200xp
+    note-ptBR Mate monstros até 12000+/32200xp
 step
     goto 1431 19.7,39.7
     note-enUS Kill the level 30 elite roaming the cemetery. Skip this step if you cannot solo her or find a group.
@@ -937,16 +1009,22 @@ step
     only Shaman
     goto 1453 61.9,84
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1429 41.09,65.77
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1453 39.6,79.6
     note-enUS Teleport to stormwind
     note-ptBR Teleporte-se para Stormwind
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1453 26.4,78.4
     note-enUS Talk to Zardeth of the Black Claw
@@ -956,6 +1034,8 @@ step
     only Warlock
     goto 1453 26.4,78.4
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1453 29.8,61.8
     note-enUS Talk to Caretaker Folsom
@@ -988,14 +1068,20 @@ step
     only Paladin
     goto 1453 38.6,32.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1453 38.5,26.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1453 61.7,15.4
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 ]==])
 
 register([==[
@@ -1024,6 +1110,8 @@ step
     only Rogue
     goto 1455 45.2,6.6
     trainer |only Rogue |opt
+    note-enUS Train your class spells in Ironforge. Skip if you just trained in Stormwind. |only Rogue
+    note-ptBR Treine suas magias de classe em Ironforge. Pule se acabou de treinar em Stormwind. |only Rogue
     note-enUS Buy the level 31 weapon upgrades (17dps)
     note-ptBR Compre as melhorias de arma de nível 31 (17 DPS)
     collect 2520 1
@@ -1034,9 +1122,17 @@ step
     only Hunter Warrior Paladin Shaman Rogue
     goto 1455 61.34,89.25
     zone 1455 |only Mage |opt
+    note-enUS Teleport to Ironforge |only Mage
+    note-ptBR Teleporte-se para Ironforge |only Mage
     train 197 |only !Rogue
+    note-enUS Train 2H Axes |only !Rogue
+    note-ptBR Treine 2H Axes |only !Rogue
     train 266 |only Hunter Warrior Rogue
+    note-enUS Train Guns |only Hunter Warrior Rogue
+    note-ptBR Treine Guns |only Hunter Warrior Rogue
     train 199 |only Warrior Shaman
+    note-enUS Train 2H Maces |only Warrior Shaman
+    note-ptBR Treine 2H Maces |only Warrior Shaman
 step
     only Paladin
     goto 1426 52.5,36.8
@@ -1048,6 +1144,8 @@ step
 step
     goto 1455 56.2,46.8
     fly 1437
+    note-enUS Fly to Wetlands
+    note-ptBR Voe para Wetlands
 step
     goto 1437 8.4,58.5
     note-enUS Talk to Karl Boran
@@ -1088,6 +1186,8 @@ step
     note-enUS Restock on food/water if needed.
     note-ptBR Reabasteça comida/água se necessário.
     home
+    note-enUS Set your Hearthstone to Deepwater Tavern
+    note-ptBR Defina sua pedra de regresso em Deepwater Tavern
 step
     goto 1437 10.9,55.9
     note-enUS Talk to Harlo Barnaby
@@ -1250,7 +1350,11 @@ step
     note-enUS Teleport to Moonglade |only Druid
     note-ptBR Teleporte-se para Moonglade |only Druid
     trainer |only Druid |opt
+    note-enUS Train spells |only Druid
+    note-ptBR Treine spells |only Druid
     hearth
+    note-enUS Hearth to Menethil Harbor
+    note-ptBR Use a pedra de regresso para Menethil Harbor
 step
     goto 1437 10.8,59.6
     note-enUS Talk to First Mate Fitzsimmons
@@ -1372,10 +1476,14 @@ step
 step
     goto 1417 44.3,93
     use 4433
+    note-enUS Jump down and loot the letter from the corpse underwater
+    note-ptBR Pule e saqueie a carta do cadáver debaixo d'água
     accept 637
 step
     path seq 1417 52.5,90.4
     goto 1417 48.7,87.9
+    note-enUS Swim east toward the ramp here
+    note-ptBR Nade para o leste em direção à rampa aqui
     objective 633/1
 step
     goto 1437 49.9,18.3
@@ -1391,6 +1499,8 @@ step
 step
     goto 1417 45.8,46.1
     fp
+    note-enUS Get the Arathi Highlands flight path
+    note-ptBR Pegue o ponto de voo de Arathi Highlands
 step
     ifonquest 647
     goto 1424 52.2,58.6
@@ -1465,15 +1575,21 @@ step
 step
     goto 1424 49.3,52.3
     fp
+    note-enUS Get the Southshore flight path
+    note-ptBR Pegue o ponto de voo de Southshore
 step
     goto 1422 42.9,85
     note-enUS Head north farming turtle meat along the river, once you get at the end of the river, head northwest into WPL. You don't need all 10 meat yet.
     note-ptBR Siga para o norte coletando carne de tartaruga ao longo do rio. Ao chegar ao fim do rio, siga para noroeste até WPL. Você ainda não precisa das 10 carnes.
     fp
+    note-enUS Get the Chillwind Camp flight path
+    note-ptBR Pegue o ponto de voo de Chillwind Camp
 step
     goto 1422 42.9,85
     goto 1424 49.3,52.3
     fly 1437
+    note-enUS Fly to Wetlands
+    note-ptBR Voe para Wetlands
 step
     goto 1437 10.6,60.5
     note-enUS Talk to Glorin Steelbrow
@@ -1504,9 +1620,13 @@ step
     only !Mage
     goto 1437 9.3,59.4
     fly 1455
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
 step
     only Mage
     zone 1455
+    note-enUS Teleport to Ironforge
+    note-ptBR Teleporte-se para Ironforge
 step
     goto 1455 63.8,67.8
     note-enUS Talk to Sara Balloo
@@ -1549,10 +1669,14 @@ step
     note-enUS Teleport to stormwind
     note-ptBR Teleporte-se para Stormwind
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1453 61.7,15.4
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Paladin
     goto 1453 40,29.9
@@ -1570,10 +1694,14 @@ step
     only Paladin
     goto 1453 38.6,32.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1453 38.5,26.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 322
     goto 1453 51.7,12.3
@@ -1591,6 +1719,8 @@ step
     accept 1274 |opt
 step
     zone 1453
+    note-enUS Exit the Chapel
+    note-ptBR Saia da Chapel
 step
     only Human Paladin
     goto 1453 39.8,30.1
@@ -1605,6 +1735,8 @@ step
     only Warlock
     goto 1453 25.3,78.7
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1453 74.1,7.6
     note-enUS Head into Stormwind Keep
@@ -1655,14 +1787,20 @@ step
     note-ptBR Fale com Farseer Umbrua
     accept 10491
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1453 78.6,45.8
     trainer
+    note-enUS Go upstairs. Train your class spells
+    note-ptBR Suba as escadas. Treine suas magias de classe
 step
     only Rogue
     goto 1453 74.6,52.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 1241
     goto 1453 73.1,78.3
@@ -1694,6 +1832,8 @@ step
 step
     goto 1453 66.2,62.1
     fly 1431
+    note-enUS Fly to Duskwood
+    note-ptBR Voe para Duskwood
 step
     ifturnedin 174
     goto 1431 79.8,47.9
@@ -1732,6 +1872,8 @@ step
     accept 159
 step
     home
+    note-enUS Set your Hearthstone to Darkshire
+    note-ptBR Defina sua pedra de regresso em Darkshire
 step
     goto 1431 73.7,46.8
     note-enUS Talk to Commander Althea Ebonlocke
@@ -1793,6 +1935,8 @@ step
     only Shaman
     goto 1431 73.9,44.5
     hearth |only Shaman |opt
+    note-enUS Hearth to Darkshire |only Shaman
+    note-ptBR Use a pedra de regresso para Darkshire |only Shaman
     note-enUS Talk to Tavernkeep Smitts
     note-ptBR Fale com Tavernkeep Smitts
     turnin 78
@@ -1842,6 +1986,8 @@ step
     goto 1431 77.6,44.6 |only Shaman
     goto 1429 72.7,51.5
     fly 1436 |only Shaman |opt
+    note-enUS Fly to Westfall |only Shaman
+    note-ptBR Voe para Westfall |only Shaman
     note-enUS Use the Symbol of Life on Henze Faulk
     note-ptBR Use o Symbol of Life em Henze Faulk
     note-enUS Talk to Henze Faulk
@@ -1936,6 +2082,8 @@ step
     only !Shaman !Paladin !Dwarf Paladin
     goto 1436 56.5,52.6
     fp
+    note-enUS Fly to Darkshire
+    note-ptBR Voe para Darkshire
 step
     ifonquest 181
     goto 1431 79.8,47.9
@@ -1997,6 +2145,8 @@ step
 step
     only !Shaman
     goto 1431 73.54,46.82
+    note-enUS You can delete "Translated Letter From The Embalmer" from your bags, as it's no longer needed
+    note-ptBR Você pode apagar "Translated Letter From The Embalmer" das suas bolsas, pois não é mais necessário
     note-enUS Talk to Commander Althea Ebonlocke
     note-ptBR Fale com Commander Althea Ebonlocke
     turnin 97
@@ -2043,6 +2193,8 @@ step
 step
     goto 1434 38.2,4.1
     fp
+    note-enUS Get the Rebel Camp flight path
+    note-ptBR Pegue o ponto de voo de Rebel Camp
 step
     goto 1434 37.8,3.3
     note-enUS Talk to Corporal Kaleb
@@ -2108,10 +2260,14 @@ step
     note-enUS Teleport to Moonglade
     note-ptBR Teleporte-se para Moonglade
     trainer
+    note-enUS Train spells
+    note-ptBR Treine spells
 step
     only Dwarf Paladin
     goto 1431 7.78,34.07
     hearth |only !Dwarf !Paladin |opt
+    note-enUS Hearth to Darkshire |only !Dwarf !Paladin
+    note-ptBR Use a pedra de regresso para Darkshire |only !Dwarf !Paladin
     note-enUS Talk to Sven Yorgen
     note-ptBR Fale com Sven Yorgen
     turnin 325
@@ -2132,6 +2288,8 @@ step
     only Dwarf Paladin
     goto 1436 56.5,52.6 12
     fp
+    note-enUS Fly to Darkshire
+    note-ptBR Voe para Darkshire
 step
     goto 1431 72,46.6
     note-enUS Talk to Lord Ello Ebonlocke
@@ -2152,12 +2310,16 @@ step
     only !Mage
     goto 1431 77.5,44.2
     fly 1453
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
 step
     only Mage
     goto 1453 39.6,79.6
     note-enUS Teleport to stormwind
     note-ptBR Teleporte-se para Stormwind
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 1245
     goto 1453 60.1,64.4
@@ -2172,10 +2334,14 @@ step
     only Paladin
     goto 1453 38.6,32.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1453 38.5,26.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     path seq 1453 64.1,61.2 |only Warrior
@@ -2188,14 +2354,20 @@ step
     note-ptBR Fale com Torm Ragetotem
     accept 1718
     trainer
+    note-enUS Train class spells
+    note-ptBR Treine class spells
 step
     only Shaman
     goto 1453 61.9,83.9
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1453 74.6,52.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 1246
     goto 1453 70.3,44.8
@@ -2227,6 +2399,8 @@ step
 step
     path seq 1453 55.4,68.3
     goto 1453 39.9,81.3
+    note-enUS Bank here if you need to
+    note-ptBR Use o banco aqui se precisar
     note-enUS Talk to Archmage Malin
     note-ptBR Fale com Archmage Malin
     accept 690
@@ -2260,6 +2434,8 @@ step
     note-ptBR Fale com Lago Blackwrench
     accept 1798
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Human Paladin
     goto 1453 38.6,26.7
@@ -2295,7 +2471,11 @@ step
     only Dwarf Paladin
     goto 1455 18.5,51.6
     zone 1455 |only Dwarf Paladin Mage |opt
+    note-enUS Head to Ironforge |only Dwarf Paladin Mage
+    note-ptBR Vá para Ironforge |only Dwarf Paladin Mage
     home
+    note-enUS Set your HS to Ironforge
+    note-ptBR Defina sua Pedra de Regresso em Ironforge
 step
     only Dwarf Paladin
     goto 1455 23.13,6.14
@@ -2348,6 +2528,8 @@ step
     goto 1426 53.2,35.3 |only Dwarf Paladin
     goto 1426 78.32,58.09
     zone 1426 |only Dwarf Paladin |opt
+    note-enUS Head outside to Dun Morogh |only Dwarf Paladin
+    note-ptBR Vá para fora, em Dun Morogh |only Dwarf Paladin
     note-enUS Use the Symbol of Life on Narm Faulk
     note-ptBR Use o Symbol of Life em Narm Faulk
     note-enUS Talk to Narm Faulk
@@ -2364,6 +2546,8 @@ step
     only Dwarf Paladin
     goto 1455 23.54,8.3
     hearth |only Dwarf Paladin |opt
+    note-enUS Hearth to Ironforge |only Dwarf Paladin
+    note-ptBR Use a pedra de regresso para Ironforge |only Dwarf Paladin
     note-enUS Speak to Muiredon upstairs
     note-ptBR Fale com Muiredon no andar de cima
     note-enUS Talk to Muiredon Battleforge
@@ -2380,17 +2564,25 @@ step
     only Gnome !Warlock Dwarf
     goto 1455 55.5,47.2
     fly 1437
+    note-enUS Fly to Wetlands
+    note-ptBR Voe para Wetlands
 step
     only !Gnome Warlock !Dwarf
     goto 1453 66.2,62.2
     fly 1437
+    note-enUS Fly to Wetlands
+    note-ptBR Voe para Wetlands
 step
     only Gnome !Warlock Dwarf !Paladin
     goto 1453 66.2,62.2
     fly 1437
+    note-enUS Fly to Wetlands
+    note-ptBR Voe para Wetlands
 step
     goto 1437 10.6,60.7
     home
+    note-enUS Set your Hearthstone to Wetlands
+    note-ptBR Defina sua pedra de regresso em Wetlands
 step
     ifonquest 1248
     goto 1437 10.6,60.7
@@ -2460,10 +2652,14 @@ step
     only Paladin
     goto 1453 38.6,32.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1453 38.5,26.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1453 39.3,28
     note-enUS Talk to Bishop Farthing
@@ -2487,6 +2683,8 @@ step
     accept 1274 |opt
 step
     zone 1453
+    note-enUS Exit the Chapel
+    note-ptBR Saia da Chapel
 step
     only Human Paladin
     goto 1453 39.8,30.1
@@ -2501,6 +2699,8 @@ step
     only Warlock
     goto 1453 25.3,78.7
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 337
     goto 1453 74.1,7.6
@@ -2545,10 +2745,14 @@ step
     only Warrior
     goto 1453 78.6,45.8
     trainer
+    note-enUS Go upstairs. Train your class spells
+    note-ptBR Suba as escadas. Treine suas magias de classe
 step
     only Rogue
     goto 1453 74.6,52.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 1241
     goto 1453 73.1,78.3
@@ -2580,9 +2784,13 @@ step
 step
     goto 1453 66.2,62.1
     fly 1431
+    note-enUS Fly to Duskwood
+    note-ptBR Voe para Duskwood
 step
     ifturnedin 174
     goto 1431 79.8,47.9
+    note-enUS If you have more gold on this server, mail yourself atleast 5 gold, we're buying our mounts soon.
+    note-ptBR Se tiver mais ouro neste servidor, envie por correio pelo menos 5 de ouro para si mesmo, vamos comprar nossas montarias em breve.
     note-enUS Talk to Viktori Prism'Antras
     note-ptBR Fale com Viktori Prism'Antras
     accept 174 |opt
@@ -2619,9 +2827,13 @@ step
 step
     only !Nightelf
     home
+    note-enUS Set your Hearthstone to Darkshire
+    note-ptBR Defina sua pedra de regresso em Darkshire
 step
     only Shaman
     home
+    note-enUS Set your Hearthstone to Darkshire
+    note-ptBR Defina sua pedra de regresso em Darkshire
 step
     goto 1431 73.7,46.8
     note-enUS Talk to Commander Althea Ebonlocke
@@ -2683,6 +2895,8 @@ step
     only Shaman
     goto 1431 73.9,44.5
     hearth |only Shaman |opt
+    note-enUS Hearth to Darkshire |only Shaman
+    note-ptBR Use a pedra de regresso para Darkshire |only Shaman
     note-enUS Talk to Tavernkeep Smitts
     note-ptBR Fale com Tavernkeep Smitts
     turnin 78
@@ -2732,6 +2946,8 @@ step
     goto 1431 77.6,44.6 |only Shaman
     goto 1429 72.7,51.5
     fly 1436 |only Shaman |opt
+    note-enUS Fly to Westfall |only Shaman
+    note-ptBR Voe para Westfall |only Shaman
     note-enUS Use the Symbol of Life on Henze Faulk
     note-ptBR Use o Symbol of Life em Henze Faulk
     note-enUS Talk to Henze Faulk
@@ -2838,6 +3054,8 @@ step
     goto 1436 56.5,52.6
     goto 1431 79.8,47.9
     fp |opt
+    note-enUS Fly to Darkshire
+    note-ptBR Voe para Darkshire
     note-enUS Talk to Viktori Prism'Antras
     note-ptBR Fale com Viktori Prism'Antras
     turnin 181
@@ -2900,6 +3118,8 @@ step
 step
     only !Shaman
     goto 1431 73.54,46.82
+    note-enUS You can delete "Translated Letter From The Embalmer" from your bags, as it's no longer needed
+    note-ptBR Você pode apagar "Translated Letter From The Embalmer" das suas bolsas, pois não é mais necessário
     note-enUS Talk to Commander Althea Ebonlocke
     note-ptBR Fale com Commander Althea Ebonlocke
     turnin 97
@@ -2970,6 +3190,8 @@ step
     only !Mage
     goto 1431 77.5,44.2
     fly 1453
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
 step
     only Shaman
     goto 1453 61.9,83.9
@@ -2977,12 +3199,16 @@ step
     note-ptBR Fale com Farseer Umbrua
     accept 10491
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1453 39.6,79.6
     note-enUS Teleport to stormwind
     note-ptBR Teleporte-se para Stormwind
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 1245
     goto 1453 60.1,64.4
@@ -2997,10 +3223,14 @@ step
     only Paladin
     goto 1453 38.6,32.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1453 38.5,26.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     path seq 1453 64.1,61.2 |only Warrior
@@ -3013,10 +3243,14 @@ step
     note-ptBR Fale com Torm Ragetotem
     accept 1718
     trainer
+    note-enUS Train class spells
+    note-ptBR Treine class spells
 step
     only Rogue
     goto 1453 74.6,52.8
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 1246
     goto 1453 70.3,44.8
@@ -3058,6 +3292,8 @@ step
     note-ptBR Fale com Lago Blackwrench
     accept 1798
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Human Paladin
     goto 1453 38.6,26.7
@@ -3096,6 +3332,8 @@ step
     only Rogue
     goto 1455 45.2,6.6
     trainer |only Rogue |opt
+    note-enUS Train your class spells in ironforge |only Rogue
+    note-ptBR Treine your class spells in ironforge |only Rogue
     note-enUS Buy the level 31 weapon upgrades (17dps)
     note-ptBR Compre as melhorias de arma de nível 31 (17 DPS)
     collect 2520 1
@@ -3106,12 +3344,22 @@ step
     only Hunter Warrior Paladin Shaman Rogue
     goto 1455 61.34,89.25
     train 197 |only !Rogue
+    note-enUS Train 2H Axes |only !Rogue
+    note-ptBR Treine 2H Axes |only !Rogue
     train 266 |only Hunter Warrior Rogue
+    note-enUS Train Guns |only Hunter Warrior Rogue
+    note-ptBR Treine Guns |only Hunter Warrior Rogue
     train 199 |only Warrior Shaman
+    note-enUS Train 2H Maces |only Warrior Shaman
+    note-ptBR Treine 2H Maces |only Warrior Shaman
     train 198 |only Rogue Shaman
+    note-enUS Train Maces |only Rogue Shaman
+    note-ptBR Treine Maces |only Rogue Shaman
 step
     goto 1455 18.5,51.6
     home
+    note-enUS Set your hearthstone to Ironforge
+    note-ptBR Defina sua pedra de regresso em Ironforge
 step
     only Dwarf Paladin
     goto 1455 23.13,6.14
@@ -3164,6 +3412,8 @@ step
     goto 1426 53.2,35.3 |only Dwarf Paladin
     goto 1426 52.5,36.8
     zone 1426 |only Dwarf Paladin |opt
+    note-enUS Head outside to Dun Morogh |only Dwarf Paladin
+    note-ptBR Vá para fora, em Dun Morogh |only Dwarf Paladin
     note-enUS Head to the gates of Ironforge |only !Dwarf
     note-ptBR Vá até os portões de Ironforge |only !Dwarf
     note-enUS Talk to Jordan Stilwell
@@ -3188,6 +3438,8 @@ step
     only Dwarf Paladin
     goto 1455 23.54,8.3
     hearth |only Dwarf Paladin |opt
+    note-enUS Hearth to Ironforge |only Dwarf Paladin
+    note-ptBR Use a pedra de regresso para Ironforge |only Dwarf Paladin
     note-enUS Speak to Muiredon upstairs
     note-ptBR Fale com Muiredon no andar de cima
     note-enUS Talk to Muiredon Battleforge
@@ -3204,6 +3456,8 @@ step
     only Mage
     goto 1455 25.5,7.1
     train 3562
+    note-enUS Train Teleport: Ironforge
+    note-ptBR Treine Teleport: Ironforge
 ]==])
 
 register([==[
@@ -3402,9 +3656,13 @@ step
     note-ptBR Pule e saqueie a carta do cadáver debaixo d'água
     accept 637
     use 4433
+    note-enUS Jump down and loot the letter from the corpse underwater
+    note-ptBR Pule e saqueie a carta do cadáver debaixo d'água
 step
     path seq 1417 52.5,90.4
     goto 1417 48.7,87.9
+    note-enUS Swim east toward the ramp here
+    note-ptBR Nade para o leste em direção à rampa aqui
     objective 633/1
 step
     goto 1437 49.9,18.3
@@ -3420,6 +3678,8 @@ step
 step
     goto 1417 45.8,46.1
     fp
+    note-enUS Get the Arathi Highlands flight path
+    note-ptBR Pegue o ponto de voo de Arathi Highlands
 step
     ifonquest 647
     goto 1424 52.2,58.6
@@ -3499,6 +3759,8 @@ step
 step
     goto 1424 49.3,52.3
     fp
+    note-enUS Get the Southshore flight path
+    note-ptBR Pegue o ponto de voo de Southshore
 step
     goto 1424 55.6,35.1
     note-enUS Look for a wooden box inside of the destroyed tower
@@ -3515,10 +3777,14 @@ step
     note-enUS Head north to Western Plaguelands
     note-ptBR Siga para o norte até Western Plaguelands
     fp
+    note-enUS Get the Chillwind Camp flight path
+    note-ptBR Pegue o ponto de voo de Chillwind Camp
 step
     goto 1422 42.9,85
     goto 1424 50.5,57.1
     fp |opt
+    note-enUS Fly to Southshore
+    note-ptBR Voe para Southshore
     note-enUS Talk to Loremaster Dibbs
     note-ptBR Fale com Loremaster Dibbs
     turnin 511
@@ -3536,6 +3802,8 @@ step
 step
     goto 1455 63.79,67.78
     hearth |opt
+    note-enUS Hearth to Ironforge
+    note-ptBR Use a pedra de regresso para Ironforge
     note-enUS Talk to Sara Balloo
     note-ptBR Fale com Sara Balloo
     turnin 637
@@ -3570,9 +3838,13 @@ step
     goto 1455 55.4,29.1 |only Shaman
     goto 1455 28.6,7.2 |only Mage
     trainer
+    note-enUS Train your spells
+    note-ptBR Treine your spells
 step
     goto 1455 55.5,47.74
     fly 1437
+    note-enUS Fly to Wetlands
+    note-ptBR Voe para Wetlands
 step
     goto 1437 10.8,59.6
     note-enUS Talk to First Mate Fitzsimmons

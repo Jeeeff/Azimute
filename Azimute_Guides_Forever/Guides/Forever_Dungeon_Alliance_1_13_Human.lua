@@ -29,6 +29,8 @@ step
     note-enUS Talk to Gothor Brumn
     note-ptBR Fale com Gothor Brumn
     vendor |opt
+    note-enUS Vendor and Repair
+    note-ptBR Venda o lixo e conserte
     note-enUS Talk to Mountaineer Stormpike
     note-ptBR Fale com Mountaineer Stormpike
     note-enUS Do not accept Stormpike's Order yet
@@ -64,6 +66,8 @@ step
     collect 3172 3 |quest 418 |q 418/1 |opt
     collect 3173 3 |quest 418 |q 418/1 |opt
     collect 3174 3 |quest 418 |q 418/1 |opt
+    note-enUS Travel to Thelsamar
+    note-ptBR Vá até Thelsamar
     note-enUS Talk to Mountaineer Kadrell
     note-ptBR Fale com Mountaineer Kadrell
     note-enUS Mountaineer Kadrell patrols the road through Thelsamar
@@ -89,12 +93,18 @@ step
     path seq 1432 @-2952.46,-5381.87
     goto 1432 @-2973.9,-5377.93
     abandon 1338 |opt
+    note-enUS Abandon Stormpike's Order. This is to unlock Mountaineer Stormpike's Task which will give a free 550xp turn in
+    note-ptBR Abandone Stormpike's Order. Isso serve para liberar Mountaineer Stormpike's Task, que dá uma entrega grátis de 550xp
     note-enUS Talk to Yanni Stoutheart
     note-ptBR Fale com Yanni Stoutheart
     vendor |opt
+    note-enUS Buy up to 2 [Small Brown Pouches] from her if needed
+    note-ptBR Compre até 2 [Small Brown Pouches] dela, se precisar
     note-enUS Talk to Innkeeper Hearthstove
     note-ptBR Fale com Innkeeper Hearthstove
     vendor
+    note-enUS Buy [Ice Cold Milk]. Aim to have about 20
+    note-ptBR Compre [Ice Cold Milk]. Tente ter cerca de 20
 step
     path seq 1432 @-3006.61,-5259.57 @-3020.95,-5282.02 @-3023.44,-5326.9 @-3007.99,-5337.39 @-2964.41,-5349.9 @-2894.9,-5401.96
     goto 1432 @-3007.99,-5337.39
@@ -109,9 +119,13 @@ step
     note-enUS Talk to Thorgrum Borrelson
     note-ptBR Fale com Thorgrum Borrelson
     fp
+    note-enUS Get the Thelsamar flight path
+    note-ptBR Pegue o ponto de voo de Thelsamar
 step
     path seq 1432 @-2677.26,-5778.34 @-2648.3,-5876.75
     goto 1432 @-2634.59,-5842.81
+    note-enUS Run up the dirt path then drop down into the bunker
+    note-ptBR Suba o caminho de terra correndo e depois pule para dentro do bunker
     note-enUS Talk to Captain Rugelfuss in the bunker
     note-ptBR Fale com Captain Rugelfuss no bunker
     accept 267
@@ -122,7 +136,11 @@ step
     accept 224
 step
     goto 1432 @-2534.38,-5648.28 5
+    note-enUS Travel to the snowy patch on the ground just outside the South Gate Pass tunnel
+    note-ptBR Vá até a área de neve no chão logo fora do túnel de South Gate Pass
     use 279380
+    note-enUS Use the [Ceramic Jar] while standing on the snowy patch to collect the [Jar of Snow]
+    note-ptBR Use o [Ceramic Jar] em pé na área de neve para coletar o [Jar of Snow]
     objective 86667/1
 step
     path seq 1426 70.84,51.78 73.53,50.85 75.35,48.53 79.88,46.8 81.04,43.46 80.58,36.04 70.84,51.78 73.53,50.85 75.35,48.53 79.88,46.8 81.04,43.46
@@ -155,6 +173,8 @@ step
 step
     path seq 1432 @-2972.96,-4835.19
     goto 1432 @-2984.82,-4902.33
+    note-enUS Enter the Silver Stream Mine, kill Kobolds for [Ears] on the way
+    note-ptBR Entre na Silver Stream Mine e mate Kobolds por [Ears] no caminho
     note-enUS Open the Miners' League Crates. Loot them for the Miners' Gear
     note-ptBR Abra os Miners' League Crates. Saqueie-os para obter o Miners' Gear
     note-enUS The Miners' League Crates can be found all throughout the Mine
@@ -208,6 +228,8 @@ step
     note-enUS Talk to Gothor Brumn
     note-ptBR Fale com Gothor Brumn
     vendor |opt
+    note-enUS Vendor and repair if needed
+    note-ptBR Venda e repare se precisar
     note-enUS Talk to Mountaineer Stormpike
     note-ptBR Fale com Mountaineer Stormpike
     turnin 307
@@ -237,11 +259,15 @@ step
     ifcomplete 418
     path seq 1432 35.27,47.75 35.43,48.24
     goto 1432 @-2954.42,-5394.1
+    note-enUS Return to Thelsamar
+    note-ptBR Volte para Thelsamar
     note-enUS Talk to Mountaineer Kadrell
     note-ptBR Fale com Mountaineer Kadrell
     note-enUS Mountaineer Kadrell patrols the road through Thelsamar
     note-ptBR Mountaineer Kadrell patrulha a estrada que atravessa Thelsamar
     turnin 416 |opt
+    note-enUS Enter the Stoutlager Inn
+    note-ptBR Entre na Stoutlager Inn
     note-enUS Talk to Vidra Hearthstove
     note-ptBR Fale com Vidra Hearthstove
     turnin 418
@@ -272,6 +298,8 @@ step
     ifcomplete 267
     path seq 1432 @-2677.26,-5778.34 @-2648.3,-5876.75
     goto 1432 @-2634.59,-5842.81
+    note-enUS Run up the dirt path then drop down into the bunker
+    note-ptBR Suba o caminho de terra correndo e depois pule para dentro do bunker
     note-enUS Talk to Captain Rugelfuss
     note-ptBR Fale com Captain Rugelfuss
     turnin 267
@@ -288,6 +316,8 @@ step
     note-enUS Grind Troggs until you have 75s 79c worth of vendor trash/money |only Warlock
     note-ptBR Faça grind de Troggs até ter 75s 79c em lixo para vender/dinheiro |only Warlock
     level 14
+    note-enUS Grind to 14
+    note-ptBR Mate monstros até o nível 14
     note-enUS Fly to Ironforge and skip this step if you're planning on running the Hall of Thanes dungeon in Ironforge
     note-ptBR Voe para Ironforge e pule esta etapa se planeja fazer a masmorra Hall of Thanes em Ironforge
 step
@@ -301,17 +331,23 @@ step
     note-enUS Talk to Bixi Wobblebonk
     note-ptBR Fale com Bixi Wobblebonk
     train 2567
+    note-enUS Train Thrown
+    note-ptBR Treine Thrown
 step
     only Human Warrior
     goto 1455 @-1234.65,-5035.67
     note-enUS Talk to Bilban Tosslespanner
     note-ptBR Fale com Bilban Tosslespanner
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1432 @-2929.87,-5424.84
     note-enUS Talk to Thorgrum Borrelson
     note-ptBR Fale com Thorgrum Borrelson
     fly 1455
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
 step
     only Priest Paladin Mage
     goto 1455 @-928.48,-4614.62 |only Mage
@@ -324,6 +360,8 @@ step
     note-enUS Talk to Dink |only Mage
     note-ptBR Fale com Dink |only Mage
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock Rogue
     path seq 1455 @-1117.6,-4615.14 |only Warlock
@@ -334,6 +372,8 @@ step
     note-enUS Talk to Fenthwick |only Rogue
     note-ptBR Fale com Fenthwick |only Rogue
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior Hunter
     goto 1455 @-1266.02,-5006.57 |only Hunter
@@ -343,6 +383,10 @@ step
     note-enUS Talk to Bilban Tosslespanner |only Warrior
     note-ptBR Fale com Bilban Tosslespanner |only Warrior
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     hearth
+    note-enUS Hearth to Stormwind City
+    note-ptBR Use a pedra de regresso para Stormwind City
 ]==])

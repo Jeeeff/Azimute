@@ -35,6 +35,8 @@ step
     note-enUS Talk to Danil
     note-ptBR Fale com Danil
     vendor
+    note-enUS Vendor Trash until you have 10+ copper
+    note-ptBR Venda o lixo até ter 10+ de cobre
 step
     path seq 1429 @-139.61,-8910.09
     goto 1429 @-162.62,-8902.59
@@ -47,12 +49,18 @@ step
     goto 1429 @-188.2,-8851.76 10
     note-enUS Jump from the stairs to the rail
     note-ptBR Pule da escada para o corrimão
+    note-enUS Travel toward Khelden upstairs
+    note-ptBR Vá em direção a Khelden no andar de cima
     note-enUS Talk to Khelden
     note-ptBR Fale com Khelden
     train 1459
+    note-enUS Train [Arcane Intellect]
+    note-ptBR Treine [Arcane Intellect]
 step
     path seq 1429 @-188.2,-8868.89 @-174.32,-8880.92 @-164.25,-8891.8
     goto 1429 @-136.52,-8933.53 10
+    note-enUS Travel toward Willem
+    note-ptBR Vá em direção a Willem
     note-enUS Talk to Willem
     note-ptBR Fale com Willem
     accept 5261
@@ -66,6 +74,8 @@ step
     note-enUS Buy 10 [Refreshing Spring Water] from him
     note-ptBR Compre 10 [Refreshing Spring Water] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 159 10 |quest 7 |q 7/1
 step
     goto 1429 @-163.21,-8869.12
@@ -102,6 +112,8 @@ step
     note-enUS Talk to Danil
     note-ptBR Fale com Danil
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 159 10 |quest 15 |q 15/1
 step
     goto 1429 @-162.62,-8902.59
@@ -118,6 +130,8 @@ step
 step
     path closest 1429 @-176.4,-8817.04 @-138.91,-8816.35 @-67.41,-8802.69 @-50.41,-8843.43 @-62.21,-8886.48 @-131.97,-8855 @-176.4,-8817.04
     level 3
+    note-enUS Grind to 1110+/1400xp
+    note-ptBR Mate monstros até 1110+/1400xp
 step
     goto 1429 @-112.54,-8899.21
     note-enUS Talk to Danil
@@ -125,6 +139,8 @@ step
     note-enUS Buy 10 [Refreshing Spring Water] from him
     note-ptBR Compre 10 [Refreshing Spring Water] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 159 10 |quest 15 |q 15/1
 step
     goto 1429 @-162.62,-8902.59
@@ -137,13 +153,19 @@ step
     goto 1429 @-188.2,-8851.76 10
     note-enUS Jump from the stairs to the rail
     note-ptBR Pule da escada para o corrimão
+    note-enUS Travel toward Khelden upstairs
+    note-ptBR Vá em direção a Khelden no andar de cima
     note-enUS Talk to Khelden
     note-ptBR Fale com Khelden
     turnin 3104
     train 116
+    note-enUS Train [Frostbolt]
+    note-ptBR Treine [Frostbolt]
 step
     path seq 1429 @-188.2,-8868.89 @-174.32,-8880.92 @-164.25,-8891.8
     goto 1429 @-136.52,-8933.53 10
+    note-enUS Travel toward Willem
+    note-ptBR Vá em direção a Willem
     note-enUS Talk to Willem
     note-ptBR Fale com Willem
     accept 18
@@ -169,10 +191,14 @@ step
     note-enUS Buy 10 [Refreshing Spring Water] from him
     note-ptBR Compre 10 [Refreshing Spring Water] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 159 10 |quest 21 |q 21/1
 step
     path seq 1429 @-122.25,-8671.45 @-130.24,-8649.23 @-141.69,-8607.11 @-150.71,-8554.57 @-198.26,-8535.36
     goto 1429 @-209.37,-8560.59
+    note-enUS Go inside the mine
+    note-ptBR Entre na mina
     note-enUS Kill Kobold Laborers
     note-ptBR Mate Kobold Laborers
     objective 21/1
@@ -186,6 +212,8 @@ step
     path seq 1429 @-327.73,-9034.15 @-297.88,-9068.64 @-353.76,-9052.9 @-356.88,-9087.15 @-333.63,-9112.61 @-356.88,-9087.15 @-353.76,-9052.9 @-327.73,-9034.15 @-297.88,-9068.64 @-353.76,-9052.9 @-356.88,-9087.15 @-333.63,-9112.61 @-356.88,-9087.15 @-353.76,-9052.9 @-327.73,-9034.15
     goto 1429 @-461.01,-9056.37
     level 5 |opt
+    note-enUS Grind to 1175+/2800xp
+    note-ptBR Mate monstros até 1175+/2800xp
     note-enUS Loot the Buckets of Grapes on the ground
     note-ptBR Saqueie os Buckets of Grapes no chão
     note-enUS This has a 5 second cast time
@@ -204,6 +232,8 @@ step
 step
     path closest 1429 @-327.73,-9034.15 @-297.88,-9068.64 @-353.76,-9052.9 @-356.88,-9087.15 @-333.63,-9112.61 @-356.88,-9087.15 @-353.76,-9052.9 @-327.73,-9034.15
     level 5
+    note-enUS Grind to 1175+/2800xp
+    note-ptBR Mate monstros até 1175+/2800xp
 step
     goto 1429 @-224.3,-8850.37
     note-enUS Talk to Milly
@@ -226,6 +256,8 @@ step
     goto 1429 @-181.64,-8902.13 10
     note-enUS Go upstairs
     note-ptBR Suba as escadas
+    note-enUS Travel toward Neals
+    note-ptBR Vá em direção a Neals
     note-enUS Talk to Neals
     note-ptBR Fale com Neals
     turnin 3905 |reward 1
@@ -248,12 +280,16 @@ step
 step
     goto 1429 @16.2,-9462.65
     home |opt
+    note-enUS Set your Hearthstone to Goldshire
+    note-ptBR Defina sua pedra de regresso em Goldshire
     note-enUS Talk to Farley
     note-ptBR Fale com Farley
     note-enUS Talk to Farley
     note-ptBR Fale com Farley
     turnin 2158 |reward 2
     vendor
+    note-enUS Vendor Trash. Buy [Ice Cold Milk] down to 2 silver
+    note-ptBR Venda o lixo. Compre [Ice Cold Milk] até ficar com 2 de prata
 step
     goto 1429 @34.28,-9472.99
     note-enUS Jump onto the Chandelier downstairs
@@ -261,6 +297,8 @@ step
     note-enUS Talk to Zaldimar through the wall
     note-ptBR Fale com Zaldimar através da parede
     trainer
+    note-enUS Train your class spells (Fireball R2, Fire Blast)
+    note-ptBR Treine suas magias de classe (Fireball R2, Fire Blast)
 step
     goto 1429 @72.81,-9496.37
     note-enUS Talk to Remy
@@ -297,6 +335,8 @@ step
     note-enUS Buy as much [Ice Cold Milk] as you can afford from him
     note-ptBR Compre o máximo de [Ice Cold Milk] que puder dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     note-enUS Kill Stonetusk Boars. Loot them for [Chunks of Boar Meat]
     note-ptBR Mate Stonetusk Boars. Saqueie-os para obter [Chunks of Boar Meat]
@@ -336,9 +376,13 @@ step
     note-enUS Buy as much [Ice Cold Milk] as you can afford from him
     note-ptBR Compre o máximo de [Ice Cold Milk] que puder dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path seq 1429 @181.79,-9843.79 @179.36,-9811.39
     goto 1429 @157.15,-9789.4
+    note-enUS Enter the Fargodeep Mine
+    note-ptBR Entre na Fargodeep Mine
     note-enUS Kill Kobold Tunnelers and Kobold Miners. Loot them for Gold Dust and Kobold Candles
     note-ptBR Mate Kobold Tunnelers e Kobold Miners. Saqueie-os para obter Gold Dust e Kobold Candles
     objective 47/1 |opt
@@ -349,6 +393,8 @@ step
 step
     path seq 1429 @148.82,-9763.71 @132.16,-9752.6
     goto 1429 @87.04,-9745.65 40
+    note-enUS Travel toward Goldtooth
+    note-ptBR Vá em direção a Goldtooth
     note-enUS Kill Goldtooth. Loot him for Bernice's Necklace
     note-ptBR Mate Goldtooth. Saqueie-o para obter o Bernice's Necklace
     objective 87/1
@@ -360,6 +406,8 @@ step
     objective 60/1
 step
     goto 1429 @72.81,-9496.37
+    note-enUS Return to Goldshire
+    note-ptBR Volte para Goldshire
     note-enUS Talk to Remy
     note-ptBR Fale com Remy
     turnin 47
@@ -387,15 +435,21 @@ step
     note-enUS Buy 35 [Ice Cold Milk] from him
     note-ptBR Compre 35 [Ice Cold Milk] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 1179 35 |quest 432 |q 432/1
 step
     goto 1429 @9.64,-9465.36
     note-enUS Talk to Brog
     note-ptBR Fale com Brog
     vendor
+    note-enUS Buy a [Small Brown Pouch] from him
+    note-ptBR Compre uma [Small Brown Pouch] dele
 step
     path seq 1429 @34.63,-9466.28 @47.12,-9456.1 @-215.62,-9390.6 @-237.83,-9438.28 @-292.32,-9442.91 @-342.3,-9391.75 @-459.62,-9402.63
     goto 1429 @-421.09,-9478.78
+    note-enUS Exit the Inn
+    note-ptBR Saia da estalagem
     note-enUS Kill Murloc Streamrunners and Murlocs. Loot them for Crystal Kelp Frond
     note-ptBR Mate Murloc Streamrunners e Murlocs. Saqueie-os para obter Crystal Kelp Frond
     note-enUS Be careful as Murloc Streamrunners have [Increased Movespeed]
@@ -404,6 +458,8 @@ step
 step
     path seq 1429 @-604.7,-9188.53 @-588.39,-9130.9 @-570.68,-9116.32
     goto 1429 @-560.97,-9100.58
+    note-enUS Enter the Jasperlode Mine
+    note-ptBR Entre na Jasperlode Mine
     note-enUS Follow the middle path of the cave
     note-ptBR Siga o caminho do meio da caverna
     note-enUS Be careful as Kobold Geomancers cast [Fireball] (Ranged Cast: Deals about 30 damage)
@@ -412,6 +468,8 @@ step
 step
     path seq 1429 @-570.68,-9116.32 @-588.39,-9130.9 @-609.91,-9186.91
     goto 1429 @-1032.06,-9610.23
+    note-enUS Exit the Jasperlode Mine
+    note-ptBR Saia da Jasperlode Mine
     note-enUS Talk to Thomas
     note-ptBR Fale com Thomas
     turnin 35
@@ -448,6 +506,8 @@ step
     note-enUS This has a 5 second cast time
     note-ptBR Isto tem 5 segundos de tempo de conjuração
     objective 5545/1 |opt
+    note-enUS Travel toward Rolf's Corpse
+    note-ptBR Vá em direção a Rolf's Corpse
 step
     goto 1429 @-1233.96,-9224.41
     note-enUS Kill the Murloc Lurkers and Murloc Foragers guarding Rolf's Corpse
@@ -532,6 +592,8 @@ step
 step
     goto 1429 @33.14,-9460.75
     hearth |opt
+    note-enUS Hearth to Goldshire
+    note-ptBR Use a pedra de regresso para Goldshire
     note-enUS Talk to William
     note-ptBR Fale com William
     turnin 112
@@ -561,9 +623,13 @@ step
     ifonquest 184
     path closest 1429 @454.25,-9915.31 @387.26,-9944.94 @372.34,-9912.07 @418.85,-9881.06 @454.25,-9915.31
     level 9
+    note-enUS Grind to 4225+/6500xp
+    note-ptBR Mate monstros até 4225+/6500xp
 step
     path closest 1429 @454.25,-9915.31 @387.26,-9944.94 @372.34,-9912.07 @418.85,-9881.06 @454.25,-9915.31
     level 9
+    note-enUS Grind to 4825+/6500xp
+    note-ptBR Mate monstros até 4825+/6500xp
 step
     goto 1429 @694.43,-9662.79
     note-enUS Talk to Rainer
@@ -606,6 +672,8 @@ step
     goto 1436 @1021.6,-10500.61
     note-enUS Be VERY careful of Harvest Watchers and Harvest Golems en route
     note-ptBR Tome MUITO cuidado com Harvest Watchers e Harvest Golems no caminho
+    note-enUS Travel toward Gryan
+    note-ptBR Vá em direção a Gryan
     note-enUS Talk to Gryan, Danuvin, and then Lewis inside
     note-ptBR Fale com Gryan, Danuvin e depois com Lewis lá dentro
     turnin 109
@@ -625,6 +693,10 @@ step
     note-enUS Talk to Thor
     note-ptBR Fale com Thor
     fly 1453 |opt
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
+    note-enUS Travel toward Morgan
+    note-ptBR Vá em direção a Morgan
     note-enUS Talk to Morgan
     note-ptBR Fale com Morgan
     turnin 61 |reward 1
@@ -633,9 +705,13 @@ step
     note-enUS Talk to Keldric
     note-ptBR Fale com Keldric
     vendor
+    note-enUS Buy [Lesser Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Healing Potions] dele (se estiverem disponíveis)
 step
     path seq 1453 @610.44,-8809.04 @599.01,-8797.84 @603.85,-8769.42 @573.74,-8741.37 @473.05,-8699.06 @426.4,-8714.66
     goto 1453 @382.04,-8702.11 12
+    note-enUS Travel toward Osric
+    note-ptBR Vá em direção a Osric
     note-enUS Talk to Osric
     note-ptBR Fale com Osric
     turnin 6281
@@ -643,6 +719,8 @@ step
 step
     path seq 1453 @450.74,-8644.11 @479.91,-8639.81 @514.05,-8608.26 @507.6,-8541.66 @683.43,-8397.08
     goto 1453 @685.18,-8387.13 12
+    note-enUS Travel toward Grimand
+    note-ptBR Vá em direção a Grimand
     note-enUS Talk to Grimand
     note-ptBR Fale com Grimand
     turnin 1097
@@ -652,9 +730,13 @@ step
     note-enUS Talk to Billibub
     note-ptBR Fale com Billibub
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     goto 1453 @522.12,-8352.8 20
     goto 1455 @-1317.71,-4839.48 30
+    note-enUS Travel to the Deeprun Tram
+    note-ptBR Vá até Deeprun Tram
     note-enUS Ride the Deeprun Tram whilst spam casting [Conjure Water r2]
     note-ptBR Pegue o Deeprun Tram enquanto conjura [Conjure Water r2] sem parar
     note-enUS Talk to Monty after taking the tram
@@ -672,24 +754,36 @@ step
 step
     ifnotturnedin 314
     zone 1455
+    note-enUS Enter Ironforge
+    note-ptBR Entre em Ironforge
 step
     ifnotturnedin 174
     goto 1455 @-1249.87,-4793.31
     note-enUS Talk to Cogspinner
     note-ptBR Fale com Cogspinner
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     path seq 1455 @-1266.48,-4749.31 @-1211.92,-4728 @-1170.41,-4754.48 @-1152.31,-4821.12
     goto 1455 @-1152.39,-4820.91
+    note-enUS Travel toward Gryth
+    note-ptBR Vá em direção a Gryth
     note-enUS Talk to Gryth
     note-ptBR Fale com Gryth
     fp
+    note-enUS Get the Ironforge flight path
+    note-ptBR Pegue o ponto de voo de Ironforge
 step
     path seq 1455 @-1101.87,-4864.81 @-1062.1,-4815.1 @-1036.48,-4804.5 @-992.68,-4742.08 @-931.8,-4627.59
     goto 1455 @-928.4,-4614.51 10
+    note-enUS Travel toward Dink
+    note-ptBR Vá em direção a Dink
     note-enUS Talk to Dink
     note-ptBR Fale com Dink
     trainer
+    note-enUS Train your class spells (Frost Armor r2, Frost Nova, Polymorph, Conjure Water r1 & r2)
+    note-ptBR Treine suas magias de classe (Frost Armor r2, Frost Nova, Polymorph, Conjure Water r1 & r2)
     note-enUS Total Cost: 15s
     note-ptBR Custo total: 15s
     note-enUS Remember you may want money for Healing Potions (3s each), Bronze Tube (8s each), and level 5 food (20c per 5)
@@ -699,14 +793,22 @@ step
     goto 1455 @-857.01,-4840.69 10
     note-enUS Go inside the building
     note-ptBR Entre no prédio
+    note-enUS Travel toward Firebrew
+    note-ptBR Vá em direção a Firebrew
     note-enUS Talk to Firebrew
     note-ptBR Fale com Firebrew
     home
+    note-enUS Set your Hearthstone to Ironforge
+    note-ptBR Defina sua pedra de regresso em Ironforge
 step
     path seq 1455 @-974.89,-4902.21
     goto 1455 @-997.66,-4886.49 30
+    note-enUS Enter the Ironforge Bank
+    note-ptBR Entre no banco de Ironforge
     note-enUS Talk to Bailey
     note-ptBR Fale com Bailey
+    note-enUS Deposit the following items into the bank:
+    note-ptBR Deposite os seguintes itens no banco:
     note-enUS [Bronze Tube]
     note-ptBR [Bronze Tube]
     note-enUS [Osric's Crate]
@@ -715,6 +817,8 @@ step
     goto 1455 @-833.45,-5021.4 20
     goto 1426 @-1145.04,-5504.3
     zone 1426
+    note-enUS Exit Ironforge
+    note-ptBR Saia de Ironforge
 ]==])
 
 register([==[
@@ -735,6 +839,8 @@ register([==[
 step
     path seq 1426 @-1145.04,-5504.3 @-1219.9,-5422.55
     goto 1426 @-1304.61,-5513.82
+    note-enUS Go up the dirt path
+    note-ptBR Suba pela trilha de terra
     note-enUS Kite Vagash down to Rudra
     note-ptBR Leve Vagash (kite) até Rudra
     note-enUS Talk to Rudra
@@ -767,6 +873,8 @@ step
     note-enUS Talk to Ghilm
     note-ptBR Fale com Ghilm
     train 2550
+    note-enUS Train [Cooking]
+    note-ptBR Treine [Cooking]
 step
     path seq 1426 @-1568.09,-5665.19
     goto 1426 @-1573.02,-5671.1
@@ -806,6 +914,8 @@ step
     note-enUS Don't go out of your way to kill them
     note-ptBR Não saia do caminho para matá-los
     objective 432/1 |opt
+    note-enUS Enter the cave
+    note-ptBR Entre na caverna
     note-enUS Kill Rockjaw Bonesnappers inside the cave
     note-ptBR Mate Rockjaw Bonesnappers dentro da caverna
     note-enUS Be careful as they cast [Knockdown] (Melee Instant: Stuns for 2 seconds)
@@ -822,6 +932,8 @@ step
     note-enUS Talk to Frast
     note-ptBR Fale com Frast
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path seq 1426 @-1600.3,-5726.59
     goto 1426 @-1579.91,-5714.77
@@ -834,9 +946,17 @@ step
     note-enUS Talk to Dank
     note-ptBR Fale com Dank
     train 2575
+    note-enUS Train [Mining]
+    note-ptBR Treine [Mining]
 step
     path seq 1426 @-1662.65,-5692.11 @-1671.03,-5674.71 @-1693.19,-5541.73 @-1788.24,-5511.85 @-1995.58,-5480.01 @-2198.49,-5277.75 @-2286.16,-5200.59
     goto 1426 @-2329.5,-5163.82
+    note-enUS Take the shortcut up behind Dank
+    note-ptBR Pegue o atalho subindo atrás de Dank
+    note-enUS Kite the nearby Rockjaw Ambushers to the Ironforge Mountaineers that can patrol on the road (make sure to deal 51%+ damage to get credit)
+    note-ptBR Atraia os Rockjaw Ambushers próximos até os Ironforge Mountaineers que patrulham a estrada (cause 51%+ do dano para receber crédito)
+    note-enUS Kite a Scarred Crag Boar through the tunnel
+    note-ptBR Leve um Scarred Crag Boar (kite) pelo túnel
     note-enUS Be careful as they cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, eles lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 40-100 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     note-enUS Talk to Hammerfoot
@@ -870,13 +990,19 @@ step
     path seq 1426 @-2286.16,-5200.59 @-2198.49,-5277.75 @-2118.71,-5516.78 @-2192.09,-5510.87 @-2216.72,-5519.08 @-2314.72,-5491.83
     goto 1426 @-2347.72,-5483.62 20
     goto 1432 @-2518.11,-5625.83
+    note-enUS Run back through the tunnel
+    note-ptBR Volte correndo pelo túnel
     note-enUS Kite a Scarred Crag Boar en route
     note-ptBR Leve um Scarred Crag Boar (kite) pelo caminho
+    note-enUS Do the Mountain Skip. Remember to drop down carefully
+    note-ptBR Faça o Mountain Skip. Lembre-se de descer com cuidado
     note-enUS Kite a Scarred Crag Boar through the tunnel
     note-ptBR Leve um Scarred Crag Boar (kite) pelo túnel
     note-enUS Be careful as they cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, eles lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 40-100 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     zone 1432
+    note-enUS Travel through the tunnel to Loch Modan
+    note-ptBR Atravesse o túnel até Loch Modan
 step
     goto 1432 @-2602.54,-5832.73
     note-enUS Try to kite a nearby Elder Black Bear or Forest Lurker into the Bunker with you (remember to deal 51%+ damage to get credit)
@@ -895,12 +1021,16 @@ step
 step
     path seq 1432 @-2635.61,-5879.14 @-2645.27,-5874.91 @-2631.48,-5847.5
     goto 1432 @-2634.59,-5842.81
+    note-enUS Enter the Bunker. Go to the top floor
+    note-ptBR Entre no Bunker. Vá para o último andar
     note-enUS Talk to Rugelfuss
     note-ptBR Fale com Rugelfuss
     accept 267
 step
     path seq 1432 @-2902.07,-5398.28 @-2945.1,-5360.2 @-3015.71,-5335.73 @-3025.09,-5318.44
     goto 1432 @-3017.64,-5274.66
+    note-enUS Travel to Thelsamar
+    note-ptBR Vá até Thelsamar
     note-enUS Talk to Kadrell
     note-ptBR Fale com Kadrell
     note-enUS Kadrell patrols along the main Thelsamar road
@@ -913,8 +1043,14 @@ step
     note-enUS Talk to Thorgrum
     note-ptBR Fale com Thorgrum
     fp |opt
+    note-enUS Get the Thelsamar flight path
+    note-ptBR Pegue o ponto de voo de Thelsamar
     fly 1455 |opt
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
     zone 1455
+    note-enUS Travel to Ironforge
+    note-ptBR Vá até Ironforge
 ]==])
 
 register([==[
@@ -936,6 +1072,8 @@ step
     goto 1426 @328.18,-6214.85
     note-enUS You have selected the Advanced guide. This is the fastest guide for the fastest class in the game (Alliance Mage). As such, there will be a lot of niche mechanics used as well as highly difficult AoE pulls. Stay persistent while you learn! Good Luck!
     note-ptBR Você selecionou o guia Avançado. É o guia mais rápido para a classe mais rápida do jogo (Mago da Aliança). Por isso, haverá muitas mecânicas específicas e pulls de AoE bem difíceis. Persista enquanto aprende! Boa sorte!
+    note-enUS Delete the [Hearthstone] from your bags, as it's no longer needed
+    note-ptBR Apague a [Hearthstone] das suas bolsas, pois não é mais necessária
     note-enUS Talk to Sten Stoutarm
     note-ptBR Fale com Sten Stoutarm
     accept 179
@@ -999,6 +1137,8 @@ step
     note-enUS Kill Frostmane Troll Whelps
     note-ptBR Mate Frostmane Troll Whelps
     objective 182/1 |opt
+    note-enUS Enter the cave
+    note-ptBR Entre na caverna
 step
     path seq 1426 @457.56,-6531.66 @408.8,-6498.83 @357.09,-6473.87 @408.8,-6498.83 @457.56,-6531.66 @408.8,-6498.83 @357.09,-6473.87 @408.8,-6498.83 @457.56,-6531.66 @408.8,-6498.83 @357.09,-6473.87
     goto 1426 @408.8,-6498.83
@@ -1025,6 +1165,8 @@ step
     ifonquest 218
     path seq 1426 @485.63,-6494.56 @357.09,-6473.87
     goto 1426 @340.84,-6493.24 10
+    note-enUS Enter the Cave. Run through the path you cleared (without fighting if possible) toward the Frozen Lake inside
+    note-ptBR Entre na caverna. Corra pelo caminho que você limpou (sem lutar, se possível) em direção ao Frozen Lake lá dentro
 step
     goto 1426 @300.94,-6509
     note-enUS Kill the Frostmane Troll Whelp in front of you
@@ -1046,9 +1188,13 @@ step
     ifonquest 218 3364
     path seq 1426 @384.18,-6143.9 @392.06,-6123.87
     goto 1426 @390.58,-6101.21
+    note-enUS Enter Anvilmar
+    note-ptBR Entre em Anvilmar
     note-enUS Talk to Rybrad Coldbank
     note-ptBR Fale com Rybrad Coldbank
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     ifnotturnedin 420
     path seq 1426 @385.16,-6056.23
@@ -1059,6 +1205,8 @@ step
     accept 3365
     turnin 3114
     trainer
+    note-enUS Train your class spells (Arcane Intellect, Frostbolt)
+    note-ptBR Treine suas magias de classe (Arcane Intellect, Frostbolt)
 step
     ifcomplete 170
     goto 1426 @338.87,-6216.46
@@ -1097,6 +1245,10 @@ step
     path seq 1426 @111.82,-6206.61
     goto 1426 @46.32,-6037.19 15
     abandon 170 |opt
+    note-enUS Abandon A New Threat
+    note-ptBR Abandone A New Threat
+    note-enUS Travel through Coldridge Pass
+    note-ptBR Passe por Coldridge Pass
 step
     ifonquest 2160
     path seq 1426 @3.97,-5943.61 @-67.94,-5908.48
@@ -1107,9 +1259,13 @@ step
     note-ptBR Cuidado, eles lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 25-70 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     collect 769 4 |quest 317 |q 317/1 |opt
     collect 2886 6 |quest 384 |q 384/1 |opt
+    note-enUS Deal 51%+ damage to nearby Juvenile Snow Leopards and Young Black Bears, then pull them to the Ironforge Mountaineer to kill them more efficiently
+    note-ptBR Cause 51%+ de dano em Juvenile Snow Leopards e Young Black Bears próximos e depois puxe-os até o Ironforge Mountaineer para matá-los com mais eficiência
 step
     path seq 1426 @-337.34,-5703.93 @-371.81,-5605.43
     goto 1426 @-464.45,-5573.78 20
+    note-enUS Travel toward Tharek
+    note-ptBR Vá em direção a Tharek
     note-enUS Talk to Tharek
     note-ptBR Fale com Tharek
     accept 400
@@ -1132,6 +1288,8 @@ step
     turnin 400
     accept 5541
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path seq 1426 @-679.62,-5573.58 @-678.64,-5618.89 @-620.03,-5550.6 @-432.39,-5502.33 @-349.65,-5586.06 @-423.03,-5662.56 @-422.05,-5775.18 @-679.62,-5573.58 @-678.64,-5618.89 @-620.03,-5550.6 @-432.39,-5502.33 @-349.65,-5586.06 @-423.03,-5662.56 @-422.05,-5775.18 @-679.62,-5573.58 @-678.64,-5618.89 @-620.03,-5550.6 @-432.39,-5502.33 @-349.65,-5586.06
     goto 1426 @-423.03,-5662.56
@@ -1165,22 +1323,32 @@ step
 step
     path closest 1426 @-744.14,-5507.59 @-713.61,-5598.21 @-730.84,-5624.15 @-663.37,-5573.25 @-638.75,-5545.67 @-567.83,-5489.2 @-572.26,-5417.95 @-437.81,-5520.06 @-368.36,-5600.83 @-349.65,-5702.29 @-304.83,-5743.99 @-387.08,-5825.09 @-478.68,-5907.83 @-476.22,-5830.34 @-565.86,-5815.89 @-630.87,-5813.27 @-576.69,-5743.99 @-615.6,-5674.38 @-641.21,-5660.59 @-730.84,-5624.15
     level 5
+    note-enUS Grind to 2690+/2800xp
+    note-ptBR Mate monstros até 2690+/2800xp
 step
     goto 1426 @-504.29,-5596.24
     note-enUS Unequip your current [Staff]
     note-ptBR Desequipe seu [Staff] atual
+    note-enUS Rebuff [Arcane Intellect]
+    note-ptBR Renove o buff [Arcane Intellect]
+    note-enUS Rebuff [Frost Armor]
+    note-ptBR Renove o buff [Frost Armor]
     note-enUS Talk to Ragnar
     note-ptBR Fale com Ragnar
     accept 384
 step
     path seq 1426 @-511.19,-5584.09 @-537.29,-5587.04
     goto 1426 @-523.35,-5590.82
+    note-enUS Go inside
+    note-ptBR Entre
     note-enUS Talk to Tannok
     note-ptBR Fale com Tannok
     turnin 2160 |reward 2
 step
     path seq 1426 @-511.19,-5584.09 @-537.29,-5587.04
     goto 1426 @-523.35,-5590.82
+    note-enUS Go inside
+    note-ptBR Entre
     note-enUS Talk to Tannok
     note-ptBR Fale com Tannok
     turnin 2160 |reward 2
@@ -1190,11 +1358,15 @@ step
     note-enUS Talk to Magis upstairs
     note-ptBR Fale com Magis no andar de cima
     trainer
+    note-enUS Train your class spells (Fireball R2, Fire Blast)
+    note-ptBR Treine suas magias de classe (Fireball R2, Fire Blast)
 step
     goto 1426 @-531.38,-5601.49
     note-enUS Talk to Belm
     note-ptBR Fale com Belm
     home |opt
+    note-enUS Set your Hearthstone to Thunderbrew Distillery
+    note-ptBR Defina sua pedra de regresso em Thunderbrew Distillery
     note-enUS Talk to Belm
     note-ptBR Fale com Belm
     note-enUS Buy a [Rhapsody Malt] from him
@@ -1302,14 +1474,22 @@ step
     note-enUS Be careful as Crag Boars cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 25-70 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, Crag Boars lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 25-70 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     objective 384/1 |opt
+    note-enUS Travel toward Hegnar
+    note-ptBR Vá em direção a Hegnar
     note-enUS Kill Crag Boars and Juvenile Snow Leopards en route
     note-ptBR Mate Crag Boars e Juvenile Snow Leopards pelo caminho
     note-enUS Be careful as Crag Boars cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 25-70 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, Crag Boars lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 25-70 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
+    note-enUS Travel toward Hegnar
+    note-ptBR Vá em direção a Hegnar
+    note-enUS Travel toward Hegnar
+    note-ptBR Vá em direção a Hegnar
     note-enUS Talk to Hegnar
     note-ptBR Fale com Hegnar
     turnin 5541
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path seq 1426 @-68.43,-5909.47 @72.92,-5741.36 @47.8,-5674.05 @10.37,-5600.51 @-68.43,-5909.47 @72.92,-5741.36 @47.8,-5674.05 @10.37,-5600.51
     goto 1426 @99.51,-5573.25
@@ -1321,6 +1501,8 @@ step
     note-ptBR Cuidado, Large Crag Boars e Crag Boars lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 25-70 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     objective 384/1 |opt
     level 7 |opt
+    note-enUS Grind to Level 7 en route to Tundra before talking to him
+    note-ptBR Mate monstros até o nível 7 a caminho de Tundra, antes de falar com ele
     note-enUS Deal 51%+ damage to nearby Juvenile Snow Leopards and Young Black Bears, then pull them to the Ironforge Mountaineer to kill them more efficiently
     note-ptBR Cause 51%+ de dano em Juvenile Snow Leopards e Young Black Bears próximos e depois puxe-os até o Ironforge Mountaineer para matá-los com mais eficiência
     note-enUS Kill Large Crag Boars and Crag Boars en route
@@ -1328,6 +1510,8 @@ step
     note-enUS Be careful as Large Crag Boars and Crag Boars cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 25-70 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, Large Crag Boars e Crag Boars lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 25-70 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     level 7 |opt
+    note-enUS Grind to Level 7 en route to Tundra before talking to him
+    note-ptBR Mate monstros até o nível 7 a caminho de Tundra, antes de falar com ele
     note-enUS Talk to Tundra
     note-ptBR Fale com Tundra
     accept 312
@@ -1356,6 +1540,8 @@ step
     note-enUS Buy up to 10 more [Ice Cold Milk] from him
     note-ptBR Compre até mais 10 [Ice Cold Milk] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 1179 10 |quest 312 |q 312/1
 step
     ifonquest 319
@@ -1365,6 +1551,8 @@ step
     note-enUS Buy up to 5 more [Ice Cold Milk] from him
     note-ptBR Compre até mais 5 [Ice Cold Milk] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 1179 5 |quest 312 |q 312/1
 step
     path seq 1426 @151.72,-5436.67 @-12.78,-5370.34 @151.72,-5436.67 @-12.78,-5370.34
@@ -1395,6 +1583,8 @@ step
     ifnotturnedin 384
     path seq 1426 @-511.19,-5584.09 @-522.02,-5585.07
     goto 1426 @-531.38,-5601.49
+    note-enUS Go inside
+    note-ptBR Entre
     note-enUS Talk to Belm
     note-ptBR Fale com Belm
     note-enUS Buy [Rhapsody Malt] and [Thunder Ale] from him
@@ -1411,6 +1601,8 @@ step
 step
     path seq 1426 @-537.29,-5597.55 @-548.13,-5598.54 @-544.68,-5606.09
     goto 1426 @-548.13,-5607.4
+    note-enUS Go Downstairs
+    note-ptBR Desça as escadas
     note-enUS Talk to Jarven downstairs
     note-ptBR Fale com Jarven no andar de baixo
     turnin 308 |opt
@@ -1438,6 +1630,8 @@ step
     ifonquest 287
     path seq 1426 @-522.02,-5585.07 @-511.19,-5584.09
     goto 1426 @-504.29,-5596.24 20
+    note-enUS Exit the Inn
+    note-ptBR Saia da estalagem
 step
     ifcomplete 384
     goto 1426 @-504.29,-5596.24
@@ -1452,6 +1646,8 @@ step
     note-ptBR Cause 51%+ de dano em Snow Tracker Wolves, Winter Wolves e Young Black Bears próximos. Puxe-os até o Ironforge Mountaineer para matá-los com mais eficiência
     note-enUS Be careful as Snow Tracker Wolves have [Increased Aggro Range] (Aggro range is increased by about 8 yards)
     note-ptBR Cuidado, Snow Tracker Wolves têm [Increased Aggro Range] (o alcance de agressão aumenta em cerca de 8 metros)
+    note-enUS Run up the ramp toward the Frostmane Seers
+    note-ptBR Suba a rampa correndo em direção aos Frostmane Seers
 step
     path seq 1426 @-269.86,-5370.34 @-271.83,-5342.43 @-250.16,-5306.32 @-230.46,-5333.9 @-240.81,-5354.91 @-221.11,-5349.99 @-224.06,-5372.31 @-184.66,-5283.66 @-151.66,-5186.15 @-164.96,-5114.9
     goto 1426 @-258.54,-5046.93
@@ -1483,6 +1679,8 @@ step
     note-enUS Be careful as they cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 25-85 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, eles lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 25-85 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     objective 319/2 |opt
+    note-enUS Travel toward the Cave
+    note-ptBR Vá em direção a Cave
 step
     goto 1426 @-94.53,-5647.79
     note-enUS After looting it, remember to jump-turn his attacks to avoid the Daze and to jump on the tree log to temporarily evade him
@@ -1561,6 +1759,8 @@ step
 step
     path seq 1426 @564.92,-5503.65 @573.79,-5538.78 @605.8,-5545.02
     goto 1426 @654.07,-5563.4
+    note-enUS Enter the cave from the north side
+    note-ptBR Entre na caverna pelo lado norte
     note-enUS Kill Frostmane Headhunters inside the cave
     note-ptBR Mate Frostmane Headhunters dentro da caverna
     note-enUS Be careful as they cast [Shoot] (Ranged Cast: Deals 8-15 damage)
@@ -1581,6 +1781,8 @@ step
 step
     goto 1426 @-531.38,-5601.49
     hearth |opt
+    note-enUS Hearth to Kharanos
+    note-ptBR Use a pedra de regresso para Kharanos
     note-enUS Talk to Belm
     note-ptBR Fale com Belm
     note-enUS Buy a [Rhapsody Malt] from him
@@ -1592,6 +1794,8 @@ step
     note-enUS Talk to Magis upstairs
     note-ptBR Fale com Magis no andar de cima
     trainer
+    note-enUS Train your class spells (Frostbolt r2, Polymorph)
+    note-ptBR Treine suas magias de classe (Frostbolt r2, Polymorph)
 step
     goto 1426 @-504.29,-5596.24
     note-enUS Remember to save [Chunks of Boar Meat] you get for leveling [Cooking] to 50 later
@@ -1608,6 +1812,10 @@ step
 step
     path seq 1426 @-632.15,-5466.54
     goto 1426 @-641.8,-5473.18
+    note-enUS Rebuff [Arcane Intellect]
+    note-ptBR Renove o buff [Arcane Intellect]
+    note-enUS Rebuff [Frost Armor]
+    note-ptBR Renove o buff [Frost Armor]
     note-enUS Talk to Bellowfiz and Stonegear
     note-ptBR Fale com Bellowfiz e Stonegear
     turnin 320 |reward 2
@@ -1619,6 +1827,8 @@ step
     note-ptBR Cause 51%+ de dano em Winter Wolves próximos e depois puxe-os até os Ironforge Mountaineers que PODEM estar patrulhando a estrada para matá-los com mais eficiência
     note-enUS If you don't see the Ironforge Mountaineers, skip this step
     note-ptBR Se não vir os Ironforge Mountaineers, pule esta etapa
+    note-enUS Go up the dirt path
+    note-ptBR Suba pela trilha de terra
     note-enUS Kite Vagash down to Rudra
     note-ptBR Leve Vagash (kite) até Rudra
     note-enUS Talk to Rudra
@@ -1649,6 +1859,8 @@ step
     note-enUS Talk to Ghilm
     note-ptBR Fale com Ghilm
     train 2550
+    note-enUS Train [Cooking]
+    note-ptBR Treine [Cooking]
 step
     path seq 1426 @-1568.09,-5665.19
     goto 1426 @-1573.02,-5671.1
@@ -1688,6 +1900,8 @@ step
     note-enUS Don't go out of your way to kill them
     note-ptBR Não saia do caminho para matá-los
     objective 432/1 |opt
+    note-enUS Enter the cave
+    note-ptBR Entre na caverna
     note-enUS Kill Rockjaw Bonesnappers inside the cave
     note-ptBR Mate Rockjaw Bonesnappers dentro da caverna
     note-enUS Be careful as they cast [Knockdown] (Melee Instant: Stuns for 2 seconds)
@@ -1703,6 +1917,8 @@ step
     note-enUS Talk to Frast
     note-ptBR Fale com Frast
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path seq 1426 @-1600.3,-5726.59
     goto 1426 @-1579.91,-5714.77
@@ -1715,10 +1931,18 @@ step
     note-enUS Talk to Dank
     note-ptBR Fale com Dank
     train 2575
+    note-enUS Train [Mining]
+    note-ptBR Treine [Mining]
 step
     ifnotturnedin 419
     path seq 1426 @-1662.65,-5692.11 @-1671.03,-5674.71 @-1693.19,-5541.73 @-1788.24,-5511.85 @-1995.58,-5480.01 @-2198.49,-5277.75 @-2286.16,-5200.59
     goto 1426 @-2329.5,-5163.82
+    note-enUS Take the shortcut up behind Dank
+    note-ptBR Pegue o atalho subindo atrás de Dank
+    note-enUS Kite the nearby Rockjaw Ambushers to the Ironforge Mountaineers that can patrol on the road (make sure to deal 51%+ damage to get credit)
+    note-ptBR Atraia os Rockjaw Ambushers próximos até os Ironforge Mountaineers que patrulham a estrada (cause 51%+ do dano para receber crédito)
+    note-enUS Kite a Scarred Crag Boar through the tunnel
+    note-ptBR Leve um Scarred Crag Boar (kite) pelo túnel
     note-enUS Be careful as they cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, eles lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 40-100 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     note-enUS Talk to Hammerfoot
@@ -1751,9 +1975,13 @@ step
 step
     path seq 1426 @-2286.16,-5200.59 @-2198.49,-5277.75
     goto 1426 @-2075.37,-5511.2
+    note-enUS Run back through the tunnel
+    note-ptBR Volte correndo pelo túnel
     note-enUS Be careful as Scarred Crag Boars and Elder Crag Boars cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range), and Ice Claw Bears cast [Ice Claw] (Melee Instant: Deals an additional 4 melee damage)
     note-ptBR Cuidado, Scarred e Elder Crag Boars lançam [Charge] (Instantâneo em si: +velocidade por 3 segundos, 40-100 de dano corpo a corpo ao acertar. Só à distância) e Ice Claw Bears lançam [Ice Claw] (Instantâneo corpo a corpo: +4 de dano)
     level 9
+    note-enUS Grind to 5450+/6500xp
+    note-ptBR Mate monstros até 5450+/6500xp
 step
     path seq 1426 @-2118.71,-5516.78 @-2192.09,-5510.87 @-2216.72,-5519.08 @-2314.72,-5491.83 @-2347.72,-5483.62
     goto 1426 @-2447.11,-5479.74
@@ -1761,9 +1989,13 @@ step
     note-ptBR Leve um Scarred Crag Boar (kite) pelo caminho
     note-enUS Be careful as they cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, eles lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 40-100 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
+    note-enUS Do the Mountain Skip. Remember to drop down carefully
+    note-ptBR Faça o Mountain Skip. Lembre-se de descer com cuidado
     note-enUS Be careful as Scarred Crag Boars cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, Scarred Crag Boars lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 40-100 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     level 9 |opt
+    note-enUS Grind to 5990+/6500xp
+    note-ptBR Mate monstros até 5990+/6500xp
     note-enUS Talk to Barleybrew
     note-ptBR Fale com Barleybrew
     turnin 413
@@ -1772,13 +2004,19 @@ step
     path seq 1426 @-2469.86,-5504.96
     goto 1426 @-2451.15,-5432.07
     level 9
+    note-enUS Grind to 6320+/6500xp
+    note-ptBR Mate monstros até 6320+/6500xp
     note-enUS Be careful as Scarred Crag Boars cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, Scarred Crag Boars lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 40-100 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
 step
     path closest 1432 @-2447.5,-5564.39 @-2534.11,-5642.02 @-2576.86,-5805.01 @-2519.49,-5875.65 @-2570.52,-5916.3 @-2576.86,-5805.01
+    note-enUS Kite a Scarred Crag Boar through the tunnel
+    note-ptBR Leve um Scarred Crag Boar (kite) pelo túnel
     note-enUS Be careful as they cast [Charge] (Self Instant: Increases movespeed for 3 seconds, dealing 40-100 melee damage on hit. Only castable at range)
     note-ptBR Cuidado, eles lançam [Charge] (Instantâneo em si: aumenta a velocidade por 3 segundos, causando 40-100 de dano corpo a corpo ao acertar. Só pode ser lançado à distância)
     level 10
+    note-enUS Grind to Level 10
+    note-ptBR Mate monstros até o nível 10
 step
     goto 1432 @-2602.54,-5832.73
     note-enUS Try to kite a nearby Elder Black Bear or Forest Lurker into the Bunker with you (remember to deal 51%+ damage to get credit)
@@ -1797,6 +2035,8 @@ step
 step
     path seq 1432 @-2635.61,-5879.14 @-2645.27,-5874.91 @-2631.48,-5847.5
     goto 1432 @-2634.59,-5842.81
+    note-enUS Enter the Bunker. Go to the top floor
+    note-ptBR Entre no Bunker. Vá para o último andar
     note-enUS Talk to Rugelfuss
     note-ptBR Fale com Rugelfuss
     accept 267
@@ -1823,6 +2063,8 @@ step
     note-enUS Talk to Thorgrum
     note-ptBR Fale com Thorgrum
     fp
+    note-enUS Get the Thelsamar flight path
+    note-ptBR Pegue o ponto de voo de Thelsamar
     turnin 6387
     accept 6391
 step
@@ -1831,38 +2073,54 @@ step
     note-enUS Talk to Thorgrum
     note-ptBR Fale com Thorgrum
     fly 1455 |opt
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
     zone 1455
+    note-enUS Travel to Ironforge
+    note-ptBR Vá até Ironforge
 step
     ifonquest 291
     path seq 1455 @-1154.84,-4771.58 @-1123.37,-4726.31 @-1106.29,-4718.18
     goto 1455 @-1121.08,-4708 10
     note-enUS Go inside the building
     note-ptBR Entre no prédio
+    note-enUS Travel toward Golnir
+    note-ptBR Vá em direção a Golnir
     note-enUS Talk to Golnir
     note-ptBR Fale com Golnir
     turnin 6391
     accept 6388
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path seq 1455 @-1106.29,-4718.18 @-1154.84,-4771.58 @-1152.31,-4821.12
     goto 1455 @-1152.39,-4820.91
     note-enUS Exit the building
     note-ptBR Saia do prédio
+    note-enUS Travel toward Gryth
+    note-ptBR Vá em direção a Gryth
     note-enUS Talk to Gryth
     note-ptBR Fale com Gryth
     turnin 6388
 step
     path seq 1455 @-1148.99,-4840.22 @-1101.87,-4864.81 @-1082.58,-4836 @-1062.42,-4835
     goto 1455 @-1026.28,-4872.56 10
+    note-enUS Travel toward Barin
+    note-ptBR Vá em direção a Barin
     note-enUS Talk to Barin
     note-ptBR Fale com Barin
     turnin 291
 step
     path seq 1455 @-1064.87,-4828.19 @-1062.1,-4815.1 @-1036.48,-4804.5 @-992.68,-4742.08 @-931.8,-4627.59
     goto 1455 @-928.4,-4614.51 10
+    note-enUS Travel toward Dink
+    note-ptBR Vá em direção a Dink
     note-enUS Talk to Dink
     note-ptBR Fale com Dink
     trainer
+    note-enUS Train your class spells (Frost Armor r2, Frost Nova, Polymorph, Conjure Water r1 & r2)
+    note-ptBR Treine suas magias de classe (Frost Armor r2, Frost Nova, Polymorph, Conjure Water r1 & r2)
     note-enUS Total Cost: 15s
     note-ptBR Custo total: 15s
     note-enUS Remember you may want money for Healing Potions (3s each), Bronze Tube (8s each), and level 5 food (20c per 5)
@@ -1871,9 +2129,13 @@ step
     goto 1455 @-857.01,-4840.69 10
     note-enUS Go inside the building
     note-ptBR Entre no prédio
+    note-enUS Travel toward Firebrew
+    note-ptBR Vá em direção a Firebrew
     note-enUS Talk to Firebrew
     note-ptBR Fale com Firebrew
     home
+    note-enUS Set your Hearthstone to Ironforge
+    note-ptBR Defina sua pedra de regresso em Ironforge
 ]==])
 
 register([==[
@@ -1899,10 +2161,16 @@ step
     path seq 1426 @-1145.04,-5504.3 @-831.81,-5108.33 @-859.39,-5144.45 @-1124.84,-5283.99 @-1161.78,-5289.24 @-1173.6,-5313.54 @-1187.88,-5327.66 @-1199.7,-5327 @-1224.33,-5245.58 @-1239.6,-5239.67 @-1243.54,-5243.93 @-1251.91,-5233.1 @-1241.07,-5180.89 @-1225.81,-5086.99 @-1224.82,-4952.7 @-1220.88,-4826.62 @-1197.73,-4626.34 @-1178.03,-4408.98 @-1178.53,-4396.18 @-1189.36,-4374.84 @-1173.11,-4348.24 @-1184.44,-4333.14 @-1221.87,-4312.78 @-1227.78,-4290.13
     goto 1426 @-1184.93,-4250.73 20
     zone 1426 |opt
+    note-enUS Exit Ironforge
+    note-ptBR Saia de Ironforge
+    note-enUS Travel to the skip spot. Hug the left side of the mountain en route
+    note-ptBR Vá até o ponto do skip. Fique colado ao lado esquerdo da montanha no caminho
     note-enUS Do the Deathless Dun Morogh -> Wetlands skip
     note-ptBR Faça o atalho Deathless de Dun Morogh para Wetlands
     note-enUS Eat to full after each fall if you don't feel confident
     note-ptBR Coma até encher após cada queda se não estiver confiante
+    note-enUS Carefully drop down the mountain side
+    note-ptBR Desça a encosta da montanha com cuidado
 step
     ifnotturnedin 983
     path seq 1426 @-1192.32,-4216.25
@@ -1917,9 +2185,13 @@ step
     note-ptBR Cuidado com os Bluegill Raiders a oeste quando chegar ao mar
     note-enUS Avoid the Young Wetlands Crocolisks when crossing the sea. Wait for them to patrol away
     note-ptBR Evite os Young Wetlands Crocolisks ao atravessar o mar. Espere que se afastem na patrulha
+    note-enUS Travel to Menethil Harbor
+    note-ptBR Vá até Menethil Harbor
 step
     path seq 1437 @-836.21,-3796.15 @-829.18,-3804.42
     goto 1437 @-823.8,-3807.18
+    note-enUS Go inside the Inn
+    note-ptBR Entre na estalagem
     note-enUS Jump onto the Chandelier downstairs
     note-ptBR Pule no lustre no andar de baixo
     note-enUS Talk to Samor through the wall
@@ -1929,11 +2201,15 @@ step
     note-enUS If the Boat has just arrived, skip this step
     note-ptBR Se o Barco acabou de chegar, pule esta etapa
     vendor
+    note-enUS Buy [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1437 @-782.03,-3793.12
     note-enUS Talk to Shellei
     note-ptBR Fale com Shellei
     fp
+    note-enUS Get the Menethil Harbor flight path
+    note-ptBR Pegue o ponto de voo de Menethil Harbor
 step
     goto 1437 @-715.87,-3697.48
     note-enUS If the Boat has just arrived, skip this step
@@ -1945,15 +2221,23 @@ step
     note-enUS If the Boat has just arrived, skip this step
     note-ptBR Se o Barco acabou de chegar, pule esta etapa
     vendor
+    note-enUS Buy [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Healing Potions] dele (se estiverem disponíveis)
 step
     path seq 1437 @-641.43,-3758.94 @-575.68,-3719.53
     goto 1437 @-565.34,-3724.77
+    note-enUS Travel toward the Darkshore Boat
+    note-ptBR Vá em direção a Darkshore Boat
     note-enUS Start spam casting [Conjure Water r2] to conjure as much water as possible
     note-ptBR Comece a conjurar [Conjure Water r2] sem parar para fazer o máximo de água possível
     zone 1439
+    note-enUS Take the boat to Darkshore
+    note-ptBR Pegue o barco para Darkshore
 step
     path seq 1439 @601.35,6358.29 @533.23,6399.77 @536.51,6389.29 @528.65,6404.14 @537.16,6417.68
     goto 1439 @519.48,6405.89 8
+    note-enUS Jump off the boat when you're closest to the shore
+    note-ptBR Pule do barco quando estiver mais perto da margem
     note-enUS Kite 2-3 Pygmy Tide Crawlers toward Wizbang (Remember to use [Frost Nova]) Kill them when you accept the quest
     note-ptBR Leve 2-3 Pygmy Tide Crawlers (kite) até Wizbang (lembre-se de usar [Frost Nova]). Mate-os quando aceitar a missão
     note-enUS Talk to Laird
@@ -1961,9 +2245,13 @@ step
     note-enUS Buy up to 20 [Longjaw Mud Snappers] from him
     note-ptBR Compre até 20 [Longjaw Mud Snappers] dele
     vendor |opt
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 983 |q 983/1 |opt
     note-enUS Go upstairs to the top floor
     note-ptBR Suba até o último andar
+    note-enUS Travel toward Wizbang
+    note-ptBR Vá em direção a Wizbang
     note-enUS Talk to Wizbang
     note-ptBR Fale com Wizbang
     accept 983
@@ -1974,9 +2262,13 @@ step
     note-enUS Kill the Pygmy Tide Crawlers you kited. Loot them for their Crawler Legs
     note-ptBR Mate os Pygmy Tide Crawlers que você trouxe (kite). Saqueie-os para obter Crawler Legs
     objective 983/1 |opt
+    note-enUS Travel toward Thundris
+    note-ptBR Vá em direção a Thundris
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Buy as many [Small Brown Pouches] as you need/can
+    note-ptBR Compre quantas [Small Brown Pouches] precisar/puder
 step
     ifskillbelow cooking 10
     goto 1439 @492.62,6580.99
@@ -1995,6 +2287,8 @@ step
 step
     path seq 1439 @462.49,6525.97 @414.68,6472.7 @383.89,6445.62 @362.93,6434.27
     goto 1439 @397.65,6437.76
+    note-enUS Travel toward Terenthis
+    note-ptBR Vá em direção a Terenthis
     note-enUS Talk to Terenthis and Tharnariun
     note-ptBR Fale com Terenthis e Tharnariun
     accept 984
@@ -2007,6 +2301,8 @@ step
     note-enUS Buy up to 20 [Longjaw Mud Snappers] from him
     note-ptBR Compre até 20 [Longjaw Mud Snappers] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 983 |q 983/1
 step
     path seq 1439 @569.26,6373.14 @596.11,6334.27 @592.84,6265.72 @600.7,6228.6 @567.29,6154.37 @437.6,6025.99
@@ -2109,6 +2405,8 @@ step
 step
     path closest 1439 @22.33,6736.44 @28.88,6669.2 @58.36,6649.98 @-6.49,6603.26 @-45.79,6638.63 @-17.62,6695.4 @-62.16,6719.41 @-130.94,6712.86 @-36.62,6760.9 @22.33,6736.44
     level 11
+    note-enUS Grind to 1100+/8800xp
+    note-ptBR Mate monstros até 1100+/8800xp
 step
     goto 1439 @48.53,6748.67
     note-enUS Talk to Asterion
@@ -2121,6 +2419,8 @@ step
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     goto 1439 @491.97,6582.3
     note-enUS Talk to Thundris
@@ -2151,6 +2451,8 @@ step
     note-enUS Talk to Caylais
     note-ptBR Fale com Caylais
     fp
+    note-enUS Get the Auberdine flight path
+    note-ptBR Pegue o ponto de voo de Auberdine
 step
     path seq 1439 @569.26,6373.14 @596.11,6334.27 @592.84,6265.72 @600.7,6228.6 @567.29,6154.37
     goto 1439 @558.78,6111.57
@@ -2206,6 +2508,8 @@ step
     note-enUS Do NOT go out of your way for these
     note-ptBR NÃO saia do caminho por causa disso
     objective 1001/1 |opt
+    note-enUS Run along the dock toward the Sea Turtle Remains
+    note-ptBR Corra pelo cais em direção aos Sea Turtle Remains
     note-enUS Swim underwater
     note-ptBR Nade debaixo d'água
     note-enUS Loot the Sea Turtle Remains
@@ -2215,6 +2519,8 @@ step
     path seq 1439 @575.81,6381.43 @596.77,6329.91 @581.05,6209.82 @575.15,6144.32 @545.68,6010.27 @634.1,5983.63 @634.76,5915.51 @537.82,5840.4 @575.81,6381.43 @596.77,6329.91 @581.05,6209.82 @575.15,6144.32 @545.68,6010.27 @634.1,5983.63 @634.76,5915.51
     goto 1439 @537.82,5840.4
     level 11
+    note-enUS Grind to 7825+/8800xp
+    note-ptBR Mate monstros até 7825+/8800xp
 step
     path seq 1439 @539.78,6364.84
     goto 1439 @543.06,6342.57
@@ -2232,11 +2538,15 @@ step
     note-enUS Open the "Set Hearthstone" menu, then cast [Hearthstone]
     note-ptBR Abra o menu "Definir Pedra de Regresso" e depois use a [Hearthstone]
     hearth
+    note-enUS Hearthstone BATCH from Auberdine to Ironforge
+    note-ptBR Use a pedra de regresso em BATCH de Auberdine para Ironforge
 step
     goto 1455 @-928.4,-4614.51
     note-enUS Talk to Dink
     note-ptBR Fale com Dink
     trainer
+    note-enUS Train your class spells (Fireball r3, Dampen Magic)
+    note-ptBR Treine suas magias de classe (Fireball r3, Dampen Magic)
     note-enUS Total Cost: 12s
     note-ptBR Custo total: 12s
     note-enUS Remember you may want money for a [Bronze Tube] (8s each) and Thelsamar flying (1s 10c)
@@ -2254,6 +2564,8 @@ step
     note-enUS Talk to Gryth
     note-ptBR Fale com Gryth
     fp
+    note-enUS Fly to Thelsamar
+    note-ptBR Voe para Thelsamar
 ]==])
 
 register([==[
@@ -2278,10 +2590,14 @@ step
     goto 1426 @-1184.93,-4250.73 20
     note-enUS NOTE: The Launch route contains quests that are VERY difficult to do solo. This is specifically for either heavily crowded servers where you can group up for the harder quests, OR players who have mob taggers
     note-ptBR NOTA: A rota de lançamento contém missões MUITO difíceis de fazer sozinho. Ela é específica para servidores muito lotados, onde você pode formar grupo para as missões mais difíceis, OU para jogadores que têm quem marque os inimigos
+    note-enUS Travel to the skip spot. Hug the left side of the mountain en route
+    note-ptBR Vá até o ponto do skip. Fique colado ao lado esquerdo da montanha no caminho
     note-enUS Do the Deathless Dun Morogh -> Wetlands skip
     note-ptBR Faça o atalho Deathless de Dun Morogh para Wetlands
     note-enUS Eat to full after each fall if you don't feel confident
     note-ptBR Coma até encher após cada queda se não estiver confiante
+    note-enUS Carefully drop down the mountain side
+    note-ptBR Desça a encosta da montanha com cuidado
 step
     ifnotturnedin 983
     path seq 1426 @-1192.32,-4216.25
@@ -2296,9 +2612,13 @@ step
     note-ptBR Cuidado com os Bluegill Raiders a oeste quando chegar ao mar
     note-enUS Avoid the Young Wetlands Crocolisks when crossing the sea. Wait for them to patrol away
     note-ptBR Evite os Young Wetlands Crocolisks ao atravessar o mar. Espere que se afastem na patrulha
+    note-enUS Travel to Menethil Harbor
+    note-ptBR Vá até Menethil Harbor
 step
     path seq 1437 @-836.21,-3796.15 @-829.18,-3804.42
     goto 1437 @-823.8,-3807.18
+    note-enUS Go inside the Inn
+    note-ptBR Entre na estalagem
     note-enUS Jump onto the Chandelier downstairs
     note-ptBR Pule no lustre no andar de baixo
     note-enUS Talk to Samor through the wall
@@ -2308,11 +2628,15 @@ step
     note-enUS If the Boat has just arrived, skip this step
     note-ptBR Se o Barco acabou de chegar, pule esta etapa
     vendor
+    note-enUS Buy [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1437 @-782.03,-3793.12
     note-enUS Talk to Shellei
     note-ptBR Fale com Shellei
     fp
+    note-enUS Get the Menethil Harbor flight path
+    note-ptBR Pegue o ponto de voo de Menethil Harbor
 step
     goto 1437 @-715.87,-3697.48
     note-enUS If the Boat has just arrived, skip this step
@@ -2324,15 +2648,23 @@ step
     note-enUS If the Boat has just arrived, skip this step
     note-ptBR Se o Barco acabou de chegar, pule esta etapa
     vendor
+    note-enUS Buy [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Healing Potions] dele (se estiverem disponíveis)
 step
     path seq 1437 @-641.43,-3758.94 @-575.68,-3719.53
     goto 1437 @-565.34,-3724.77
+    note-enUS Travel toward the Darkshore Boat
+    note-ptBR Vá em direção a Darkshore Boat
     note-enUS Start spam casting [Conjure Water r2] to conjure as much water as possible
     note-ptBR Comece a conjurar [Conjure Water r2] sem parar para fazer o máximo de água possível
     zone 1439
+    note-enUS Take the boat to Darkshore
+    note-ptBR Pegue o barco para Darkshore
 step
     path seq 1439 @601.35,6358.29 @533.23,6399.77 @536.51,6389.29 @528.65,6404.14 @537.16,6417.68
     goto 1439 @519.48,6405.89 8
+    note-enUS Jump off the boat when you're closest to the shore
+    note-ptBR Pule do barco quando estiver mais perto da margem
     note-enUS Kite 2-3 Pygmy Tide Crawlers toward Wizbang (Remember to use [Frost Nova]) Kill them when you accept the quest
     note-ptBR Leve 2-3 Pygmy Tide Crawlers (kite) até Wizbang (lembre-se de usar [Frost Nova]). Mate-os quando aceitar a missão
     note-enUS Talk to Laird
@@ -2340,9 +2672,13 @@ step
     note-enUS Buy up to 20 [Longjaw Mud Snappers] from him
     note-ptBR Compre até 20 [Longjaw Mud Snappers] dele
     vendor |opt
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 983 |q 983/1 |opt
     note-enUS Go upstairs to the top floor
     note-ptBR Suba até o último andar
+    note-enUS Travel toward Wizbang
+    note-ptBR Vá em direção a Wizbang
     note-enUS Talk to Wizbang
     note-ptBR Fale com Wizbang
     accept 983
@@ -2357,6 +2693,8 @@ step
     note-enUS Buy up to 20 [Longjaw Mud Snappers] from him
     note-ptBR Compre até 20 [Longjaw Mud Snappers] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 983 |q 983/1
 step
     path seq 1439 @362.93,6434.27
@@ -2371,6 +2709,8 @@ step
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Buy as many [Small Brown Pouches] as you need/can
+    note-ptBR Compre quantas [Small Brown Pouches] precisar/puder
 step
     ifskillbelow cooking 10
     goto 1439 @492.62,6580.99
@@ -2436,6 +2776,8 @@ step
 step
     goto 1439 @397.65,6437.76
     level 10
+    note-enUS Grind to 6625+/7600xp en route back to Tharnariun
+    note-ptBR Mate monstros até 6625+/7600xp no caminho de volta a Tharnariun
 step
     goto 1439 @397.65,6437.76
     note-enUS Talk to Tharnariun
@@ -2461,6 +2803,8 @@ step
     note-enUS Talk to Caylais
     note-ptBR Fale com Caylais
     fp
+    note-enUS Get the Auberdine flight path
+    note-ptBR Pegue o ponto de voo de Auberdine
 step
     path seq 1439 @569.26,6373.14 @596.11,6334.27 @592.84,6265.72 @600.7,6228.6 @567.29,6154.37
     goto 1439 @558.78,6111.57
@@ -2548,8 +2892,12 @@ step
     ifonquest 958
     path seq 1439 @-22.21,5999.79 @-54.96,6015.51
     goto 1439 @210.32,6739.5 30
+    note-enUS Go inside the cave
+    note-ptBR Entre na caverna
     note-enUS Avoid Thistle Bears, Moonkins, and Raging Moonkins en route (if possible)
     note-ptBR Evite Thistle Bears, Moonkins e Raging Moonkins no caminho (se possível)
+    note-enUS Kill the Moonkin Oracle inside the cave
+    note-ptBR Mate o Moonkin Oracle dentro da caverna
     note-enUS Be careful as it casts [Wrath] (Ranged Cast: Deals 30-45 Nature damage), [Moonfire] (Ranged Instant: Deals 20-30 Nature damage, then 44 Nature damage over 12 seconds), and [Regrowth] (Self Cast: Heals for about 150 damage. Rare, but run if this happens)
     note-ptBR Cuidado, ele lança [Wrath] (à distância: 30-45 de dano de Natureza), [Moonfire] (instantâneo: 20-30 de dano de Natureza e mais 44 em 12 segundos) e [Regrowth] (em si: cura cerca de 150. Raro, mas fuja se acontecer)
     note-enUS You can LoS his [Wrath] behind the rocks inside the mouth of the cave
@@ -2565,6 +2913,8 @@ step
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     goto 1439 @491.97,6582.3
     note-enUS Talk to Thundris
@@ -2616,6 +2966,8 @@ step
     note-enUS Do NOT go out of your way for these
     note-ptBR NÃO saia do caminho por causa disso
     objective 1001/1 |opt
+    note-enUS Run along the dock toward the Sea Turtle Remains
+    note-ptBR Corra pelo cais em direção aos Sea Turtle Remains
     note-enUS Swim underwater
     note-ptBR Nade debaixo d'água
     note-enUS Loot the Sea Turtle Remains
@@ -2625,6 +2977,8 @@ step
     path seq 1439 @575.81,6381.43 @596.77,6329.91 @581.05,6209.82 @575.15,6144.32 @545.68,6010.27 @634.1,5983.63 @634.76,5915.51 @537.82,5840.4 @575.81,6381.43 @596.77,6329.91 @581.05,6209.82 @575.15,6144.32 @545.68,6010.27 @634.1,5983.63 @634.76,5915.51
     goto 1439 @537.82,5840.4
     level 11
+    note-enUS Grind to 7825+/8800xp
+    note-ptBR Mate monstros até 7825+/8800xp
 step
     path seq 1439 @539.78,6364.84
     goto 1439 @543.06,6342.57
@@ -2642,11 +2996,15 @@ step
     note-enUS Open the "Set Hearthstone" menu, then cast [Hearthstone]
     note-ptBR Abra o menu "Definir Pedra de Regresso" e depois use a [Hearthstone]
     hearth
+    note-enUS Hearthstone BATCH from Auberdine to Ironforge
+    note-ptBR Use a pedra de regresso em BATCH de Auberdine para Ironforge
 step
     goto 1455 @-928.4,-4614.51
     note-enUS Talk to Dink
     note-ptBR Fale com Dink
     trainer
+    note-enUS Train your class spells (Fireball r3, Dampen Magic)
+    note-ptBR Treine suas magias de classe (Fireball r3, Dampen Magic)
     note-enUS Total Cost: 12s
     note-ptBR Custo total: 12s
     note-enUS Remember you may want money for a [Bronze Tube] (8s each) and Thelsamar flying (1s 10c)
@@ -2664,6 +3022,8 @@ step
     note-enUS Talk to Gryth
     note-ptBR Fale com Gryth
     fp
+    note-enUS Fly to Thelsamar
+    note-ptBR Voe para Thelsamar
 ]==])
 
 register([==[
@@ -2687,6 +3047,8 @@ step
     note-enUS As you quest through Loch Modan, save ALL of the [Chunks of Boar Meat] you loot for later
     note-ptBR Enquanto faz missões em Loch Modan, guarde TODOS os [Chunks of Boar Meat] que saquear para depois
     zone 1432
+    note-enUS Travel to Loch Modan
+    note-ptBR Vá até Loch Modan
 step
     goto 1432 @-2602.54,-5832.73
     note-enUS Talk to Cobbleflint
@@ -2695,6 +3057,8 @@ step
 step
     path seq 1432 @-2635.61,-5879.14 @-2645.27,-5874.91 @-2631.48,-5847.5
     goto 1432 @-2634.59,-5842.81
+    note-enUS Enter the Bunker. Go to the top floor
+    note-ptBR Entre no Bunker. Vá para o último andar
     note-enUS Talk to Rugelfuss
     note-ptBR Fale com Rugelfuss
     accept 267
@@ -2730,6 +3094,8 @@ step
 step
     path seq 1432 @-2635.61,-5879.14 @-2645.27,-5874.91 @-2631.48,-5847.5
     goto 1432 @-2634.59,-5842.81
+    note-enUS Enter the Bunker. Go to the top floor
+    note-ptBR Entre no Bunker. Vá para o último andar
     note-enUS Talk to Rugelfuss
     note-ptBR Fale com Rugelfuss
     turnin 267
@@ -2749,12 +3115,16 @@ step
     collect 3172 3 |quest 418 |q 418/1 |opt
     collect 3173 3 |quest 418 |q 418/1 |opt
     collect 3174 3 |quest 418 |q 418/1 |opt
+    note-enUS Travel to Algaz Station
+    note-ptBR Vá até Algaz Station
 step
     ifonquest 1339
     goto 1432 @-2659.34,-4822.3
     note-enUS Talk to Gothor
     note-ptBR Fale com Gothor
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     goto 1432 @-2676.82,-4825.93
     note-enUS Go Upstairs
@@ -2784,6 +3154,8 @@ step
     note-enUS Kill Tunnel Rats. Loot them for their Tunnel Rat Ears
     note-ptBR Mate Tunnel Rats. Saqueie-os para obter Tunnel Rat Ears
     objective 416/1 |opt
+    note-enUS Travel to the entrance of the Mine
+    note-ptBR Vá até a entrada da mina
 step
     path seq 1432 @-2971.58,-4854.31 @-2998.33,-4868.66 @-2965.79,-4891.84 @-2983.99,-4892.58 @-2955.86,-4919.99 @-2989.51,-4910.05 @-2993.09,-4945.19 @-2957.24,-4945.37 @-2971.58,-4854.31 @-2998.33,-4868.66 @-2965.79,-4891.84 @-2983.99,-4892.58 @-2955.86,-4919.99 @-2989.51,-4910.05 @-2993.09,-4945.19
     goto 1432 @-2957.24,-4945.37
@@ -2795,6 +3167,8 @@ step
 step
     ifonquest 307
     goto 1432 @-2972.13,-4836.1 40
+    note-enUS Exit the Mine
+    note-ptBR Saia da mina
 step
     path closest 1432 @-2942.06,-4812.55 @-2971.3,-4769.69 @-3018.47,-4681.21 @-3079.98,-4688.38 @-3054.6,-4752.95 @-3087.98,-4820.83 @-3092.67,-4944.27 @-3023.71,-4980.88 @-3018.47,-4938.75 @-3065.36,-4878.41 @-3038.88,-4834.81 @-2942.06,-4812.55
     note-enUS Kill Tunnel Rat Scouts, Tunnel Rat Vermin, Tunnel Rat Kobolds, and Tunnel Rat Foragers. Loot them for their Tunnel Rat Ears
@@ -2818,12 +3192,16 @@ step
     collect 3172 3 |quest 418 |q 418/1 |opt
     collect 3173 3 |quest 418 |q 418/1 |opt
     collect 3174 3 |quest 418 |q 418/1 |opt
+    note-enUS Travel to Algaz Station
+    note-ptBR Vá até Algaz Station
 step
     ifonquest 307
     goto 1432 @-2659.34,-4822.3
     note-enUS Talk to Gothor
     note-ptBR Fale com Gothor
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     goto 1432 @-2676.82,-4825.93
     note-enUS Go Upstairs
@@ -2880,11 +3258,15 @@ step
     only Human
     path closest 1432 @-2849.11,-4944.45 @-2895.45,-5014.91 @-2957.24,-5067.89 @-3008.26,-5098.06 @-3087.43,-5091.25 @-3046.05,-5189.48 @-2918.62,-5233.08 @-2817.66,-5471.86 @-2809.66,-5343.64 @-2819.87,-5220.39 @-2740.98,-5225.17 @-2794.49,-5102.66 @-2743.74,-5021.16 @-2704.57,-4958.43 @-2645.82,-4895.89 @-2849.11,-4944.45
     level 13
+    note-enUS Grind to 8675+/11400xp
+    note-ptBR Mate monstros até 8675+/11400xp
 step
     only Gnome
     ifonquest 6392
     path closest 1432 @-2849.11,-4944.45 @-2895.45,-5014.91 @-2957.24,-5067.89 @-3008.26,-5098.06 @-3087.43,-5091.25 @-3046.05,-5189.48 @-2918.62,-5233.08 @-2817.66,-5471.86 @-2809.66,-5343.64 @-2819.87,-5220.39 @-2740.98,-5225.17 @-2794.49,-5102.66 @-2743.74,-5021.16 @-2704.57,-4958.43 @-2645.82,-4895.89 @-2849.11,-4944.45
     level 13
+    note-enUS Grind to 6545+/11400xp
+    note-ptBR Mate monstros até 6545+/11400xp
 step
     only Gnome
     ifonquest 436
@@ -2892,9 +3274,13 @@ step
     goto 1432 @-3781.98,-5702.54 20 |only Gnome
     path seq 1432 @-3812.59,-5694.63
     goto 1432 @-3783.63,-5713.77
+    note-enUS Travel toward Aldren |only Gnome
+    note-ptBR Vá em direção a Aldren |only Gnome
     note-enUS Talk to Aldren |only Gnome
     note-ptBR Fale com Aldren |only Gnome
     vendor |only Gnome |opt
+    note-enUS Buy the [Wise Man's Belt] from him (if it's up) |only Gnome
+    note-ptBR Compre o [Wise Man's Belt] dele (se estiver disponível) |only Gnome
     note-enUS Talk to Ironband and Magmar
     note-ptBR Fale com Ironband e Magmar
     accept 298
@@ -2912,6 +3298,8 @@ step
     path seq 1432 @-3816.18,-5786.25 @-4013.68,-5791.58 @-4124.56,-5742.1 @-4258.62,-5650.48 |only Gnome
     goto 1432 @-4296.41,-5694.63 20 |only Gnome
     goto 1432 @-4296.41,-5694.63
+    note-enUS Travel to Daryl |only Gnome
+    note-ptBR Vá até Daryl |only Gnome
     note-enUS Talk to Daryl
     note-ptBR Fale com Daryl
     accept 257
@@ -2928,6 +3316,8 @@ step
     path seq 1432 @-4258.62,-5650.48 |only Gnome
     goto 1432 @-4296.41,-5694.63 20 |only Gnome
     goto 1432 @-4296.41,-5694.63
+    note-enUS Travel to Daryl |only Gnome
+    note-ptBR Vá até Daryl |only Gnome
     note-enUS Talk to Daryl
     note-ptBR Fale com Daryl
     turnin 257 |reward 2
@@ -2952,6 +3342,8 @@ step
     ifonquest 298
     path closest 1432 @-2849.11,-4944.45 @-2895.45,-5014.91 @-2957.24,-5067.89 @-3008.26,-5098.06 @-3087.43,-5091.25 @-3046.05,-5189.48 @-2918.62,-5233.08 @-2817.66,-5471.86 @-2809.66,-5343.64 @-2819.87,-5220.39 @-2740.98,-5225.17 @-2794.49,-5102.66 @-2743.74,-5021.16 @-2704.57,-4958.43 @-2645.82,-4895.89 @-2849.11,-4944.45
     level 13
+    note-enUS Grind to 6780+/11400xp
+    note-ptBR Mate monstros até 6780+/11400xp
 step
     path seq 1432 @-2902.07,-5398.28 @-2945.1,-5360.2 @-3015.71,-5335.73 @-3025.09,-5318.44
     goto 1432 @-3017.64,-5274.66
@@ -2997,6 +3389,8 @@ step
     goto 1432 @-2954.42,-5394.1 10
     note-enUS Go inside the Inn
     note-ptBR Entre na estalagem
+    note-enUS Travel toward Vidra
+    note-ptBR Vá em direção a Vidra
     note-enUS Talk to Vidra
     note-ptBR Fale com Vidra
     accept 418
@@ -3006,6 +3400,8 @@ step
     note-enUS Do NOT get rid of any of your extra [Chunks of Boar Meat]
     note-ptBR NÃO se desfaça de nenhum dos seus [Chunks of Boar Meat] extras
     skill cooking 10
+    note-enUS Cook [Chunks of Boar Meat] into [Roasted Boar Meat] until your [Cooking] skill reaches 10
+    note-ptBR Cozinhe [Chunks of Boar Meat] em [Roasted Boar Meat] até sua habilidade de [Cooking] chegar a 10
 step
     ifonquest 1338
     goto 1432 @-2952.55,-5381.91
@@ -3016,6 +3412,8 @@ step
     note-enUS Do NOT go below 45 Silver
     note-ptBR NÃO fique abaixo de 45 de prata
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     ifonquest 1338
     goto 1432 @-2929.93,-5424.95
@@ -3024,6 +3422,8 @@ step
     note-enUS Talk to Thorgrum
     note-ptBR Fale com Thorgrum
     fly 1455
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
 step
     only Gnome
     ifonquest 301
@@ -3036,6 +3436,8 @@ step
     note-enUS Talk to Cogspinner
     note-ptBR Fale com Cogspinner
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     only Gnome
     goto 1455 @-1317.71,-4839.48 30
@@ -3067,12 +3469,18 @@ step
 step
     ifonquest 1338
     zone 1453
+    note-enUS Enter Stormwind City
+    note-ptBR Entre em Stormwind City
 step
     path seq 1453 @574.95,-8388.3 @614.33,-8380.77
     goto 1453 @638.26,-8342.22 15
+    note-enUS Travel toward Billibub
+    note-ptBR Vá em direção a Billibub
     note-enUS Talk to Billibub
     note-ptBR Fale com Billibub
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     goto 1453 @600.08,-8427.2
     note-enUS Talk to Furen
@@ -3081,6 +3489,8 @@ step
 step
     path seq 1453 @663.94,-8451.76 @686.79,-8473.27 @678.86,-8562.64 @711.26,-8587.38 @737.6,-8557.89
     goto 1453 @719.86,-8550.36 12
+    note-enUS Travel toward Baros
+    note-ptBR Vá em direção a Baros
     note-enUS Go inside the building
     note-ptBR Entre no prédio
     note-enUS Talk to Baros
@@ -3095,10 +3505,14 @@ step
     note-ptBR Com Sombras em "Razoável" ou "Baixo", fique entre os pés de Derek the Dinosaur (a parte mais clara da terra) logo antes do vazio azul e ande reto para frente
     note-enUS NOTE: There is a small chance of dying using this method. You can also walk to the Mage Tower normally if you wish
     note-ptBR NOTA: Há uma pequena chance de morrer usando este método. Se preferir, você também pode andar normalmente até a Mage Tower
+    note-enUS Travel toward Jennea
+    note-ptBR Vá em direção a Jennea
     note-enUS Talk to Jennea
     note-ptBR Fale com Jennea
     accept 1861 |only Gnome
     trainer
+    note-enUS Train your class spells (Fire Blast r2, Arcane Intellect r2, Arcane Explosion)
+    note-ptBR Treine suas magias de classe (Fire Blast r2, Arcane Intellect r2, Arcane Explosion)
     note-enUS Total Cost: 27s
     note-ptBR Custo total: 27s
     note-enUS Remember you may want money for Potions (1-3s each) and Scrolls (50c-3s each)
@@ -3108,30 +3522,46 @@ step
     goto 1453 @948.65,-8994.5 10
     note-enUS Exit the Mage Tower
     note-ptBR Saia da Mage Tower
+    note-enUS Travel toward Charys
+    note-ptBR Vá em direção a Charys
     note-enUS Enter the building
     note-ptBR Entre no prédio
     note-enUS Talk to Charys
     note-ptBR Fale com Charys
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from her (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dela (se estiverem disponíveis)
 step
     path seq 1453 @852.4,-8920.1 @829.01,-8901.28 @789.22,-8904.59 @758.31,-8878.78 @810.33,-8832.44 @827.54,-8850.19
     goto 1453 @822.16,-8865.6 10
+    note-enUS Travel toward Adair
+    note-ptBR Vá em direção a Adair
     note-enUS Enter the building
     note-ptBR Entre no prédio
     note-enUS Talk to Adair
     note-ptBR Fale com Adair
     vendor
+    note-enUS Buy non-intellect [Scrolls] from him (if they're up)
+    note-ptBR Compre [Scrolls] sem intelecto dele (se estiverem disponíveis)
 step
     path seq 1453 @680.61,-8828.67
     goto 1453 @635.44,-8863.81 8
+    note-enUS Travel toward Keldric
+    note-ptBR Vá em direção a Keldric
     note-enUS Talk to Keldric through the wall
     note-ptBR Fale com Keldric através da parede
     vendor
+    note-enUS Buy [Lesser Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Healing Potions] dele (se estiverem disponíveis)
 step
     path seq 1453 @637.59,-8889.81
     goto 1453 @614.33,-8932.92
+    note-enUS Enter the Stormwind Bank
+    note-ptBR Entre no banco de Stormwind
     note-enUS Talk to Newton
     note-ptBR Fale com Newton
+    note-enUS Deposit the following items into the bank:
+    note-ptBR Deposite os seguintes itens no banco:
     note-enUS [Chunk of Boar Meat]
     note-ptBR [Chunk of Boar Meat]
     note-enUS [Bronze Tube]
@@ -3151,6 +3581,8 @@ step
     goto 1453 @673.75,-8867.93 10
     note-enUS Enter the Inn
     note-ptBR Entre na estalagem
+    note-enUS Travel Toward Allison
+    note-ptBR Vá em direção a Allison
     note-enUS ===PAY ATTENTION===
     note-ptBR ===PRESTE ATENÇÃO===
     note-enUS Talk to Allison
@@ -3158,6 +3590,8 @@ step
     note-enUS Open the "Set Hearthstone" menu, then cast [Hearthstone]
     note-ptBR Abra o menu "Definir Pedra de Regresso" e depois use a [Hearthstone]
     hearth
+    note-enUS Hearthstone BATCH from Stormwind to Auberdine
+    note-ptBR Use a pedra de regresso em BATCH de Stormwind para Auberdine
 ]==])
 
 register([==[
@@ -3263,6 +3697,8 @@ step
     note-enUS Be careful as they cast [Rabies] (Instant Melee: Reduces ALL health regen by 50% for 10 Minutes)
     note-ptBR Cuidado, eles lançam [Rabies] (Instantâneo corpo a corpo: reduz TODA a regeneração de vida em 50% por 10 minutos)
     objective 2138/1 |opt
+    note-enUS Travel toward the Beached Sea Turtle
+    note-ptBR Vá em direção a Beached Sea Turtle
 step
     goto 1439 @46.57,7433.8
     note-enUS Save the [Murloc Eyes] you loot from the Greymist Warriors and Greymist Netters
@@ -3298,6 +3734,8 @@ step
     note-enUS Kill Moonstalker Runts and Moonstalkers. Loot them for their Moonstalker Fangs
     note-ptBR Mate Moonstalker Runts e Moonstalkers. Saqueie-os para obter Moonstalker Fangs
     objective 1002/1 |opt
+    note-enUS Travel toward The Red Crystal
+    note-ptBR Vá em direção a The Red Crystal
 step
     goto 1439 @-144.04,6209.82
     note-enUS Kill Foreststrider Fledglings. Loot them for their Strider Meat
@@ -3314,6 +3752,8 @@ step
 step
     ifonquest 957
     goto 1439 @166.43,5633.86 175
+    note-enUS Travel toward the Ancient Flame
+    note-ptBR Vá em direção a Ancient Flame
 step
     path seq 1439 @161.19,5684.51
     goto 1439 @166.43,5633.86
@@ -3372,6 +3812,8 @@ step
 step
     ifonquest 982
     goto 1439 @543.06,6342.57 150
+    note-enUS Travel toward Gwennyth
+    note-ptBR Vá em direção a Gwennyth
 step
     path seq 1439 @536.51,6365.28
     goto 1439 @543.06,6342.57
@@ -3388,6 +3830,8 @@ step
     note-enUS Buy up to 20 [Longjaw Mud Snappers] from him
     note-ptBR Compre até 20 [Longjaw Mud Snappers] dele
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 4763 |q 4763/1
 step
     path seq 1439 @539.13,6409.82
@@ -3422,6 +3866,8 @@ step
 step
     path seq 1439 @488.69,6451.3 @487.38,6481.87
     goto 1439 @489.35,6506.32 15
+    note-enUS Travel toward Hollee
+    note-ptBR Vá em direção a Hollee
     note-enUS Talk to Hollee
     note-ptBR Fale com Hollee
     accept 729
@@ -3430,11 +3876,15 @@ step
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Buy as many [Small Brown Pouches] as you need/can
+    note-ptBR Compre quantas [Small Brown Pouches] precisar/puder
 step
     goto 1439 @488.69,6564.83
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Buy a [Brown Leather Satchel] from him
+    note-ptBR Compre uma [Brown Leather Satchel] dele
 step
     goto 1439 @492.62,6580.99
     note-enUS Talk to Thundris
@@ -3455,6 +3905,8 @@ step
 step
     path seq 1439 @476.25,6479.25 @478.21,6446.5
     goto 1439 @473.63,6439.07 20
+    note-enUS Travel toward Glynda
+    note-ptBR Vá em direção a Glynda
     note-enUS Talk to Glynda
     note-ptBR Fale com Glynda
     turnin 4811
@@ -3513,6 +3965,8 @@ step
     note-enUS Kill Moonstalkers. Loot them for their Moonstalker Fangs
     note-ptBR Mate Moonstalkers. Saqueie-os para obter Moonstalker Fangs
     objective 1002/1 |opt
+    note-enUS Travel toward Den Mother
+    note-ptBR Vá em direção a Den Mother
     note-enUS Kill Den Mother
     note-ptBR Mate Den Mother
     note-enUS Be careful as Den Mother and her Thistle Cubs cast [Ravage] (2 second stun)
@@ -3551,6 +4005,8 @@ step
 step
     path seq 1439 @-497.74,6887.53
     goto 1439 @-480.05,6888.84
+    note-enUS Use the [Filled Cleansing Bowl] near the campfire to summon Xabraxxis
+    note-ptBR Use o [Filled Cleansing Bowl] perto da fogueira para invocar Xabraxxis
     note-enUS This has a 5 second cast time
     note-ptBR Isto tem 5 segundos de tempo de conjuração
     use 12347 |opt
@@ -3620,6 +4076,8 @@ step
 step
     path seq 1439 @-660.83,6873.99 @-663.45,6877.49 @-679.17,6848.67 @-666.73,6819.41 @-680.48,6779.67 @-690.31,6751.29 @-706.68,6748.23
     goto 1439 @-719.13,6787.53 12
+    note-enUS Go inside the Cave
+    note-ptBR Entre na Cave
     note-enUS Loot the blue Scaber Stalks on the ground
     note-ptBR Saqueie as Scaber Stalks azuis no chão
     note-enUS This has a 5 second cast time
@@ -3642,6 +4100,8 @@ step
     objective 947/1
 step
     goto 1439 @492.62,6580.99
+    note-enUS Travel to Auberdine
+    note-ptBR Vá até Auberdine
     note-enUS Talk to Thundris
     note-ptBR Fale com Thundris
     turnin 4763 |reward 1
@@ -3650,6 +4110,8 @@ step
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Buy a [Brown Leather Satchel] from him
+    note-ptBR Compre uma [Brown Leather Satchel] dele
     note-enUS Do NOT go below 30 Silver
     note-ptBR NÃO fique abaixo de 30 de prata
 step
@@ -3687,6 +4149,8 @@ step
     note-enUS Open the "Set Hearthstone" menu, then cast [Hearthstone]
     note-ptBR Abra o menu "Definir Pedra de Regresso" e depois use a [Hearthstone]
     hearth
+    note-enUS Hearthstone BATCH from Auberdine to Stormwind City
+    note-ptBR Use a pedra de regresso em BATCH de Auberdine para Stormwind City
 ]==])
 
 register([==[
@@ -3711,6 +4175,8 @@ step
     note-ptBR NOTA: Você precisa de 12 pilhas de cada tecido ([Wool Cloth], [Silk Cloth], [Mageweave Cloth] e [Runecloth]) para as entregas de tecido depois. Você os obterá naturalmente enquanto sobe de nível
     note-enUS Talk to Newton
     note-ptBR Fale com Newton
+    note-enUS Deposit the following items into the bank:
+    note-ptBR Deposite os seguintes itens no banco:
     note-enUS [Light Feather]
     note-ptBR [Light Feather]
     note-enUS [Letter to Delgren]
@@ -3723,6 +4189,10 @@ step
     goto 1453 @614.33,-8932.92
     note-enUS Talk to Newton
     note-ptBR Fale com Newton
+    note-enUS Withdraw the following items from your bank: |only Gnome
+    note-ptBR Retire os seguintes itens do seu banco: |only Gnome
+    note-enUS Withdraw the following items from your bank: |only Human
+    note-ptBR Retire os seguintes itens do seu banco: |only Human
     note-enUS [Murloc Eyes]
     note-ptBR [Murloc Eyes]
     note-enUS [Jennea's Flask] |only Gnome
@@ -3738,9 +4208,13 @@ step
     note-ptBR Com Sombras em "Razoável" ou "Baixo", fique entre os pés de Derek the Dinosaur (a parte mais clara da terra) logo antes do vazio azul e ande reto para frente
     note-enUS NOTE: There is a small chance of dying using this method. You can also walk to the Mage Tower normally if you wish
     note-ptBR NOTA: Há uma pequena chance de morrer usando este método. Se preferir, você também pode andar normalmente até a Mage Tower
+    note-enUS Travel toward Jennea
+    note-ptBR Vá em direção a Jennea
     note-enUS Talk to Jennea
     note-ptBR Fale com Jennea
     trainer
+    note-enUS Train your class spells (Flamestrike)
+    note-ptBR Treine your class spells (Flamestrike)
     note-enUS Total Cost: 15s
     note-ptBR Custo total: 15s
 step
@@ -3748,16 +4222,24 @@ step
     note-enUS Talk to Keldric through the wall
     note-ptBR Fale com Keldric através da parede
     vendor
+    note-enUS Buy [Lesser Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Healing Potions] dele (se estiverem disponíveis)
 step
     path seq 1453 @618.9,-8796.58
     goto 1453 @612.99,-8795.96 10
+    note-enUS Travel toward Woo Ping
+    note-ptBR Vá em direção a Woo Ping
     note-enUS Talk to Woo Ping
     note-ptBR Fale com Woo Ping
     train 1180
+    note-enUS Train [Daggers]
+    note-ptBR Treine [Daggers]
 step
     only Human
     path seq 1453 @612.45,-8806.18 @528.43,-8850.28 @532.2,-8863.72
     goto 1453 @490.12,-8835.67 10
+    note-enUS Travel toward Dungar
+    note-ptBR Vá em direção a Dungar
     note-enUS Talk to Dungar
     note-ptBR Fale com Dungar
     turnin 6261
@@ -3772,7 +4254,15 @@ step
     note-enUS Talk to Dungar
     note-ptBR Fale com Dungar
     fp |only Gnome |opt
+    note-enUS Get the Stormwind City flight path |only Gnome
+    note-ptBR Pegue o ponto de voo de Stormwind City |only Gnome
     fly 1436 |only Human |opt
+    note-enUS Fly to Westfall |only Human
+    note-ptBR Voe para Westfall |only Human
+    note-enUS Drop down to the ledge below Dungar |only Gnome
+    note-ptBR Desça até a plataforma abaixo de Dungar |only Gnome
+    note-enUS Exit Stormwind |only Gnome
+    note-ptBR Saia de Stormwind |only Gnome
     note-enUS Use [Jennea's Flask] at the waterfall
     note-ptBR Use [Jennea's Flask] na cachoeira
     note-enUS This has a 5 second cast time
@@ -3938,6 +4428,8 @@ step
     goto 1436 @1917.67,-11086.77 30
     note-enUS Keep an eye out for Old Murk-Eye. Try to stay close to the edge of the ridge as to not miss him
     note-ptBR Fique atento a Old Murk-Eye. Tente ficar perto da beira do penhasco para não perdê-lo
+    note-enUS AoE the Gnoll Camps
+    note-ptBR Use dano em área nos acampamentos de Gnolls
     note-enUS AoE Riverpaw Herbalists, Riverpaw Mongrels, and Riverpaw Brutes. Loot them for their Gnoll Paws
     note-ptBR Use AoE em Riverpaw Herbalists, Riverpaw Mongrels e Riverpaw Brutes. Saqueie-os para obter Gnoll Paws
     note-enUS If you find Old Murk-Eye, skip this step
@@ -3983,6 +4475,8 @@ step
     note-enUS Be careful as the Defias Highwaymen cast [Backstab] (deals double damage from behind)
     note-ptBR Cuidado, os Defias Highwaymen lançam [Backstab] (causa dano dobrado pelas costas)
     objective 153/1 |opt
+    note-enUS Travel toward the end of The Dagger Hills
+    note-ptBR Vá em direção ao fim de The Dagger Hills
 step
     ifonquest 153
     path seq 1436 @1383.92,-10636.43 @1328.97,-10454.9 @1414.72,-10314.43 @1389.52,-10270.33
@@ -4004,6 +4498,8 @@ step
     note-enUS Be careful as the Defias Trappers cast [Backstab] (deals double damage from behind) and [Net] (Immobilizes for 9 seconds)
     note-ptBR Cuidado, os Defias Trappers lançam [Backstab] (causa dano dobrado pelas costas) e [Net] (imobiliza por 9 segundos)
     objective 153/1 |opt
+    note-enUS Travel toward The Molsen Farm
+    note-ptBR Vá em direção a The Molsen Farm
 step
     path seq 1436 @1457.77,-10209.9 @1471.77,-10022.07 @1402.12,-10018.8
     goto 1436 @1310.77,-9885.1
@@ -4095,11 +4591,15 @@ step
     ifcomplete 12
     goto 1436 @1207.17,-9940.4
     level 17
+    note-enUS Grind to 11890+/17700xp
+    note-ptBR Mate monstros até 11890+/17700xp
 step
     goto 1436 @1207.17,-9940.4
     note-enUS Skip this step if you've finished the objective of The People's Militia
     note-ptBR Pule este passo se já concluiu o objetivo de The People's Militia
     level 17
+    note-enUS Grind to 12800+/17700xp
+    note-ptBR Mate monstros até 12800+/17700xp
 step
     path seq 1436 @1055.27,-10128.7
     goto 1436 @1041.97,-10112.13
@@ -4107,6 +4607,8 @@ step
     note-ptBR Fale com Farmer Saldean e depois com Salma lá dentro
     turnin 9 |reward 1
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     turnin 22
     turnin 38
 step
@@ -4136,16 +4638,22 @@ step
     note-enUS Talk to Thor
     note-ptBR Fale com Thor
     fly 1453 |opt
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
     note-enUS Jump up onto the torch, then drop down to get under Stormwind
     note-ptBR Suba na tocha e depois desça para ficar embaixo de Stormwind
     note-enUS With Shadows on "Fair" or "Low", get in the middle of Derek the Dinosaur's feet (the lighter part of the dirt) just before the blue void, then walk straight forward
     note-ptBR Com Sombras em "Razoável" ou "Baixo", fique entre os pés de Derek the Dinosaur (a parte mais clara da terra) logo antes do vazio azul e ande reto para frente
     note-enUS NOTE: There is a small chance of dying using this method. You can also walk to the Mage Tower normally if you wish
     note-ptBR NOTA: Há uma pequena chance de morrer usando este método. Se preferir, você também pode andar normalmente até a Mage Tower
+    note-enUS Travel toward Jennea
+    note-ptBR Vá em direção a Jennea
     note-enUS Talk to Jennea
     note-ptBR Fale com Jennea
     turnin 1861 |reward 1
     trainer
+    note-enUS Train your class spells (Fireball r4)
+    note-ptBR Treine your class spells (Fireball r4)
     note-enUS Total Cost: 18s
     note-ptBR Custo total: 18s
 step
@@ -4153,14 +4661,20 @@ step
     goto 1453 @948.65,-8994.5 10
     note-enUS Exit the Mage Tower
     note-ptBR Saia da Mage Tower
+    note-enUS Travel toward Charys
+    note-ptBR Vá em direção a Charys
     note-enUS Enter the building
     note-ptBR Entre no prédio
     note-enUS Talk to Charys
     note-ptBR Fale com Charys
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from her (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dela (se estiverem disponíveis)
 step
     path seq 1453 @958.74,-8987.87 @941.8,-8918.49 @916.79,-8891.96 @948.65,-8816.3 @946.64,-8803.31 @970.57,-8772.74 @1030.92,-8747.2 @1049.34,-8750.33
     goto 1453 @1093.16,-8779.02 10
+    note-enUS Travel toward Argos
+    note-ptBR Vá em direção a Argos
     note-enUS Talk to Argos
     note-ptBR Fale com Argos
     accept 3765
@@ -4171,9 +4685,13 @@ step
     note-enUS Talk to Adair
     note-ptBR Fale com Adair
     vendor
+    note-enUS Buy non-intellect [Scrolls] from him (if they're up)
+    note-ptBR Compre [Scrolls] sem intelecto dele (se estiverem disponíveis)
 step
     path seq 1453 @661.38,-8858.16 @680.61,-8829.39 @717.44,-8847.32 @693.24,-8891.51
     goto 1453 @681.28,-8888.01 10
+    note-enUS Travel toward Roberto
+    note-ptBR Vá em direção a Roberto
     note-enUS Go inside the building
     note-ptBR Entre no prédio
     note-enUS Talk to Roberto
@@ -4184,14 +4702,22 @@ step
 step
     path seq 1453 @680.61,-8828.67
     goto 1453 @635.44,-8863.81 8
+    note-enUS Travel toward Keldric
+    note-ptBR Vá em direção a Keldric
     note-enUS Talk to Keldric through the wall
     note-ptBR Fale com Keldric através da parede
     vendor
+    note-enUS Buy [Lesser Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Healing Potions] dele (se estiverem disponíveis)
 step
     path seq 1453 @637.59,-8889.81
     goto 1453 @614.33,-8932.92
+    note-enUS Enter the Stormwind Bank
+    note-ptBR Entre no banco de Stormwind
     note-enUS Talk to Newton
     note-ptBR Fale com Newton
+    note-enUS Withdraw the following items from your bank:
+    note-ptBR Retire os seguintes itens do seu banco:
     note-enUS [Chunk of Boar Meat]
     note-ptBR [Chunk of Boar Meat]
     note-enUS [Letter to Delgren]
@@ -4204,6 +4730,8 @@ step
     note-ptBR Fale com Newton
     note-enUS NOTE: You need 12 stacks of each cloth ([Wool Cloth], [Silk Cloth], [Mageweave Cloth], and [Runecloth]) to do the cloth turnins later. You'll get these naturally as you level
     note-ptBR NOTA: Você precisa de 12 pilhas de cada tecido ([Wool Cloth], [Silk Cloth], [Mageweave Cloth] e [Runecloth]) para as entregas de tecido depois. Você os obterá naturalmente enquanto sobe de nível
+    note-enUS Deposit the following items into the bank:
+    note-ptBR Deposite os seguintes itens no banco:
     note-enUS [Bronze Tube]
     note-ptBR [Bronze Tube]
     note-enUS [Scrolls]
@@ -4221,6 +4749,8 @@ step
     goto 1453 @673.75,-8867.93 10
     note-enUS Enter the Inn
     note-ptBR Entre na estalagem
+    note-enUS Travel Toward Allison
+    note-ptBR Vá em direção a Allison
     note-enUS ===PAY ATTENTION===
     note-ptBR ===PRESTE ATENÇÃO===
     note-enUS Talk to Allison
@@ -4228,6 +4758,8 @@ step
     note-enUS Open the "Set Hearthstone" menu, then cast [Hearthstone]
     note-ptBR Abra o menu "Definir Pedra de Regresso" e depois use a [Hearthstone]
     hearth
+    note-enUS Hearthstone BATCH from Stormwind to Auberdine
+    note-ptBR Use a pedra de regresso em BATCH de Stormwind para Auberdine
 ]==])
 
 register([==[
@@ -4488,6 +5020,8 @@ step
     ifonquest 950
     goto 1439 @896.76,4597.21
     abandon 5321 |opt
+    note-enUS Abandon The Sleeper has Awakened
+    note-ptBR Abandone The Sleeper has Awakened
     note-enUS Loot the Beached Sea Turtle on the ground
     note-ptBR Saqueie a Beached Sea Turtle no chão
     note-enUS The Turtle Shell has LoS
@@ -4792,6 +5326,8 @@ step
     ifonquest 5321
     goto 1440 @128.01,3305.31
     level 19 |opt
+    note-enUS Grind to 4635+/21300xp
+    note-ptBR Mate monstros até 4635+/21300xp
     note-enUS AoE Ghostpaw Runners. Loot them for their Lean Wolf Flanks
     note-ptBR Use AoE em Ghostpaw Runners. Saqueie-os para obter Lean Wolf Flanks
     collect 1015 10 |quest 90 |q 90/1 |opt
@@ -4812,6 +5348,8 @@ step
 step
     goto 1440 @-284.31,2828.3
     level 19
+    note-enUS Grind to 8720+/21300xp
+    note-ptBR Mate monstros até 8720+/21300xp
 step
     goto 1440 @-284.31,2828.3
     path seq 1439 @543.06,6342.13
@@ -4819,6 +5357,8 @@ step
     note-enUS Talk to Daelyshia
     note-ptBR Fale com Daelyshia
     fp |opt
+    note-enUS Fly to Auberdine
+    note-ptBR Voe para Auberdine
     note-enUS Talk to Gwennyth and Gubber
     note-ptBR Fale com Gwennyth e Gubber
     turnin 4728
@@ -4890,23 +5430,37 @@ step
     path seq 1439 @487.38,6479.68 @489.35,6454.36 @527.99,6409.82 @782.79,6504.57
     goto 1439 @765.1,6590.6 50
     goto 1438 @1018.75,8564.77 100
+    note-enUS Travel toward the Darnassus Boat
+    note-ptBR Vá em direção a Darnassus Boat
+    note-enUS Cast [Basic Campfire] on the Boat (or Dock if the boat isn't visible yet)
+    note-ptBR Lance [Basic Campfire] no barco (ou no cais se o barco ainda não estiver visível)
     note-enUS This has a 5 second cast time
     note-ptBR Isto tem 5 segundos de tempo de conjuração
     note-enUS Cook any [Chunks of Boar Meat] into [Roasted Boar Meat]
     note-ptBR Cozinhe quaisquer [Chunks of Boar Meat] em [Roasted Boar Meat]
     note-enUS Start spam casting [Conjure Water r2] to conjure as much water as possible
     note-ptBR Comece a conjurar [Conjure Water r2] sem parar para fazer o máximo de água possível
+    note-enUS Take the Boat to Teldrassil
+    note-ptBR Pegue o barco para Teldrassil
 step
     path seq 1438 @987.69,8651.99 @922.52,8678.46 @888.4,8676.08
     goto 1438 @841.05,8641.12 20
+    note-enUS Travel toward Vesprystus
+    note-ptBR Vá em direção a Vesprystus
     note-enUS Talk to Vesprystus
     note-ptBR Fale com Vesprystus
     fp
+    note-enUS Get the Rut'theran Village flight path
+    note-ptBR Pegue o ponto de voo de Rut'theran Village
 step
     goto 1438 55.88,89.35
     path seq 1457 @2536.83,9898.58 @2534.08,9772.82 @2549,9727.09
     goto 1457 @2607.74,9642.04 20
     zone 1457 |opt
+    note-enUS Go through the purple portal into Darnassus
+    note-ptBR Atravesse o portal roxo para Darnassus
+    note-enUS Travel toward Greywhisker
+    note-ptBR Vá em direção a Greywhisker
     note-enUS Talk to Greywhisker
     note-ptBR Fale com Greywhisker
     turnin 741 |reward 3
@@ -4932,14 +5486,22 @@ register([==[
 step
     goto 1453 @635.44,-8863.81
     hearth |opt
+    note-enUS Hearth to Stormwind City
+    note-ptBR Use a pedra de regresso para Stormwind City
     note-enUS Talk to Keldric through the wall
     note-ptBR Fale com Keldric através da parede
     vendor
+    note-enUS Vendor Trash. Buy [Lesser Healing Potions] from him (if they're up)
+    note-ptBR Venda o lixo. Compre [Lesser Healing Potions] dele (se estiverem disponíveis)
 step
     path seq 1453 @637.59,-8889.81
     goto 1453 @614.33,-8932.92
+    note-enUS Enter the Stormwind Bank
+    note-ptBR Entre no banco de Stormwind
     note-enUS Talk to Newton
     note-ptBR Fale com Newton
+    note-enUS Withdraw the following items from your bank:
+    note-ptBR Retire os seguintes itens do seu banco:
     note-enUS [Bronze Tube]
     note-ptBR [Bronze Tube]
     note-enUS [Scrolls]
@@ -4954,6 +5516,8 @@ step
     note-ptBR Fale com Newton
     note-enUS NOTE: You need 12 stacks of each cloth ([Wool Cloth], [Silk Cloth], [Mageweave Cloth], and [Runecloth]) to do the cloth turnins later. You'll get these naturally as you level
     note-ptBR NOTA: Você precisa de 12 pilhas de cada tecido ([Wool Cloth], [Silk Cloth], [Mageweave Cloth] e [Runecloth]) para as entregas de tecido depois. Você os obterá naturalmente enquanto sobe de nível
+    note-enUS Deposit the following items into the bank:
+    note-ptBR Deposite os seguintes itens no banco:
     note-enUS [Light Feather]
     note-ptBR [Light Feather]
     note-enUS [Wool Cloth]
@@ -4965,6 +5529,8 @@ step
 step
     path seq 1453 @679.8,-8829.57 @716.77,-8847.23 @693.24,-8891.33
     goto 1453 @681.28,-8888.01
+    note-enUS Travel toward Roberto
+    note-ptBR Vá em direção a Roberto
     note-enUS Go inside the building
     note-ptBR Entre no prédio
     note-enUS Talk to Roberto
@@ -4981,9 +5547,13 @@ step
     note-ptBR Com Sombras em "Razoável" ou "Baixo", fique entre os pés de Derek the Dinosaur (a parte mais clara da terra) logo antes do vazio azul e ande reto para frente
     note-enUS NOTE: There is a small chance of dying using this method. You can also walk to the Mage Tower normally if you wish
     note-ptBR NOTA: Há uma pequena chance de morrer usando este método. Se preferir, você também pode andar normalmente até a Mage Tower
+    note-enUS Travel toward Larimaine
+    note-ptBR Vá em direção a Larimaine
     note-enUS Talk to Larimaine
     note-ptBR Fale com Larimaine
     train 3561
+    note-enUS Train [Teleport: Stormwind]
+    note-ptBR Treine [Teleport: Stormwind]
     note-enUS Total Cost: 20s
     note-ptBR Custo total: 20s
 step
@@ -4991,6 +5561,8 @@ step
     note-enUS Talk to Jennea
     note-ptBR Fale com Jennea
     trainer
+    note-enUS Train your class spells (Blink, Evocation, Frost Armor r3, Mana Shield, Conjure Water r3)
+    note-ptBR Treine suas magias de classe (Blink, Evocation, Frost Armor r3, Mana Shield, Conjure Water r3)
     note-enUS Do NOT train Blizzard yet
     note-ptBR NÃO treine Blizzard ainda
     note-enUS Total Cost: 1g
@@ -5000,6 +5572,8 @@ step
     goto 1453 @948.65,-8994.5 10
     note-enUS Exit the Mage Tower
     note-ptBR Saia da Mage Tower
+    note-enUS Travel toward Charys
+    note-ptBR Vá em direção a Charys
     note-enUS Enter the building
     note-ptBR Entre no prédio
     note-enUS Talk to Charys
@@ -5023,11 +5597,15 @@ step
 step
     path seq 1453 @852.4,-8920.1 @829.01,-8901.28 @789.22,-8904.59 @758.31,-8878.78 @810.33,-8832.44 @827.54,-8850.19
     goto 1453 @822.16,-8865.6 10
+    note-enUS Travel toward Adair
+    note-ptBR Vá em direção a Adair
     note-enUS Enter the building
     note-ptBR Entre no prédio
     note-enUS Talk to Adair
     note-ptBR Fale com Adair
     vendor
+    note-enUS Buy non-intellect [Scrolls] from him (if they're up)
+    note-ptBR Compre [Scrolls] sem intelecto dele (se estiverem disponíveis)
     note-enUS DON'T go below 18s 31c
     note-ptBR NÃO fique abaixo de 18s 31c
 step
@@ -5037,17 +5615,23 @@ step
     note-enUS Talk to Adair
     note-ptBR Fale com Adair
     vendor
+    note-enUS Buy non-intellect [Scrolls] from him (if they're up)
+    note-ptBR Compre [Scrolls] sem intelecto dele (se estiverem disponíveis)
     note-enUS DON'T go below 26s 31c
     note-ptBR NÃO fique abaixo de 26s 31c
 step
     path seq 1453 @872.3,-8803.22 @872.7,-8682.39
     goto 1453 @766.64,-8623.23
+    note-enUS Run up the edge of the wall instead of going around
+    note-ptBR Suba correndo pela borda da parede em vez de contornar
     note-enUS Talk to Kristoff
     note-ptBR Fale com Kristoff
     accept 343
 step
     path seq 1453 @737.74,-8571.69 @736.26,-8558.06
     goto 1453 @719.86,-8550.36 12
+    note-enUS Travel toward Baros
+    note-ptBR Vá em direção a Baros
     note-enUS Go inside the building
     note-ptBR Entre no prédio
     note-enUS Talk to Baros
@@ -5058,9 +5642,13 @@ step
     note-enUS Talk to Billibub
     note-ptBR Fale com Billibub
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     path seq 1453 @453.16,-8533.33 @405.03,-8486.89 @442.94,-8427.47 @435.41,-8381.66
     goto 1453 @383.66,-8345.63 12
+    note-enUS Travel toward Milton
+    note-ptBR Vá em direção a Milton
     note-enUS Talk to Milton
     note-ptBR Fale com Milton
     turnin 343
@@ -5068,6 +5656,8 @@ step
 step
     path seq 1453 @435.41,-8381.66 @442.94,-8427.47 @405.03,-8486.89 @450.74,-8539.51 @551.02,-8658.37 @509.88,-8819.71
     goto 1453 @518.35,-8822.04 12
+    note-enUS Travel toward Felicia
+    note-ptBR Vá em direção a Felicia
     note-enUS Talk to Felicia
     note-ptBR Fale com Felicia
     note-enUS Buy the [Stormwind Seasoning Herbs] from her
@@ -5078,6 +5668,10 @@ step
     goto 1453 @504.24,-8956.31 40
     path seq 1429 @44.35,-9458.41
     goto 1429 @8.25,-9460.03
+    note-enUS Drop down to the ledge below Dungar
+    note-ptBR Desça até a plataforma abaixo de Dungar
+    note-enUS Travel toward the Goldshire Inn
+    note-ptBR Vá em direção a Goldshire Inn
     note-enUS Talk to Dobbins
     note-ptBR Fale com Dobbins
     note-enUS Buy a [Skin of Sweet Rum] from him
@@ -5088,9 +5682,13 @@ step
     note-enUS Talk to Farley
     note-ptBR Fale com Farley
     home
+    note-enUS Set your Hearthstone to Goldshire
+    note-ptBR Defina sua pedra de regresso em Goldshire
 step
     path seq 1429 @-158,-8901.52 @-174.32,-8881.39
     goto 1429 @-186.46,-8874.91 10
+    note-enUS Travel toward Paxton
+    note-ptBR Vá em direção a Paxton
     note-enUS Talk to Paxton
     note-ptBR Fale com Paxton
     turnin 344
@@ -5098,9 +5696,13 @@ step
 step
     path seq 1429 @-174.32,-8881.39 @-158,-8901.52 @-140.3,-8916.57 @-464.48,-9142.47 @-701.54,-9538.96
     goto 1429 @-716.46,-9541.04
+    note-enUS Take the Mountain Path toward the Tower of Azora
+    note-ptBR Pegue o Mountain Path em direção à Tower of Azora
     note-enUS Talk to Dawn upstairs
     note-ptBR Fale com Dawn no andar de cima
     vendor
+    note-enUS Buy non-intellect [Scrolls], [Minor Mana Potions], and [Lesser Healing Potions] from her (if they're up)
+    note-ptBR Compre [Scrolls] sem intelecto, [Minor Mana Potions] e [Lesser Healing Potions] dela (se estiverem disponíveis)
     note-enUS DON'T go below 11s 38c
     note-ptBR NÃO fique abaixo de 11s 38c
 step
@@ -5108,6 +5710,8 @@ step
     note-enUS Talk to Dawn upstairs
     note-ptBR Fale com Dawn no andar de cima
     vendor
+    note-enUS Buy non-intellect [Scrolls], [Minor Mana Potions], and [Lesser Healing Potions] from her (if they're up)
+    note-ptBR Compre [Scrolls] sem intelecto, [Minor Mana Potions] e [Lesser Healing Potions] dela (se estiverem disponíveis)
     note-enUS DON'T go below 19s 38c
     note-ptBR NÃO fique abaixo de 19s 38c
 step
@@ -5120,6 +5724,8 @@ step
 step
     path seq 1431 @-1159,-10544.31 @-1164.94,-10533.15
     goto 1431 @-1159.54,-10509.03
+    note-enUS Go Inside the Inn
+    note-ptBR Entre na estalagem
     note-enUS Talk to Hann
     note-ptBR Fale com Hann
     note-enUS Buy the [Bottle of Moonshine] from him
@@ -5128,6 +5734,10 @@ step
 step
     path seq 1431 @-1164.94,-10533.15 @-1159,-10544.31 @-1197.61,-10585.35
     goto 1431 @-1200.85,-10593.99
+    note-enUS Exit the Inn
+    note-ptBR Saia da estalagem
+    note-enUS Go inside the building
+    note-ptBR Entre no prédio
     note-enUS Talk to Elaine
     note-ptBR Fale com Elaine
     accept 163
@@ -5138,6 +5748,8 @@ step
     note-enUS Talk to Herble
     note-ptBR Fale com Herble
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     goto 1431 @-1320.73,-10581.75
     note-enUS Talk to Viktori
@@ -5163,27 +5775,39 @@ step
     note-enUS Talk to Felicia
     note-ptBR Fale com Felicia
     fp
+    note-enUS Get the Duskwood flight path
+    note-ptBR Pegue o ponto de voo de Duskwood
 step
     path seq 1431 @-1236.49,-10139.49
     goto 1431 @-1375.81,-10072.35 20
+    note-enUS Travel toward Kzixx
+    note-ptBR Vá em direção a Kzixx
     note-enUS Talk to Kzixx
     note-ptBR Fale com Kzixx
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1431 @-1375.81,-10072.35
     note-enUS Talk to Kzixx
     note-ptBR Fale com Kzixx
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1431 @-1375.81,-10072.35
     note-enUS Talk to Kzixx
     note-ptBR Fale com Kzixx
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1431 @-1375.81,-10072.35
     note-enUS Talk to Kzixx
     note-ptBR Fale com Kzixx
     vendor
+    note-enUS Buy [Lesser Mana Potions], [Healing Potions], and a [Cloth Belt] from him (if they're up, and if needed)
+    note-ptBR Compre [Lesser Mana Potions], [Healing Potions] e um [Cloth Belt] dele (se estiverem disponíveis e se precisar)
 step
     path seq 1433 @-1907.75,-9625.9 @-1893.64,-9592.88
     goto 1433 @-1938.36,-9591.44
@@ -5214,6 +5838,8 @@ step
     note-enUS Talk to Ariena
     note-ptBR Fale com Ariena
     fp
+    note-enUS Get the Redridge Mountains flight path
+    note-ptBR Pegue o ponto de voo de Redridge Mountains
 step
     path seq 1433 @-2298.28,-9283.9
     goto 1433 @-2268.54,-9279.27
@@ -5358,6 +5984,8 @@ step
     note-enUS Talk to Dorin
     note-ptBR Fale com Dorin
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     path closest 1433 @-2377.51,-9229.46 @-2403.56,-9173.57 @-2415.07,-9034.28 @-2509.72,-9067.73 @-2599.16,-9078.44 @-2772.39,-9226.85 @-2808.64,-9313.58 @-2791.71,-9355.86 @-2838.17,-9350.5 @-2840.12,-9220.92 @-2854.01,-9211.65 @-2867.69,-9183.27 @-2924.13,-9179.65 @-2928.91,-9231.77 @-2377.51,-9229.46 @-2403.56,-9173.57 @-2441.12,-9163.43 @-2501.9,-9143.45 @-2859.44,-9220.19 @-2868.77,-9183.85 @-2929.34,-9175.31 @-2929.12,-9233.51 @-2859.44,-9220.19 @-2831.22,-9328.06 @-2809.95,-9313.87 @-2789.11,-9350.36 @-2831.22,-9328.06 @-2509.72,-9067.73 @-2599.16,-9078.44 @-2655.6,-9061.5 @-2697.5,-9150.55 @-2760.67,-9163.72 @-2758.28,-9225.55 @-2821.88,-9247.99 @-2705.31,-9104.36 @-2744.82,-9129.26 @-2764.36,-9158.65 @-2803.65,-9173.86 @-2813.85,-9264.21 @-2759.58,-9234.96 @-2714.21,-9193.69 @-2667.1,-9176.61 @-2705.31,-9104.36 @-2415.07,-9034.28
     note-enUS AoE Blackrock Outrunners, Blackrock Renegades and Blackrock Grunts. Loot them for their Battleworn Axes
@@ -5434,6 +6062,8 @@ step
     note-ptBR Use AoE em Redridge Mystics e Redridge Brutes. Saqueie-os para obter Iron Pikes e Iron Rivets
     objective 89/1 |opt
     objective 89/2 |opt
+    note-enUS Travel to the Rethban Caverns
+    note-ptBR Vá até Rethban Caverns
 step
     path closest 1433 @-1982.21,-8929.74 @-2040.17,-8918.45 @-2046.03,-8793.06 @-2009.56,-8766.85 @-1979.38,-8792.62 @-1919.47,-8822.3 @-1950.29,-8858.07 @-1919.25,-8879.64 @-1982.21,-8929.74
     note-enUS AoE Redridge Drudgers. Loot them for their Rethban Ore, Iron Pikes, and Iron Rivets
@@ -5449,13 +6079,19 @@ step
     ifnotturnedin 92
     path closest 1433 @-1982.21,-8929.74 @-2040.17,-8918.45 @-2046.03,-8793.06 @-2009.56,-8766.85 @-1979.38,-8792.62 @-1919.47,-8822.3 @-1950.29,-8858.07 @-1919.25,-8879.64 @-1982.21,-8929.74
     level 21
+    note-enUS Grind to 14365+/25200xp
+    note-ptBR Mate monstros até 14365+/25200xp
 step
     ifturnedin 92
     path closest 1433 @-1982.21,-8929.74 @-2040.17,-8918.45 @-2046.03,-8793.06 @-2009.56,-8766.85 @-1979.38,-8792.62 @-1919.47,-8822.3 @-1950.29,-8858.07 @-1919.25,-8879.64 @-1982.21,-8929.74
     level 21
+    note-enUS Grind to 15715+/25200xp
+    note-ptBR Mate monstros até 15715+/25200xp
 step
     path seq 1433 @-2298.28,-9283.9
     goto 1433 @-2268.54,-9279.27
+    note-enUS Return to Lakeshire
+    note-ptBR Volte para Lakeshire
     note-enUS Talk to Marris and Oslow
     note-ptBR Fale com Marris e Oslow
     turnin 20
@@ -5476,6 +6112,8 @@ step
 step
     goto 1433 @-2158.69,-9234.38
     vendor
+    note-enUS Vendor Trash. You can sell the [Mining Pick] now if you wish
+    note-ptBR Venda o lixo. Você pode vender o [Mining Pick] agora, se quiser
 step
     goto 1433 @-2155.22,-9225.84
     note-enUS Go Inside the Inn
@@ -5497,6 +6135,8 @@ step
 step
     goto 1429 @87.73,-9456.79
     hearth |opt
+    note-enUS Hearth to Goldshire
+    note-ptBR Use a pedra de regresso para Goldshire
     note-enUS Talk to Argus
     note-ptBR Fale com Argus
     turnin 118
@@ -5504,12 +6144,16 @@ step
 step
     path seq 1429 @-158,-8901.52 @-174.32,-8881.39
     goto 1429 @-186.46,-8874.91 10
+    note-enUS Travel toward Paxton
+    note-ptBR Vá em direção a Paxton
     note-enUS Talk to Paxton
     note-ptBR Fale com Paxton
     turnin 347
     accept 346
 step
     goto 1453 @867.06,-9012.61
+    note-enUS Cast [Teleport: Stormwind]
+    note-ptBR Lance [Teleport: Stormwind]
     note-enUS ===PAY ATTENTION===
     note-ptBR ===PRESTE ATENÇÃO===
     note-enUS Respec to the Frost AoE spec
@@ -5517,11 +6161,15 @@ step
     note-enUS Talk to Dumas
     note-ptBR Fale com Dumas
     train 10
+    note-enUS Train Blizzard
+    note-ptBR Treine Blizzard
 step
     path seq 1453 @887.22,-9017.8 @871.36,-9013.14 @868.8,-9004.27 @877,-9008.03 @863.96,-9001.4 @928.62,-9010.1 @962.63,-8990.73 @949.86,-9009.38 @942.34,-9001.49
     goto 1453 @948.65,-8994.5 10
     note-enUS Exit the Mage Tower
     note-ptBR Saia da Mage Tower
+    note-enUS Travel toward Charys
+    note-ptBR Vá em direção a Charys
     note-enUS DON'T Go below 1g 43s 30c
     note-ptBR NÃO fique abaixo de 1g 43s 30c
     note-enUS Enter the building
@@ -5529,6 +6177,8 @@ step
     note-enUS Talk to Charys
     note-ptBR Fale com Charys
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1453 @948.65,-8994.5
     note-enUS Enter the building
@@ -5536,6 +6186,8 @@ step
     note-enUS Talk to Charys
     note-ptBR Fale com Charys
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1453 @948.65,-8994.5
     note-enUS Enter the building
@@ -5543,6 +6195,8 @@ step
     note-enUS Talk to Charys
     note-ptBR Fale com Charys
     vendor
+    note-enUS Buy [Lesser Mana Potions] and [Healing Potions] from him (if they're up)
+    note-ptBR Compre [Lesser Mana Potions] e [Healing Potions] dele (se estiverem disponíveis)
 step
     goto 1453 @948.65,-8994.5
     note-enUS Enter the building
@@ -5550,17 +6204,25 @@ step
     note-enUS Talk to Charys
     note-ptBR Fale com Charys
     vendor
+    note-enUS Buy [Lesser Mana Potions], [Healing Potions], and a [Cloth Belt] from him (if they're up, and if needed)
+    note-ptBR Compre [Lesser Mana Potions], [Healing Potions] e um [Cloth Belt] dele (se estiverem disponíveis e se precisar)
 step
     path seq 1453 @852.4,-8920.1 @829.01,-8901.28 @789.22,-8904.59 @758.31,-8878.78 @810.33,-8832.44 @827.54,-8850.19
     goto 1453 @822.16,-8865.6 10
+    note-enUS Travel toward Adair
+    note-ptBR Vá em direção a Adair
     note-enUS Enter the building
     note-ptBR Entre no prédio
     note-enUS Talk to Adair
     note-ptBR Fale com Adair
     vendor
+    note-enUS Buy non-intellect [Scrolls] from him (if they're up)
+    note-ptBR Compre [Scrolls] sem intelecto dele (se estiverem disponíveis)
 step
     path seq 1453 @872.3,-8803.22 @872.7,-8682.39
     goto 1453 @766.64,-8623.23
+    note-enUS Run up the edge of the wall instead of going around
+    note-ptBR Suba correndo pela borda da parede em vez de contornar
     note-enUS Talk to Kristoff
     note-ptBR Fale com Kristoff
     turnin 346
@@ -5570,24 +6232,36 @@ step
     note-enUS Talk to Billibub
     note-ptBR Fale com Billibub
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     goto 1453 @522.12,-8352.8 20
+    note-enUS Travel to the Deeprun Tram
+    note-ptBR Vá até Deeprun Tram
     note-enUS Ride the Deeprun Tram whilst spam casting [Conjure Water r3]
     note-ptBR Pegue o Deeprun Tram enquanto conjura [Conjure Water r3] sem parar
     zone 1455
+    note-enUS Take the Deeprun Tram to Ironforge
+    note-ptBR Pegue o Deeprun Tram para Ironforge
 step
     ifnotturnedin 174
     goto 1455 @-1249.87,-4793.31
     note-enUS Talk to Cogspinner
     note-ptBR Fale com Cogspinner
     vendor
+    note-enUS Buy a [Bronze Tube] from him if its up
+    note-ptBR Compre um [Bronze Tube] dele, se estiver disponível
 step
     path seq 1455 @-977.98,-4904.59
     goto 1455 @-997.66,-4886.49
+    note-enUS Enter the Ironforge Bank
+    note-ptBR Entre no banco de Ironforge
     note-enUS Talk to Bailey
     note-ptBR Fale com Bailey
     note-enUS NOTE: You need 12 stacks of each cloth ([Wool Cloth], [Silk Cloth], [Mageweave Cloth], and [Runecloth]) to do the cloth turnins later. You'll get these naturally as you level
     note-ptBR NOTA: Você precisa de 12 pilhas de cada tecido ([Wool Cloth], [Silk Cloth], [Mageweave Cloth] e [Runecloth]) para as entregas de tecido depois. Você os obterá naturalmente enquanto sobe de nível
+    note-enUS Deposit the following items into the bank:
+    note-ptBR Deposite os seguintes itens no banco:
     note-enUS [Light Feather]
     note-ptBR [Light Feather]
     note-enUS [Wool Cloth]
@@ -5604,6 +6278,8 @@ step
     note-ptBR [Crate of Horseshoes]
 step
     goto 1455 @-997.66,-4886.49
+    note-enUS Withdraw the following items from your bank:
+    note-ptBR Retire os seguintes itens do seu banco:
     note-enUS [Mysterious Fossil]
     note-ptBR [Mysterious Fossil]
 step
@@ -5611,6 +6287,8 @@ step
     note-enUS Talk to Milstaff
     note-ptBR Fale com Milstaff
     train 3562
+    note-enUS Train [Teleport: Ironforge]
+    note-ptBR Treine [Teleport: Ironforge]
 step
     goto 1455 @-928.48,-4614.62
     note-enUS ===PAY ATTENTION===
@@ -5620,6 +6298,8 @@ step
     note-enUS Talk to Dink
     note-ptBR Fale com Dink
     train 10
+    note-enUS Train Blizzard
+    note-ptBR Treine Blizzard
 step
     goto 1455 @-1152.39,-4820.91
     note-enUS Start spam casting [Conjure Water r3] to conjure as much water as possible before taking the flight
@@ -5627,5 +6307,9 @@ step
     note-enUS Talk to Gryth
     note-ptBR Fale com Gryth
     fp |opt
+    note-enUS Fly to Menethil Harbor
+    note-ptBR Voe para Menethil Harbor
     zone 1437
+    note-enUS Travel to Wetlands
+    note-ptBR Vá até Wetlands
 ]==])

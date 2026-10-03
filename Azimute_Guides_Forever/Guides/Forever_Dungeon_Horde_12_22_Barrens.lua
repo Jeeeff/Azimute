@@ -32,6 +32,8 @@ step
     only Tauren Shaman
     path closest 1411 @-4834.14,418.07 @-4754.3,796.66 |only Tauren Shaman
     path closest 1411 @-4706.71,902.41 @-4774.39,780.8 @-4749.01,822.39 @-4767.52,825.92 @-4772.28,848.12 @-4756.41,863.63 @-4715.7,861.87 @-4706.71,902.41
+    note-enUS Go into Dustwind Cave |only Tauren Shaman
+    note-ptBR Entre em Dustwind Cave |only Tauren Shaman
     note-enUS Kill Cultists. Loot them for a Reagent Pouch
     note-ptBR Mate Cultists. Saqueie-os para obter uma Reagent Pouch
     objective 1525/2
@@ -47,6 +49,8 @@ step
     path seq 1413 @-2902.79,-276.55 @-3004.12,-298.17 |only Tauren Warrior
     goto 1413 @-3110.52,-320.46 30 |only Tauren Warrior
     goto 1413 @-3176.39,-437.35
+    note-enUS Travel to the top of the mountain |only Tauren Warrior
+    note-ptBR Vá até o topo da montanha |only Tauren Warrior
     note-enUS Talk to Thun'grim
     note-ptBR Fale com Thun'grim
     turnin 1502
@@ -62,6 +66,8 @@ step
     path seq 1413 @-2902.79,-276.55 @-3004.12,-298.17 |only Tauren Warrior
     goto 1413 @-3110.52,-320.46 30 |only Tauren Warrior
     goto 1413 @-3176.39,-437.35
+    note-enUS Travel to the top of the mountain |only Tauren Warrior
+    note-ptBR Vá até o topo da montanha |only Tauren Warrior
     note-enUS Talk to Thun'grim
     note-ptBR Fale com Thun'grim
     turnin 1503
@@ -69,6 +75,8 @@ step
     only !Tauren
     goto 1413 @-2516.71,-590.71 |only !Tauren
     goto 1413 @-2672.76,-544.77
+    note-enUS Die and respawn at the Spirit Healer |only !Tauren
+    note-ptBR Morra e renasça no Spirit Healer |only !Tauren
     note-enUS Talk to Tonga
     note-ptBR Fale com Tonga
     accept 870
@@ -100,6 +108,8 @@ step
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fp
+    note-enUS Get the The Crossroads flight path
+    note-ptBR Pegue o ponto de voo de The Crossroads
 step
     ifonquest 1358
     goto 1413 @-2589.67,-424.51
@@ -145,6 +155,8 @@ step
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     home
+    note-enUS Set your Hearthstone to Crossroads
+    note-ptBR Defina sua pedra de regresso em Crossroads
 step
     only Orc Troll
     goto 1413 @-2709.24,-403.57
@@ -160,6 +172,10 @@ step
     note-enUS Kill Plainstriders. Loot them for their Beaks
     note-ptBR Mate Plainstriders. Saqueie-os para obter os bicos
     objective 844/1 |opt
+    note-enUS Travel to the top of the mountain |only !Tauren !Scourge !Skyborne
+    note-ptBR Vá até o topo da montanha |only !Tauren !Scourge !Skyborne
+    note-enUS Go inside Dreadmist Den |only !Tauren !Scourge !Skyborne
+    note-ptBR Entre em Dreadmist Den |only !Tauren !Scourge !Skyborne
     note-enUS Right click the Altar
     note-ptBR Clique com o botão direito no Altar
     note-enUS Make sure you have a [Flawed Power Stone] (30 minute duration) on you
@@ -181,6 +197,8 @@ step
     objective 871/2 |opt
     objective 871/3 |opt
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS You can get it later if it's not there
     note-ptBR Você pode pegá-lo depois se não estiver lá
     collect 4926 1 |quest 819
@@ -194,6 +212,8 @@ step
     objective 871/3
 step
     path closest 1413 @-2819.7,-359.65 @-2784.23,-163.04 @-2771.06,-306.95 @-2805.51,-386 @-2738.63,-610.31 @-2576.5,-610.98 @-2494.42,-485.32 @-2448.82,-398.84 @-2537.99,-260.33 @-2730.52,-273.17 @-2819.7,-359.65
+    note-enUS Now you should be looking for a group to Ragefire Chasm |only !Scourge !Tauren
+    note-ptBR Agora você deve procurar um grupo para Ragefire Chasm |only !Scourge !Tauren
     note-enUS Kill every Raptor you see. Loot them for their Heads
     note-ptBR Mate todos os Raptors que vir. Saqueie-os para obter as cabeças
     objective 869/1 |opt
@@ -235,6 +255,8 @@ step
     note-enUS Do NOT fly to Orgrimmar!
     note-ptBR NÃO voe para Orgrimmar!
     fp
+    note-enUS Get the The Crossroads flight path
+    note-ptBR Pegue o ponto de voo de The Crossroads
     turnin 6365
     accept 6384
 step
@@ -257,10 +279,16 @@ step
     path seq 1413 @-3021.35,-231.96
     goto 1413 @-3029.46,261.25
     vendor |only Orc Warrior Troll Warrior Tauren Warrior |opt
+    note-enUS Check if Lizzarik is in the Crossroads. He sells potions and [Heavy Spiked Mace] which is a limited supply item |only Orc Warrior Troll Warrior Tauren Warrior
+    note-ptBR Veja se Lizzarik está em Crossroads. Ele vende poções e [Heavy Spiked Mace], que é um item de estoque limitado |only Orc Warrior Troll Warrior Tauren Warrior
     note-enUS Talk to Devrak |only !Scourge !Tauren
     note-ptBR Fale com Devrak |only !Scourge !Tauren
     fly 1454 |only !Scourge !Tauren |opt
+    note-enUS Fly to Orgrimmar |only !Scourge !Tauren
+    note-ptBR Voe para Orgrimmar |only !Scourge !Tauren
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS You can get it later if it's not there
     note-ptBR Você pode pegá-lo depois se não estiver lá
     collect 4926 1 |quest 819
@@ -316,6 +344,8 @@ step
     note-enUS Kill any Zhevra you see. Loot them for their Hooves |only Tauren
     note-ptBR Mate os Zhevras que vir. Saqueie-os para obter os cascos |only Tauren
     objective 845/1 |only Tauren |opt
+    note-enUS Travel the path up the mountain toward Telf |only Tauren Shaman
+    note-ptBR Siga o caminho montanha acima em direção a Telf |only Tauren Shaman
     note-enUS Talk to Telf
     note-ptBR Fale com Telf
     turnin 1525
@@ -325,6 +355,8 @@ step
     ifdungeon RFC
     goto 1411 @-3981.27,-256.61 |only Tauren Shaman
     goto 1411 @-4022.51,-243.92
+    note-enUS Use the [Fire Sapta] |only Tauren Shaman
+    note-ptBR Use o [Fire Sapta] |only Tauren Shaman
     use 6636 |only Tauren Shaman |opt
     note-enUS Kill the Minor Manifestation of Fire. Loot him for a Glowing Ember
     note-ptBR Mate a Minor Manifestation of Fire. Saqueie-a para obter uma Glowing Ember
@@ -349,6 +381,8 @@ step
     ifdungeon RFC
     goto 1413 @-3029.46,261.25
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS Wait for the respawn if it's not up
     note-ptBR Espere reaparecer se não estiver lá
     collect 4926 1 |quest 819
@@ -359,12 +393,18 @@ step
     ifdungeon RFC
     goto 1454 @-4367.46,1405.44 50 |only Tauren
     goto 1454 @-4313.6,1676.24
+    note-enUS Now you should be looking for a group to Ragefire Chasm |only Tauren
+    note-ptBR Agora você deve procurar um grupo para Ragefire Chasm |only Tauren
     zone 1454 |only Tauren |opt
+    note-enUS Travel to Orgrimmar |only Tauren
+    note-ptBR Vá até Orgrimmar |only Tauren
     note-enUS Talk to Doras
     note-ptBR Fale com Doras
     note-enUS Don't fly anywhere!
     note-ptBR Não voe para lugar nenhum!
     fp
+    note-enUS Get the Orgrimmar flight path
+    note-ptBR Pegue o ponto de voo de Orgrimmar
 step
     only !Scourge
     ifdungeon RFC
@@ -413,6 +453,10 @@ step
     only !Scourge
     ifdungeon RFC
     goto 1454 @-4420.76,1815.8
+    note-enUS Destroy [Lieutenant's Insignia] as you no longer need it |only !Scourge
+    note-ptBR Destrua [Lieutenant's Insignia], pois não é mais necessário |only !Scourge
+    note-enUS Enter the RFC Instance portal. Zone in
+    note-ptBR Entre no portal da instância RFC. Entre na instância
 step
     only !Scourge
     ifdungeon RFC
@@ -527,11 +571,19 @@ step
     note-enUS Talk to Doras |only Tauren
     note-ptBR Fale com Doras |only Tauren
     fly 1456 |only Tauren |opt
+    note-enUS Fly to Thunder Bluff |only Tauren
+    note-ptBR Voe para Thunder Bluff |only Tauren
     hearth |only !Tauren |opt
+    note-enUS Hearth to The Crossroads |only !Tauren
+    note-ptBR Use a pedra de regresso para The Crossroads |only !Tauren
     use 6948 |only !Tauren |opt
     note-enUS Talk to Devrak |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
     note-ptBR Fale com Devrak |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
     fly 1456 |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman |opt
+    note-enUS Fly to Thunder Bluff |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
+    note-ptBR Voe para Thunder Bluff |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
+    note-enUS Travel to the Elder Rise |only Tauren Orc Warrior Troll Warrior Orc Shaman Troll Shaman
+    note-ptBR Vá até Elder Rise |only Tauren Orc Warrior Troll Warrior Orc Shaman Troll Shaman
     note-enUS Talk to Rahauro
     note-ptBR Fale com Rahauro
     turnin 5724
@@ -557,11 +609,17 @@ step
     path seq 1413 @-3021.35,-231.96
     goto 1413 @-3029.46,261.25
     hearth |opt
+    note-enUS Hearth to The Crossroads
+    note-ptBR Use a pedra de regresso para The Crossroads
     use 6948 |opt
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp |opt
+    note-enUS Fly to Crossroads
+    note-ptBR Voe para Crossroads
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS Wait for the respawn if it's not up
     note-ptBR Espere reaparecer se não estiver lá
     collect 4926 1 |quest 819
@@ -620,6 +678,10 @@ step
     note-ptBR Mate os Zhevras que vir. Saqueie-os para obter os cascos |only Shaman
     objective 845/1 |only Shaman |opt
     zone 1411 |only Shaman |opt
+    note-enUS Travel toward Durotar |only Shaman
+    note-ptBR Vá em direção a Durotar |only Shaman
+    note-enUS Travel the path up the mountain toward Telf |only Shaman
+    note-ptBR Siga o caminho montanha acima em direção a Telf |only Shaman
     note-enUS Talk to Telf
     note-ptBR Fale com Telf
     turnin 1525
@@ -628,6 +690,8 @@ step
     only Shaman
     goto 1411 @-3981.27,-256.61 |only Shaman
     goto 1411 @-4022.51,-243.92
+    note-enUS Use the [Fire Sapta] |only Shaman
+    note-ptBR Use o [Fire Sapta] |only Shaman
     use 6636 |only Shaman |opt
     note-enUS Kill the Minor Manifestation of Fire. Loot him for a Glowing Ember
     note-ptBR Mate a Minor Manifestation of Fire. Saqueie-a para obter uma Glowing Ember
@@ -655,6 +719,8 @@ step
     only Shaman
     goto 1413 @-3029.46,261.25
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS Wait for the respawn if it's not up
     note-ptBR Espere reaparecer se não estiver lá
     collect 4926 1 |quest 819
@@ -666,6 +732,8 @@ step
     note-enUS Kill Zhevra Runners. Loot them for their Hooves
     note-ptBR Mate Zhevra Runners. Saqueie-os para obter os cascos
     objective 845/1 |opt
+    note-enUS Travel to Ratchet
+    note-ptBR Vá até Ratchet
 step
     goto 1413 @-3728.66,-835.29
     note-enUS Talk to Gazlowe
@@ -677,6 +745,8 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp |opt
+    note-enUS Get the Ratchet flight path
+    note-ptBR Pegue o ponto de voo de Ratchet
     note-enUS Talk to Sputtervalve and the Wanted Poster
     note-ptBR Fale com Sputtervalve e com o Wanted Poster
     accept 894
@@ -765,10 +835,14 @@ step
     note-enUS [Longjaw Mud Snappers] are extremely cheap, buy as many as you want
     note-ptBR [Longjaw Mud Snappers] são extremamente baratos, compre quantos quiser
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 895 |q 895/1
     collect 1205 10 |quest 895 |q 895/1 |only Mage Warlock Priest Shaman Druid
 step
     path closest 1413 @-3883.7,-1572.4 @-3818.84,-1707.52 @-3724.6,-1746.71 @-3883.7,-1572.4 @-3818.84,-1707.52 @-3724.6,-1746.71
+    note-enUS Delete the [Control Console Operating Manual] from your bags, as it's no longer needed
+    note-ptBR Apague o [Control Console Operating Manual] das suas bolsas, pois não é mais necessário
     note-enUS Kill Southsea Brigands and Southsea Cannoneers
     note-ptBR Mate Southsea Brigands e Southsea Cannoneers
     objective 887/1 |opt
@@ -890,6 +964,8 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Kill every Raptor you see. Loot them for their Heads
     note-ptBR Mate todos os Raptors que vir. Saqueie-os para obter as cabeças
     objective 869/1 |opt
@@ -928,6 +1004,8 @@ step
     note-enUS Talk to Uthrok
     note-ptBR Fale com Uthrok
     vendor
+    note-enUS Buy a [Fine Longbow] from him if it's available and stock up on arrows
+    note-ptBR Compre um [Fine Longbow] dele, se estiver disponível, e estoque flechas
     note-enUS If it's not up, buy a [Reinforced Bow] instead
     note-ptBR Se não estiver disponível, compre um [Reinforced Bow]
     collect 2515 1200 |quest 870 |q 870/1 |only Hunter
@@ -1015,15 +1093,23 @@ step
 step
     ifdungeon RFC
     abandon 5723
+    note-enUS Abandon Testing an Enemy's Strength
+    note-ptBR Abandone Testing an Enemy's Strength
 step
     ifdungeon RFC
     abandon 5725
+    note-enUS Abandon The Power to Destroy...
+    note-ptBR Abandone The Power to Destroy...
 step
     ifdungeon RFC
     abandon 5728
+    note-enUS Abandon Hidden Enemies
+    note-ptBR Abandone Hidden Enemies
 step
     ifdungeon RFC
     abandon 5761
+    note-enUS Abandon Slaying the Beast
+    note-ptBR Abandone Slaying the Beast
 step
     goto 1413 @-1815.48,786.89
     note-enUS Be careful of Sunscale Scytheclaws in the area. They are up to level 18 and can [Thrash]
@@ -1036,6 +1122,8 @@ step
     note-enUS Vrang sells [Heavy Spiked Mace] which is a limited supply item |only Orc Warrior Troll Warrior Tauren Warrior
     note-ptBR Vrang vende [Heavy Spiked Mace], que é um item de estoque limitado |only Orc Warrior Troll Warrior Tauren Warrior
     vendor
+    note-enUS Vendor trash and repair
+    note-ptBR Venda o lixo e repare
 step
     goto 1413 @-2686.95,825.4
     note-enUS Click on the Control Console
@@ -1151,20 +1239,30 @@ step
     goto 1414 @-3839.37,1644.65
     goto 1454 @-4160.01,1483.17
     zone 1454 |opt
+    note-enUS Enter Orgrimmar through the western entrance
+    note-ptBR Entre em Orgrimmar pela entrada oeste
     skill firstaid 40 |opt
+    note-enUS Create [Linen Bandages] until your skill is 40 or higher
+    note-ptBR Crie [Linen Bandages] até sua habilidade chegar a 40 ou mais
     note-enUS Talk to Arnok
     note-ptBR Fale com Arnok
     note-enUS Skip this step if you did not have enough [Linen Cloth] to reach 40 skill
     note-ptBR Pule este passo se não tinha [Linen Cloth] suficiente para chegar a 40 de perícia
     train 3276
+    note-enUS Train [Heavy Linen Bandage]
+    note-ptBR Treine [Heavy Linen Bandage]
 step
     goto 1454 @-4160.01,1483.17
     skill firstaid 50 |opt
+    note-enUS Create [Heavy Linen Bandages] until your skill is 50 or higher
+    note-ptBR Crie [Heavy Linen Bandages] até sua habilidade chegar a 50 ou mais
     note-enUS Talk to Arnok
     note-ptBR Fale com Arnok
     note-enUS Skip this step if you did not have enough [Linen Cloth] to reach 50 skill
     note-ptBR Pule este passo se não tinha [Linen Cloth] suficiente para chegar a 50 de perícia
     train 3274
+    note-enUS Train Journeyman First Aid
+    note-ptBR Treine Journeyman First Aid
 step
     only Priest
     goto 1454 @-4179.79,1452.58
@@ -1173,24 +1271,32 @@ step
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 8102
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1454 @-4179.79,1452.58
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 970
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1454 @-4218.64,1473.72
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 2120
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1454 @-4218.64,1473.72
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 3140
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only !Tauren !Scourge !Shaman !Warrior
     ifonquest 6384
@@ -1221,18 +1327,24 @@ step
     note-enUS Don't fly anywhere!
     note-ptBR Não voe para lugar nenhum!
     fp
+    note-enUS Get the Orgrimmar flight path
+    note-ptBR Pegue o ponto de voo de Orgrimmar
 step
     only Shaman
     goto 1454 @-4225.09,1933.29
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 8019
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1454 @-4225.09,1933.29
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 913
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1454 @-4226.78,1914.77
     note-enUS Talk to Zor
@@ -1244,7 +1356,11 @@ step
     note-enUS Talk to Shenthul
     note-ptBR Fale com Shenthul
     train 1804
+    note-enUS Train [Pick Lock]
+    note-ptBR Treine [Pick Lock]
     train 921
+    note-enUS Train [Pick Pocket]
+    note-ptBR Treine [Pick Pocket]
     accept 2379
 step
     only Orc Rogue Troll Rogue
@@ -1296,12 +1412,16 @@ step
     note-enUS Talk to Mirket
     note-ptBR Fale com Mirket
     train 1455
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1454 @-4362.55,1834.7
     note-enUS Talk to Mirket
     note-ptBR Fale com Mirket
     train 1014
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1454 @-4347.4,1836.57
@@ -1320,49 +1440,67 @@ step
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 285
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1454 @-4801.42,1980.53
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 8198
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4607.02,2100.64
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 13795
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4607.02,2100.64
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 2643
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4611.09,2135.15
     note-enUS Talk to Xao'tsu
     note-ptBR Fale com Xao'tsu
     train 24557
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Troll Hunter Orc Hunter Priest
     goto 1454 @-4824,2090.54
     note-enUS Talk to Hanashi
     note-ptBR Fale com Hanashi
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Tauren Hunter
     goto 1454 @-4824,2090.54
     note-enUS Talk to Hanashi
     note-ptBR Fale com Hanashi
     train 264
+    note-enUS Train Bows
+    note-ptBR Treine Bows
 step
     only Troll Warrior Tauren Warrior Scourge Warrior
     goto 1454 @-4824,2090.54
     note-enUS Talk to Hanashi
     note-ptBR Fale com Hanashi
     train 197
+    note-enUS Train Two-Handed Axes
+    note-ptBR Treine Two-Handed Axes
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Hunter
     goto 1454 @-4819.1,2099.05
@@ -1391,14 +1529,22 @@ step
     ifnotturnedin 3281
     goto 1413 @-2645.4,-406.94
     hearth |opt
+    note-enUS Hearth to The Crossroads
+    note-ptBR Use a pedra de regresso para The Crossroads
     use 6948 |opt
     note-enUS Talk to Doras
     note-ptBR Fale com Doras
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     goto 1413 @-2639.32,-436
     note-enUS Talk to Gazrog
@@ -1449,6 +1595,8 @@ step
 step
     goto 1413 @-2669.72,-481.94
     abandon 881
+    note-enUS If Echeyakee didn't spawn after using the [Horn of Echeyakee]or you didn't get the tag when it did spawn, abandon Echeyakee, then return to town and accept it again
+    note-ptBR Se Echeyakee não surgiu depois de usar o [Horn of Echeyakee] ou você não conseguiu o tag quando ele surgiu, abandone Echeyakee, volte à cidade e aceite-a de novo
 step
     goto 1413 @-2670.74,-482.61
     note-enUS Talk to Sergra
@@ -1470,6 +1618,8 @@ step
     accept 905
 step
     goto 1413 @-2641.35,-521.12
+    note-enUS Destroy [Horn of Echeyakee] as you no longer need it
+    note-ptBR Destrua [Horn of Echeyakee], pois não é mais necessário
     note-enUS Talk to Mankrik
     note-ptBR Fale com Mankrik
     accept 899
@@ -1489,6 +1639,8 @@ step
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fp |opt
+    note-enUS Fly to Ratchet
+    note-ptBR Voe para Ratchet
     note-enUS Talk to Wrenix
     note-ptBR Fale com Wrenix
     turnin 2382
@@ -1553,6 +1705,8 @@ step
     note-enUS [Longjaw Mud Snappers] are extremely cheap, buy as many as you want
     note-ptBR [Longjaw Mud Snappers] são extremamente baratos, compre quantos quiser
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 888 |q 888/1
     collect 1205 10 |quest 888 |q 888/1 |only Mage Warlock Priest Shaman Druid
 step
@@ -1677,9 +1831,13 @@ step
     note-enUS Kill Stormsnouts. Loot them for a Horn. This does not have to be completed now
     note-ptBR Mate Stormsnouts. Saqueie-os para obter um chifre. Isto não precisa ser concluído agora
     objective 821/3 |opt
+    note-enUS Travel to Camp Taurajo
+    note-ptBR Vá até Camp Taurajo
     note-enUS Talk to Innkeeper Byula
     note-ptBR Fale com Innkeeper Byula
     home
+    note-enUS Set your Hearthstone to Camp Taurajo
+    note-ptBR Defina sua pedra de regresso em Camp Taurajo
 step
     ifonquest 883
     goto 1413 @-1921.88,-2383.15
@@ -1698,6 +1856,8 @@ step
     note-enUS Talk to Omusa
     note-ptBR Fale com Omusa
     fp |only !Tauren
+    note-enUS Get the Camp Taurajo flight path |only !Tauren
+    note-ptBR Pegue o ponto de voo de Camp Taurajo |only !Tauren
 step
     ifonquest 5724
     ifcomplete 5723
@@ -1706,9 +1866,15 @@ step
     path seq 1456 @184.96,-1308.69 @-212.71,-1065.01
     goto 1456 @-218.13,-1055.97
     zone 1412 |opt
+    note-enUS Travel into Mulgore
+    note-ptBR Vá para Mulgore
     zone 1456 |opt
+    note-enUS Take the lift into Thunder Bluff
+    note-ptBR Pegue o elevador para Thunder Bluff
     note-enUS If you have the Thunder Bluff flight path, fly there instead
     note-ptBR Se tiver o caminho de voo de Thunder Bluff, voe para lá
+    note-enUS Travel to the Elder Rise
+    note-ptBR Vá até Elder Rise
     note-enUS Talk to Rahauro
     note-ptBR Fale com Rahauro
     turnin 5724
@@ -1733,6 +1899,8 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
 step
     ifcomplete 848
     path seq 1413 @-1881.35,-2384.5
@@ -1740,7 +1908,11 @@ step
     note-enUS Talk to Omusa
     note-ptBR Fale com Omusa
     fp |only !Tauren |opt
+    note-enUS Get the Camp Taurajo flight path |only !Tauren
+    note-ptBR Pegue o ponto de voo de Camp Taurajo |only !Tauren
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Helbrim
     note-ptBR Fale com Helbrim
     turnin 848
@@ -1755,6 +1927,9 @@ step
     turnin 905
     accept 3261
     turnin 3281
+step
+    note-enUS Delete any leftover [Sunscale Feathers] you still have
+    note-ptBR Apague quaisquer [Sunscale Feathers] que ainda tiver
 step
     only Hunter
     goto 1413 @-2556.23,-351.54
@@ -1779,6 +1954,8 @@ step
 step
     ifturnedin 851
     path closest 1413 @-2001.94,-965.69 @-2022.2,-945.42 @-2016.12,-915.01 @-2033.35,-894.74 @-2031.32,-881.23 @-2052.6,-877.18 @-2057.67,-879.21 @-2066.79,-877.85 @-2085.03,-898.8 @-2097.19,-908.26 @-2102.26,-950.15 @-2114.42,-981.22 @-2167.11,-1021.09 @-2187.38,-1040.68 @-2261.35,-1060.95 @-2281.62,-1061.62 @-2301.88,-1056.89 @-2295.8,-1087.3 @-2299.86,-1125.13 @-2268.44,-1145.4 @-2247.16,-1145.4 @-2226.9,-1166.35 @-2189.4,-1179.86 @-2174.2,-1198.78 @-2162.04,-1200.8 @-2124.55,-1228.5 @-2095.16,-1220.4 @-2065.78,-1208.91 @-2041.46,-1167.7 @-2024.23,-1179.18 @-2047.54,-1156.21 @-2046.52,-1135.94 @-2009.03,-1127.84 @-2001.94,-965.69
+    note-enUS Travel to the Lushwater Oasis
+    note-ptBR Vá até Lushwater Oasis
     note-enUS Kill Oasis Snapjaws as you're looking for Hezrul Bloodmark. Loot them for their Shells
     note-ptBR Mate Oasis Snapjaws enquanto procura Hezrul Bloodmark. Saqueie-os para obter os cascos
     objective 880/1 |opt
@@ -1804,6 +1981,8 @@ step
     ifcomplete 855
     goto 1413 @-1972.55,-306.95
     abandon 855 |opt
+    note-enUS Abandon Centaur Bracers as you have not looted enough previously to make it worthwhile to finish
+    note-ptBR Abandone Centaur Bracers, pois você não saqueou o suficiente antes para valer a pena terminá-la
     note-enUS Talk to Regthar
     note-ptBR Fale com Regthar
     turnin 852
@@ -1880,6 +2059,8 @@ step
 step
     path seq 1413 @-950.1,-271.14
     goto 1413 @-943,-265.06
+    note-enUS Travel toward Seereth
+    note-ptBR Vá em direção a Seereth
     note-enUS Talk to Seereth and Makaba
     note-ptBR Fale com Seereth e Makaba
     turnin 1061
@@ -1934,6 +2115,8 @@ step
     ifturnedin 6548
     path seq 1442 @-460.13,67.77
     goto 1442 @-350.74,112.06
+    note-enUS Travel up the path to the bonfire
+    note-ptBR Suba o caminho até a fogueira
     note-enUS Kill Grundig Darkcloud and Grimtotem Brutes
     note-ptBR Mate Grundig Darkcloud e Grimtotem Brutes
     note-enUS Make sure you kill all six Grimtotem Brutes before starting the quest inside
@@ -2009,17 +2192,27 @@ step
     ifnotturnedin 1093
     path seq 1442 @735.8,925.8 @806.12,929.05
     goto 1442 @927.72,893.56
+    note-enUS Travel to Sun Rock Retreat
+    note-ptBR Vá até Sun Rock Retreat
     note-enUS Talk to Innkeeper Jayka
     note-ptBR Fale com Innkeeper Jayka
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     ifnotturnedin 1093
     goto 1442 @920.88,911.47
     note-enUS Talk to Jeeda on the second floor of the inn
     note-ptBR Fale com Jeeda no segundo andar da estalagem
     vendor |only !Warrior
+    note-enUS Buy [Healing Potions] from her if they're up |only !Warrior
+    note-ptBR Compre [Healing Potions] dela, se estiverem disponíveis |only !Warrior
     vendor |only Warrior
+    note-enUS Buy [Healing Potions] and [Liferoot] from her if they're up |only Warrior
+    note-ptBR Compre [Healing Potions] e [Liferoot] dela, se estiverem disponíveis |only Warrior
 step
     ifcomplete 6284
     goto 1442 @940.9,925.14
@@ -2031,8 +2224,12 @@ step
     note-enUS Talk to Tharm
     note-ptBR Fale com Tharm
     fp
+    note-enUS Get the Sun Rock Retreat flight path
+    note-ptBR Pegue o ponto de voo de Sun Rock Retreat
 step
     goto 1442 @365.16,878.25 15
+    note-enUS Travel toward Ziz
+    note-ptBR Vá em direção a Ziz
     note-enUS Talk to Ziz
     note-ptBR Fale com Ziz
     turnin 1483
@@ -2064,6 +2261,8 @@ step
     note-enUS Talk to Veenix
     note-ptBR Fale com Veenix
     vendor
+    note-enUS Buy an [Executioner's Sword] from him
+    note-ptBR Compre uma [Executioner's Sword] dele
     note-enUS If it's not up, buy a [Dacian Falx] instead
     note-ptBR Se não estiver disponível, compre uma [Dacian Falx]
 step
@@ -2092,6 +2291,8 @@ step
     note-enUS Equip the [Longsword] |only Rogue
     note-ptBR Equipe a [Longsword] |only Rogue
     use 923 |only Rogue |opt
+    note-enUS Travel to Windshear Crag
+    note-ptBR Vá até Windshear Crag
 step
     path closest 1442 @179.1,1168.06 @232.82,1239.7 @-16.23,1441.59 @-255.52,1291.8 @-382.48,1135.5
     note-enUS Kill Venture Co. Loggers
@@ -2130,24 +2331,36 @@ step
 step
     only Druid
     goto 1450 @-2593.82,7866.9
+    note-enUS Cast [Teleport: Moonglade] |only Druid
+    note-ptBR Lance [Teleport: Moonglade] |only Druid
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     train 1430
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     goto 1450 @-2593.82,7866.9
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     train 768
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifonquest 3261
     goto 1413 @-1995.86,-2375.71
     hearth |opt
+    note-enUS Hearth to Camp Taurajo
+    note-ptBR Use a pedra de regresso para Camp Taurajo
     use 6948 |opt
     note-enUS Talk to Innkeeper Byula
     note-ptBR Fale com Innkeeper Byula
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     goto 1413 @-1921.88,-2383.15
     note-enUS Talk to Jorn Skyseer
@@ -2191,6 +2404,8 @@ step
     only Warlock Shaman
     path closest 1413 @-2515.7,-2076.41 @-2518.74,-2125.73 @-2517.72,-2223.7 @-2486.31,-2254.1 @-2494.42,-2282.48 @-2531.91,-2272.34 @-2571.43,-2295.31 @-2620.07,-2285.18 @-2625.14,-2245.32 @-2755.86,-2082.49 @-2813.62,-2054.12 @-2811.59,-2004.12 @-2783.22,-1949.39 @-2747.75,-1889.26 @-2709.24,-1913.59 @-2706.2,-1948.72 @-2687.96,-1973.04 @-2678.84,-2016.28 @-2584.6,-2050.74
     level 19
+    note-enUS Grind to 11000+/21300 xp
+    note-ptBR Mate monstros até 11000+/21300 xp
 step
     path closest 1413 @-2532.92,-1965.61 @-2449.83,-1953.45 @-2377.88,-2018.31 @-2397.14,-2108.84 @-2345.46,-2187.21 @-2415.38,-2179.78
     note-enUS Kill Stormsnouts. Loot them for a Horn
@@ -2227,12 +2442,16 @@ step
     note-ptBR Mate qualquer Zhevra. Saqueie-o para obter uma Fresh Zhevra Carcass
     collect 10338 1 |opt
     use 10338
+    note-enUS Use the [Fresh Zhevra Carcass] at the dead tree to summon Ishamuhale. Kill and loot him for his Fang
+    note-ptBR Use a [Fresh Zhevra Carcass] na árvore morta para invocar Ishamuhale. Mate-o e saqueie a Fang dele
     note-enUS The Carcass only has a 30 minute duration!
     note-ptBR A carcaça dura apenas 30 minutos!
     objective 882/1
 step
     only Rogue
     goto 1413 @-3768.18,-840.69
+    note-enUS Travel to Ratchet
+    note-ptBR Vá até Ratchet
     note-enUS Talk to Wrenix
     note-ptBR Fale com Wrenix
     turnin 2381
@@ -2270,6 +2489,8 @@ step
     note-enUS Talk to Grazlix
     note-ptBR Fale com Grazlix
     vendor
+    note-enUS Buy [Mighty Chain Pants] from him if it's up
+    note-ptBR Compre [Mighty Chain Pants] dele, se estiver disponível
 step
     only Rogue Hunter Warrior Shaman Druid
     ifturnedin 865
@@ -2277,6 +2498,8 @@ step
     note-enUS Talk to Vexspindle
     note-ptBR Fale com Vexspindle
     vendor
+    note-enUS Buy [Wolf Bracers] from him if they're up
+    note-ptBR Compre [Wolf Bracers] dele, se estiverem disponíveis
 step
     ifdungeon WC
     ifturnedin 865
@@ -2290,6 +2513,8 @@ step
     note-enUS Talk to Innkeeper Wiley
     note-ptBR Fale com Innkeeper Wiley
     home
+    note-enUS Set your Hearthstone to Ratchet
+    note-ptBR Defina sua pedra de regresso em Ratchet
 step
     ifdungeon WC
     goto 1413 @-3770.2,-928.53
@@ -2303,6 +2528,8 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Thork
     note-ptBR Fale com Thork
     accept 6541
@@ -2333,14 +2560,23 @@ step
     accept 1489
     accept 3301
 step
+    note-enUS Delete any leftover [Bristleback Quilboar Tusks] you may still have
+    note-ptBR Apague quaisquer [Bristleback Quilboar Tusks] que ainda tiver
+step
     ifnotdungeon WC
     ifdungeon DM
     goto 1413 @-2645.4,-406.94
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     home
+    note-enUS Set your Hearthstone to Crossroads
+    note-ptBR Defina sua pedra de regresso em Crossroads
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     goto 1413 @-2555.22,-387.35
     note-enUS Talk to Korran
@@ -2353,6 +2589,8 @@ step
     note-enUS Talk to Devrak |only Shaman
     note-ptBR Fale com Devrak |only Shaman
     fly 1454 |only Shaman |opt
+    note-enUS Fly to Orgrimmar |only Shaman
+    note-ptBR Voe para Orgrimmar |only Shaman
     note-enUS Talk to Searn
     note-ptBR Fale com Searn
     accept 1528
@@ -2362,6 +2600,8 @@ step
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 2645
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1413 @-2595.75,-437.35 |only Warlock
@@ -2369,9 +2609,13 @@ step
     note-enUS Talk to Devrak |only Warlock
     note-ptBR Fale com Devrak |only Warlock
     fly 1454 |only Warlock |opt
+    note-enUS Fly to Orgrimmar |only Warlock
+    note-ptBR Voe para Orgrimmar |only Warlock
     note-enUS Talk to Gan'rul
     note-ptBR Fale com Gan'rul
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 1507
 step
     only Warlock
@@ -2403,12 +2647,18 @@ step
     only Shaman
     ifdungeon DM
     goto 1454 @-4225.09,1933.29
+    note-enUS Now you should be looking for a group to The Deadmines
+    note-ptBR Agora você deve procurar um grupo para The Deadmines
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fly 1454 |opt
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 8052
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     ifdungeon DM
@@ -2416,6 +2666,8 @@ step
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 2645
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     ifdungeon DM
@@ -2423,6 +2675,8 @@ step
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 14318
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     ifdungeon DM
@@ -2430,6 +2684,8 @@ step
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 14290
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     ifdungeon DM
@@ -2437,6 +2693,8 @@ step
     note-enUS Talk to Xao'tsu
     note-ptBR Fale com Xao'tsu
     train 5118
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Warrior
     ifdungeon DM
@@ -2444,6 +2702,8 @@ step
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 8198
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     ifdungeon DM
@@ -2451,6 +2711,8 @@ step
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 845
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     ifdungeon DM
@@ -2458,6 +2720,8 @@ step
     note-enUS Talk to Ormok
     note-ptBR Fale com Ormok
     train 1943
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     ifdungeon DM
@@ -2465,6 +2729,8 @@ step
     note-enUS Talk to Zevrost
     note-ptBR Fale com Zevrost
     train 1014
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     ifdungeon DM
@@ -2472,6 +2738,8 @@ step
     note-enUS Talk to Zevrost
     note-ptBR Fale com Zevrost
     train 706
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     ifdungeon DM
@@ -2479,6 +2747,8 @@ step
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 3140
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     ifdungeon DM
@@ -2486,6 +2756,8 @@ step
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 1953
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     ifdungeon DM
@@ -2493,6 +2765,8 @@ step
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 970
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     ifdungeon DM
@@ -2500,22 +2774,34 @@ step
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 14914
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifdungeon DM
     goto 1411 @-4648.55,1321.88 40
     zone 1411 |opt
+    note-enUS Leave Orgrimmar
+    note-ptBR Saia de Orgrimmar
+    note-enUS Go up the Zeppelin Tower
+    note-ptBR Suba a torre do Zepelim
     zone 1434
+    note-enUS Take the Zeppelin to Stranglethorn Vale
+    note-ptBR Pegue o zepelim para Stranglethorn Vale
 step
     ifdungeon DM
     path seq 1434 @273.91,-12406.71 @492.15,-12499.03 @759.53,-12494.77 @1178.78,-12166.78
     goto 1434 @1360,-11978.74 60
     path seq 1436 @1578.87,-11699.5 @1718.17,-11480.4
     goto 1436 @1966.32,-11407.13 200
+    note-enUS Swim directly to the west from Grom'Gol into the Vile Reef and then swim north toward Westfall
+    note-ptBR Nade direto para o oeste a partir de Grom'Gol até o Vile Reef e depois nade para o norte em direção a Westfall
     note-enUS Steer clear from the island. Follow the waypoint for safety!
     note-ptBR Fique longe da ilha. Siga o waypoint por segurança!
 step
     ifdungeon DM
     goto 1436 @1966.32,-11407.13 40
+    note-enUS Travel to the Westfall Lighthouse
+    note-ptBR Vá até Westfall Lighthouse
     note-enUS Talk to Captain Grayson
     note-ptBR Fale com Captain Grayson
     accept 103
@@ -2548,14 +2834,22 @@ step
 step
     ifdungeon DM
     abandon 103
+    note-enUS Abandon Keeper of the Flame
+    note-ptBR Abandone Keeper of the Flame
 step
     ifdungeon DM
     path seq 1415 @1596.2,-11768.97 @1596.2,-11780.71 @1606.76,-11797.13 @1582.12,-11799.48 @1596.2,-11813.56 @1631.4,-11846.41 @1649,-11898.04 @1659.56,-11919.16 @1698.28,-11891
     goto 1415 @1744.04,-11881.61
+    note-enUS Enter the Deadmines Instance portal. Zone in
+    note-ptBR Entre no portal da instância Deadmines. Entre na instância
 step
     ifdungeon DM
     hearth
+    note-enUS Hearth to The Barrens after having completed Deadmines
+    note-ptBR Use a pedra de regresso para The Barrens depois de completar Deadmines
     zone 1413
+    note-enUS Arrive in The Barrens
+    note-ptBR Chegue em The Barrens
     use 6948
 step
     ifdungeon WC
@@ -2563,14 +2857,22 @@ step
     note-enUS Talk to Innkeeper Wiley
     note-ptBR Fale com Innkeeper Wiley
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     ifdungeon DM
     goto 1413 @-2645.4,-406.94
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     only Warlock
     goto 1413 @-3770.2,-898.12 |only Warlock
@@ -2579,9 +2881,13 @@ step
     note-enUS Talk to Bragok |only Warlock
     note-ptBR Fale com Bragok |only Warlock
     fp |only Warlock |opt
+    note-enUS Fly to The Crossroads |only Warlock
+    note-ptBR Voe para The Crossroads |only Warlock
     note-enUS Talk to Doras |only Warlock
     note-ptBR Fale com Doras |only Warlock
     fp |only Warlock |opt
+    note-enUS Fly to The Crossroads |only Warlock
+    note-ptBR Voe para The Crossroads |only Warlock
     note-enUS Talk to Gazrog
     note-ptBR Fale com Gazrog
     turnin 1509
@@ -2593,6 +2899,8 @@ step
     note-enUS Talk to Doras |only Shaman
     note-ptBR Fale com Doras |only Shaman
     fp |only Shaman |opt
+    note-enUS Fly to Ratchet |only Shaman
+    note-ptBR Voe para Ratchet |only Shaman
     note-enUS Talk to Islen
     note-ptBR Fale com Islen
     turnin 1528
@@ -2606,9 +2914,13 @@ step
     note-enUS Talk to Bragok |only !Warlock !Shaman
     note-ptBR Fale com Bragok |only !Warlock !Shaman
     fp |only !Warlock !Shaman |opt
+    note-enUS Fly to Crossroads |only !Warlock !Shaman
+    note-ptBR Voe para Crossroads |only !Warlock !Shaman
     note-enUS Talk to Bragok |only Shaman
     note-ptBR Fale com Bragok |only Shaman
     fp |only Shaman |opt
+    note-enUS Fly to Crossroads |only Shaman
+    note-ptBR Voe para Crossroads |only Shaman
     note-enUS Talk to Helbrim
     note-ptBR Fale com Helbrim
     note-enUS Helbrim Starts a 45-minute timed quest
@@ -2624,12 +2936,18 @@ step
     note-enUS Talk to Bragok |only !Warlock !Shaman
     note-ptBR Fale com Bragok |only !Warlock !Shaman
     fp |only !Warlock !Shaman |opt
+    note-enUS Fly to Camp Taurajo |only !Warlock !Shaman
+    note-ptBR Voe para Camp Taurajo |only !Warlock !Shaman
     note-enUS Talk to Bragok |only Shaman
     note-ptBR Fale com Bragok |only Shaman
     fp |only Shaman |opt
+    note-enUS Fly to Camp Taurajo |only Shaman
+    note-ptBR Voe para Camp Taurajo |only Shaman
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fp |opt
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
     note-enUS Kill Bristleback Quilboars. Loot them for a [Blood Shard
     note-ptBR Mate Bristleback Quilboars. Saqueie-os para obter um [Blood Shard
     collect 5075 1 |quest 5052 |q 5052/1
@@ -2705,6 +3023,8 @@ step
     collect 5102 1 |quest 884 |q 884/1 |only Shaman |opt
     accept 884 |only Shaman |opt
     use 5102 |only Shaman |opt
+    note-enUS Travel South toward Brine |only Shaman
+    note-ptBR Vá para o sul em direção a Brine |only Shaman
     note-enUS Kill a Thunderhawk. Loot it for its Wings |only Shaman
     note-ptBR Mate um Thunderhawk. Saqueie-o para obter as asas |only Shaman
     objective 913/1 |only Shaman |opt
@@ -2716,6 +3036,8 @@ step
     only Shaman
     goto 1413 @-1858.04,-3572.92
     use 7766
+    note-enUS Fill your [Empty Brown Waterskin] in the watering hole below Brine's hut
+    note-ptBR Encha seu [Empty Brown Waterskin] no poço abaixo da cabana de Brine
     objective 1535/1
 step
     only Shaman
@@ -2726,6 +3048,8 @@ step
     accept 1536
 step
     path closest 1413 @-1899.59,-2624.34 @-2016.12,-2650.02 @-2400.18,-2398.01 @-2363.7,-2537.19 @-1899.59,-2624.34 @-2016.12,-2650.02 @-2363.7,-2537.19 @-2400.18,-2398.01 @-1919.86,-2652.04 @-2096.18,-2531.11 @-2341.4,-2352.74 @-1982.68,-2217.62 @-1775.96,-2235.86
+    note-enUS Travel back toward Camp Taurajo |only Shaman
+    note-ptBR Volte em direção a Camp Taurajo |only Shaman
     note-enUS Kill Owatanka. Loot him for [Owatanka's Tailspike]
     note-ptBR Mate Owatanka. Saqueie-o para obter [Owatanka's Tailspike]
     note-enUS Use the [Owatanka's Tailspike] to start the quest
@@ -2759,6 +3083,8 @@ step
     goto 1413 @-1891.48,-2391.93
     note-enUS Talk to Mangletooth
     note-ptBR Fale com Mangletooth
+    note-enUS If you have 10 [Blood Shards left, use them to obtain [Spirit of the Wind] from Mangletooth
+    note-ptBR Se tiver 10 [Blood Shards] sobrando, use-os para obter [Spirit of the Wind] de Mangletooth
     note-enUS Skip this step if you have the Thunder Bluff flight path
     note-ptBR Pule este passo se já tiver o caminho de voo de Thunder Bluff
 step
@@ -2768,28 +3094,42 @@ step
     goto 1413 @-1881.35,-2384.5 |only Tauren Shaman Orc Warrior Troll Warrior
     goto 1456 @89.46,-1286.5
     zone 1412 |only !Tauren !Shaman !Warrior Scourge |opt
+    note-enUS Travel into Mulgore |only !Tauren !Shaman !Warrior Scourge
+    note-ptBR Vá para Mulgore |only !Tauren !Shaman !Warrior Scourge
     zone 1456 |only !Tauren !Shaman !Warrior Scourge |opt
+    note-enUS Take the lift into Thunder Bluff |only !Tauren !Shaman !Warrior Scourge
+    note-ptBR Pegue o elevador para Thunder Bluff |only !Tauren !Shaman !Warrior Scourge
     note-enUS If you have the Thunder Bluff flight path, fly there instead |only !Tauren !Shaman !Warrior Scourge
     note-ptBR Se tiver o caminho de voo de Thunder Bluff, voe para lá |only !Tauren !Shaman !Warrior Scourge
     note-enUS Talk to Omusa |only Tauren Shaman Orc Warrior Troll Warrior
     note-ptBR Fale com Omusa |only Tauren Shaman Orc Warrior Troll Warrior
     fly 1456 |only Tauren Shaman Orc Warrior Troll Warrior |opt
+    note-enUS Fly to Thunder Bluff |only Tauren Shaman Orc Warrior Troll Warrior
+    note-ptBR Voe para Thunder Bluff |only Tauren Shaman Orc Warrior Troll Warrior
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 199
+    note-enUS Train Two-Handed Maces
+    note-ptBR Treine Two-Handed Maces
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Troll Hunter Orc Hunter Scourge Warrior Warlock Priest
     goto 1456 @89.46,-1286.5
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Rogue
     goto 1456 @89.46,-1286.5
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 198
+    note-enUS Train Maces
+    note-ptBR Treine Maces
 step
     only Rogue
     goto 1456 @110.13,-1299.65
@@ -2801,10 +3141,16 @@ step
     goto 1456 @24.85,-1252.75
     note-enUS Talk to Chesmu
     note-ptBR Fale com Chesmu
+    note-enUS Deposit your [Blood Shards]
+    note-ptBR Deposite seus [Blood Shards]
+    note-enUS Deposit your [Digging Claw]
+    note-ptBR Deposite sua [Digging Claw]
 step
     goto 1456 @24.85,-1252.75
     note-enUS Talk to Chesmu
     note-ptBR Fale com Chesmu
+    note-enUS Deposit your [Blood Shards]
+    note-ptBR Deposite seus [Blood Shards]
 step
     ifnotturnedin 6442
     ifnotdungeon WC
@@ -2812,11 +3158,15 @@ step
     note-enUS Talk to Innkeeper Pala
     note-ptBR Fale com Innkeeper Pala
     home
+    note-enUS Set your Hearthstone to Thunder Bluff
+    note-ptBR Defina sua pedra de regresso em Thunder Bluff
 step
     ifonquest 853
     ifdungeon WC
     path seq 1456 @222.96,-1079.42 @219.09,-1051.44 @218.68,-1028.41
     goto 1456 @278.48,-995.29
+    note-enUS Travel to the Spirit Rise and enter the pools of vision
+    note-ptBR Vá até Spirit Rise e entre nas pools of vision
     note-enUS Talk to Clarice
     note-ptBR Fale com Clarice
     accept 264 |opt
@@ -2844,39 +3194,55 @@ step
     accept 5644 |only Scourge Priest
     accept 5642 |only Troll Priest
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1456 @279.32,-950.76
     note-enUS Talk to Shymm
     note-ptBR Fale com Shymm
     train 12051
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1456 @279.32,-950.76
     note-enUS Talk to Shymm
     note-ptBR Fale com Shymm
     train 2138
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1456 @269.92,-980.4
     note-enUS Talk to Tigor
     note-ptBR Fale com Tigor
     train 2645
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1456 @269.92,-980.4
     note-enUS Talk to Tigor
     note-ptBR Fale com Tigor
     train 8498
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1456 @206.88,-997.45
     skill firstaid 80 |opt
+    note-enUS Create [Heavy Linen Bandages] until your skill is 80 or higher
+    note-ptBR Crie [Heavy Linen Bandages] até sua habilidade chegar a 80 ou mais
     note-enUS Talk to Pand
     note-ptBR Fale com Pand
     note-enUS Skip this step if you did not have enough [Linen Cloth] to reach 80 skill
     note-ptBR Pule este passo se não tinha [Linen Cloth] suficiente para chegar a 80 de perícia
     train 3277
+    note-enUS Train [Wool Bandage]
+    note-ptBR Treine [Wool Bandage]
     train 7934 |only Rogue
+    note-enUS Train [Anti-Venom] |only Rogue
+    note-ptBR Treine [Anti-Venom] |only Rogue
 step
     only Rogue
     note-enUS Create [Anti-Venom] if you found any [Small Venom Sacs]
@@ -2887,6 +3253,8 @@ step
 step
     path seq 1456 @-212.71,-1065.01
     goto 1456 @-303.83,-1048.66
+    note-enUS Travel to the Elder Rise
+    note-ptBR Vá até Elder Rise
     note-enUS Talk to Hamuul
     note-ptBR Fale com Hamuul
     turnin 1489
@@ -2909,10 +3277,14 @@ step
     note-enUS Talk to Turak
     note-ptBR Fale com Turak
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 27
 step
     only Druid
     goto 1450 @-2678.76,8019.94
+    note-enUS Cast [Teleport: Moonglade] |only Druid
+    note-ptBR Lance [Teleport: Moonglade] |only Druid
     note-enUS Talk to Dendrite
     note-ptBR Fale com Dendrite
     turnin 27
@@ -2922,8 +3294,12 @@ step
     goto 1450 @-2634.67,7634.43 |only Druid
     goto 1450 @-2221.48,7844.89
     collect 15877 1 |quest 28 |q 28/1 |only Druid |opt
+    note-enUS Loot the Bauble Container at the bottom of the lake for a[Shrine Bauble] |only Druid
+    note-ptBR Saqueie o Bauble Container no fundo do lago para pegar um [Shrine Bauble] |only Druid
     note-enUS Do not go underwater until you arive right above the Bauble |only Druid
     note-ptBR Não mergulhe até estar logo acima do Bauble |only Druid
+    note-enUS Use the [Shrine Bauble] at the Shrine of Remulos
+    note-ptBR Use o [Shrine Bauble] no Shrine of Remulos
     objective 28/1
     use 15877
 step
@@ -2937,6 +3313,8 @@ step
     only Druid
     ifnotdungeon WC
     hearth
+    note-enUS Hearth to Thunder Bluff
+    note-ptBR Use a pedra de regresso para Thunder Bluff
     use 6948
 step
     only Hunter
@@ -2946,31 +3324,47 @@ step
     note-enUS Talk to Bunthen |only Druid
     note-ptBR Fale com Bunthen |only Druid
     fly 1456 |only Druid |opt
+    note-enUS Fly to Thunder Bluff |only Druid
+    note-ptBR Voe para Thunder Bluff |only Druid
     note-enUS Talk to Bunthen |only Druid
     note-ptBR Fale com Bunthen |only Druid
     fly 1456 |only Druid |opt
+    note-enUS Fly to Thunder Bluff |only Druid
+    note-ptBR Voe para Thunder Bluff |only Druid
+    note-enUS Travel to the Hunter Rise |only Hunter
+    note-ptBR Vá até Hunter Rise |only Hunter
     note-enUS Talk to Urek
     note-ptBR Fale com Urek
     train 5118
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1456 @-100.5,-1454.75
     note-enUS Talk to Urek
     note-ptBR Fale com Urek
     train 5118
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1456 @-47.69,-1434.64
     note-enUS Talk to Hesuwa
     note-ptBR Fale com Hesuwa
     train 24494
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Warrior
     goto 1456 @-123.26,-1394.49 60 |only Warrior
     goto 1456 @-81.09,-1457.74
+    note-enUS Travel to the Hunter Rise |only Warrior
+    note-ptBR Vá até Hunter Rise |only Warrior
     note-enUS Talk to Torm
     note-ptBR Fale com Torm
     train 845
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 1823
 step
     only Rogue
@@ -3024,16 +3418,22 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp |opt
+    note-enUS Fly to Crossroads
+    note-ptBR Voe para Crossroads
     note-enUS Now you should be looking for a group to Wailing Caverns
     note-ptBR Agora procure um grupo para Wailing Caverns
     note-enUS Grind Quilboars while assembling a Wailing Caverns group
     note-ptBR Farme Quilboars enquanto monta um grupo para Wailing Caverns
+    note-enUS Travel to Wailing Caverns
+    note-ptBR Vá até Wailing Caverns
 step
     ifdungeon WC
     path seq 1413 @-2134.68,-764.35
     goto 1413 @-2122.52,-734.62 20
     path seq 1414 @-2061.94,-781.68 @-2028.82,-828.29 @-2021.46,-816.03 @-2036.18,-796.4
     goto 1414 @-2039.86,-801.31
+    note-enUS Run up the mountain at the Wailing Caverns meeting stone
+    note-ptBR Suba a montanha correndo na meeting stone de Wailing Caverns
     note-enUS Follow the arrow closely to reach the hidden cave
     note-ptBR Siga a seta de perto para chegar à caverna escondida
     note-enUS Talk to Nalpak and Ebru
@@ -3069,6 +3469,8 @@ step
     ifdungeon WC
     path seq 1414 @-2028.82,-636.93 @-2050.9,-585.41 @-2168.66,-607.49
     goto 1414 @-2216.5,-742.43 30
+    note-enUS Enter the WC Instance portal. Zone in
+    note-ptBR Entre no portal da instância WC. Entre na instância
 step
     ifonquest 914
     ifdungeon WC
@@ -3170,6 +3572,8 @@ step
     ifdungeon WC
     goto 1413 @-3697.24,-929.2
     hearth |opt
+    note-enUS Hearth to Ratchet
+    note-ptBR Use a pedra de regresso para Ratchet
     use 6948 |opt
     note-enUS Talk to Mebok
     note-ptBR Fale com Mebok
@@ -3195,11 +3599,15 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
 step
     ifonquest 6981
     ifdungeon WC
     path seq 1413 @-2493.4,-708.95 @-2404.23,-721.11 @-2356.6,-685.98
     goto 1413 @-2259.32,-602.2 50
+    note-enUS Travel up the mountain
+    note-ptBR Suba a montanha
     note-enUS Talk to Falla
     note-ptBR Fale com Falla
     turnin 6981
@@ -3249,6 +3657,8 @@ step
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fly 1456 |opt
+    note-enUS Fly to Thunder Bluff
+    note-ptBR Voe para Thunder Bluff
     note-enUS Talk to Nara
     note-ptBR Fale com Nara
     turnin 914
@@ -3264,6 +3674,8 @@ step
     ifdungeon WC
     path seq 1456 @219.09,-1051.44
     goto 1456 @276.6,-996.12
+    note-enUS Travel to the Spirit Rise and enter the pools of vision
+    note-ptBR Vá até Spirit Rise e entre nas pools of vision
     note-enUS Talk to Apothecary Zamah
     note-ptBR Fale com Apothecary Zamah
     turnin 962
@@ -3274,18 +3686,32 @@ step
     note-enUS Talk to Innkeeper Pala
     note-ptBR Fale com Innkeeper Pala
     home
+    note-enUS Set your Hearthstone to Thunder Bluff
+    note-ptBR Defina sua pedra de regresso em Thunder Bluff
 step
     abandon 1486
+    note-enUS Abandon Deviate Hides
+    note-ptBR Abandone Deviate Hides
 step
     abandon 1487
+    note-enUS Abandon Deviate Eradication
+    note-ptBR Abandone Deviate Eradication
 step
     abandon 1491
+    note-enUS Abandon Smart Drinks
+    note-ptBR Abandone Smart Drinks
 step
     abandon 959
+    note-enUS Abandon Trouble at the Docks
+    note-ptBR Abandone Trouble at the Docks
 step
     abandon 914
+    note-enUS Abandon Leaders of the Fang
+    note-ptBR Abandone Leaders of the Fang
 step
     abandon 962
+    note-enUS Abandon Serpentbloom
+    note-ptBR Abandone Serpentbloom
 step
     ifcomplete 852
     goto 1456 @26.1,-1196.66
@@ -3293,6 +3719,8 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Regthar
     note-ptBR Fale com Regthar
     turnin 852
@@ -3306,6 +3734,8 @@ step
     ifturnedin 852
     goto 1413 @-1972.55,-306.95
     abandon 855 |opt
+    note-enUS Abandon Centaur Bracers
+    note-ptBR Abandone Centaur Bracers
     note-enUS This next quest is very hard & grouping up is recommended. You can kite Warlord Krom'zar around using the building where the quest giver is located
     note-ptBR A próxima missão é muito difícil e é recomendado formar um grupo. Você pode kitar Warlord Krom'zar ao redor do prédio onde fica quem dá a missão
     note-enUS Talk to Regthar
@@ -3391,6 +3821,8 @@ step
     note-enUS Talk to Vhulgra
     note-ptBR Fale com Vhulgra
     fp
+    note-enUS Get the Splintertree Post flight path
+    note-ptBR Pegue o ponto de voo de Splintertree Post
 step
     ifcomplete 876
     goto 1440 @-2520.05,2305.55 |only Hunter
@@ -3398,6 +3830,10 @@ step
     note-enUS Talk to Vhulgra |only Hunter
     note-ptBR Fale com Vhulgra |only Hunter
     fp |only Hunter |opt
+    note-enUS Fly to Crossroads |only Hunter
+    note-ptBR Voe para Crossroads |only Hunter
+    note-enUS Die and respawn at the Spirit Healer |only !Hunter
+    note-ptBR Morra e renasça no Spirit Healer |only !Hunter
     note-enUS Talk to Darsok
     note-ptBR Fale com Darsok
     turnin 876
@@ -3419,6 +3855,8 @@ step
     path seq 1413 @-950.1,-271.14
     goto 1413 @-943,-265.06
     zone 1442 |opt
+    note-enUS Travel to Stonetalon Mountains
+    note-ptBR Vá até Stonetalon Mountains
     note-enUS Talk to Seereth and Makaba
     note-ptBR Fale com Seereth e Makaba
     turnin 1062
@@ -3459,6 +3897,8 @@ step
     ifturnedin 876
     path seq 1442 @-786.33,-294.97 @-665.72,-280.97 @-522.63,-294.32
     goto 1442 @-394.2,-272.5
+    note-enUS Follow the path on the left upward
+    note-ptBR Siga o caminho da esquerda subindo
     note-enUS Talk to Jin'Zil
     note-ptBR Fale com Jin'Zil
     turnin 1060
@@ -3499,6 +3939,8 @@ step
 step
     ifcomplete 6284
     goto 1442 @940.9,925.14
+    note-enUS Travel to Sun Rock Retreat
+    note-ptBR Vá até Sun Rock Retreat
     note-enUS Talk to Maggran
     note-ptBR Fale com Maggran
     turnin 6284
@@ -3516,8 +3958,14 @@ step
     note-enUS Do NOT set your [Hearthstone]
     note-ptBR NÃO defina sua [Hearthstone]
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     ifonquest 1095
     path seq 1442 @925.27,885.42
@@ -3525,10 +3973,16 @@ step
     note-enUS Talk to Jeeda on the second floor of the inn
     note-ptBR Fale com Jeeda no segundo andar da estalagem
     vendor |only !Warrior
+    note-enUS Buy [Healing Potions] from her if they're up |only !Warrior
+    note-ptBR Compre [Healing Potions] dela, se estiverem disponíveis |only !Warrior
     vendor |only Warrior
+    note-enUS Buy [Healing Potions] and [Liferoot] from her if they're up |only Warrior
+    note-ptBR Compre [Healing Potions] e [Liferoot] dela, se estiverem disponíveis |only Warrior
 step
     path seq 1442 @834.44,908.21 @856.91,874.67 @896.46,836.57 @940.41,831.04
     goto 1442 @933.09,824.53
+    note-enUS Run up the path to the right
+    note-ptBR Suba o caminho correndo à direita
     note-enUS Talk to Tsunaman
     note-ptBR Fale com Tsunaman
     accept 6562
@@ -3555,6 +4009,8 @@ step
 step
     path seq 1442 @-357.09,978.55
     goto 1442 @-263.82,962.92
+    note-enUS Enter the Windshear Mine
+    note-ptBR Entre na Windshear Mine
     note-enUS Talk to Piznik
     note-ptBR Fale com Piznik
     note-enUS This quest takes 5 minutes, and will spawn 3 waves of Kobolds at set times:
@@ -3600,15 +4056,23 @@ step
 step
     path closest 1442 @-577.33,1532.43
     path closest 1440 @-268.74,2612.28 @637.2,3406.79 @1010.31,3355.28 @1073.74,3635.49 @1052.4,3683.92 @1017.8,3683.15 @978.59,3746.96 @882.29,3749.26 @843.65,3785.78 @885.17,3874.57 @850.57,3921.08 @858.64,3984.89 @928.42,4042.93 @914.58,4116.34 @884.02,4084.44 @784.25,4080.21 @811.93,4021.02 @822.31,3949.91 @815.97,3874.19 @815.97,3807.69 @816.55,3715.82 @848.84,3691.99 @856.91,3654.71 @862.68,3587.06 @918.62,3544.39 @984.36,3552.46 @1052.98,3479.82 @1101.42,3535.17 @1065.09,3574.76
+    note-enUS Enter the Talondeep Path
+    note-ptBR Entre no Talondeep Path
+    note-enUS Travel toward the Zoram'gar Outpost
+    note-ptBR Vá em direção a Zoram'gar Outpost
     note-enUS Make sure to avoid Astranaar guards en route. Follow the waypoint for safety
     note-ptBR Evite os guardas de Astranaar pelo caminho. Siga o waypoint para sua segurança
     level 21
+    note-enUS Grind to level 21
+    note-ptBR Mate monstros até o nível 21
 step
     ifnotturnedin 6442
     goto 1440 @994.16,3373.73
     note-enUS Talk to Andruk
     note-ptBR Fale com Andruk
     fp
+    note-enUS Get the Zoram'gar Outpost flight path
+    note-ptBR Pegue o ponto de voo de Zoram'gar Outpost
 step
     path seq 1440 @1033.37,3354.89 @1013.77,3345.67 @1028.18,3333.37
     goto 1440 @1025.88,3331.45
@@ -3646,6 +4110,8 @@ step
     ifnotdungeon BFD
     path closest 1440 @1073.74,3635.49 @1052.4,3683.92 @1017.8,3683.15 @978.59,3746.96 @882.29,3749.26 @843.65,3785.78 @885.17,3874.57 @850.57,3921.08 @858.64,3984.89 @928.42,4042.93 @914.58,4116.34 @884.02,4084.44 @784.25,4080.21 @811.93,4021.02 @822.31,3949.91 @815.97,3874.19 @815.97,3807.69 @816.55,3715.82 @848.84,3691.99 @856.91,3654.71 @862.68,3587.06 @918.62,3544.39 @984.36,3552.46 @1052.98,3479.82 @1101.42,3535.17 @1065.09,3574.76
     level 21
+    note-enUS Grind to 21450+/25200 xp
+    note-ptBR Mate monstros até 21450+/25200 xp
 step
     path seq 1440 @995.31,3357.97
     goto 1440 @1025.88,3331.45
@@ -3664,8 +4130,14 @@ step
     note-enUS Talk to Andruk
     note-ptBR Fale com Andruk
     fly 1456 |opt
+    note-enUS Fly to Thunder Bluff
+    note-ptBR Voe para Thunder Bluff
     hearth |opt
+    note-enUS Hearth to Thunder Bluff
+    note-ptBR Use a pedra de regresso para Thunder Bluff
     use 6948 |opt
+    note-enUS Travel to the Elder Rise
+    note-ptBR Vá até Elder Rise
     note-enUS Talk to Magatha
     note-ptBR Fale com Magatha
     note-enUS Wait for the RP to finish
@@ -3684,24 +4156,32 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
 step
     only !Warlock
     goto 1456 @26.1,-1196.66
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Warlock
     goto 1440 @994.16,3373.73
     note-enUS Talk to Andruk
     note-ptBR Fale com Andruk
     fp
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
 step
     only !Warlock
     goto 1440 @994.16,3373.73
     note-enUS Talk to Andruk
     note-ptBR Fale com Andruk
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Warlock
     goto 1413 @-1898.58,-2391.93
@@ -3722,6 +4202,8 @@ step
     note-enUS Talk to Omusa
     note-ptBR Fale com Omusa
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Warlock
     goto 1454 @-4357.36,1850.41
@@ -3732,6 +4214,8 @@ step
 step
     only Warlock
     goto 1454 @-4377.13,1804.77
+    note-enUS Use [Dogran's Pendant] at the Summoning Circle |only Warlock
+    note-ptBR Use [Dogran's Pendant] no Summoning Circle |only Warlock
     use 6626 |only Warlock |opt
     note-enUS Kill the Summoned Succubus
     note-ptBR Mate a Summoned Succubus
@@ -3749,12 +4233,16 @@ step
     note-enUS Talk to Mirket
     note-ptBR Fale com Mirket
     train 6202
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1454 @-4362.55,1834.7
     note-enUS Talk to Mirket
     note-ptBR Fale com Mirket
     train 6223
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1454 @-4320.75,1750.51 |only Rogue
@@ -3765,11 +4253,23 @@ step
     note-enUS Talk to Shenthul
     note-ptBR Fale com Shenthul
     train 921
+    note-enUS Train [Pick Pocket]
+    note-ptBR Treine [Pick Pocket]
     train 8676
+    note-enUS Train [Ambush]
+    note-ptBR Treine [Ambush]
     train 1943
+    note-enUS Train [Rupture]
+    note-ptBR Treine [Rupture]
     train 1856
+    note-enUS Train [Vanish]
+    note-ptBR Treine [Vanish]
     train 1725
+    note-enUS Train [Distract]
+    note-ptBR Treine [Distract]
     train 1785
+    note-enUS Train [Stealth Rank 2]
+    note-ptBR Treine [Stealth Rank 2]
     accept 2460
 step
     only Rogue
@@ -3804,18 +4304,24 @@ step
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 2138
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1454 @-4218.64,1473.72
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 2121
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1454 @-4222.85,1474.94
     note-enUS Talk to Thuul at the top of the hut
     note-ptBR Fale com Thuul no topo da cabana
     train 3567
+    note-enUS Train [Teleport: Orgrimmar]
+    note-ptBR Treine [Teleport: Orgrimmar]
 step
     only Troll Priest
     goto 1454 @-4179.79,1452.58
@@ -3823,24 +4329,34 @@ step
     note-ptBR Fale com Ur'kyo
     turnin 5642
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Scourge Priest
     goto 1454 @-4179.79,1452.58
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 8103
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Scourge Priest
     goto 1454 @-4179.79,1452.58
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 3747
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     path seq 1454 @-4048.36,1697.85 @-3900.25,1681.48 |only Rogue Druid
     goto 1454 @-3933.49,1707.86 50 |only Rogue Druid
     goto 1413 @-3216.92,1107.13 120 |only Rogue Druid
     goto 1413 @-3119.64,1050.38
+    note-enUS Enter The Barrens through the Western Exit |only Rogue Druid
+    note-ptBR Entre em The Barrens pela saída oeste |only Rogue Druid
+    note-enUS Travel toward the Sludge Ven |only Rogue Druid
+    note-ptBR Vá em direção a Sludge Ven |only Rogue Druid
     note-enUS Loot the Strange Lockbox in the water for the [Half Pendant of Aquatic Agility]
     note-ptBR Saqueie a Strange Lockbox na água para obter o [Half Pendant of Aquatic Agility]
     collect 15883 1 |quest 31 |q 31/1
@@ -3898,9 +4414,13 @@ step
 step
     only Rogue Druid
     goto 1413 @-2595.75,-437.35
+    note-enUS Die and respawn at the Spirit Healer |only Rogue Druid
+    note-ptBR Morra e renasça no Spirit Healer |only Rogue Druid
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Rogue
     goto 1454 @-4284.42,1771.28
@@ -3921,48 +4441,64 @@ step
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 8498
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1454 @-4225.09,1933.29
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 905
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Troll Warrior Scourge Warrior Tauren Warrior
     goto 1454 @-4824,2090.54
     note-enUS Talk to Hanashi
     note-ptBR Fale com Hanashi
     train 197
+    note-enUS Train Two-Handed Axes
+    note-ptBR Treine Two-Handed Axes
 step
     only Warrior
     goto 1454 @-4801.42,1980.53
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 6192
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1454 @-4801.42,1980.53
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 5308
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4607.02,2100.64
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 14323
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4607.02,2100.64
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 14262
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4611.09,2135.15
     note-enUS Talk to Xao'tsu
     note-ptBR Fale com Xao'tsu
     train 24558
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Rogue
     goto 1454 @-4355.53,1520.68
@@ -3975,17 +4511,35 @@ step
     note-ptBR Se tiver algum [Anti-Venom], use um para se curar do [Touch of Zanzil]
     use 6452
 step
+    only Rogue
+    note-enUS Delete the [Flare Gun] from your bags, as it's no longer needed
+    note-ptBR Apague a [Flare Gun] das suas bolsas, pois não é mais necessária
+    note-enUS Delete [Fizzule's Whistle] from your bags, as it's no longer needed
+    note-ptBR Apague [Fizzule's Whistle] das suas bolsas, pois não é mais necessário
+step
     abandon 6421
+    note-enUS Abandon Boulderslide Ravine
+    note-ptBR Abandone Boulderslide Ravine
 step
     abandon 4021
+    note-enUS Abandon Counterattack!
+    note-ptBR Abandone Counterattack!
 step
     abandon 6481
+    note-enUS Abandon Earthen Arise
+    note-ptBR Abandone Earthen Arise
 step
     abandon 6284
+    note-enUS Abandon Arachnophobia
+    note-ptBR Abandone Arachnophobia
 step
     abandon 6641
+    note-enUS Abandon Vorsha the Lasher
+    note-ptBR Abandone Vorsha the Lasher
 step
     abandon 6563
+    note-enUS Abandon The Essence of Aku'Mai
+    note-ptBR Abandone The Essence of Aku'Mai
 ]==])
 
 register([==[
@@ -4010,6 +4564,8 @@ step
     only !Tauren
     goto 1413 @-2516.71,-590.71 |only !Tauren
     goto 1413 @-2672.76,-544.77
+    note-enUS Die and respawn at the Spirit Healer |only !Tauren
+    note-ptBR Morra e renasça no Spirit Healer |only !Tauren
     note-enUS Talk to Tonga
     note-ptBR Fale com Tonga
     accept 870
@@ -4041,6 +4597,8 @@ step
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fp
+    note-enUS Get the The Crossroads flight path
+    note-ptBR Pegue o ponto de voo de The Crossroads
 step
     only !Tauren
     ifnotturnedin 848
@@ -4070,6 +4628,8 @@ step
     note-enUS Talk to Uthrok
     note-ptBR Fale com Uthrok
     vendor
+    note-enUS Buy a [Fine Longbow] from him if it's available and stock up on arrows
+    note-ptBR Compre um [Fine Longbow] dele, se estiver disponível, e estoque flechas
     note-enUS If it's not up, buy a [Reinforced Bow] instead
     note-ptBR Se não estiver disponível, compre um [Reinforced Bow]
     collect 2515 1200 |quest 870 |q 870/1 |only Hunter
@@ -4104,6 +4664,8 @@ step
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     home
+    note-enUS Set your Hearthstone to Crossroads
+    note-ptBR Defina sua pedra de regresso em Crossroads
 step
     only !Scourge !Tauren
     goto 1413 @-2709.24,-403.57
@@ -4119,6 +4681,10 @@ step
     note-enUS Kill Plainstriders. Loot them for their Beaks
     note-ptBR Mate Plainstriders. Saqueie-os para obter os bicos
     objective 844/1 |opt
+    note-enUS Travel to the top of the mountain |only !Tauren !Scourge
+    note-ptBR Vá até o topo da montanha |only !Tauren !Scourge
+    note-enUS Go inside Dreadmist Den |only !Tauren !Scourge
+    note-ptBR Entre em Dreadmist Den |only !Tauren !Scourge
     note-enUS Right click the Altar
     note-ptBR Clique com o botão direito no Altar
     note-enUS Make sure you have a [Flawed Power Stone] (30 minute duration) on you
@@ -4140,6 +4706,8 @@ step
     objective 871/2 |opt
     objective 871/3 |opt
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS If it's not up you'll get it later
     note-ptBR Se não estiver disponível, você o pegará depois
     collect 4926 1 |quest 819
@@ -4156,6 +4724,8 @@ step
     path seq 1413 @-2902.79,-276.55 @-3004.12,-298.17 |only Warrior !Scourge
     goto 1413 @-3110.52,-320.46 30 |only Warrior !Scourge
     goto 1413 @-3176.39,-437.35
+    note-enUS Travel to the top of the mountain |only Warrior !Scourge
+    note-ptBR Vá até o topo da montanha |only Warrior !Scourge
     note-enUS Talk to Thun'grim
     note-ptBR Fale com Thun'grim
     turnin 1502
@@ -4171,11 +4741,15 @@ step
     path seq 1413 @-2902.79,-276.55 @-3004.12,-298.17 |only Warrior !Scourge
     goto 1413 @-3110.52,-320.46 30 |only Warrior !Scourge
     goto 1413 @-3176.39,-437.35
+    note-enUS Travel to the top of the mountain |only Warrior !Scourge
+    note-ptBR Vá até o topo da montanha |only Warrior !Scourge
     note-enUS Talk to Thun'grim
     note-ptBR Fale com Thun'grim
     turnin 1503
 step
     path closest 1413 @-2819.7,-359.65 @-2784.23,-163.04 @-2771.06,-306.95 @-2805.51,-386 @-2738.63,-610.31 @-2576.5,-610.98 @-2494.42,-485.32 @-2448.82,-398.84 @-2537.99,-260.33 @-2730.52,-273.17 @-2819.7,-359.65
+    note-enUS Now you should be looking for a group to Ragefire Chasm |only !Scourge !Tauren
+    note-ptBR Agora você deve procurar um grupo para Ragefire Chasm |only !Scourge !Tauren
     note-enUS Kill every Raptor you see. Loot them for their Heads
     note-ptBR Mate todos os Raptors que vir. Saqueie-os para obter as cabeças
     objective 869/1 |opt
@@ -4186,6 +4760,8 @@ step
     goto 1413 @-2697.08,-461.67 |only Tauren Warrior
     goto 1413 @-2670.74,-482.61
     vendor |only Tauren Warrior |opt
+    note-enUS Check if Lizzarik is in the Crossroads. He sells potions and [Heavy Spiked Mace] which is a limited supply item |only Tauren Warrior
+    note-ptBR Veja se Lizzarik está em Crossroads. Ele vende poções e [Heavy Spiked Mace], que é um item de estoque limitado |only Tauren Warrior
     note-enUS Talk to Sergra
     note-ptBR Fale com Sergra
     turnin 842 |only Tauren Shaman
@@ -4233,6 +4809,8 @@ step
     note-enUS Talk to Uthrok
     note-ptBR Fale com Uthrok
     vendor
+    note-enUS Buy a [Fine Longbow] from him if it's available and stock up on arrows
+    note-ptBR Compre um [Fine Longbow] dele, se estiver disponível, e estoque flechas
     note-enUS If it's not up, buy a [Reinforced Bow] instead
     note-ptBR Se não estiver disponível, compre um [Reinforced Bow]
     collect 2515 1200 |quest 870 |q 870/1 |only Hunter
@@ -4272,7 +4850,11 @@ step
     note-enUS Talk to Devrak |only !Scourge !Tauren
     note-ptBR Fale com Devrak |only !Scourge !Tauren
     fly 1454 |only !Scourge !Tauren |opt
+    note-enUS Fly to Orgrimmar |only !Scourge !Tauren
+    note-ptBR Voe para Orgrimmar |only !Scourge !Tauren
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS You can get it later if it's not there
     note-ptBR Você pode pegá-lo depois se não estiver lá
     collect 4926 1 |quest 819
@@ -4331,6 +4913,8 @@ step
     note-enUS Kill any Zhevra you see. Loot them for their Hooves |only Tauren
     note-ptBR Mate os Zhevras que vir. Saqueie-os para obter os cascos |only Tauren
     objective 845/1 |only Tauren |opt
+    note-enUS Travel the path up the mountain toward Telf |only Tauren Shaman
+    note-ptBR Siga o caminho montanha acima em direção a Telf |only Tauren Shaman
     note-enUS Talk to Telf
     note-ptBR Fale com Telf
     turnin 1525
@@ -4340,6 +4924,8 @@ step
     ifdungeon RFC
     goto 1411 @-3981.27,-256.61 |only Tauren Shaman
     goto 1411 @-4022.51,-243.92
+    note-enUS Use the [Fire Sapta] |only Tauren Shaman
+    note-ptBR Use o [Fire Sapta] |only Tauren Shaman
     use 6636 |only Tauren Shaman |opt
     note-enUS Kill the Minor Manifestation of Fire. Loot him for a Glowing Ember
     note-ptBR Mate a Minor Manifestation of Fire. Saqueie-a para obter uma Glowing Ember
@@ -4364,6 +4950,8 @@ step
     ifdungeon RFC
     goto 1413 @-3029.46,261.25
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest. Wait for the respawn if it's not up
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão. Espere o respawn se ele não estiver disponível
     collect 4926 1 |quest 819
     accept 819
 step
@@ -4372,12 +4960,18 @@ step
     ifdungeon RFC
     goto 1454 @-4367.46,1405.44 50 |only Tauren
     goto 1454 @-4313.6,1676.24
+    note-enUS Now you should be looking for a group to Ragefire Chasm |only Tauren
+    note-ptBR Agora você deve procurar um grupo para Ragefire Chasm |only Tauren
     zone 1454 |only Tauren |opt
+    note-enUS Travel to Orgrimmar |only Tauren
+    note-ptBR Vá até Orgrimmar |only Tauren
     note-enUS Talk to Doras
     note-ptBR Fale com Doras
     note-enUS Don't fly anywhere!
     note-ptBR Não voe para lugar nenhum!
     fp
+    note-enUS Get the Orgrimmar flight path
+    note-ptBR Pegue o ponto de voo de Orgrimmar
 step
     only !Scourge
     ifdungeon RFC
@@ -4426,6 +5020,10 @@ step
     only !Scourge
     ifdungeon RFC
     goto 1454 @-4420.76,1815.8
+    note-enUS Destroy [Lieutenant's Insignia] as you no longer need it |only !Scourge
+    note-ptBR Destrua [Lieutenant's Insignia], pois não é mais necessário |only !Scourge
+    note-enUS Enter the RFC Instance portal. Zone in
+    note-ptBR Entre no portal da instância RFC. Entre na instância
 step
     only !Scourge
     ifdungeon RFC
@@ -4540,11 +5138,19 @@ step
     note-enUS Talk to Doras |only Tauren
     note-ptBR Fale com Doras |only Tauren
     fly 1456 |only Tauren |opt
+    note-enUS Fly to Thunder Bluff |only Tauren
+    note-ptBR Voe para Thunder Bluff |only Tauren
     hearth |only !Tauren |opt
+    note-enUS Hearth to The Crossroads |only !Tauren
+    note-ptBR Use a pedra de regresso para The Crossroads |only !Tauren
     use 6948 |only !Tauren |opt
     note-enUS Talk to Devrak |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
     note-ptBR Fale com Devrak |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
     fly 1456 |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman |opt
+    note-enUS Fly to Thunder Bluff |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
+    note-ptBR Voe para Thunder Bluff |only Orc Warrior Troll Warrior Orc Shaman Troll Shaman
+    note-enUS Travel to the Elder Rise |only Tauren Orc Warrior Troll Warrior Orc Shaman Troll Shaman
+    note-ptBR Vá até Elder Rise |only Tauren Orc Warrior Troll Warrior Orc Shaman Troll Shaman
     note-enUS Talk to Rahauro
     note-ptBR Fale com Rahauro
     turnin 5724
@@ -4570,11 +5176,17 @@ step
     path seq 1413 @-3021.35,-231.96
     goto 1413 @-3029.46,261.25
     hearth |opt
+    note-enUS Hearth to The Crossroads
+    note-ptBR Use a pedra de regresso para The Crossroads
     use 6948 |opt
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp |opt
+    note-enUS Fly to Crossroads
+    note-ptBR Voe para Crossroads
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS Wait for the respawn if it's not up
     note-ptBR Espere reaparecer se não estiver lá
     collect 4926 1 |quest 819
@@ -4637,6 +5249,10 @@ step
     note-ptBR Mate os Zhevras que vir. Saqueie-os para obter os cascos |only Shaman
     objective 845/1 |only Shaman |opt
     zone 1411 |only Shaman |opt
+    note-enUS Travel toward Durotar |only Shaman
+    note-ptBR Vá em direção a Durotar |only Shaman
+    note-enUS Travel the path up the mountain toward Telf |only Shaman
+    note-ptBR Siga o caminho montanha acima em direção a Telf |only Shaman
     note-enUS Talk to Telf
     note-ptBR Fale com Telf
     turnin 1525
@@ -4645,6 +5261,8 @@ step
     only Shaman
     goto 1411 @-3981.27,-256.61 |only Shaman
     goto 1411 @-4022.51,-243.92
+    note-enUS Use the [Fire Sapta] |only Shaman
+    note-ptBR Use o [Fire Sapta] |only Shaman
     use 6636 |only Shaman |opt
     note-enUS Kill the Minor Manifestation of Fire. Loot him for a Glowing Ember
     note-ptBR Mate a Minor Manifestation of Fire. Saqueie-a para obter uma Glowing Ember
@@ -4672,6 +5290,8 @@ step
     only Shaman
     goto 1413 @-3029.46,261.25
     use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-ptBR Saqueie Chen's Empty Keg do chão e comece a missão
     note-enUS Wait for the respawn if it's not up
     note-ptBR Espere reaparecer se não estiver lá
     collect 4926 1 |quest 819
@@ -4683,6 +5303,8 @@ step
     note-enUS Kill Zhevra Runners. Loot them for their Hooves
     note-ptBR Mate Zhevra Runners. Saqueie-os para obter os cascos
     objective 845/1 |opt
+    note-enUS Travel to Ratchet
+    note-ptBR Vá até Ratchet
 step
     goto 1413 @-3728.66,-835.29
     note-enUS Talk to Gazlowe
@@ -4694,6 +5316,8 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp |opt
+    note-enUS Get the Ratchet flight path
+    note-ptBR Pegue o ponto de voo de Ratchet
     note-enUS Talk to Sputtervalve and the Wanted Poster
     note-ptBR Fale com Sputtervalve e com o Wanted Poster
     accept 894
@@ -4786,11 +5410,15 @@ step
     note-enUS [Longjaw Mud Snappers] are extremely cheap, buy as many as you want
     note-ptBR [Longjaw Mud Snappers] são extremamente baratos, compre quantos quiser
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 895 |q 895/1
     collect 1205 10 |quest 895 |q 895/1 |only Mage Warlock Priest Shaman Druid
 step
     ifonquest 895
     path closest 1413 @-3883.7,-1572.4 @-3818.84,-1707.52 @-3724.6,-1746.71 @-3883.7,-1572.4 @-3818.84,-1707.52 @-3724.6,-1746.71
+    note-enUS Delete the [Control Console Operating Manual] from your bags, as it's no longer needed
+    note-ptBR Apague o [Control Console Operating Manual] das suas bolsas, pois não é mais necessário
     note-enUS Kill Southsea Brigands and Southsea Cannoneers
     note-ptBR Mate Southsea Brigands e Southsea Cannoneers
     objective 887/1 |opt
@@ -4931,6 +5559,8 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Kill every Raptor you see. Loot them for their Heads
     note-ptBR Mate todos os Raptors que vir. Saqueie-os para obter as cabeças
     objective 869/1 |opt
@@ -4960,7 +5590,11 @@ step
 step
     goto 1413 @-2669.72,-481.94
     abandon 871 |opt
+    note-enUS Abandon Disrupt the Attacks
+    note-ptBR Abandone Disrupt the Attacks
     abandon 5041 |opt
+    note-enUS Abandon Supplies for the Crossroads
+    note-ptBR Abandone Supplies for the Crossroads
     note-enUS Talk to Thork and Sergra
     note-ptBR Fale com Thork e Sergra
     turnin 845
@@ -4979,6 +5613,8 @@ step
     note-enUS Talk to Uthrok
     note-ptBR Fale com Uthrok
     vendor
+    note-enUS Buy a [Fine Longbow] from him if it's available and stock up on arrows
+    note-ptBR Compre um [Fine Longbow] dele, se estiver disponível, e estoque flechas
     note-enUS If it's not up, buy a [Reinforced Bow] instead
     note-ptBR Se não estiver disponível, compre um [Reinforced Bow]
     collect 2515 1200 |quest 870 |q 870/1 |only Hunter
@@ -5064,15 +5700,23 @@ step
 step
     ifdungeon RFC
     abandon 5723
+    note-enUS Abandon Testing an Enemy's Strength
+    note-ptBR Abandone Testing an Enemy's Strength
 step
     ifdungeon RFC
     abandon 5725
+    note-enUS Abandon The Power to Destroy...
+    note-ptBR Abandone The Power to Destroy...
 step
     ifdungeon RFC
     abandon 5728
+    note-enUS Abandon Hidden Enemies
+    note-ptBR Abandone Hidden Enemies
 step
     ifdungeon RFC
     abandon 5761
+    note-enUS Abandon Slaying the Beast
+    note-ptBR Abandone Slaying the Beast
 step
     goto 1413 @-2670.74,-482.61
     note-enUS Be careful of Sunscale Scytheclaws in the area. They are up to level 18 and can [Thrash]
@@ -5086,6 +5730,8 @@ step
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     goto 1413 @-1815.48,786.89
     note-enUS Kill Plainstriders. Loot them for their Kidneys
@@ -5096,6 +5742,8 @@ step
     note-enUS Vrang sells [Heavy Spiked Mace] which is a limited supply item |only Orc Warrior Troll Warrior Tauren Warrior
     note-ptBR Vrang vende [Heavy Spiked Mace], que é um item de estoque limitado |only Orc Warrior Troll Warrior Tauren Warrior
     vendor
+    note-enUS Vendor trash and repair
+    note-ptBR Venda o lixo e repare
 step
     goto 1413 @-2686.95,825.4
     note-enUS Click on the Control Console
@@ -5161,6 +5809,8 @@ step
 step
     goto 1413 @-3102.42,1105.78
     level 16
+    note-enUS Grind to level 16
+    note-ptBR Mate monstros até o nível 16
 step
     goto 1413 @-3104.44,1109.16
     note-enUS Talk to Wizzlecrank's Shredder in The Sludge Ven
@@ -5220,22 +5870,32 @@ step
 step
     goto 1414 @-3839.37,1644.65
     zone 1454 |opt
+    note-enUS Enter Orgrimmar through the western entrance
+    note-ptBR Entre em Orgrimmar pela entrada oeste
 step
     goto 1454 @-4160.01,1483.17
     skill firstaid 40 |opt
+    note-enUS Create [Linen Bandages] until your skill is 40 or higher
+    note-ptBR Crie [Linen Bandages] até sua habilidade chegar a 40 ou mais
     note-enUS Talk to Arnok
     note-ptBR Fale com Arnok
     note-enUS Skip this step if you did not have enough [Linen Cloth] to reach 40 skill
     note-ptBR Pule este passo se não tinha [Linen Cloth] suficiente para chegar a 40 de perícia
     train 3276
+    note-enUS Train [Heavy Linen Bandage]
+    note-ptBR Treine [Heavy Linen Bandage]
 step
     goto 1454 @-4160.01,1483.17
     skill firstaid 50 |opt
+    note-enUS Create [Heavy Linen Bandages] until your skill is 50 or higher
+    note-ptBR Crie [Heavy Linen Bandages] até sua habilidade chegar a 50 ou mais
     note-enUS Talk to Arnok
     note-ptBR Fale com Arnok
     note-enUS Skip this step if you did not have enough [Linen Cloth] to reach 50 skill
     note-ptBR Pule este passo se não tinha [Linen Cloth] suficiente para chegar a 50 de perícia
     train 3274
+    note-enUS Train Journeyman First Aid
+    note-ptBR Treine Journeyman First Aid
 step
     only Priest
     goto 1454 @-4179.79,1452.58
@@ -5244,18 +5904,24 @@ step
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 8102
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1454 @-4179.79,1452.58
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 970
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1454 @-4218.64,1473.72
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 3140
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only !Tauren !Scourge
     ifonquest 6384
@@ -5286,6 +5952,8 @@ step
     note-enUS Don't fly anywhere!
     note-ptBR Não voe para lugar nenhum!
     fp
+    note-enUS Get the Orgrimmar flight path
+    note-ptBR Pegue o ponto de voo de Orgrimmar
 step
     only Shaman
     goto 1454 @-4225.09,1933.29
@@ -5294,6 +5962,8 @@ step
     note-enUS Make sure you have trained [Purge] as it will be needed to obtain a rune later
     note-ptBR Certifique-se de ter treinado [Purge], pois será necessário para obter uma runa depois
     train 8019
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1454 @-4225.09,1933.29
@@ -5302,6 +5972,8 @@ step
     note-enUS Make sure you have trained [Purge] as it will be needed to obtain a rune later
     note-ptBR Certifique-se de ter treinado [Purge], pois será necessário para obter uma runa depois
     train 913
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1454 @-4226.78,1914.77
     note-enUS Talk to Zor
@@ -5313,7 +5985,11 @@ step
     note-enUS Talk to Shenthul
     note-ptBR Fale com Shenthul
     train 1804
+    note-enUS Train [Pick Lock]
+    note-ptBR Treine [Pick Lock]
     train 921
+    note-enUS Train [Pick Pocket]
+    note-ptBR Treine [Pick Pocket]
     accept 2379
 step
     only Orc Rogue Troll Rogue
@@ -5373,6 +6049,8 @@ step
     only Warlock
     goto 1454 @-4362.55,1834.7
     abandon 1963 |only Orc Rogue Troll Rogue |opt
+    note-enUS Abandon The Shattered Hand |only Orc Rogue Troll Rogue
+    note-ptBR Abandone The Shattered Hand |only Orc Rogue Troll Rogue
     note-enUS Equip the [Kris] |only Rogue
     note-ptBR Equipe o [Kris] |only Rogue
     use 2209 |only Rogue |opt
@@ -5382,12 +6060,16 @@ step
     note-enUS Talk to Mirket
     note-ptBR Fale com Mirket
     train 1455
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1454 @-4362.55,1834.7
     note-enUS Talk to Mirket
     note-ptBR Fale com Mirket
     train 1014
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1454 @-4347.4,1836.57
@@ -5406,49 +6088,67 @@ step
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 285
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     goto 1454 @-4801.42,1980.53
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 8198
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4607.02,2100.64
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 13795
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4607.02,2100.64
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 2643
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1454 @-4611.09,2135.15
     note-enUS Talk to Xao'tsu
     note-ptBR Fale com Xao'tsu
     train 24557
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Troll Hunter Orc Hunter Priest
     goto 1454 @-4824,2090.54
     note-enUS Talk to Hanashi
     note-ptBR Fale com Hanashi
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Tauren Hunter
     goto 1454 @-4824,2090.54
     note-enUS Talk to Hanashi
     note-ptBR Fale com Hanashi
     train 264
+    note-enUS Train Bows
+    note-ptBR Treine Bows
 step
     only Tauren Warrior Scourge Warrior
     goto 1454 @-4824,2090.54
     note-enUS Talk to Hanashi
     note-ptBR Fale com Hanashi
     train 197
+    note-enUS Train Two-Handed Axes
+    note-ptBR Treine Two-Handed Axes
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Hunter
     goto 1454 @-4819.1,2099.05
@@ -5477,14 +6177,22 @@ step
     ifnotturnedin 3281
     goto 1413 @-2645.4,-406.94
     hearth |opt
+    note-enUS Hearth to The Crossroads
+    note-ptBR Use a pedra de regresso para The Crossroads
     use 6948 |opt
     note-enUS Talk to Doras
     note-ptBR Fale com Doras
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     goto 1413 @-2639.32,-436
     note-enUS Talk to Gazrog
@@ -5535,6 +6243,8 @@ step
 step
     goto 1413 @-2669.72,-481.94
     abandon 881
+    note-enUS If Echeyakee didn't spawn after using the [Horn of Echeyakee]or you didn't get the tag when it did spawn, abandon Echeyakee, then return to town and accept it again
+    note-ptBR Se Echeyakee não surgiu depois de usar o [Horn of Echeyakee] ou você não conseguiu o tag quando ele surgiu, abandone Echeyakee, volte à cidade e aceite-a de novo
 step
     goto 1413 @-2670.74,-482.61
     note-enUS Talk to Sergra
@@ -5556,6 +6266,8 @@ step
     accept 905
 step
     goto 1413 @-2641.35,-521.12
+    note-enUS Destroy [Horn of Echeyakee] as you no longer need it
+    note-ptBR Destrua [Horn of Echeyakee], pois não é mais necessário
     note-enUS Talk to Mankrik
     note-ptBR Fale com Mankrik
     accept 899
@@ -5575,6 +6287,8 @@ step
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fp |opt
+    note-enUS Fly to Ratchet
+    note-ptBR Voe para Ratchet
     note-enUS Talk to Wrenix
     note-ptBR Fale com Wrenix
     turnin 2382
@@ -5637,6 +6351,8 @@ step
     note-enUS [Longjaw Mud Snappers] are extremely cheap, buy as many as you want
     note-ptBR [Longjaw Mud Snappers] são extremamente baratos, compre quantos quiser
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
     collect 4592 20 |quest 888 |q 888/1
     collect 1205 10 |quest 888 |q 888/1 |only Mage Warlock Priest Shaman Druid
 step
@@ -5763,9 +6479,13 @@ step
     note-enUS Kill Stormsnouts. Loot them for a Horn. This does not have to be completed now
     note-ptBR Mate Stormsnouts. Saqueie-os para obter um chifre. Isto não precisa ser concluído agora
     objective 821/3 |opt
+    note-enUS Travel to Camp Taurajo
+    note-ptBR Vá até Camp Taurajo
     note-enUS Talk to Innkeeper Byula
     note-ptBR Fale com Innkeeper Byula
     home
+    note-enUS Set your Hearthstone to Camp Taurajo
+    note-ptBR Defina sua pedra de regresso em Camp Taurajo
 step
     ifonquest 883
     goto 1413 @-1921.88,-2383.15
@@ -5784,7 +6504,11 @@ step
     note-enUS Talk to Omusa
     note-ptBR Fale com Omusa
     fp |only !Tauren |opt
+    note-enUS Get the Camp Taurajo flight path |only !Tauren
+    note-ptBR Pegue o ponto de voo de Camp Taurajo |only !Tauren
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Helbrim
     note-ptBR Fale com Helbrim
     turnin 848
@@ -5799,6 +6523,9 @@ step
     turnin 905
     accept 3261
     turnin 3281
+step
+    note-enUS Delete any leftover [Sunscale Feathers] you may still have
+    note-ptBR Apague quaisquer [Sunscale Feathers] que ainda tiver
 step
     only Hunter
     goto 1413 @-2556.23,-351.54
@@ -5830,6 +6557,8 @@ step
 step
     ifturnedin 851
     path closest 1413 @-2001.94,-965.69 @-2022.2,-945.42 @-2016.12,-915.01 @-2033.35,-894.74 @-2031.32,-881.23 @-2052.6,-877.18 @-2057.67,-879.21 @-2066.79,-877.85 @-2085.03,-898.8 @-2097.19,-908.26 @-2102.26,-950.15 @-2114.42,-981.22 @-2167.11,-1021.09 @-2187.38,-1040.68 @-2261.35,-1060.95 @-2281.62,-1061.62 @-2301.88,-1056.89 @-2295.8,-1087.3 @-2299.86,-1125.13 @-2268.44,-1145.4 @-2247.16,-1145.4 @-2226.9,-1166.35 @-2189.4,-1179.86 @-2174.2,-1198.78 @-2162.04,-1200.8 @-2124.55,-1228.5 @-2095.16,-1220.4 @-2065.78,-1208.91 @-2041.46,-1167.7 @-2024.23,-1179.18 @-2047.54,-1156.21 @-2046.52,-1135.94 @-2009.03,-1127.84
+    note-enUS Travel to the Lushwater Oasis
+    note-ptBR Vá até Lushwater Oasis
     note-enUS Kill Oasis Snapjaws as you're looking for Hezrul Bloodmark. Loot them for their Shells
     note-ptBR Mate Oasis Snapjaws enquanto procura Hezrul Bloodmark. Saqueie-os para obter os cascos
     objective 880/1 |opt
@@ -5855,6 +6584,8 @@ step
     ifcomplete 855
     goto 1413 @-1972.55,-306.95
     abandon 855 |opt
+    note-enUS Abandon Centaur Bracers as you have not looted enough previously to make it worthwhile to finish
+    note-ptBR Abandone Centaur Bracers, pois você não saqueou o suficiente antes para valer a pena terminá-la
     note-enUS Talk to Regthar
     note-ptBR Fale com Regthar
     turnin 852
@@ -5931,6 +6662,8 @@ step
 step
     path seq 1413 @-950.1,-271.14
     goto 1413 @-943,-265.06
+    note-enUS Travel toward Seereth
+    note-ptBR Vá em direção a Seereth
     note-enUS Talk to Seereth and Makaba
     note-ptBR Fale com Seereth e Makaba
     turnin 1061
@@ -5985,6 +6718,8 @@ step
     ifturnedin 6548
     path seq 1442 @-460.13,67.77
     goto 1442 @-350.74,112.06
+    note-enUS Travel up the path to the bonfire
+    note-ptBR Suba o caminho até a fogueira
     note-enUS Kill Grundig Darkcloud and Grimtotem Brutes
     note-ptBR Mate Grundig Darkcloud e Grimtotem Brutes
     note-enUS Make sure you kill all six Grimtotem Brutes before starting the quest inside
@@ -6037,6 +6772,8 @@ step
 step
     path seq 1442 @-786.33,-294.97 @-665.72,-280.97 @-522.63,-294.32
     goto 1442 @-233.54,-177.42
+    note-enUS Follow the path on the left upward
+    note-ptBR Siga o caminho da esquerda subindo
     note-enUS Talk to Xen'Zilla
     note-ptBR Fale com Xen'Zilla
     accept 6461
@@ -6079,17 +6816,27 @@ step
     ifonquest 1483
     path seq 1442 @735.8,925.8 @806.12,929.05
     goto 1442 @927.72,893.56
+    note-enUS Travel to Sun Rock Retreat
+    note-ptBR Vá até Sun Rock Retreat
     note-enUS Talk to Innkeeper Jayka
     note-ptBR Fale com Innkeeper Jayka
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     ifonquest 1483
     goto 1442 @920.88,911.47
     note-enUS Talk to Jeeda on the second floor of the inn
     note-ptBR Fale com Jeeda no segundo andar da estalagem
     vendor |only !Warrior
+    note-enUS Buy [Healing Potions] from her if they're up |only !Warrior
+    note-ptBR Compre [Healing Potions] dela, se estiverem disponíveis |only !Warrior
     vendor |only Warrior
+    note-enUS Buy [Healing Potions] and [Liferoot] from her if they're up |only Warrior
+    note-ptBR Compre [Healing Potions] e [Liferoot] dela, se estiverem disponíveis |only Warrior
 step
     ifturnedin 6523
     goto 1442 @928.2,1015.99
@@ -6107,8 +6854,12 @@ step
     note-enUS Talk to Tharm
     note-ptBR Fale com Tharm
     fp
+    note-enUS Get the Sun Rock Retreat flight path
+    note-ptBR Pegue o ponto de voo de Sun Rock Retreat
 step
     goto 1442 @365.16,878.25 15
+    note-enUS Travel toward Ziz
+    note-ptBR Vá em direção a Ziz
     note-enUS Talk to Ziz
     note-ptBR Fale com Ziz
     turnin 1483
@@ -6140,6 +6891,8 @@ step
     note-enUS Talk to Veenix
     note-ptBR Fale com Veenix
     vendor
+    note-enUS Buy an [Executioner's Sword] from him
+    note-ptBR Compre uma [Executioner's Sword] dele
     note-enUS If it's not up, buy a [Dacian Falx] instead
     note-ptBR Se não estiver disponível, compre uma [Dacian Falx]
 step
@@ -6168,6 +6921,8 @@ step
     note-enUS Equip the [Longsword] |only Rogue
     note-ptBR Equipe a [Longsword] |only Rogue
     use 923 |only Rogue |opt
+    note-enUS Travel to Windshear Crag
+    note-ptBR Vá até Windshear Crag
 step
     path closest 1442 @179.1,1168.06 @232.82,1239.7 @-16.23,1441.59 @-255.52,1291.8 @-382.48,1135.5
     note-enUS Kill Venture Co. Loggers
@@ -6206,29 +6961,41 @@ step
 step
     only Druid
     goto 1450 @-2593.82,7866.9
+    note-enUS Cast [Teleport: Moonglade] |only Druid
+    note-ptBR Lance [Teleport: Moonglade] |only Druid
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     train 1430
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     goto 1450 @-2593.82,7866.9
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     train 768
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     goto 1450 @-2593.82,7866.9
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     train 1075
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path seq 1413 @-2595.75,-437.35
     goto 1413 @-1921.88,-2383.15
     hearth |opt
+    note-enUS Hearth to Camp Taurajo
+    note-ptBR Use a pedra de regresso para Camp Taurajo
     use 6948 |opt
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fp |opt
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
     note-enUS Talk to Jorn Skyseer
     note-ptBR Fale com Jorn Skyseer
     turnin 3261
@@ -6270,6 +7037,8 @@ step
     only Warlock Shaman
     path closest 1413 @-2515.7,-2076.41 @-2518.74,-2125.73 @-2517.72,-2223.7 @-2486.31,-2254.1 @-2494.42,-2282.48 @-2531.91,-2272.34 @-2571.43,-2295.31 @-2620.07,-2285.18 @-2625.14,-2245.32 @-2755.86,-2082.49 @-2813.62,-2054.12 @-2811.59,-2004.12 @-2783.22,-1949.39 @-2747.75,-1889.26 @-2709.24,-1913.59 @-2706.2,-1948.72 @-2687.96,-1973.04 @-2678.84,-2016.28 @-2584.6,-2050.74
     level 19
+    note-enUS Grind to level 19
+    note-ptBR Mate monstros até o nível 19
 step
     path closest 1413 @-2532.92,-1965.61 @-2449.83,-1953.45 @-2377.88,-2018.31 @-2397.14,-2108.84 @-2345.46,-2187.21 @-2415.38,-2179.78
     note-enUS Kill Stormsnouts. Loot them for a Horn
@@ -6306,6 +7075,8 @@ step
     note-ptBR Mate qualquer Zhevra. Saqueie-o para obter uma Fresh Zhevra Carcass
     collect 10338 1 |opt
     use 10338
+    note-enUS Use the [Fresh Zhevra Carcass] at the dead tree to summon Ishamuhale. Kill and loot him for his Fang
+    note-ptBR Use a [Fresh Zhevra Carcass] na árvore morta para invocar Ishamuhale. Mate-o e saqueie a Fang dele
     note-enUS The Carcass only has a 30 minute duration!
     note-ptBR A carcaça dura apenas 30 minutos!
     objective 882/1
@@ -6314,6 +7085,8 @@ step
     goto 1413 @-3768.18,-840.69 |only Rogue
     goto 1413 @-3728.66,-835.29 |only !Rogue
     goto 1413 @-3768.18,-840.69
+    note-enUS Travel to Ratchet
+    note-ptBR Vá até Ratchet
     note-enUS Talk to Wrenix
     note-ptBR Fale com Wrenix
     turnin 2381
@@ -6350,6 +7123,8 @@ step
     note-enUS Talk to Grazlix
     note-ptBR Fale com Grazlix
     vendor
+    note-enUS Buy [Mighty Chain Pants] from him if it's up
+    note-ptBR Compre [Mighty Chain Pants] dele, se estiver disponível
 step
     only Rogue Hunter Warrior Shaman Druid
     ifturnedin 865
@@ -6357,6 +7132,8 @@ step
     note-enUS Talk to Vexspindle
     note-ptBR Fale com Vexspindle
     vendor
+    note-enUS Buy [Wolf Bracers] from him if they're up
+    note-ptBR Compre [Wolf Bracers] dele, se estiverem disponíveis
 step
     ifdungeon WC
     ifturnedin 865
@@ -6367,6 +7144,8 @@ step
     note-enUS Talk to Innkeeper Wiley
     note-ptBR Fale com Innkeeper Wiley
     home
+    note-enUS Set your Hearthstone to Ratchet
+    note-ptBR Defina sua pedra de regresso em Ratchet
 step
     ifdungeon WC
     goto 1413 @-3770.2,-928.53
@@ -6380,6 +7159,8 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Thork
     note-ptBR Fale com Thork
     accept 6541
@@ -6415,12 +7196,17 @@ step
     note-ptBR Fale com Korran
     accept 868
 step
+    note-enUS Delete any leftover [Bristleback Quilboar Tusks] you may still have
+    note-ptBR Apague quaisquer [Bristleback Quilboar Tusks] que ainda tiver
+step
     only Shaman
     goto 1413 @-2595.75,-437.35 |only Shaman
     goto 1454 @-4213.03,1920.94
     note-enUS Talk to Devrak |only Shaman
     note-ptBR Fale com Devrak |only Shaman
     fly 1454 |only Shaman |opt
+    note-enUS Fly to Orgrimmar |only Shaman
+    note-ptBR Voe para Orgrimmar |only Shaman
     note-enUS Talk to Searn
     note-ptBR Fale com Searn
     accept 1528
@@ -6430,6 +7216,8 @@ step
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 2645
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1413 @-2595.75,-437.35 |only Warlock
@@ -6437,9 +7225,13 @@ step
     note-enUS Talk to Devrak |only Warlock
     note-ptBR Fale com Devrak |only Warlock
     fly 1454 |only Warlock |opt
+    note-enUS Fly to Orgrimmar |only Warlock
+    note-ptBR Voe para Orgrimmar |only Warlock
     note-enUS Talk to Gan'rul
     note-ptBR Fale com Gan'rul
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 1507
 step
     only Warlock
@@ -6471,12 +7263,18 @@ step
     only Shaman
     ifdungeon DM
     goto 1454 @-4225.09,1933.29
+    note-enUS Now you should be looking for a group to The Deadmines
+    note-ptBR Agora você deve procurar um grupo para The Deadmines
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fly 1454 |opt
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 8052
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     ifdungeon DM
@@ -6484,6 +7282,8 @@ step
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 2645
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     ifdungeon DM
@@ -6491,6 +7291,8 @@ step
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 14318
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     ifdungeon DM
@@ -6498,6 +7300,8 @@ step
     note-enUS Talk to Ormak
     note-ptBR Fale com Ormak
     train 14290
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     ifdungeon DM
@@ -6505,6 +7309,8 @@ step
     note-enUS Talk to Xao'tsu
     note-ptBR Fale com Xao'tsu
     train 5118
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Warrior
     ifdungeon DM
@@ -6512,6 +7318,8 @@ step
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 8198
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     ifdungeon DM
@@ -6519,6 +7327,8 @@ step
     note-enUS Talk to Grezz
     note-ptBR Fale com Grezz
     train 845
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     ifdungeon DM
@@ -6526,6 +7336,8 @@ step
     note-enUS Talk to Ormok
     note-ptBR Fale com Ormok
     train 1943
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     ifdungeon DM
@@ -6533,6 +7345,8 @@ step
     note-enUS Talk to Zevrost
     note-ptBR Fale com Zevrost
     train 1014
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     ifdungeon DM
@@ -6540,6 +7354,8 @@ step
     note-enUS Talk to Zevrost
     note-ptBR Fale com Zevrost
     train 706
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     ifdungeon DM
@@ -6547,6 +7363,8 @@ step
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 3140
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     ifdungeon DM
@@ -6554,6 +7372,8 @@ step
     note-enUS Talk to Pephredo
     note-ptBR Fale com Pephredo
     train 1953
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     ifdungeon DM
@@ -6561,6 +7381,8 @@ step
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 970
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     ifdungeon DM
@@ -6568,22 +7390,34 @@ step
     note-enUS Talk to Ur'kyo
     note-ptBR Fale com Ur'kyo
     train 14914
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifdungeon DM
     goto 1411 @-4648.55,1321.88 40
     zone 1411 |opt
+    note-enUS Leave Orgrimmar
+    note-ptBR Saia de Orgrimmar
+    note-enUS Go up the Zeppelin Tower
+    note-ptBR Suba a torre do Zepelim
     zone 1434
+    note-enUS Take the Zeppelin to Stranglethorn Vale
+    note-ptBR Pegue o zepelim para Stranglethorn Vale
 step
     ifdungeon DM
     path seq 1434 @273.91,-12406.71 @492.15,-12499.03 @759.53,-12494.77 @1178.78,-12166.78
     goto 1434 @1360,-11978.74 60
     path seq 1436 @1578.87,-11699.5 @1718.17,-11480.4
     goto 1436 @1966.32,-11407.13 200
+    note-enUS Swim directly to the west from Grom'Gol into the Vile Reef and then swim north toward Westfall
+    note-ptBR Nade direto para o oeste a partir de Grom'Gol até o Vile Reef e depois nade para o norte em direção a Westfall
     note-enUS Steer clear from the island. Follow the waypoint for safety!
     note-ptBR Fique longe da ilha. Siga o waypoint por segurança!
 step
     ifdungeon DM
     goto 1436 @1966.32,-11407.13 40
+    note-enUS Travel to the Westfall Lighthouse
+    note-ptBR Vá até Westfall Lighthouse
     note-enUS Talk to Captain Grayson
     note-ptBR Fale com Captain Grayson
     accept 104
@@ -6611,14 +7445,22 @@ step
 step
     ifdungeon DM
     abandon 103
+    note-enUS Abandon Keeper of the Flame
+    note-ptBR Abandone Keeper of the Flame
 step
     ifdungeon DM
     path seq 1415 @1596.2,-11768.97 @1596.2,-11780.71 @1606.76,-11785.4 @1582.12,-11799.48 @1596.2,-11813.56 @1631.4,-11846.41 @1649,-11898.04 @1659.56,-11919.16 @1698.28,-11891
     goto 1415 @1744.04,-11881.61
+    note-enUS Enter the Deadmines Instance portal. Zone in
+    note-ptBR Entre no portal da instância Deadmines. Entre na instância
 step
     ifdungeon DM
     hearth
+    note-enUS Hearth to The Barrens after having completed Deadmines
+    note-ptBR Use a pedra de regresso para The Barrens depois de completar Deadmines
     zone 1413
+    note-enUS Arrive in The Barrens
+    note-ptBR Chegue em The Barrens
     use 6948
 step
     ifdungeon WC
@@ -6626,14 +7468,22 @@ step
     note-enUS Talk to Innkeeper Wiley
     note-ptBR Fale com Innkeeper Wiley
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     ifdungeon DM
     goto 1413 @-2645.4,-406.94
     note-enUS Talk to Innkeeper Boorand
     note-ptBR Fale com Innkeeper Boorand
     vendor |only !Rogue !Warrior
+    note-enUS Sell your junk, then restock on food and water if necessary |only !Rogue !Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida e água se necessário |only !Rogue !Warrior
     vendor |only Rogue Warrior
+    note-enUS Sell your junk, then restock on food if necessary |only Rogue Warrior
+    note-ptBR Venda seu lixo e depois reabasteça comida se necessário |only Rogue Warrior
 step
     only Warlock
     goto 1413 @-3770.2,-898.12 |only Warlock
@@ -6642,9 +7492,13 @@ step
     note-enUS Talk to Bragok |only Warlock
     note-ptBR Fale com Bragok |only Warlock
     fp |only Warlock |opt
+    note-enUS Fly to The Crossroads |only Warlock
+    note-ptBR Voe para The Crossroads |only Warlock
     note-enUS Talk to Doras |only Warlock
     note-ptBR Fale com Doras |only Warlock
     fp |only Warlock |opt
+    note-enUS Fly to The Crossroads |only Warlock
+    note-ptBR Voe para The Crossroads |only Warlock
     note-enUS Talk to Gazrog
     note-ptBR Fale com Gazrog
     turnin 1509
@@ -6656,6 +7510,8 @@ step
     note-enUS Talk to Doras |only Shaman
     note-ptBR Fale com Doras |only Shaman
     fp |only Shaman |opt
+    note-enUS Fly to Ratchet |only Shaman
+    note-ptBR Voe para Ratchet |only Shaman
     note-enUS Talk to Islen
     note-ptBR Fale com Islen
     turnin 1528
@@ -6669,9 +7525,13 @@ step
     note-enUS Talk to Bragok |only !Warlock !Shaman
     note-ptBR Fale com Bragok |only !Warlock !Shaman
     fp |only !Warlock !Shaman |opt
+    note-enUS Fly to Crossroads |only !Warlock !Shaman
+    note-ptBR Voe para Crossroads |only !Warlock !Shaman
     note-enUS Talk to Bragok |only Shaman
     note-ptBR Fale com Bragok |only Shaman
     fp |only Shaman |opt
+    note-enUS Fly to Crossroads |only Shaman
+    note-ptBR Voe para Crossroads |only Shaman
     note-enUS Talk to Helbrim
     note-ptBR Fale com Helbrim
     note-enUS Helbrim Starts a 45-minute timed quest
@@ -6687,12 +7547,18 @@ step
     note-enUS Talk to Bragok |only !Warlock !Shaman
     note-ptBR Fale com Bragok |only !Warlock !Shaman
     fp |only !Warlock !Shaman |opt
+    note-enUS Fly to Camp Taurajo |only !Warlock !Shaman
+    note-ptBR Voe para Camp Taurajo |only !Warlock !Shaman
     note-enUS Talk to Bragok |only Shaman
     note-ptBR Fale com Bragok |only Shaman
     fp |only Shaman |opt
+    note-enUS Fly to Camp Taurajo |only Shaman
+    note-ptBR Voe para Camp Taurajo |only Shaman
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fp |opt
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
     note-enUS Kill Bristleback Quilboars. Loot them for a [Blood Shard
     note-ptBR Mate Bristleback Quilboars. Saqueie-os para obter um [Blood Shard
     collect 5075 1 |quest 5052 |q 5052/1
@@ -6768,6 +7634,8 @@ step
     collect 5102 1 |quest 884 |q 884/1 |only Shaman |opt
     accept 884 |only Shaman |opt
     use 5102 |only Shaman |opt
+    note-enUS Travel South toward Brine |only Shaman
+    note-ptBR Vá para o sul em direção a Brine |only Shaman
     note-enUS Kill a Thunderhawk. Loot it for its Wings |only Shaman
     note-ptBR Mate um Thunderhawk. Saqueie-o para obter as asas |only Shaman
     objective 913/1 |only Shaman |opt
@@ -6779,6 +7647,8 @@ step
     only Shaman
     goto 1413 @-1858.04,-3572.92
     use 7766
+    note-enUS Fill your [Empty Brown Waterskin] in the watering hole below Brine's hut
+    note-ptBR Encha seu [Empty Brown Waterskin] no poço abaixo da cabana de Brine
     objective 1535/1
 step
     only Shaman
@@ -6790,6 +7660,8 @@ step
 step
     path closest 1413 @-1899.59,-2624.34 @-2016.12,-2650.02 @-2400.18,-2398.01 @-2363.7,-2537.19 @-1899.59,-2624.34 @-2016.12,-2650.02 @-2363.7,-2537.19 @-2400.18,-2398.01 |only Shaman
     path closest 1413 @-1919.86,-2652.04 @-2096.18,-2531.11 @-2341.4,-2352.74 @-1982.68,-2217.62 @-1775.96,-2235.86
+    note-enUS Travel back toward Camp Taurajo |only Shaman
+    note-ptBR Volte em direção a Camp Taurajo |only Shaman
     note-enUS Kill Owatanka. Loot him for [Owatanka's Tailspike] |only Shaman
     note-ptBR Mate Owatanka. Saqueie-o para obter [Owatanka's Tailspike] |only Shaman
     note-enUS Use the [Owatanka's Tailspike] to start the quest |only Shaman
@@ -6833,6 +7705,8 @@ step
     goto 1413 @-1891.48,-2391.93
     note-enUS Talk to Mangletooth
     note-ptBR Fale com Mangletooth
+    note-enUS If you have 10 [Blood Shards left, use them to obtain [Spirit of the Wind] from Mangletooth
+    note-ptBR Se tiver 10 [Blood Shards] sobrando, use-os para obter [Spirit of the Wind] de Mangletooth
     note-enUS Skip this step if you have the Thunder Bluff flight path
     note-ptBR Pule este passo se já tiver o caminho de voo de Thunder Bluff
 step
@@ -6842,28 +7716,42 @@ step
     goto 1413 @-1881.35,-2384.5 |only Tauren
     goto 1456 @89.46,-1286.5
     zone 1412 |only !Tauren |opt
+    note-enUS Travel into Mulgore |only !Tauren
+    note-ptBR Vá para Mulgore |only !Tauren
     zone 1456 |only !Tauren |opt
+    note-enUS Take the lift into Thunder Bluff |only !Tauren
+    note-ptBR Pegue o elevador para Thunder Bluff |only !Tauren
     note-enUS If you have the Thunder Bluff flight path, fly there instead |only !Tauren
     note-ptBR Se tiver o caminho de voo de Thunder Bluff, voe para lá |only !Tauren
     note-enUS Talk to Omusa |only Tauren
     note-ptBR Fale com Omusa |only Tauren
     fly 1456 |only Tauren |opt
+    note-enUS Fly to Thunder Bluff |only Tauren
+    note-ptBR Voe para Thunder Bluff |only Tauren
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 199
+    note-enUS Train Two-Handed Maces
+    note-ptBR Treine Two-Handed Maces
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Troll Hunter Orc Hunter Scourge Warrior Warlock Priest
     goto 1456 @89.46,-1286.5
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Rogue
     goto 1456 @89.46,-1286.5
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 198
+    note-enUS Train Maces
+    note-ptBR Treine Maces
 step
     only Rogue
     goto 1456 @110.13,-1299.65
@@ -6877,6 +7765,8 @@ step
     goto 1456 @219.09,-1051.44 10
     goto 1456 @218.68,-1028.41 |only Rogue Shaman
     goto 1456 @278.48,-995.29
+    note-enUS Travel to the Spirit Rise and enter the pools of vision
+    note-ptBR Vá até Spirit Rise e entre nas pools of vision
     note-enUS Talk to Clarice |only Rogue Shaman
     note-ptBR Fale com Clarice |only Rogue Shaman
     accept 264 |only Rogue Shaman |opt
@@ -6903,51 +7793,71 @@ step
     note-ptBR Fale com Miles
     accept 5642 |only Troll Priest
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1456 @279.32,-950.76
     note-enUS Talk to Shymm
     note-ptBR Fale com Shymm
     train 12051
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1456 @279.32,-950.76
     note-enUS Talk to Shymm
     note-ptBR Fale com Shymm
     train 2138
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1456 @279.32,-950.76
     note-enUS Talk to Shymm
     note-ptBR Fale com Shymm
     train 2121
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1456 @269.92,-980.4
     note-enUS Talk to Tigor
     note-ptBR Fale com Tigor
     train 2645
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1456 @269.92,-980.4
     note-enUS Talk to Tigor
     note-ptBR Fale com Tigor
     train 8498
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1456 @269.92,-980.4
     note-enUS Talk to Tigor
     note-ptBR Fale com Tigor
     train 8046
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1456 @206.88,-997.45
     skill firstaid 80 |opt
+    note-enUS Create [Heavy Linen Bandages] until your skill in First Aid is 80 or higher
+    note-ptBR Crie [Heavy Linen Bandages] até sua habilidade em First Aid chegar a 80 ou mais
     note-enUS Talk to Pand
     note-ptBR Fale com Pand
     note-enUS Skip this step if you did not have enough [Linen Cloth] to reach 80 skill
     note-ptBR Pule este passo se não tinha [Linen Cloth] suficiente para chegar a 80 de perícia
     train 3277
+    note-enUS Train [Wool Bandage]
+    note-ptBR Treine [Wool Bandage]
     train 7934 |only Rogue
+    note-enUS Train [Anti-Venom] |only Rogue
+    note-ptBR Treine [Anti-Venom] |only Rogue
 step
     only Rogue
     note-enUS Create [Anti-Venom] if you found any [Small Venom Sacs]
@@ -6958,6 +7868,8 @@ step
 step
     path seq 1456 @-212.71,-1065.01
     goto 1456 @-303.83,-1048.66
+    note-enUS Travel to the Elder Rise
+    note-ptBR Vá até Elder Rise
     note-enUS Talk to Hamuul
     note-ptBR Fale com Hamuul
     turnin 1489
@@ -6980,6 +7892,8 @@ step
     note-enUS Talk to Turak
     note-ptBR Fale com Turak
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1456 @-56.98,-1207.8
     note-enUS Talk to Zangen
@@ -6989,34 +7903,48 @@ step
     only Hunter
     goto 1456 @-123.26,-1394.49 60 |only Hunter
     goto 1456 @-100.5,-1454.75
+    note-enUS Travel to the Hunter Rise |only Hunter
+    note-ptBR Vá até Hunter Rise |only Hunter
     note-enUS Talk to Urek
     note-ptBR Fale com Urek
     train 5118
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1456 @-100.5,-1454.75
     note-enUS Talk to Urek
     note-ptBR Fale com Urek
     train 5118
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1456 @-100.5,-1454.75
     note-enUS Talk to Urek
     note-ptBR Fale com Urek
     train 19885
+    note-enUS Train [Track Hidden]
+    note-ptBR Treine [Track Hidden]
 step
     only Hunter
     goto 1456 @-47.69,-1434.64
     note-enUS Talk to Hesuwa
     note-ptBR Fale com Hesuwa
     train 24494
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Warrior
     goto 1456 @-123.26,-1394.49 60 |only Warrior
     goto 1456 @-81.09,-1457.74
+    note-enUS Travel to the Hunter Rise |only Warrior
+    note-ptBR Vá até Hunter Rise |only Warrior
     note-enUS Talk to Torm
     note-ptBR Fale com Torm
     train 845
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 1823
 step
     only Rogue
@@ -7070,14 +7998,22 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp |opt
+    note-enUS Fly to Crossroads
+    note-ptBR Voe para Crossroads
+    note-enUS Now you should be looking for a group to Wailing Caverns
+    note-ptBR Agora procure um grupo para Wailing Caverns
     note-enUS Grind Quilboars while assembling a Wailing Caverns group
     note-ptBR Farme Quilboars enquanto monta um grupo para Wailing Caverns
+    note-enUS Travel to Wailing Caverns
+    note-ptBR Vá até Wailing Caverns
 step
     ifdungeon WC
     path seq 1413 @-2134.68,-764.35
     goto 1413 @-2122.52,-734.62 20
     path seq 1414 @-2061.94,-781.68 @-2028.82,-828.29 @-2021.46,-816.03 @-2036.18,-796.4
     goto 1414 @-2039.86,-801.31
+    note-enUS Run up the mountain at the Wailing Caverns meeting stone
+    note-ptBR Suba a montanha correndo na meeting stone de Wailing Caverns
     note-enUS Follow the arrow closely to reach the hidden cave
     note-ptBR Siga a seta de perto para chegar à caverna escondida
     note-enUS Talk to Nalpak and Ebru
@@ -7113,6 +8049,8 @@ step
     ifdungeon WC
     path seq 1414 @-2028.82,-636.93 @-2050.9,-585.41 @-2168.66,-607.49
     goto 1414 @-2216.5,-742.43 30
+    note-enUS Enter the WC Instance portal. Zone in
+    note-ptBR Entre no portal da instância WC. Entre na instância
 step
     ifonquest 914
     ifdungeon WC
@@ -7214,6 +8152,8 @@ step
     ifdungeon WC
     goto 1413 @-3697.24,-929.2
     hearth |opt
+    note-enUS Hearth to Ratchet
+    note-ptBR Use a pedra de regresso para Ratchet
     use 6948 |opt
     note-enUS Talk to Mebok
     note-ptBR Fale com Mebok
@@ -7239,11 +8179,15 @@ step
     note-enUS Talk to Bragok
     note-ptBR Fale com Bragok
     fp
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
 step
     ifonquest 6981
     ifdungeon WC
     path seq 1413 @-2493.4,-708.95 @-2404.23,-721.11 @-2356.6,-685.98
     goto 1413 @-2259.32,-602.2 50
+    note-enUS Travel up the mountain
+    note-ptBR Suba a montanha
     note-enUS Talk to Falla
     note-ptBR Fale com Falla
     turnin 6981
@@ -7293,6 +8237,8 @@ step
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fly 1456 |opt
+    note-enUS Fly to Thunder Bluff
+    note-ptBR Voe para Thunder Bluff
     note-enUS Talk to Nara
     note-ptBR Fale com Nara
     turnin 914
@@ -7308,21 +8254,35 @@ step
     ifdungeon WC
     path seq 1456 @219.09,-1051.44
     goto 1456 @276.6,-996.12
+    note-enUS Travel to the Spirit Rise and enter the pools of vision
+    note-ptBR Vá até Spirit Rise e entre nas pools of vision
     note-enUS Talk to Apothecary Zamah
     note-ptBR Fale com Apothecary Zamah
     turnin 962
 step
     abandon 1486
+    note-enUS Abandon Deviate Hides
+    note-ptBR Abandone Deviate Hides
 step
     abandon 1487
+    note-enUS Abandon Deviate Eradication
+    note-ptBR Abandone Deviate Eradication
 step
     abandon 1491
+    note-enUS Abandon Smart Drinks
+    note-ptBR Abandone Smart Drinks
 step
     abandon 959
+    note-enUS Abandon Trouble at the Docks
+    note-ptBR Abandone Trouble at the Docks
 step
     abandon 914
+    note-enUS Abandon Leaders of the Fang
+    note-ptBR Abandone Leaders of the Fang
 step
     abandon 962
+    note-enUS Abandon Serpentbloom
+    note-ptBR Abandone Serpentbloom
 step
     ifcomplete 852
     goto 1456 @26.1,-1196.66
@@ -7330,6 +8290,8 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp |opt
+    note-enUS Fly to The Crossroads
+    note-ptBR Voe para The Crossroads
     note-enUS Talk to Regthar
     note-ptBR Fale com Regthar
     turnin 852
@@ -7373,6 +8335,8 @@ step
     ifturnedin 875
     goto 1413 @-1345.3,790.94
     abandon 855 |opt
+    note-enUS Abandon Centaur Bracers
+    note-ptBR Abandone Centaur Bracers
     note-enUS Kill Serena Bloodfeather. Loot her for her Head
     note-ptBR Mate Serena Bloodfeather. Saqueie-a para obter a cabeça dela
     objective 876/1
@@ -7428,6 +8392,8 @@ step
     note-enUS Talk to Vhulgra
     note-ptBR Fale com Vhulgra
     fp
+    note-enUS Get the Splintertree Post flight path
+    note-ptBR Pegue o ponto de voo de Splintertree Post
 step
     ifcomplete 876
     goto 1440 @-2520.05,2305.55 |only Hunter
@@ -7435,6 +8401,10 @@ step
     note-enUS Talk to Vhulgra |only Hunter
     note-ptBR Fale com Vhulgra |only Hunter
     fp |only Hunter |opt
+    note-enUS Fly to Crossroads |only Hunter
+    note-ptBR Voe para Crossroads |only Hunter
+    note-enUS Die and respawn at the Spirit Healer |only !Hunter
+    note-ptBR Morra e renasça no Spirit Healer |only !Hunter
     note-enUS Talk to Darsok
     note-ptBR Fale com Darsok
     turnin 876
@@ -7477,6 +8447,8 @@ step
 step
     goto 1413 @-950.1,-271.14
     zone 1442 |opt
+    note-enUS Travel to Stonetalon Mountains
+    note-ptBR Vá até Stonetalon Mountains
     note-enUS Talk to Seereth
     note-ptBR Fale com Seereth
     turnin 1062
@@ -7485,6 +8457,8 @@ step
     ifturnedin 876
     path seq 1442 @-786.33,-294.97 @-665.72,-280.97 @-522.63,-294.32
     goto 1442 @-394.2,-272.5
+    note-enUS Follow the path on the left upward
+    note-ptBR Siga o caminho da esquerda subindo
     note-enUS Talk to Jin'Zil
     note-ptBR Fale com Jin'Zil
     turnin 1060
@@ -7502,9 +8476,13 @@ step
     turnin 6461
 step
     hearth
+    note-enUS Hearth to Thunder Bluff
+    note-ptBR Use a pedra de regresso para Thunder Bluff
     use 6948
 step
     goto 1456 @-212.71,-1065.01 80
+    note-enUS Travel to the Elder Rise
+    note-ptBR Vá até Elder Rise
     note-enUS Talk to Magatha
     note-ptBR Fale com Magatha
     note-enUS Wait for the RP to finish
@@ -7523,6 +8501,8 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
 step
     only Warlock
     goto 1413 @-1898.58,-2391.93
@@ -7543,24 +8523,32 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Shaman
     goto 1413 @-1881.35,-2384.5
     note-enUS Talk to Omusa
     note-ptBR Fale com Omusa
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Shaman
     goto 1454 @-4225.09,1933.29
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 8498
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     goto 1454 @-4225.09,1933.29
     note-enUS Talk to Kardris
     note-ptBR Fale com Kardris
     train 905
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1454 @-4320.75,1750.51 |only Rogue
@@ -7571,11 +8559,23 @@ step
     note-enUS Talk to Shenthul
     note-ptBR Fale com Shenthul
     train 921
+    note-enUS Train [Pick Pocket]
+    note-ptBR Treine [Pick Pocket]
     train 8676
+    note-enUS Train [Ambush]
+    note-ptBR Treine [Ambush]
     train 1943
+    note-enUS Train [Rupture]
+    note-ptBR Treine [Rupture]
     train 1856
+    note-enUS Train [Vanish]
+    note-ptBR Treine [Vanish]
     train 1725
+    note-enUS Train [Distract]
+    note-ptBR Treine [Distract]
     train 1785
+    note-enUS Train [Stealth Rank 2]
+    note-ptBR Treine [Stealth Rank 2]
     accept 2460
 step
     only Rogue
@@ -7605,6 +8605,10 @@ step
     path seq 1413 @-3216.92,1107.13 |only Rogue
     goto 1413 @-3021.35,1214.56 |only Rogue
     goto 1413 @-2995,1236.85
+    note-enUS Enter The Barrens through the western Exit |only Rogue
+    note-ptBR Entre em The Barrens pela saída oeste |only Rogue
+    note-enUS Travel toward the Sludge Ven |only Rogue
+    note-ptBR Vá em direção a Sludge Ven |only Rogue
     note-enUS Target Taskmaster Fizzule, then use your [Flare Gun] TWICE and type /Salute |only Rogue
     note-ptBR Selecione Taskmaster Fizzule como alvo, use sua [Flare Gun] DUAS vezes e digite /Salute |only Rogue
     note-enUS Be careful! Do NOT approach him until he becomes friendly or he will attack you! |only Rogue
@@ -7655,9 +8659,13 @@ step
 step
     only Rogue
     goto 1413 @-2595.75,-437.35
+    note-enUS Die and respawn at the Spirit Healer |only Rogue
+    note-ptBR Morra e renasça no Spirit Healer |only Rogue
     note-enUS Talk to Devrak
     note-ptBR Fale com Devrak
     fly 1454
+    note-enUS Fly to Orgrimmar
+    note-ptBR Voe para Orgrimmar
 step
     only Rogue
     goto 1454 @-4284.42,1771.28
@@ -7678,15 +8686,33 @@ step
     note-ptBR Se tiver algum [Anti-Venom], use um para se curar do [Touch of Zanzil]
     use 6452
 step
+    only Rogue
+    note-enUS Delete the [Flare Gun] from your bags, as it's no longer needed
+    note-ptBR Apague a [Flare Gun] das suas bolsas, pois não é mais necessária
+    note-enUS Delete [Fizzule's Whistle] from your bags, as it's no longer needed
+    note-ptBR Apague [Fizzule's Whistle] das suas bolsas, pois não é mais necessário
+step
     abandon 6421
+    note-enUS Abandon Boulderslide Ravine
+    note-ptBR Abandone Boulderslide Ravine
 step
     abandon 4021
+    note-enUS Abandon Counterattack!
+    note-ptBR Abandone Counterattack!
 step
     abandon 6481
+    note-enUS Abandon Earthen Arise
+    note-ptBR Abandone Earthen Arise
 step
     abandon 6284
+    note-enUS Abandon Arachnophobia
+    note-ptBR Abandone Arachnophobia
 step
     abandon 6641
+    note-enUS Abandon Vorsha the Lasher
+    note-ptBR Abandone Vorsha the Lasher
 step
     abandon 6563
+    note-enUS Abandon The Essence of Aku'Mai
+    note-ptBR Abandone The Essence of Aku'Mai
 ]==])

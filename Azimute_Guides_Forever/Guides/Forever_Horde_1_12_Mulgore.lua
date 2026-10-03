@@ -40,16 +40,22 @@ step
     note-enUS Talk to Kawnie Softbreeze
     note-ptBR Fale com Kawnie Softbreeze
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     only Warrior
     note-enUS Talk to Harutt Thunderhorn
     note-ptBR Fale com Harutt Thunderhorn
     train 6673
+    note-enUS Train [Battle Shout]
+    note-ptBR Treine [Battle Shout]
 step
     only Shaman
     note-enUS Talk to Meela Dawnstrider
     note-ptBR Fale com Meela Dawnstrider
     train 8017
+    note-enUS Train [Rockbiter Weapon]
+    note-ptBR Treine [Rockbiter Weapon]
 step
     note-enUS Kill Plainstriders. Loot them for their Meat and Feathers
     note-ptBR Mate Plainstriders. Saqueie-os para obter carne e penas
@@ -86,6 +92,8 @@ step
     note-ptBR Compre [Light Shots] dela |only Hunter
     collect 2516 1000 |quest 750 |q 750/1 |only Hunter
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     note-enUS Talk to Chief Hawkwind
     note-ptBR Fale com Chief Hawkwind
@@ -115,6 +123,8 @@ step
 step
     path closest 1412 @-292.73,-3285.2 @-362.6,-3281.44 @-452.5,-3246.84 @-554.23,-3213.96 @-572.72,-3139.98 @-626.67,-3065.32 @-616.9,-2998.53 @-606.63,-2923.52 @-621.01,-2847.15 @-537.27,-2887.22 @-461.75,-2869.75 @-387.77,-2851.94 @-356.43,-2951.61 @-307.11,-3026.96 @-265.5,-3086.55 @-217.21,-3146.15 @-207.45,-3221.16
     level 3
+    note-enUS Grind to 1150+/1400xp
+    note-ptBR Mate monstros até 1150+/1400xp
 step
     note-enUS Grind Plainstriders. Loot them until you have 2 silver worth of vendor items |only Warrior Druid
     note-ptBR Faça grind de Plainstriders. Saqueie-os até ter 2 de prata em itens para vender |only Warrior Druid
@@ -128,6 +138,8 @@ step
     note-enUS Talk to Kawnie Softbreeze
     note-ptBR Fale com Kawnie Softbreeze
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     note-enUS Talk to Brave Windfeather
     note-ptBR Fale com Brave Windfeather
@@ -140,25 +152,35 @@ step
     note-ptBR Fale com Harutt Thunderhorn
     turnin 3091
     train 100
+    note-enUS Train [Charge]
+    note-ptBR Treine [Charge]
     train 772
+    note-enUS Train [Rend]
+    note-ptBR Treine [Rend]
 step
     only Warrior
     note-enUS Talk to Harutt Thunderhorn
     note-ptBR Fale com Harutt Thunderhorn
     turnin 3091
     train 772
+    note-enUS Train [Rend]
+    note-ptBR Treine [Rend]
 step
     only Hunter
     note-enUS Talk to Lanka Farshot
     note-ptBR Fale com Lanka Farshot
     turnin 3092
     train 1978
+    note-enUS Train [Serpent Sting]
+    note-ptBR Treine [Serpent Sting]
 step
     only Druid
     note-enUS Talk to Gart Mistrunner
     note-ptBR Fale com Gart Mistrunner
     turnin 3094
     train 8921
+    note-enUS Train [Moonfire]
+    note-ptBR Treine [Moonfire]
 step
     only Shaman
     note-enUS Talk to Seer Ravenfeather
@@ -170,6 +192,8 @@ step
     note-ptBR Fale com Meela Dawnstrider
     turnin 3093
     train 8042
+    note-enUS Train [Earth Shock]
+    note-ptBR Treine [Earth Shock]
 step
     goto 1412 @-1005.5,-3372.7
     note-enUS Kill Battleboars. Loot them for their Flanks and Snouts
@@ -190,6 +214,8 @@ step
 step
     path seq 1412 @-1017.63,-3126.97 @-1062.33,-3048.54 @-1155.31,-3056.41
     goto 1412 @-1162.51,-2971.13 35
+    note-enUS Travel through the cave-c:Mulgore,59.67,83.33
+    note-ptBR Atravesse a caverna-c:Mulgore,59.67,83.33
     note-enUS Kill Bristleback Quilboars. Loot them for their Belts
     note-ptBR Mate Bristleback Quilboars. Saqueie-os para obter os cintos
     objective 757/1 |opt
@@ -201,6 +227,8 @@ step
     objective 3376/1
 step
     goto 1412 @-1201.04,-3105.39 40
+    note-enUS Enter the Cave-c:Mulgore,63.24,82.70
+    note-ptBR Entre na caverna-c:Mulgore,63.24,82.70
     note-enUS Loot the [Dirt-stained Map] on the ground. Use it to start the quest
     note-ptBR Saqueie o [Dirt-stained Map] no chão. Use-o para iniciar a missão
     collect 4851 1 |quest 781
@@ -223,9 +251,15 @@ step
 step
     path closest 1412 @-1239.06,-3015.66 @-1256.01,-2954.35 @-1223.13,-2882.08 @-1171.75,-2879.34 @-1103.43,-2914.62 @-1122.95,-2977.98 @-1152.23,-3065.32 @-1076.71,-3040.66 @-1038.69,-3079.02 @-1087.5,-3092.38 @-1151.2,-3082.44
     level 5 |only !Shaman
+    note-enUS Grind to 880+/2800xp |only !Shaman
+    note-ptBR Mate monstros até 880+/2800xp |only !Shaman
     level 5 |only Shaman
+    note-enUS Grind to level 5 |only Shaman
+    note-ptBR Mate monstros até o nível 5 |only Shaman
 step
     hearth |opt
+    note-enUS Hearth to Camp Narache
+    note-ptBR Use a pedra de regresso para Camp Narache
     use 6948 |opt
     note-enUS Talk to Grull Hawkwind
     note-ptBR Fale com Grull Hawkwind
@@ -239,6 +273,8 @@ step
     note-enUS Talk to Kawnie Softbreeze
     note-ptBR Fale com Kawnie Softbreeze
     vendor
+    note-enUS Vendor Trash
+    note-ptBR Venda o lixo
 step
     note-enUS Talk to Brave Windfeather
     note-ptBR Fale com Brave Windfeather
@@ -261,6 +297,10 @@ step
 step
     only Shaman
     goto 1412 @-712.98,-3018.05 30 |only Shaman
+    note-enUS Travel toward the rock-c:Mulgore,53.74,80.15 |only Shaman
+    note-ptBR Vá em direção à pedra-c:Mulgore,53.74,80.15 |only Shaman
+    note-enUS Use the [Earth Sapta] |only Shaman
+    note-ptBR Use o [Earth Sapta] |only Shaman
     use 6635 |only Shaman |opt
     note-enUS Talk to the Manifestation
     note-ptBR Fale com a Manifestation
@@ -276,39 +316,59 @@ step
     note-enUS Talk to Meela Dawnstrider
     note-ptBR Fale com Meela Dawnstrider
     train 332
+    note-enUS Train [Healing Wave]
+    note-ptBR Treine [Healing Wave]
 step
     only Hunter
     note-enUS Talk to Lanka Farshot
     note-ptBR Fale com Lanka Farshot
     train 1130
+    note-enUS Train [Hunter's Mark]
+    note-ptBR Treine [Hunter's Mark]
     train 3044
+    note-enUS Train [Arcane Shot]
+    note-ptBR Treine [Arcane Shot]
 step
     only Hunter
     note-enUS Talk to Lanka Farshot
     note-ptBR Fale com Lanka Farshot
     train 3044
+    note-enUS Train [Arcane Shot]
+    note-ptBR Treine [Arcane Shot]
 step
     only Druid
     note-enUS Talk to Gart Mistrunner
     note-ptBR Fale com Gart Mistrunner
     train 467
+    note-enUS Train [Thorns]
+    note-ptBR Treine [Thorns]
     train 5177
+    note-enUS Train [Wrath]
+    note-ptBR Treine [Wrath]
 step
     only Druid
     note-enUS Talk to Gart Mistrunner
     note-ptBR Fale com Gart Mistrunner
     train 5177
+    note-enUS Train [Wrath]
+    note-ptBR Treine [Wrath]
 step
     only Warrior
     note-enUS Talk to Harutt Thunderhorn
     note-ptBR Fale com Harutt Thunderhorn
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
     train 6343
+    note-enUS Train [Thunder Clap]
+    note-ptBR Treine [Thunder Clap]
 step
     only Warrior
     note-enUS Talk to Harutt Thunderhorn
     note-ptBR Fale com Harutt Thunderhorn
     train 3127
+    note-enUS Train [Parry]
+    note-ptBR Treine [Parry]
 step
     note-enUS Talk to Antur Fallow
     note-ptBR Fale com Antur Fallow
@@ -335,6 +395,8 @@ register([==[
 
 step
     goto 1412 @-408.9,-2179.8
+    note-enUS Die and respawn at the Spirit Healer
+    note-ptBR Morra e renasça no Spirit Healer
     note-enUS Talk to Yaw Sharpmane
     note-ptBR Fale com Yaw Sharpmane
     accept 96130
@@ -347,6 +409,8 @@ step
     note-enUS Talk to Mahnott
     note-ptBR Fale com Mahnott
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Walking Stick] (5s 04c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Walking Stick] (5s 04c). Você volta depois se ainda não tiver o suficiente
 step
     only Shaman Druid
     note-enUS Talk to Mahnott. Buy a [Walking Stick] from him
@@ -357,6 +421,8 @@ step
     note-enUS Talk to Mahnott
     note-ptBR Fale com Mahnott
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Wooden Mallet] (7s 1c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Wooden Mallet] (7s 1c). Você volta depois se ainda não tiver o suficiente
 step
     only Warrior
     note-enUS Talk to Mahnott. Buy a [Wooden Mallet] from him
@@ -367,6 +433,8 @@ step
     note-enUS Talk to Kennah
     note-ptBR Fale com Kennah
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Ornate Blunderbuss] (4s 14c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Ornate Blunderbuss] (4s 14c). Você volta depois se ainda não tiver o suficiente
 step
     only Hunter
     note-enUS Talk to Kennah. Buy a [Ornate Blunderbuss] from him
@@ -397,6 +465,8 @@ step
     note-ptBR Fale com Innkeeper Kauth
     turnin 1656
     home
+    note-enUS Set your Hearthstone to Bloodhoof Village
+    note-ptBR Defina sua pedra de regresso em Bloodhoof Village
 step
     note-enUS Talk to Baine
     note-ptBR Fale com Baine
@@ -516,6 +586,8 @@ step
     note-enUS Buy [Freshly Baked Bread] from her |only Warrior
     note-ptBR Compre [Freshly Baked Bread] dela |only Warrior
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     collect 1179 10 |quest 746 |q 746/1 |only Shaman Druid
     collect 4541 10 |quest 746 |q 746/1 |only Warrior
 step
@@ -529,11 +601,15 @@ step
     note-enUS Talk to Vira
     note-ptBR Fale com Vira
     train 3273
+    note-enUS Train [First Aid]
+    note-ptBR Treine [First Aid]
 step
     only Shaman Druid
     note-enUS Talk to Mahnott
     note-ptBR Fale com Mahnott
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Walking Stick] (5s 04c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Walking Stick] (5s 04c). Você volta depois se ainda não tiver o suficiente
 step
     only Shaman Druid
     note-enUS Talk to Mahnott. Buy a [Walking Stick] from him
@@ -544,6 +620,8 @@ step
     note-enUS Talk to Mahnott
     note-ptBR Fale com Mahnott
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Wooden Mallet] (7s 1c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Wooden Mallet] (7s 1c). Você volta depois se ainda não tiver o suficiente
 step
     only Warrior
     note-enUS Talk to Mahnott. Buy a [Wooden Mallet] from him
@@ -554,6 +632,8 @@ step
     note-enUS Talk to Kennah
     note-ptBR Fale com Kennah
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Ornate Blunderbuss] (4s 14c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Ornate Blunderbuss] (4s 14c). Você volta depois se ainda não tiver o suficiente
 step
     only Hunter
     note-enUS Talk to Kennah. Buy a [Ornate Blunderbuss] from him
@@ -573,6 +653,8 @@ step
     note-enUS Talk to Pyall
     note-ptBR Fale com Pyall
     train 2550
+    note-enUS Train Cooking
+    note-ptBR Treine Cooking
     turnin 96661
 step
     note-enUS Talk to Zarlman
@@ -586,21 +668,29 @@ step
     note-enUS Talk to Yaw
     note-ptBR Fale com Yaw
     train 5116
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     note-enUS Talk to Gennia
     note-ptBR Fale com Gennia
     train 5186
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     note-enUS Talk to Krang
     note-ptBR Fale com Krang
     train 284
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     note-enUS Talk to Narm
     note-ptBR Fale com Narm
     train 8044
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     path closest 1412 @-784.9,-2350.18 @-597.9,-2301.54 @-674.96,-2336.14 @-784.9,-2350.18 @-904.6,-2371.07 @-1016.6,-2410.12 @-784.9,-2350.18
     note-enUS Talk to Morin
@@ -647,6 +737,8 @@ step
 step
     path seq 1412 @297.8,-2398.5 @395.8,-2339.3
     goto 1412 @442.3,-2439.1
+    note-enUS Enter the cave
+    note-ptBR Entre na caverna
     note-enUS Kill Palemane Tanners, Palemane Skinners and Palemane Poachers
     note-ptBR Mate Palemane Tanners, Palemane Skinners e Palemane Poachers
     objective 745/1 |opt
@@ -671,6 +763,8 @@ step
     objective 745/3
 step
     goto 1412 @-408.7,-2180
+    note-enUS Die and respawn at the Spirit Healer
+    note-ptBR Morra e renasça no Spirit Healer
     note-enUS Talk to Yaw Sharpmane
     note-ptBR Fale com Yaw Sharpmane
     turnin 96130
@@ -679,6 +773,8 @@ step
     note-enUS Talk to Yaw
     note-ptBR Fale com Yaw
     train 5116
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifcomplete 766
     note-enUS Talk to Maur
@@ -689,6 +785,8 @@ step
     note-enUS Talk to Mahnott
     note-ptBR Fale com Mahnott
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Walking Stick] (5s 04c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Walking Stick] (5s 04c). Você volta depois se ainda não tiver o suficiente
 step
     only Shaman Druid
     note-enUS Talk to Mahnott. Buy a [Walking Stick] from him
@@ -699,6 +797,8 @@ step
     note-enUS Talk to Mahnott
     note-ptBR Fale com Mahnott
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Wooden Mallet] (7s 1c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Wooden Mallet] (7s 1c). Você volta depois se ainda não tiver o suficiente
 step
     only Warrior
     note-enUS Talk to Mahnott. Buy a [Wooden Mallet] from him
@@ -709,6 +809,8 @@ step
     note-enUS Talk to Kennah
     note-ptBR Fale com Kennah
     vendor
+    note-enUS Vendor trash. Sell your weapon if it gives you enough money for a [Ornate Blunderbuss] (4s 14c). You'll come back later if you don't have enough yet
+    note-ptBR Venda o lixo. Venda sua arma se der dinheiro suficiente para comprar [Ornate Blunderbuss] (4s 14c). Você volta depois se ainda não tiver o suficiente
 step
     only Hunter
     note-enUS Talk to Kennah. Buy a [Ornate Blunderbuss] from him
@@ -733,6 +835,8 @@ step
     note-enUS Talk to Harant
     note-ptBR Fale com Harant
     vendor |opt
+    note-enUS Vendor trash and repair
+    note-ptBR Venda o lixo e repare
     note-enUS Talk to Brave Wildrunner
     note-ptBR Fale com Brave Wildrunner
     note-enUS He patrols around a bit
@@ -762,21 +866,29 @@ step
     note-enUS Talk to Narm
     note-ptBR Fale com Narm
     train 8044
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     note-enUS Talk to Gennia
     note-ptBR Fale com Gennia
     train 5186
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     note-enUS Talk to Krang
     note-ptBR Fale com Krang
     train 284
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     note-enUS Talk to Yaw
     note-ptBR Fale com Yaw
     train 5116
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     note-enUS Talk to Innkeeper Kauth
     note-ptBR Fale com Innkeeper Kauth
@@ -785,6 +897,8 @@ step
     note-enUS Buy [Freshly Baked Bread] from him |only Warrior
     note-ptBR Compre [Freshly Baked Bread] dele |only Warrior
     vendor |only !Hunter
+    note-enUS Vendor Trash |only !Hunter
+    note-ptBR Venda o lixo |only !Hunter
     collect 1179 10 |quest 746 |q 746/1 |only Shaman Druid
     collect 4541 10 |quest 746 |q 746/1 |only Warrior
 step
@@ -805,6 +919,8 @@ step
     note-enUS Kill Bael'dun Diggers and Bael'dun Appraisers. Loot them for their Prospector's Picks
     note-ptBR Mate Bael'dun Diggers e Bael'dun Appraisers. Saqueie-os para obter os Prospector's Picks
     use 4702
+    note-enUS Smash the [Picks] at the Forge
+    note-ptBR Quebre os [Picks] na Forge
     note-enUS Be careful as Bael'dun Appraisers cast [Lesser Heal] (Ranged Cast: Heals themselves or a nearby mob below 50% health for about 75 health)
     note-ptBR Cuidado, os Bael'dun Appraisers lançam [Lesser Heal] (Lançamento à distância: cura a si mesmos ou um mob próximo abaixo de 50% de vida em cerca de 75 de vida)
     objective 746/1
@@ -815,6 +931,8 @@ step
     objective 743/1
 step
     goto 1412 @333.53,-1523.73 50
+    note-enUS Enter the cave just north of the Windfury Harpies-c:Mulgore,33.37,36.52
+    note-ptBR Entre na caverna logo ao norte das Windfury Harpies-c:Mulgore,33.37,36.52
     note-enUS Talk to Wiserunner
     note-ptBR Fale com Wiserunner
     turnin 772
@@ -822,6 +940,10 @@ step
 step
     path seq 1456 @186.8,-1309.4 @147.9,-1290.6
     goto 1456 @104.5,-1308.4
+    note-enUS You can delete [Water of the Seers] from your bags, as it's no longer needed
+    note-ptBR Você pode apagar [Water of the Seers] das suas bolsas, pois não é mais necessário
+    note-enUS Take the elevator into Thunder Bluff
+    note-ptBR Pegue o elevador para Thunder Bluff
     note-enUS Talk to Boarton Shadetotem
     note-ptBR Fale com Boarton Shadetotem
     note-enUS He is [Stealthed]
@@ -831,10 +953,14 @@ step
     note-enUS Talk to Innkeeper Pala
     note-ptBR Fale com Innkeeper Pala
     home
+    note-enUS Set your Hearthstone to Thunder Bluff
+    note-ptBR Defina sua pedra de regresso em Thunder Bluff
 step
     path seq 1456 @186.8,-1309.4
     goto 1456 @147.9,-1290.6 30
     zone 1412 |opt
+    note-enUS Exit Thunder Bluff
+    note-ptBR Saia de Thunder Bluff
     note-enUS Finish getting the items for Mazzranache
     note-ptBR Termine de pegar os itens para Mazzranache
     objective 766/1 |opt
@@ -895,23 +1021,35 @@ step
     ifcomplete 766
     path closest 1412 @-1009.92,-1073 @-906.66,-926.41 @-788.5,-912.36 @-674.44,-866.81 @-572.21,-903.12 @-512.61,-983.26 @-511.59,-1084.3 @-496.17,-1166.84 @-506.45,-1236.71 @-561.42,-1278.84 @-635.91,-1302.81 @-737.12,-1315.14 @-836.79,-1312.4 @-920.02,-1316.86 @-972.42,-1249.73 @-1063.35,-1159.31 @-1009.92,-1073
     level 9
+    note-enUS Grind to 3020+/6500xp
+    note-ptBR Mate monstros até 3020+/6500xp
 step
     ifcomplete 761
     path closest 1412 @-1009.92,-1073 @-906.66,-926.41 @-788.5,-912.36 @-674.44,-866.81 @-572.21,-903.12 @-512.61,-983.26 @-511.59,-1084.3 @-496.17,-1166.84 @-506.45,-1236.71 @-561.42,-1278.84 @-635.91,-1302.81 @-737.12,-1315.14 @-836.79,-1312.4 @-920.02,-1316.86 @-972.42,-1249.73 @-1063.35,-1159.31 @-1009.92,-1073
     level 9
+    note-enUS Grind to 3720+/6500xp
+    note-ptBR Mate monstros até 3720+/6500xp
 step
     ifcomplete 766
     path closest 1412 @-1009.92,-1073 @-906.66,-926.41 @-788.5,-912.36 @-674.44,-866.81 @-572.21,-903.12 @-512.61,-983.26 @-511.59,-1084.3 @-496.17,-1166.84 @-506.45,-1236.71 @-561.42,-1278.84 @-635.91,-1302.81 @-737.12,-1315.14 @-836.79,-1312.4 @-920.02,-1316.86 @-972.42,-1249.73 @-1063.35,-1159.31 @-1009.92,-1073
     level 9
+    note-enUS Grind to 3700+/6500xp
+    note-ptBR Mate monstros até 3700+/6500xp
 step
     path closest 1412 @-1009.92,-1073 @-906.66,-926.41 @-788.5,-912.36 @-674.44,-866.81 @-572.21,-903.12 @-512.61,-983.26 @-511.59,-1084.3 @-496.17,-1166.84 @-506.45,-1236.71 @-561.42,-1278.84 @-635.91,-1302.81 @-737.12,-1315.14 @-836.79,-1312.4 @-920.02,-1316.86 @-972.42,-1249.73 @-1063.35,-1159.31 @-1009.92,-1073
     level 9
+    note-enUS Grind to 4400+/6500xp
+    note-ptBR Mate monstros até 4400+/6500xp
 step
     ifnotturnedin 870
     goto 1412 @-598.9,-1603.7
+    note-enUS Die at the waypoint arror (or further south of it) and respawn at the Spirit Healer
+    note-ptBR Morra na seta do waypoint (ou mais ao sul) e renasça no Spirit Healer
     note-enUS Talk to Innkeeper Kauth
     note-ptBR Fale com Innkeeper Kauth
     vendor
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
 step
     ifonquest 770
     note-enUS Talk to Skorn
@@ -955,6 +1093,8 @@ step
     turnin 743
 step
     only Hunter
+    note-enUS You can delete [Prospector's Picks] from your bags, as they're no longer needed
+    note-ptBR Você pode apagar [Prospector's Picks] das suas bolsas, pois não são mais necessários
     note-enUS Talk to Kennah
     note-ptBR Fale com Kennah
     note-enUS Buy [Heavy Shots] from him |only Hunter
@@ -970,6 +1110,8 @@ step
     note-enUS Talk to Krang
     note-ptBR Fale com Krang
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 1505
 step
     only Shaman
@@ -977,28 +1119,38 @@ step
     note-ptBR Fale com Narm
     accept 2984
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     note-enUS Talk to Yaw
     note-ptBR Fale com Yaw
     accept 6061
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     ifnotturnedin 5928
     note-enUS Talk to Gennia
     note-ptBR Fale com Gennia
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     accept 5928 |only Tauren
 step
     only Druid
     note-enUS Talk to Gennia
     note-ptBR Fale com Gennia
     train 8924
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     path closest 1412 @24.77,-2239.89 @-154.53,-2152.56 @-44.59,-2177.22 @24.77,-2239.89
     use 15914
+    note-enUS Use your [Taming Rod] on an Adult Plainstrider at max range
+    note-ptBR Use sua [Taming Rod] em um Adult Plainstrider à distância máxima
     objective 6061/1
 step
     only Hunter
@@ -1010,6 +1162,8 @@ step
     only Hunter
     path closest 1412 @-494.63,-1720.66 @-375.96,-1990.55 @-348.73,-1890.2 @-427.33,-1823.41 @-494.63,-1720.66
     use 15915
+    note-enUS Use your [Taming Rod] on a Prairie Stalker at max range
+    note-ptBR Use sua [Taming Rod] em um Prairie Stalker à distância máxima
     objective 6087/1
 step
     only Hunter
@@ -1021,6 +1175,8 @@ step
     only Hunter
     path closest 1412 @-379.55,-1688.47 @-285.02,-1652.85 @-601.49,-1793.62
     use 15916
+    note-enUS Use your [Taming Rod] on a Swoop at max range and re-cast it immediately if they knock you down
+    note-ptBR Use sua [Taming Rod] em um Swoop à distância máxima e lance de novo imediatamente se ele derrubar você
     note-enUS If you fail and run out of Taming Rod Charges, abandon the quest, then pick it up again and come back
     note-ptBR Se falhar e acabarem as cargas do Taming Rod, abandone a missão, pegue-a novamente e volte
     objective 6088/1
@@ -1058,6 +1214,8 @@ step
     note-enUS Kill Flatland Prowlers. Loot them for their Claws
     note-ptBR Mate Flatland Prowlers. Saqueie-os para obter as garras
     objective 861/1 |opt
+    note-enUS Tame a Prairie Wolf Alpha
+    note-ptBR Domine um Prairie Wolf Alpha
     note-enUS This will allow you to train [Bite Rank 2]
     note-ptBR Isto permitirá treinar [Bite Rank 2]
 step
@@ -1086,6 +1244,8 @@ step
     objective 759/1
 step
     goto 1412 @-1112.16,-1892.6 20
+    note-enUS Travel to The Venture Co. Mine-c:Mulgore,61.51,47.29
+    note-ptBR Vá até The Venture Co. Mine-c:Mulgore,61.51,47.29
     note-enUS Kill Venture Co. Workers and Venture Co. Supervisors
     note-ptBR Mate Venture Co. Workers e Venture Co. Supervisors
     objective 764/1 |opt
@@ -1141,6 +1301,8 @@ step
     turnin 98424
 step
     goto 1412 @-393.1,-2333.4
+    note-enUS Travel to Bloodhoof Village |only Tauren
+    note-ptBR Vá até Bloodhoof Village |only Tauren
     note-enUS Talk to Baine Bloodhoof
     note-ptBR Fale com Baine Bloodhoof
     turnin 99080
@@ -1154,8 +1316,12 @@ step
 step
     goto 1456 @104.5,-1308.4
     hearth |only !Druid |opt
+    note-enUS Hearth to Thunder Bluff |only !Druid
+    note-ptBR Use a pedra de regresso para Thunder Bluff |only !Druid
     use 6948 |only !Druid |opt
     zone 1456 |only Druid |opt
+    note-enUS Travel to Thunder Bluff |only Druid
+    note-ptBR Vá até Thunder Bluff |only Druid
     note-enUS Talk to Boarton Shadetotem
     note-ptBR Fale com Boarton Shadetotem
     note-enUS He is [Stealthed]
@@ -1185,6 +1351,8 @@ step
     note-enUS Talk to Hesuwa
     note-ptBR Fale com Hesuwa
     train 24547
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Shaman Druid
     note-enUS Drag [Beast Training] onto your Action Bars. Teach skills to your pet |only Hunter
@@ -1192,11 +1360,15 @@ step
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 199
+    note-enUS Train Two-Handed Maces
+    note-ptBR Treine Two-Handed Maces
 step
     only Hunter
     note-enUS Talk to Ansekhwa
     note-ptBR Fale com Ansekhwa
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     note-enUS Talk to Eyahn
     note-ptBR Fale com Eyahn
@@ -1224,6 +1396,8 @@ step
     only Tauren Druid
     ifonquest 5928
     goto 1456 @-230.66,-1059.79 80 |only Tauren Druid
+    note-enUS Travel to the Elder Rise-c:Thunder Bluff,71.60,30.15 |only Tauren Druid
+    note-ptBR Vá até Elder Rise-c:Thunder Bluff,71.60,30.15 |only Tauren Druid
     note-enUS Talk to Turak
     note-ptBR Fale com Turak
     turnin 5928
@@ -1235,6 +1409,8 @@ step
     accept 5922
 step
     only Tauren Druid
+    note-enUS Cast [Teleport: Moonglade] |only Tauren Druid
+    note-ptBR Lance [Teleport: Moonglade] |only Tauren Druid
     note-enUS Talk to Dendrite
     note-ptBR Fale com Dendrite
     turnin 5922
@@ -1246,6 +1422,8 @@ step
     objective 5930/1
 step
     only Tauren Druid
+    note-enUS Cast [Teleport: Moonglade] |only Tauren Druid
+    note-ptBR Lance [Teleport: Moonglade] |only Tauren Druid
     note-enUS Talk to Dendrite
     note-ptBR Fale com Dendrite
     turnin 5930
@@ -1253,10 +1431,14 @@ step
 step
     only Tauren Druid
     hearth |only Tauren Druid |opt
+    note-enUS Hearth to Thunder Bluff |only Tauren Druid
+    note-ptBR Use a pedra de regresso para Thunder Bluff |only Tauren Druid
     use 6948 |only Tauren Druid |opt
     note-enUS Talk to Bunthen |only Tauren Druid
     note-ptBR Fale com Bunthen |only Tauren Druid
     fly 1456 |only Tauren Druid |opt
+    note-enUS Fly to Thunder Bluff |only Tauren Druid
+    note-ptBR Voe para Thunder Bluff |only Tauren Druid
     note-enUS Talk to Turak
     note-ptBR Fale com Turak
     turnin 5932
@@ -1272,6 +1454,8 @@ step
     path closest 1456 @186.8,-1309.4 @147.9,-1290.6
     path closest 1412 @419.33,-1238.77 @496.39,-940.79 @419.33,-1238.77 @496.39,-940.79
     zone 1412 |opt
+    note-enUS Exit Thunder Bluff
+    note-ptBR Saia de Thunder Bluff
     note-enUS Keep an eye out for Ghost Howl. Loot him for his [Demon Scarred Cloak]. Use it to start the quest
     note-ptBR Fique atento a Ghost Howl. Saqueie-o para obter o [Demon Scarred Cloak]. Use-o para iniciar a missão
     note-enUS Skip this step if you're unable to find him
@@ -1303,6 +1487,8 @@ step
 step
     only Tauren
     use 5416
+    note-enUS Use the [Wildmane Cleansing Totem] at the Well
+    note-ptBR Use o [Wildmane Cleansing Totem] no Well
     objective 760/1
 step
     path closest 1412 @-654.41,-690.77 @-448.91,-824.34 @-613.31,-1430.57 @-839.36,-1399.74
@@ -1319,6 +1505,8 @@ step
 step
     ifdungeon RFC
     zone 1456 |opt
+    note-enUS Travel back to Thunder Bluff
+    note-ptBR Volte para Thunder Bluff
     note-enUS Talk to Rahauro
     note-ptBR Fale com Rahauro
     accept 5722
@@ -1362,8 +1550,12 @@ step
     path seq 1456 @-141.4,-1432.7
     goto 1456 @-161.3,-1454.2 10
     zone 1412 |opt
+    note-enUS Jump down the Hunter Rise onto the small hill to exit Thunder Bluff
+    note-ptBR Pule do Hunter Rise na colina pequena para sair de Thunder Bluff
     note-enUS Follow the arrow precisely to avoid dying. Regain some health before the second jump
     note-ptBR Siga a seta com precisão para não morrer. Recupere um pouco de vida antes do segundo pulo
+    note-enUS Travel to Bloodhoof Village
+    note-ptBR Vá até Bloodhoof Village
     note-enUS Talk to Skorn
     note-ptBR Fale com Skorn
     turnin 770
@@ -1377,26 +1569,38 @@ step
     note-enUS Talk to Narm
     note-ptBR Fale com Narm
     train 547
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     note-enUS Talk to Gennia
     note-ptBR Fale com Gennia
     train 8936
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     note-enUS Talk to Krang
     note-ptBR Fale com Krang
     train 7384
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     note-enUS Talk to Yaw
     note-ptBR Fale com Yaw
     train 14281
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Tauren Druid
     goto 1412 @-1527.78,-2341.62 100
     zone 1413 |opt
+    note-enUS Travel to The Barrens
+    note-ptBR Vá até The Barrens
     use 15710
+    note-enUS Use [Cenarion Lunardust] at the Moonkin Stone
+    note-ptBR Use [Cenarion Lunardust] na Moonkin Stone
     note-enUS Kill Lunaclaw as he spawns. Talk to the Lunaclaw Spirit afterwards
     note-ptBR Mate Lunaclaw quando ele aparecer. Depois fale com o Lunaclaw Spirit
     note-enUS Be careful! Lunaclaw casts [Thrash] (Charges 2 extra attacks every 10 seconds)
@@ -1410,16 +1614,24 @@ step
     note-enUS Talk to Omusa
     note-ptBR Fale com Omusa
     fp
+    note-enUS Get the Camp Taurajo flight path
+    note-ptBR Pegue o ponto de voo de Camp Taurajo
 step
     only Druid
     ifnotturnedin 848
     note-enUS Talk to Omusa
     note-ptBR Fale com Omusa
     fp
+    note-enUS Get the Camp Taurajo flight path
+    note-ptBR Pegue o ponto de voo de Camp Taurajo
     fly 1456 |only Tauren
+    note-enUS Fly to Thunder Bluff |only Tauren
+    note-ptBR Voe para Thunder Bluff |only Tauren
 step
     only Tauren Druid
     goto 1456 @-230.66,-1059.79 80 |only Tauren Druid
+    note-enUS Travel to the Elder Rise-c:Thunder Bluff,71.60,30.15 |only Tauren Druid
+    note-ptBR Vá até Elder Rise-c:Thunder Bluff,71.60,30.15 |only Tauren Druid
     note-enUS Talk to Turak
     note-ptBR Fale com Turak
     turnin 6002
@@ -1429,12 +1641,16 @@ step
     note-enUS Talk to Tal
     note-ptBR Fale com Tal
     fp
+    note-enUS Fly to Camp Taurajo
+    note-ptBR Voe para Camp Taurajo
 step
     only Tauren
     note-enUS Talk to Kirge Sternhorn
     note-ptBR Fale com Kirge Sternhorn
     accept 854
 step
+    note-enUS Travel north toward The Crossroads
+    note-ptBR Vá para o norte em direção a The Crossroads
     note-enUS Talk to Tonga
     note-ptBR Fale com Tonga
     turnin 886 |only Tauren Druid
@@ -1493,6 +1709,8 @@ step
     only Shaman
     path seq 1411 @-3905.13,-228.41 @-3899.31,-241.45 @-3906.71,-270.71 @-3910.94,-247.45 @-3931.56,-240.75 @-3964.35,-242.51 @-3974.39,-228.76 @-4020.92,-219.95 @-4034.67,-232.64 |only Shaman
     goto 1411 @-4033.08,-255.91 10 |only Shaman
+    note-enUS Travel the path up the mountain to Telf-c:Durotar,39.16,58.56 |only Shaman
+    note-ptBR Siga o caminho montanha acima até Telf-c:Durotar,39.16,58.56 |only Shaman
     note-enUS Be careful to not fall of the mountain, the path is very narrow. You could die if you fall |only Shaman
     note-ptBR Cuidado para não cair da montanha, o caminho é muito estreito. Você pode morrer se cair |only Shaman
     note-enUS Talk to Telf

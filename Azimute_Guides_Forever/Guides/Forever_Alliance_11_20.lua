@@ -27,6 +27,8 @@ step
     note-enUS Talk to Innkeeper Allison
     note-ptBR Fale com Innkeeper Allison
     home
+    note-enUS Set your Hearthstone to Stormwind City
+    note-ptBR Defina sua pedra de regresso em Stormwind City
 step
     only Human
     goto 1453 @489.99,-8835.76
@@ -40,11 +42,17 @@ step
     note-enUS Talk to Dungar Longdrink
     note-ptBR Fale com Dungar Longdrink
     fly 1436 |only !Nightelf
+    note-enUS Fly to Westfall |only !Nightelf
+    note-ptBR Voe para Westfall |only !Nightelf
     fp |only Nightelf
+    note-enUS Get the Stormwind Flight Path |only Nightelf
+    note-ptBR Pegue o ponto de voo de Stormwind |only Nightelf
 step
     goto 1429 @875.96,-9814.4
     goto 1436 @918.42,-9851.5
     zone 1436 |opt
+    note-enUS Travel to Westfall
+    note-ptBR Vá até Westfall
     note-enUS Talk to Farmer Furlbrow
     note-ptBR Fale com Farmer Furlbrow
     accept 64
@@ -56,6 +64,8 @@ step
     accept 151
 step
     goto 1436 @1055.27,-10128.7 65
+    note-enUS Travel to Saldean's Farm
+    note-ptBR Vá até Saldean's Farm
     note-enUS Talk to Farmer Saldean
     note-ptBR Fale com Farmer Saldean
     accept 9
@@ -105,6 +115,8 @@ step
     note-enUS Talk to Innkeeper Heather
     note-ptBR Fale com Innkeeper Heather
     vendor
+    note-enUS Buy food/water if needed
+    note-ptBR Compre comida/água se precisar
 step
     goto 1436 @1179.8,-10635.6
     note-enUS Talk to Alba Fairmoon
@@ -129,6 +141,8 @@ step
     objective 12/1 |opt
     objective 12/2 |opt
     objective 153/1 |opt
+    note-enUS Travel to the Alexston's Farmstead
+    note-ptBR Vá até Alexston's Farmstead
     note-enUS Work on completing the other quest objectives as you move there
     note-ptBR Vá completando os outros objetivos da missão no caminho
 step
@@ -147,6 +161,8 @@ step
 step
     goto 1436 @1404.2,-10290.9
     use 254545
+    note-enUS Use the [Well Water Sample Kit] at the Molsen Farm well
+    note-ptBR Use o [Well Water Sample Kit] no poço de Molsen Farm
     objective 92742/2
 step
     goto 1436 @1266.67,-9927.33 75
@@ -160,6 +176,8 @@ step
     objective 12/1 |opt
     objective 12/2 |opt
     objective 153/1 |opt
+    note-enUS Travel to the Jansen Stead, work on the other quest objectives as you move there
+    note-ptBR Vá até Jansen Stead, trabalhando nos outros objetivos da missão enquanto se move
 step
     goto 1436 @1289.77,-9849.63
     note-enUS Open Furlbrow's Wardrobe. Loot it for Furlbrow's Pocket Watch
@@ -193,6 +211,8 @@ step
 step
     goto 1436 @1035.3,-9835.1
     use 254545
+    note-enUS Use the [Well Water Sample Kit] at the Jansen Stead well
+    note-ptBR Use o [Well Water Sample Kit] no poço de Jansen Stead
     objective 92742/1
 step
     only Human Warlock
@@ -217,6 +237,8 @@ step
     note-enUS Talk to Farmer Saldean
     note-ptBR Fale com Farmer Saldean
     vendor |opt
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     note-enUS Do NOT sell [Murloc Eyes], [Goretusk Snouts], [Goretusk Livers] or [Stringy Vulture Meat]
     note-ptBR NÃO venda [Murloc Eyes], [Goretusk Snouts], [Goretusk Livers] nem [Stringy Vulture Meat]
     note-enUS Talk to Farmer Saldean
@@ -343,11 +365,15 @@ step
     turnin 92744
 step
     hearth
+    note-enUS Hearth to Stormwind
+    note-ptBR Use a pedra de regresso para Stormwind
 step
     goto 1436 @1037.42,-10628.27
     note-enUS Talk to Thor
     note-ptBR Fale com Thor
     fly 1453 |opt
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
 step
     only !Nightelf
     ifskillbelow cooking 50
@@ -379,6 +405,8 @@ step
     note-ptBR Fale com Osborne
     train 1758
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     path seq 1453 @358.25,-8728.28 @302.6,-8685.53
@@ -387,6 +415,8 @@ step
     note-ptBR Fale com Wu ou Ilsa
     train 1160
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1453 @552.78,-8415.71
@@ -395,6 +425,8 @@ step
     note-enUS If you just trained earlier, skip this step
     note-ptBR Se você treinou há pouco, pule esta etapa
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifcomplete 399
     goto 1453 @719.67,-8550.3
@@ -407,31 +439,45 @@ step
     note-enUS Talk to Theridran
     note-ptBR Fale com Theridran
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     path seq 1453 @988.44,-8942.15 |only Warlock
     goto 1453 @1015.33,-8978.9 15 |only Warlock
     goto 1453 @1029.89,-8971.06
+    note-enUS Travel to The Slaughtered Lamb and go downstairs |only Warlock
+    note-ptBR Vá até The Slaughtered Lamb e desça as escadas |only Warlock
     note-enUS Talk to Ursula Deline
     note-ptBR Fale com Ursula Deline
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 6222
 step
     only Mage
     goto 1453 @874.32,-9014.67 10 |only Mage
     goto 1453 @885.34,-9006.15
+    note-enUS Travel to the Mage Tower |only Mage
+    note-ptBR Vá até Mage Tower |only Mage
     note-enUS Talk to Elsharin
     note-ptBR Fale com Elsharin
     train 2137
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Paladin
     goto 1453 @809.52,-8579.22 20 |only Priest Paladin
     path seq 1453 @859.13,-8559.14
     goto 1453 @861.14,-8573.03
+    note-enUS Travel to the Stormwind Cathedral |only Priest Paladin
+    note-ptBR Vá até Stormwind Cathedral |only Priest Paladin
     note-enUS Talk to Arthur the Faithful
     note-ptBR Fale com Arthur the Faithful
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 19742
 step
     only Priest
@@ -439,6 +485,8 @@ step
     note-enUS Talk to Brother Joshua
     note-ptBR Fale com Brother Joshua
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 8122
 step
     goto 1453 @765.7,-8804
@@ -458,10 +506,16 @@ step
     goto 1453 @1330.1,-8645.4
     note-enUS On the Boat if it just arrived or on the dock if the boat just left:
     note-ptBR No barco, se ele acabou de chegar, ou no cais, se o barco acabou de partir:
+    note-enUS Create a [Basic Campfire] (in your Profession Book)
+    note-ptBR Crie uma [Basic Campfire] (no seu Livro de Profissões)
     note-enUS On the Boat if it just arrived or on the dock if the boat just left:
     note-ptBR No barco, se ele acabou de chegar, ou no cais, se o barco acabou de partir:
+    note-enUS Create a [Basic Campfire] (in your Profession Book)
+    note-ptBR Crie uma [Basic Campfire] (no seu Livro de Profissões)
     note-enUS On the Boat if it just arrived or on the dock if the boat just left:
     note-ptBR No barco, se ele acabou de chegar, ou no cais, se o barco acabou de partir:
+    note-enUS Create a [Basic Campfire] (in your Profession Book)
+    note-ptBR Crie uma [Basic Campfire] (no seu Livro de Profissões)
     note-enUS You need 50 [Cooking] for a quest in Duskwood later
     note-ptBR Você precisa de 50 em [Cooking] para uma missão em Duskwood mais tarde
     note-enUS [Cook] the following items:
@@ -481,9 +535,13 @@ step
     note-enUS Level your [First Aid] while waiting for the boat to Darkshore if needed
     note-ptBR Suba seu [First Aid] enquanto espera o barco para Darkshore, se necessário
     zone 1439
+    note-enUS Take the boat to Darkshore
+    note-ptBR Pegue o barco para Darkshore
 step
     goto 1453 @1330.1,-8645.4
     zone 1439
+    note-enUS Take the boat to Darkshore
+    note-ptBR Pegue o barco para Darkshore
 ]==])
 
 register([==[
@@ -527,6 +585,8 @@ step
     path seq 1439 36.83,44.15 |only Nightelf
     goto 1439 36.69,43.95 8 |only Nightelf
     goto 1439 35.74,43.71
+    note-enUS Travel up the ramps toward Wizbang Cranktoggle |only Nightelf
+    note-ptBR Suba as rampas em direção a Wizbang Cranktoggle |only Nightelf
     note-enUS Talk to Cerellean Whiteclaw
     note-ptBR Fale com Cerellean Whiteclaw
     note-enUS You may need to wait out his RP if someone else just turned in
@@ -535,6 +595,8 @@ step
 step
     goto 1439 @525.8,6414.8 8 |only !Nightelf
     goto 1439 36.98,44.13
+    note-enUS Travel up the ramp toward Wizbang Cranktoggle |only !Nightelf
+    note-ptBR Suba a rampa em direção a Wizbang Cranktoggle |only !Nightelf
     note-enUS Talk to Wizbang Cranktoggle upstairs
     note-ptBR Fale com Wizbang Cranktoggle no andar de cima
     accept 983
@@ -543,6 +605,8 @@ step
     note-enUS Talk to Shaussiy downstairs
     note-ptBR Fale com Shaussiy no andar de baixo
     home
+    note-enUS Set your Hearthstone to Auberdine
+    note-ptBR Defina sua pedra de regresso em Auberdine
 step
     goto 1439 37.32,43.64
     note-enUS Talk to Barithras Moonshade
@@ -586,6 +650,8 @@ step
     note-enUS Talk to Caylais Moonfeather
     note-ptBR Fale com Caylais Moonfeather
     fp
+    note-enUS Get the Auberdine flight path
+    note-ptBR Pegue o ponto de voo de Auberdine
 step
     ifonquest 983
     path closest 1439 @272.54,5255.27 @271.23,4902.88 @438.91,5131.69 @272.54,5255.27 @271.23,4902.88 @438.91,5131.69 |only Dwarf Hunter Human Hunter
@@ -593,6 +659,8 @@ step
     note-enUS Send your pet to attack a Thistle Bear. Once your pet is stunned by the Thistle Bear, abandon your pet and start taming it |only Dwarf Hunter Human Hunter
     note-ptBR Mande seu ajudante atacar um Thistle Bear. Quando ele for atordoado pelo Thistle Bear, abandone o ajudante e comece a domar o urso |only Dwarf Hunter Human Hunter
     train 16828 |only Dwarf Hunter Human Hunter |opt
+    note-enUS Cast [Tame Beast] on a Thistle Bear to tame it |only Dwarf Hunter Human Hunter
+    note-ptBR Lance [Tame Beast] em um Thistle Bear para domá-lo |only Dwarf Hunter Human Hunter
     train 17255 |only Dwarf Hunter Human Hunter |opt
     note-enUS Kill Foreststrider Fledglings. Loot them for their Strider Meat
     note-ptBR Mate Foreststrider Fledglings. Saqueie-os para obter Strider Meat
@@ -641,6 +709,8 @@ step
     only Nightelf
     path closest 1439 36.05,44.76 36.28,50.07 35.27,53.46 36.05,44.76 35.76,45.45 35.9,47.15 35.98,48.41 36.52,48.55 36.28,50.07 36.09,51.5 37.12,52.37 37.13,53.66 36.74,55.22 35.66,55.87 35.09,55.09 35.27,53.46 36.09,51.5
     level 11
+    note-enUS Grind to 7300+/8800xp
+    note-ptBR Mate monstros até 7300+/8800xp
 step
     goto 1439 36.63,46.25
     note-enUS Click the Buzzbox 827 on the ground
@@ -659,6 +729,10 @@ step
     path seq 1439 43.13,45.59 |only Druid Nightelf
     goto 1439 @92.42,6325.98 |only Druid Nightelf
     goto 1439 @119.27,6344.32
+    note-enUS Enter the Moonkin Stone cave |only Druid Nightelf
+    note-ptBR Entre na caverna da Moonkin Stone |only Druid Nightelf
+    note-enUS Use the [Cenarion Moondust] at the Moonkin Stone inside the cave to summon Lunaclaw at the entrance of the cave |only Druid Nightelf
+    note-ptBR Use o [Cenarion Moondust] na Moonkin Stone dentro da caverna para invocar Lunaclaw na entrada da caverna |only Druid Nightelf
     use 15208 |only Druid Nightelf |opt
     note-enUS Kill Lunaclaw
     note-ptBR Mate Lunaclaw
@@ -676,9 +750,13 @@ step
 step
     only Nightelf Druid
     goto 1438 @950.52,8694.07
+    note-enUS Cast Teleport: Moonglade |only Druid Nightelf
+    note-ptBR Lance Teleport: Moonglade |only Druid Nightelf
     note-enUS Talk to Silva Fil'naveth |only Druid Nightelf
     note-ptBR Fale com Silva Fil'naveth |only Druid Nightelf
     fly 1438 |only Druid Nightelf |opt
+    note-enUS Fly to Darnassus |only Druid Nightelf
+    note-ptBR Voe para Darnassus |only Druid Nightelf
     note-enUS Talk to Nessa Shadowsong
     note-ptBR Fale com Nessa Shadowsong
     turnin 6343
@@ -688,18 +766,26 @@ step
     goto 1438 @965.8,8780.95 |only Nightelf Druid
     goto 1457 @2563.98,10179
     zone 1457 |only Nightelf Druid |opt
+    note-enUS Take the purple portal into Darnassus |only Nightelf Druid
+    note-ptBR Pegue o portal roxo para Darnassus |only Nightelf Druid
     note-enUS Talk to Mathrengyl Bearwalker
     note-ptBR Fale com Mathrengyl Bearwalker
     turnin 6001 |only Nightelf
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid Nightelf
     goto 1457 @2636.53,9956.8 |only Druid Nightelf
     goto 1438 @841.1,8640.58
     zone 1438 |only Druid Nightelf |opt
+    note-enUS Travel through the purple portal to Rut'theran Village |only Druid Nightelf
+    note-ptBR Atravesse o portal roxo até Rut'theran Village |only Druid Nightelf
     note-enUS Talk to Vesprystus
     note-ptBR Fale com Vesprystus
     fly 1439
+    note-enUS Fly to Darkshore
+    note-ptBR Voe para Darkshore
 step
     only Druid Nightelf
     ifonquest 4811
@@ -725,6 +811,8 @@ step
 step
     path seq 1439 36.81,44.14
     goto 1439 35.74,43.71 12
+    note-enUS Travel toward Cerellean Whiteclaw on the dock
+    note-ptBR Vá em direção a Cerellean Whiteclaw no cais
     note-enUS Talk to Cerellean Whiteclaw
     note-ptBR Fale com Cerellean Whiteclaw
     note-enUS You may need to wait out his RP if someone else just turned in
@@ -733,6 +821,8 @@ step
 step
     path seq 1439 32.43,43.74 @741.52,6570.95 @915.1,6333.84 @778.2,6231.66
     goto 1439 31.84,46.3
+    note-enUS Travel to the end of the dock, then jump into the water
+    note-ptBR Vá até o fim do cais e depois pule na água
     note-enUS Kill Darkshore Threshers. Loot them for their Thresher Eyes
     note-ptBR Mate Darkshore Threshers. Saqueie-os para obter os Thresher Eyes
     objective 1001/1 |opt
@@ -786,7 +876,11 @@ step
     note-enUS Talk to Kurdram Stonehammer and Delfrum Flintbeard
     note-ptBR Fale com Kurdram Stonehammer e Delfrum Flintbeard
     train 2575
+    note-enUS Train [Mining]
+    note-ptBR Treine [Mining]
     train 2018
+    note-enUS Train [Blacksmithing]
+    note-ptBR Treine [Blacksmithing]
     note-enUS This will allow you to make [Rough Sharpening Stones] which increase your melee damage by 2 |only Warrior Rogue
     note-ptBR Isto permitirá fazer [Rough Sharpening Stones], que aumentam seu dano corpo a corpo em 2 |only Warrior Rogue
     note-enUS If you don't want to do this, skip this step
@@ -803,6 +897,8 @@ step
 step
     only !Nightelf !Warrior !Rogue
     goto 1439 38.11,41.16
+    note-enUS Cast [Find Minerals] |only Nightelf Warrior Nightelf Rogue
+    note-ptBR Lance [Find Minerals] |only Nightelf Warrior Nightelf Rogue
     train 2575 |only Nightelf Warrior Nightelf Rogue |opt
     note-enUS Talk to Gorbold Steelhand
     note-ptBR Fale com Gorbold Steelhand
@@ -819,6 +915,8 @@ step
     note-enUS Talk to Naram Longclaw
     note-ptBR Fale com Naram Longclaw
     vendor
+    note-enUS Buy a [Jambiya] from him if you can afford it
+    note-ptBR Compre uma [Jambiya] dele, se puder pagar
     collect 2207 1
 step
     path seq 1439 @488.69,6564.83
@@ -826,6 +924,8 @@ step
     note-enUS Talk to Dalmond inside
     note-ptBR Fale com Dalmond lá dentro
     vendor |opt
+    note-enUS Buy as many [Small Brown Pouches] or [Brown Leather Satchels] as you need from him
+    note-ptBR Compre quantas [Small Brown Pouches] ou [Brown Leather Satchels] precisar dele
     note-enUS Buy [Sharp Arrows] or [Heavy Shots] from him until your Quiver/Ammo Pouch is full |only Hunter
     note-ptBR Compre [Sharp Arrows] ou [Heavy Shots] dele até encher sua Aljava/Bolsa de Munição |only Hunter
     note-enUS Talk to Thundris Windweaver
@@ -922,6 +1022,8 @@ step
     note-enUS Be careful as they [Flee] at <30% health
     note-ptBR Cuidado, eles usam [Flee] com <30% de vida
     collect 5469 5 |quest 2178 |q 2178/1 |opt
+    note-enUS Travel toward Asterion
+    note-ptBR Vá em direção a Asterion
     note-enUS Talk to Asterion
     note-ptBR Fale com Asterion
     note-enUS Avoid killing Wild Grells and Vile Sprites en-route
@@ -961,6 +1063,8 @@ step
     ifturnedin 955
     path closest 1439 45.39,36.47 45.43,39.77 47.37,36.77 45.39,36.47 45.94,37.8 45.94,38.04 46.53,39.13 45.43,39.77 47.26,37.67 47.92,37.23 47.37,36.77
     abandon 955 |opt
+    note-enUS Abandon Bashal'Aran
+    note-ptBR Abandone Bashal'Aran
     note-enUS Kill Deth'ryll Satyrs. Loot them for the Ancient Moonstone Seal
     note-ptBR Mate Deth'ryll Satyrs. Saqueie-os para obter o Ancient Moonstone Seal
     note-enUS Be aware that they do not have dynamic respawns
@@ -984,6 +1088,8 @@ step
     path seq 1439 44.53,36.59 45.33,39.39 46.1,36.54 44.53,36.59 44.44,37.4 44.44,38.2 44.49,39.01 44.82,39.71 45.33,39.39 45.17,38.65 45.09,37.87 45.49,37.02 45.83,36.79 46.1,36.54 46.91,36.17 47.43,36.15 47.02,37.08 47.17,37.58
     goto 1439 45.83,36.81 50
     level 13
+    note-enUS Grind to level 13
+    note-ptBR Mate monstros até o nível 13
 step
     path seq 1439 43.51,33.21
     goto 1439 47.31,48.68
@@ -1024,6 +1130,10 @@ step
     goto 1439 37.7,43.39 |only Nightelf Hunter Druid Warrior
     goto 1439 37.7,43.39
     hearth |only Nightelf Hunter Warrior Druid |opt
+    note-enUS Hearth to Auberdine |only Nightelf Hunter Warrior Druid
+    note-ptBR Use a pedra de regresso para Auberdine |only Nightelf Hunter Warrior Druid
+    note-enUS Return to Auberdine |only Nightelf Hunter Druid Warrior
+    note-ptBR Volte para Auberdine |only Nightelf Hunter Druid Warrior
     note-enUS Talk to Sentinel Glynda Nal'Shea
     note-ptBR Fale com Sentinel Glynda Nal'Shea
     turnin 4811
@@ -1096,6 +1206,10 @@ step
     goto 1439 37.7,43.39 |only Nightelf !Hunter Druid Warrior
     goto 1439 @472.32,6438.64
     hearth |only Nightelf !Hunter Warrior Druid |opt
+    note-enUS Hearth to Auberdine |only Nightelf !Hunter Warrior Druid
+    note-ptBR Use a pedra de regresso para Auberdine |only Nightelf !Hunter Warrior Druid
+    note-enUS Return to Auberdine |only Nightelf !Hunter Druid Warrior
+    note-ptBR Volte para Auberdine |only Nightelf !Hunter Druid Warrior
     note-enUS Talk to Sentinel Glynda Nal'Shea
     note-ptBR Fale com Sentinel Glynda Nal'Shea
     turnin 4813 |reward 3
@@ -1245,6 +1359,8 @@ step
     note-enUS Kill Moonstalker Runts. Loot them for their Moonstalker Fangs
     note-ptBR Mate Moonstalker Runts. Saqueie-os para obter Moonstalker Fangs
     objective 1002/1 |opt
+    note-enUS Return to Auberdine
+    note-ptBR Volte para Auberdine
     note-enUS Talk to Gwennyth Bly'Leggonde
     note-ptBR Fale com Gwennyth Bly'Leggonde
     turnin 4722
@@ -1260,6 +1376,8 @@ step
     path seq 1439 36.81,44.14 |only !Nightelf
     goto 1439 35.74,43.71 12 |only !Nightelf
     goto 1439 35.74,43.71
+    note-enUS Return to Cerellean Whiteclaw on the dock |only !Nightelf
+    note-ptBR Volte para Cerellean Whiteclaw no cais |only !Nightelf
     note-enUS Talk to Cerellean Whiteclaw
     note-ptBR Fale com Cerellean Whiteclaw
     note-enUS You may need to wait out his RP if someone else just turned in
@@ -1322,6 +1440,8 @@ step
 step
     path seq 1439 39.28,43.12 39.16,43.19
     goto 1439 39.04,43.55
+    note-enUS Go upstairs
+    note-ptBR Suba as escadas
     note-enUS Talk to Sentinel Elissa Starbreeze upstairs
     note-ptBR Fale com Sentinel Elissa Starbreeze no andar de cima
     accept 965
@@ -1331,11 +1451,15 @@ step
     note-enUS Talk to Gorbold Steelhand
     note-ptBR Fale com Gorbold Steelhand
     vendor |opt
+    note-enUS Buy [Mild Spices] from him until you have [Mild Spices] equal or more than the amount of [Small Eggs] that you currently have
+    note-ptBR Compre [Mild Spices] dele até ter [Mild Spices] em quantidade igual ou maior que a de [Small Eggs] que você tem agora
     collect 2678 50 |quest 90 |q 90/1 |opt
     collect 6889 50 |quest 90 |q 90/1 |opt
     note-enUS Talk to Gorbold Steelhand
     note-ptBR Fale com Gorbold Steelhand
     vendor
+    note-enUS Buy a [Shiny Bauble] and three [Nightcrawlers] from him. You will need them for a quest in Stormwind soon
+    note-ptBR Compre um [Shiny Bauble] e três [Nightcrawlers] dele. Você vai precisar deles para uma missão em Stormwind em breve
     collect 6529 1
     collect 6530 3
 step
@@ -1381,6 +1505,8 @@ step
     path seq 1439 36.81,44.14 |only Nightelf
     goto 1439 35.74,43.71 12 |only Nightelf
     goto 1439 35.74,43.71
+    note-enUS Return to Cerellean Whiteclaw on the dock |only Nightelf
+    note-ptBR Volte para Cerellean Whiteclaw no cais |only Nightelf
     note-enUS Talk to Cerellean Whiteclaw
     note-ptBR Fale com Cerellean Whiteclaw
     note-enUS You may need to wait out his RP if someone else just turned in
@@ -1392,6 +1518,8 @@ step
     note-enUS Level your [First Aid] while waiting for the boat |only Rogue Warrior
     note-ptBR Suba seu [First Aid] enquanto espera o barco |only Rogue Warrior
     zone 1453
+    note-enUS Take the boat to Stormwind City
+    note-ptBR Pegue o barco para Stormwind City
 step
     only Nightelf
     goto 1453 @1268.8,-8540.7
@@ -1409,6 +1537,8 @@ step
     path seq 1453 @1194.2,-8360.9 @1076.3,-8408.5 @1001.4,-8499.7 @985.5,-8471.3 @960.1,-8501.8 @981.2,-8581.8 |only Nightelf
     goto 1453 @875.5,-8680.9 10 |only Nightelf
     goto 1453 @719.67,-8550.3
+    note-enUS Exit the Stormwind Harbor |only Nightelf
+    note-ptBR Saia do Stormwind Harbor |only Nightelf
     note-enUS Talk to Baros Alexston
     note-ptBR Fale com Baros Alexston
     turnin 97914
@@ -1420,30 +1550,40 @@ step
     note-enUS Talk to Theridran
     note-ptBR Fale com Theridran
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Nightelf Hunter
     goto 1453 @552.78,-8415.71
     note-enUS Talk to Einris Brightspear
     note-ptBR Fale com Einris Brightspear
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Nightelf Hunter
     goto 1453 @553.22,-8422.23
     note-enUS Talk to Karrina Mekenda
     note-ptBR Fale com Karrina Mekenda
     trainer
+    note-enUS Train your pet spells
+    note-ptBR Treine your pet spells
 step
     only Nightelf Priest
     goto 1453 @862.89,-8519.61
     note-enUS Talk to Brother Joshua
     note-ptBR Fale com Brother Joshua
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Nightelf Rogue
     goto 1453 @377.47,-8752.39
     note-enUS Talk to Osborne
     note-ptBR Fale com Osborne
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Nightelf Warrior
     path seq 1453 @358.25,-8728.28 @302.6,-8685.53
@@ -1451,13 +1591,19 @@ step
     note-enUS Talk to Wu or Ilsa
     note-ptBR Fale com Wu ou Ilsa
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Nightelf Rogue Nightelf Warrior
     goto 1453 @613.12,-8795.96
     note-enUS Talk to Woo Ping
     note-ptBR Fale com Woo Ping
     train 201 |only Rogue
+    note-enUS Train 1h Swords |only Rogue
+    note-ptBR Treine 1h Swords |only Rogue
     train 202 |only Warrior
+    note-enUS Train 2h Swords |only Warrior
+    note-ptBR Treine 2h Swords |only Warrior
 step
     only Nightelf
     goto 1453 @568.7,-8848.7
@@ -1489,11 +1635,17 @@ step
     note-enUS Talk to Dungar Longdrink
     note-ptBR Fale com Dungar Longdrink
     fly 1436 |only !Nightelf
+    note-enUS Fly to Westfall |only !Nightelf
+    note-ptBR Voe para Westfall |only !Nightelf
     fp |only Nightelf
+    note-enUS Get the Stormwind Flight Path |only Nightelf
+    note-ptBR Pegue o ponto de voo de Stormwind |only Nightelf
 step
     goto 1429 @875.96,-9814.4
     goto 1436 @918.42,-9851.5
     zone 1436 |opt
+    note-enUS Travel to Westfall
+    note-ptBR Vá até Westfall
     note-enUS Talk to Farmer Furlbrow
     note-ptBR Fale com Farmer Furlbrow
     accept 64
@@ -1505,6 +1657,8 @@ step
     accept 151
 step
     goto 1436 @1055.27,-10128.7 65
+    note-enUS Travel to Saldean's Farm
+    note-ptBR Vá até Saldean's Farm
     note-enUS Talk to Farmer Saldean
     note-ptBR Fale com Farmer Saldean
     accept 9
@@ -1554,6 +1708,8 @@ step
     note-enUS Talk to Innkeeper Heather
     note-ptBR Fale com Innkeeper Heather
     vendor
+    note-enUS Buy food/water if needed
+    note-ptBR Compre comida/água se precisar
 step
     goto 1436 @1179.8,-10635.6
     note-enUS Talk to Alba Fairmoon
@@ -1578,6 +1734,8 @@ step
     objective 12/1 |opt
     objective 12/2 |opt
     objective 153/1 |opt
+    note-enUS Travel to the Alexston's Farmstead
+    note-ptBR Vá até Alexston's Farmstead
     note-enUS Work on completing the other quest objectives as you move there
     note-ptBR Vá completando os outros objetivos da missão no caminho
 step
@@ -1596,6 +1754,8 @@ step
 step
     goto 1436 @1404.2,-10290.9
     use 254545
+    note-enUS Use the [Well Water Sample Kit] at the Molsen Farm well
+    note-ptBR Use o [Well Water Sample Kit] no poço de Molsen Farm
     objective 92742/2
 step
     goto 1436 @1266.67,-9927.33 75
@@ -1609,6 +1769,8 @@ step
     objective 12/1 |opt
     objective 12/2 |opt
     objective 153/1 |opt
+    note-enUS Travel to the Jansen Stead, work on the other quest objectives as you move there
+    note-ptBR Vá até Jansen Stead, trabalhando nos outros objetivos da missão enquanto se move
 step
     goto 1436 @1289.77,-9849.63
     note-enUS Open Furlbrow's Wardrobe. Loot it for Furlbrow's Pocket Watch
@@ -1642,6 +1804,8 @@ step
 step
     goto 1436 @1035.3,-9835.1
     use 254545
+    note-enUS Use the [Well Water Sample Kit] at the Jansen Stead well
+    note-ptBR Use o [Well Water Sample Kit] no poço de Jansen Stead
     objective 92742/1
 step
     only Human Warlock
@@ -1666,6 +1830,8 @@ step
     note-enUS Talk to Farmer Saldean
     note-ptBR Fale com Farmer Saldean
     vendor |opt
+    note-enUS Vendor trash
+    note-ptBR Venda o lixo
     note-enUS Do NOT sell [Murloc Eyes], [Goretusk Snouts], [Goretusk Livers] or [Stringy Vulture Meat]
     note-ptBR NÃO venda [Murloc Eyes], [Goretusk Snouts], [Goretusk Livers] nem [Stringy Vulture Meat]
     note-enUS Talk to Farmer Saldean
@@ -1792,11 +1958,15 @@ step
     turnin 92744
 step
     hearth
+    note-enUS Hearth to Stormwind
+    note-ptBR Use a pedra de regresso para Stormwind
 step
     goto 1436 @1037.42,-10628.27
     note-enUS Talk to Thor
     note-ptBR Fale com Thor
     fly 1453 |opt
+    note-enUS Fly to Stormwind
+    note-ptBR Voe para Stormwind
 step
     only !Nightelf
     ifskillbelow cooking 50
@@ -1828,6 +1998,8 @@ step
     note-ptBR Fale com Osborne
     train 1758
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warrior
     path seq 1453 @358.25,-8728.28 @302.6,-8685.53
@@ -1836,6 +2008,8 @@ step
     note-ptBR Fale com Wu ou Ilsa
     train 1160
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Hunter
     goto 1453 @552.78,-8415.71
@@ -1844,6 +2018,8 @@ step
     note-enUS If you just trained earlier, skip this step
     note-ptBR Se você treinou há pouco, pule esta etapa
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifcomplete 399
     goto 1453 @719.67,-8550.3
@@ -1856,31 +2032,45 @@ step
     note-enUS Talk to Theridran
     note-ptBR Fale com Theridran
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     path seq 1453 @988.44,-8942.15 |only Warlock
     goto 1453 @1015.33,-8978.9 15 |only Warlock
     goto 1453 @1029.89,-8971.06
+    note-enUS Travel to The Slaughtered Lamb and go downstairs |only Warlock
+    note-ptBR Vá até The Slaughtered Lamb e desça as escadas |only Warlock
     note-enUS Talk to Ursula Deline
     note-ptBR Fale com Ursula Deline
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 6222
 step
     only Mage
     goto 1453 @874.32,-9014.67 10 |only Mage
     goto 1453 @885.34,-9006.15
+    note-enUS Travel to the Mage Tower |only Mage
+    note-ptBR Vá até Mage Tower |only Mage
     note-enUS Talk to Elsharin
     note-ptBR Fale com Elsharin
     train 2137
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Paladin
     goto 1453 @809.52,-8579.22 20 |only Priest Paladin
     path seq 1453 @859.13,-8559.14
     goto 1453 @861.14,-8573.03
+    note-enUS Travel to the Stormwind Cathedral |only Priest Paladin
+    note-ptBR Vá até Stormwind Cathedral |only Priest Paladin
     note-enUS Talk to Arthur the Faithful
     note-ptBR Fale com Arthur the Faithful
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 19742
 step
     only Priest
@@ -1888,10 +2078,14 @@ step
     note-enUS Talk to Brother Joshua
     note-ptBR Fale com Brother Joshua
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 8122
 step
     only Nightelf
     hearth
+    note-enUS Hearthstone to Auberdine
+    note-ptBR Use a pedra de regresso para Auberdine
 step
     only Nightelf
     goto 1439 @577.38,6371.35
@@ -2003,6 +2197,8 @@ step
     ifcomplete 1002
     path seq 1439 51.12,23.67
     goto 1439 51.29,24.55 12
+    note-enUS Travel up the ramp toward the Buzzbox 323
+    note-ptBR Suba a rampa em direção ao Buzzbox 323
     note-enUS Click the Buzzbox 323 on the ground
     note-ptBR Clique na Buzzbox 323 no chão
     turnin 1002
@@ -2029,6 +2225,8 @@ step
     note-enUS Kill Moonstalkers. Loot them for their Moonstalker Fangs |only Hunter Druid
     note-ptBR Mate Moonstalkers. Saqueie-os para obter Moonstalker Fangs |only Hunter Druid
     objective 1002/1 |only Hunter Druid |opt
+    note-enUS Travel toward Balthule Shadowstrike |only Hunter Druid
+    note-ptBR Vá em direção a Balthule Shadowstrike |only Hunter Druid
     note-enUS Talk to Balthule Shadowstrike
     note-ptBR Fale com Balthule Shadowstrike
     turnin 965
@@ -2082,6 +2280,8 @@ step
     ifonquest 6122
     path seq 1439 54.93,32.72 55.11,33.6
     goto 1439 @-660.18,6874.43
+    note-enUS Travel to the Cliffspring River Cave
+    note-ptBR Vá até Cliffspring River Cave
     note-enUS Use the [Empty Cliffspring Falls Sampler] in the water at the entrance of the Cliffspring River Cave
     note-ptBR Use o [Empty Cliffspring Falls Sampler] na água na entrada da Cliffspring River Cave
     objective 6122/1
@@ -2106,6 +2306,8 @@ step
     note-enUS Kill Moonstalker Runts and Moonstalkers. Loot them for their Moonstalker Fangs
     note-ptBR Mate Moonstalker Runts e Moonstalkers. Saqueie-os para obter Moonstalker Fangs
     objective 1002/1 |opt
+    note-enUS Travel to Auberdine
+    note-ptBR Vá até Auberdine
     note-enUS Talk to Thundris Windweaver
     note-ptBR Fale com Thundris Windweaver
     turnin 4762
@@ -2206,6 +2408,8 @@ step
     path seq 1439 39.9,54.74 40.18,56.23 39.27,53.09 39.75,53.44 40.23,54.33 39.9,54.74 40.18,56.23 39.39,56.67 39.19,56.38 39.96,55.3
     goto 1439 39.33,54.08 50
     level 16
+    note-enUS Grind to level 16
+    note-ptBR Mate monstros até o nível 16
 step
     only Nightelf Druid
     goto 1439 @561.66,6343.27 |only Druid
@@ -2213,6 +2417,8 @@ step
     note-enUS Talk to Caylais Moonfeather |only Druid
     note-ptBR Fale com Caylais Moonfeather |only Druid
     fly 1438 |only Druid |opt
+    note-enUS Fly to Teldrassil |only Druid
+    note-ptBR Voe para Teldrassil |only Druid
     note-enUS Talk to Nessa Shadowsong
     note-ptBR Fale com Nessa Shadowsong
     turnin 6343
@@ -2221,20 +2427,28 @@ step
     goto 1438 @965.8,8780.95 |only Druid
     goto 1457 @2563.98,10179
     zone 1457 |only Druid |opt
+    note-enUS Take the purple portal into Darnassus |only Druid
+    note-ptBR Pegue o portal roxo para Darnassus |only Druid
     note-enUS Talk to Mathrengyl Bearwalker
     note-ptBR Fale com Mathrengyl Bearwalker
     accept 26
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Nightelf Druid
     goto 1438 @2607.86,9641.94
     abandon 729 |only Druid |opt
+    note-enUS Abandon The Absent Minded Prospector to accept the quest Trouble In Darkshore? |only Druid
+    note-ptBR Abandone The Absent Minded Prospector para aceitar a missão Trouble In Darkshore? |only Druid
     note-enUS Talk to Chief Archaeologist Greywhisker
     note-ptBR Fale com Chief Archaeologist Greywhisker
     accept 730
 step
     only Druid
     goto 1450 @-2676.22,8019.01
+    note-enUS Cast Teleport: Moonglade |only Druid
+    note-ptBR Lance Teleport: Moonglade |only Druid
     note-enUS Talk to Dendrite Starblaze
     note-ptBR Fale com Dendrite Starblaze
     turnin 26
@@ -2252,6 +2466,8 @@ step
 step
     only Druid
     goto 1450 @-2212.85,7854.68
+    note-enUS Cast Teleport: Moonglade |only Druid
+    note-ptBR Lance Teleport: Moonglade |only Druid
     note-enUS Use the [Shrine Bauble] at the Shrine of Remulos tree
     note-ptBR Use o [Shrine Bauble] na árvore do Shrine of Remulos
     objective 29/1
@@ -2266,6 +2482,8 @@ step
 step
     only Druid
     hearth
+    note-enUS Hearth to Darkshore
+    note-ptBR Use a pedra de regresso para Darkshore
 ]==])
 
 register([==[
@@ -2314,6 +2532,8 @@ step
     ifonquest 4763
     goto 1439 @467.08,6409.38
     use 12346
+    note-enUS Use the [Empty Cleansing Bowl] at the Auberdine Moonwell
+    note-ptBR Use o [Empty Cleansing Bowl] no Moonwell de Auberdine
     collect 12347 1 |quest 4763 |q 4763/1
 step
     path seq 1439 42.02,58.87 43.22,59.69 43.07,62.45 42.49,60.68 42.02,58.87 42.31,58.65 42.45,58.24 43.22,59.69 43.45,60.13 43.78,60.27 43.07,62.45 43.1,62.56 42.79,62.17
@@ -2353,6 +2573,8 @@ step
     objective 6123/2
 step
     goto 1439 43.55,76.29 80
+    note-enUS Travel to the Grove of the Ancients
+    note-ptBR Vá até Grove of the Ancients
     note-enUS Talk to Onu
     note-ptBR Fale com Onu
     turnin 952 |only Nightelf
@@ -2378,6 +2600,8 @@ step
 step
     ifonquest 944
     goto 1439 @417.3,4575.82 100
+    note-enUS Travel to The Master's Glaive
+    note-ptBR Vá até The Master's Glaive
 step
     goto 1439 @390.7,4542.7
     note-enUS Kill Twilight Disciples and Twilight Thugs. Loot them for the [Book: The Powers Below]
@@ -2388,6 +2612,8 @@ step
     objective 944/1
 step
     goto 1439 @417.3,4575.82
+    note-enUS Use the [Phial of Scrying] and place it on the ground
+    note-ptBR Use o [Phial of Scrying] e coloque-o no chão
     use 5251 |opt
     note-enUS Click the Scrying Bowl on the ground
     note-ptBR Clique na Scrying Bowl no chão
@@ -2425,6 +2651,10 @@ step
     objective 98042/1
     collect 5352 1 |quest 968 |q 968/1
 step
+    ifturnedin 949
+    note-enUS Delete the [Phial of Scrying] from your bags, as it's no longer needed
+    note-ptBR Apague o [Phial of Scrying] das suas bolsas, pois não é mais necessário
+step
     ifonquest 1003
     path seq 1439 @227.35,4575.38 @205.73,4639.13 @129.1,4741.75 @86.52,4839.13 @338.7,4821.22
     goto 1439 @452.67,4684.98
@@ -2459,6 +2689,8 @@ step
     only Hunter
     goto 1439 @417.3,4575.82
     level 17
+    note-enUS Grind to level 17
+    note-ptBR Mate monstros até o nível 17
 step
     only Hunter
     goto 1439 35.72,83.7
@@ -2557,21 +2789,31 @@ step
 step
     only Druid
     goto 1450 @-2593.82,7867.06
+    note-enUS Cast Teleport: Moonglade |only Druid
+    note-ptBR Lance Teleport: Moonglade |only Druid
     note-enUS Go to Moonglade
     note-ptBR Vá para Moonglade
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Druid
     goto 1450 @-2491.79,7454.76
     note-enUS Talk to Sindrayl
     note-ptBR Fale com Sindrayl
     fp
+    note-enUS Fly to Darkshore
+    note-ptBR Voe para Darkshore
 step
     ifcomplete 963
     path seq 1439 36.81,44.14
     goto 1439 35.74,43.71 12
+    note-enUS Travel to Auberdine |only Nightelf !Druid Dwarf Hunter Human Hunter
+    note-ptBR Vá até Auberdine |only Nightelf !Druid Dwarf Hunter Human Hunter
+    note-enUS Return to Cerellean Whiteclaw on the dock
+    note-ptBR Volte para Cerellean Whiteclaw no cais
     note-enUS Talk to Cerellean Whiteclaw
     note-ptBR Fale com Cerellean Whiteclaw
     note-enUS You may need to wait out his RP if someone else just turned in
@@ -2581,6 +2823,8 @@ step
     path seq 1439 36.7,45.12
     goto 1439 36.62,45.6
     abandon 963 |opt
+    note-enUS Abandon For Love Eternal
+    note-ptBR Abandone For Love Eternal
     note-enUS Talk to Gwennyth Bly'Leggonde
     note-ptBR Fale com Gwennyth Bly'Leggonde
     turnin 4728
@@ -2599,6 +2843,8 @@ step
     note-enUS Talk to Laird and Allyndia
     note-ptBR Fale com Laird e Allyndia
     vendor
+    note-enUS Vendor and restock on Food and Water
+    note-ptBR Venda e reabasteça comida e água
 step
     goto 1439 37.7,43.39
     note-enUS Talk to Sentinel Glynda Nal'Shea
@@ -2636,6 +2882,8 @@ step
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Restock on Ammo
+    note-ptBR Reabasteça a munição
 step
     only Druid
     ifcomplete 6123
@@ -2647,6 +2895,8 @@ step
     path seq 1439 @-489.22,6875.3 @-376.56,6807.62 @-503.63,6732.95
     goto 1439 @-430.27,6662.65
     abandon 6123 |only Druid |opt
+    note-enUS Abandon Gathering the Cure |only Druid
+    note-ptBR Abandone Gathering the Cure |only Druid
     note-enUS Open the Blackwood Grain Stores. Loot it for the [Blackwood Grain Sample]
     note-ptBR Abra os Blackwood Grain Stores. Saqueie-os para obter a [Blackwood Grain Sample]
     note-enUS Looting this will spawn 2 Blackwood Furbolgs that will aggro and run towards you. Be ready to fight them or reset them
@@ -2679,6 +2929,8 @@ step
     note-ptBR Se vir Xabraxxis gritar no chat ou alguém lutando com ele, ajude. Abra a Xabraxxis' Demon Bag que ele deixa cair no chão. Saqueie-a para obter o Talisman of Corruption
     collect 12341 1 |quest 4763 |q 4763/1 |opt
     objective 4763/1 |opt
+    note-enUS Use the [Filled Cleansing Bowl] at the Bonfire to summon Xabraxxis
+    note-ptBR Use o [Filled Cleansing Bowl] na Bonfire para invocar Xabraxxis
     use 12347 |opt
     note-enUS Kill Xabraxxis. Open the Xabraxxis' Demon Bag he drops on the ground. Loot it for the Talisman of Corruption
     note-ptBR Mate Xabraxxis. Abra a Xabraxxis' Demon Bag que ele deixa cair no chão. Saqueie-a para obter o Talisman of Corruption
@@ -2688,10 +2940,14 @@ step
     only !Hunter
     goto 1439 @-503.63,6866.13
     level 18
+    note-enUS Grind to level 18
+    note-ptBR Mate monstros até o nível 18
 step
     only Hunter
     goto 1439 @-503.63,6866.13
     level 18
+    note-enUS Grind to 18 + 75%
+    note-ptBR Mate monstros até o nível 18 + 75%
     note-enUS Make sure your HS cooldown is <10 min
     note-ptBR Certifique-se de que a recarga da sua Pedra de Regresso seja <10 min
     note-enUS Skip this step if the area is too crowded
@@ -2807,6 +3063,8 @@ step
 step
     path seq 1439 55.8,18.29
     goto 1439 53.11,18.1
+    note-enUS Talk to The Threshwackonator 4100 to start the escort
+    note-ptBR Fale com The Threshwackonator 4100 para iniciar a escolta
     note-enUS This quest is VERY difficult
     note-ptBR Esta missão é MUITO difícil
     note-enUS Click the Beached Sea Turtle
@@ -2835,13 +3093,21 @@ step
     turnin 2078
 step
     abandon 2078 |opt
+    note-enUS Abandon Gyromast's Revenge
+    note-ptBR Abandone Gyromast's Revenge
     note-enUS Kill Encrusted Tide Crawlers. Loot them for their Fine Crab Chunks |only Druid
     note-ptBR Mate Encrusted Tide Crawlers. Saqueie-os para obter Fine Crab Chunks |only Druid
     objective 1138/1 |only Druid |opt
+    note-enUS Delete [Gyromast's Key] from your bags, as it's no longer needed
+    note-ptBR Apague [Gyromast's Key] das suas bolsas, pois não é mais necessário
 step
     only !Nightelf !Dwarf Hunter !Human Hunter !Druid
     goto 1448 @577.92,6371.65 100 |only !Nightelf !Dwarf Hunter !Human Hunter !Druid
+    note-enUS Travel to Auberdine |only !Nightelf !Dwarf Hunter !Human Hunter !Druid
+    note-ptBR Vá até Auberdine |only !Nightelf !Dwarf Hunter !Human Hunter !Druid
     hearth
+    note-enUS Hearth to Auberdine
+    note-ptBR Use a pedra de regresso para Auberdine
 step
     only Druid
     goto 1439 53.11,18.1
@@ -2859,12 +3125,22 @@ step
 step
     only !Nightelf
     goto 1439 37.39,40.13
+    note-enUS Grind until your HS cooldown is <6 minutes. Die and respawn at the Spirit Healer |only Dwarf Hunter Human Hunter
+    note-ptBR Mate monstros até a recarga da sua pedra de regresso ser menor que 6 minutos. Morra e renasça no Spirit Healer |only Dwarf Hunter Human Hunter
+    note-enUS Die and respawn at the Spirit Healer |only !Nightelf !Hunter
+    note-ptBR Morra e renasça no Spirit Healer |only !Nightelf !Hunter
     note-enUS Talk to Thundris Windweaver
     note-ptBR Fale com Thundris Windweaver
     turnin 4763
 step
     only !Nightelf
     goto 1439 38.84,43.42
+    note-enUS Delete the [Blackwood Grain Sample] from your bags, as it's no longer needed |only !Nightelf
+    note-ptBR Apague o [Blackwood Grain Sample] das suas bolsas, pois não é mais necessário |only !Nightelf
+    note-enUS Delete the [Blackwood Nut Sample] from your bags, as it's no longer needed |only !Nightelf
+    note-ptBR Apague o [Blackwood Nut Sample] das suas bolsas, pois não é mais necessário |only !Nightelf
+    note-enUS Delete the [Blackwood Fruit Sample] from your bags, as it's no longer needed |only !Nightelf
+    note-ptBR Apague o [Blackwood Fruit Sample] das suas bolsas, pois não é mais necessário |only !Nightelf
     note-enUS Talk to Tharnariun Treetender
     note-ptBR Fale com Tharnariun Treetender
     turnin 2139
@@ -2881,32 +3157,50 @@ step
     goto 1439 33.21,39.88
     note-enUS If you equip the [Enchanted Moonstalker Cloak], make sure you save your current cloak for later as the [Enchanted Moonstalker Cloak] is lost upon a later turn in |only !Nightelf
     note-ptBR Se equipar o [Enchanted Moonstalker Cloak], guarde sua capa atual para depois, pois o [Enchanted Moonstalker Cloak] é perdido em uma entrega futura |only !Nightelf
+    note-enUS Equip the [Enchanted Moonstalker Cloak] If it's better than your current Cloak |only !Nightelf
+    note-ptBR Equipe a [Enchanted Moonstalker Cloak] se for melhor que sua capa atual |only !Nightelf
+    note-enUS Travel to the dock of the Darnassus boat |only Dwarf Hunter Human Hunter
+    note-ptBR Vá até o cais do barco de Darnassus |only Dwarf Hunter Human Hunter
     note-enUS On the Boat if it just arrived or on the dock if the boat just left: |only Dwarf Hunter Human Hunter
     note-ptBR No barco, se ele acabou de chegar, ou no cais, se o barco acabou de partir: |only Dwarf Hunter Human Hunter
+    note-enUS Create a [Basic Campfire] (under the General Tab of your Spellbook) |only Dwarf Hunter Human Hunter
+    note-ptBR Crie uma [Basic Campfire] (na aba Geral do seu Grimório) |only Dwarf Hunter Human Hunter
     note-enUS You need 50 [Cooking] for a quest in Duskwood later |only Dwarf Hunter Human Hunter
     note-ptBR Você precisa de 50 em [Cooking] para uma missão em Duskwood mais tarde |only Dwarf Hunter Human Hunter
     note-enUS [Cook] the [Small Eggs] and [Mild Spices] into [Herb Baked Eggs] |only Dwarf Hunter Human Hunter
     note-ptBR Use [Cook] para transformar os [Small Eggs] e [Mild Spices] em [Herb Baked Eggs] |only Dwarf Hunter Human Hunter
     zone 1438
+    note-enUS Take the boat to Darnassus
+    note-ptBR Pegue o barco para Darnassus
 step
     only Dwarf Hunter Human Hunter
     goto 1438 @841.56,8640.79
     note-enUS Talk to Vesprystus
     note-ptBR Fale com Vesprystus
     fp
+    note-enUS Get the Teldrassil Flight Path
+    note-ptBR Pegue o ponto de voo de Teldrassil
 step
     only Dwarf Hunter Human Hunter
     goto 1438 @965.8,8780.95 |only Dwarf Hunter Human Hunter
     goto 1457 @2511.01,10178.05 |only Dwarf Hunter Human Hunter
     goto 1457 @2329.19,9908.6
     zone 1457 |only Dwarf Hunter Human Hunter |opt
+    note-enUS Take the purple portal into Darnassus |only Dwarf Hunter Human Hunter
+    note-ptBR Pegue o portal roxo para Darnassus |only Dwarf Hunter Human Hunter
     note-enUS Talk to Jocaste |only Dwarf Hunter Human Hunter
     note-ptBR Fale com Jocaste |only Dwarf Hunter Human Hunter
     trainer |only Dwarf Hunter Human Hunter |opt
+    note-enUS Train your class spells |only Dwarf Hunter Human Hunter
+    note-ptBR Treine your class spells |only Dwarf Hunter Human Hunter
     note-enUS Talk to Ilyenia Moonfire
     note-ptBR Fale com Ilyenia Moonfire
     train 264
+    note-enUS Train Bows
+    note-ptBR Treine Bows
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     only Dwarf Hunter Human Hunter
     goto 1457 @2268.76,9770.63
@@ -2937,14 +3231,22 @@ step
 step
     only Druid
     goto 1450 @-2593.82,7867.06
+    note-enUS Cast Teleport: Moonglade |only Druid
+    note-ptBR Lance Teleport: Moonglade |only Druid
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1448 @577.92,6371.65 100 |only Nightelf Dwarf Hunter Human Hunter
     path seq 1439 36.7,45.12
     goto 1439 36.62,45.6
+    note-enUS Travel to Auberdine |only Nightelf Dwarf Hunter Human Hunter
+    note-ptBR Vá até Auberdine |only Nightelf Dwarf Hunter Human Hunter
     hearth |only Nightelf Dwarf Hunter Human Hunter |opt
+    note-enUS Hearth to Auberdine |only Nightelf Dwarf Hunter Human Hunter
+    note-ptBR Use a pedra de regresso para Auberdine |only Nightelf Dwarf Hunter Human Hunter
     note-enUS Talk to Gwennyth Bly'Leggonde
     note-ptBR Fale com Gwennyth Bly'Leggonde
     turnin 4727
@@ -2963,9 +3265,17 @@ step
 step
     only Nightelf Hunter
     goto 1439 @488.69,6564.83
+    note-enUS Delete the [Blackwood Grain Sample] from your bags, as it's no longer needed |only Nightelf
+    note-ptBR Apague o [Blackwood Grain Sample] das suas bolsas, pois não é mais necessário |only Nightelf
+    note-enUS Delete the [Blackwood Nut Sample] from your bags, as it's no longer needed |only Nightelf
+    note-ptBR Apague o [Blackwood Nut Sample] das suas bolsas, pois não é mais necessário |only Nightelf
+    note-enUS Delete the [Blackwood Fruit Sample] from your bags, as it's no longer needed |only Nightelf
+    note-ptBR Apague o [Blackwood Fruit Sample] das suas bolsas, pois não é mais necessário |only Nightelf
     note-enUS Talk to Dalmond
     note-ptBR Fale com Dalmond
     vendor
+    note-enUS Stock up on [Sharp Arrows]
+    note-ptBR Estoque [Sharp Arrows]
 step
     only Nightelf
     goto 1439 38.84,43.42
@@ -2983,6 +3293,8 @@ step
     only Nightelf
     note-enUS If you equip the [Enchanted Moonstalker Cloak], make sure you save your current cloak for later as the [Enchanted Moonstalker Cloak] is lost upon a later turn in
     note-ptBR Se equipar o [Enchanted Moonstalker Cloak], guarde sua capa atual para depois, pois o [Enchanted Moonstalker Cloak] é perdido em uma entrega futura
+    note-enUS Equip the [Enchanted Moonstalker Cloak] If it's better than your current Cloak
+    note-ptBR Equipe a [Enchanted Moonstalker Cloak] se for melhor que sua capa atual
 step
     only !Hunter
     ifskillbelow cooking 50
@@ -3007,10 +3319,18 @@ step
     note-enUS Talk to Gorbold Steelhand |only !Hunter
     note-ptBR Fale com Gorbold Steelhand |only !Hunter
     vendor |only !Hunter |opt
+    note-enUS Buy [Mild Spices] from him until you have [Mild Spices] equal or more than the amount of [Small Eggs] that you currently have |only !Hunter
+    note-ptBR Compre [Mild Spices] dele até ter [Mild Spices] em quantidade igual ou maior que a de [Small Eggs] que você tem agora |only !Hunter
     collect 2678 50 |quest 90 |q 90/1 |only !Hunter |opt
     collect 6889 50 |quest 90 |q 90/1 |only !Hunter |opt
+    note-enUS Travel to the dock of the Stormwind City boat |only !Shaman
+    note-ptBR Vá até o cais do barco de Stormwind City |only !Shaman
+    note-enUS Travel to the dock of the Menethil Harbor boat |only Shaman
+    note-ptBR Vá até o cais do barco de Menethil Harbor |only Shaman
     note-enUS On the Boat if it just arrived or on the dock if the boat just left: |only !Hunter
     note-ptBR No barco, se ele acabou de chegar, ou no cais, se o barco acabou de partir: |only !Hunter
+    note-enUS Create a [Basic Campfire] (under the General Tab of your Spellbook) |only !Hunter
+    note-ptBR Crie uma [Basic Campfire] (na aba Geral do seu Grimório) |only !Hunter
     note-enUS You need 50 [Cooking] for a quest in Duskwood later |only !Hunter
     note-ptBR Você precisa de 50 em [Cooking] para uma missão em Duskwood mais tarde |only !Hunter
     note-enUS [Cook] the [Small Eggs] and [Mild Spices] into [Herb Baked Eggs] |only !Hunter
@@ -3018,7 +3338,11 @@ step
     note-enUS Level your [First Aid] while waiting for the boat |only Rogue Warrior Paladin
     note-ptBR Suba seu [First Aid] enquanto espera o barco |only Rogue Warrior Paladin
     zone 1453 |only !Shaman
+    note-enUS Take the boat to Stormwind City |only !Shaman
+    note-ptBR Pegue o barco para Stormwind City |only !Shaman
     zone 1437 |only Shaman
+    note-enUS Take the boat to Menethil Harbor |only Shaman
+    note-ptBR Pegue o barco para Menethil Harbor |only Shaman
 step
     only Shaman
     path seq 1437 @-819.67,-3691.42 @-807.26,-3716.22 @-827.94,-3724.49
@@ -3026,6 +3350,8 @@ step
     note-enUS Talk to Neal Allen
     note-ptBR Fale com Neal Allen
     vendor
+    note-enUS Buy a [Bronze Tube]
+    note-ptBR Compre um [Bronze Tube]
     note-enUS This is a limited supply item. Skip this step if Neal Allen doesn't have one
     note-ptBR Este é um item de estoque limitado. Pule esta etapa se Neal Allen não tiver um
 step
@@ -3034,12 +3360,16 @@ step
     note-enUS Talk to Shellei
     note-ptBR Fale com Shellei
     fly 1455
+    note-enUS Fly to Ironforge
+    note-ptBR Voe para Ironforge
 step
     only Shaman
     goto 1455 @-1086.5,-4642.4
     note-enUS Talk to Eldrun Stormbreaker
     note-ptBR Fale com Eldrun Stormbreaker
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Shaman
     ifonquest 968
@@ -3053,9 +3383,13 @@ step
     note-enUS Talk to Gearcutter Cogspinner |only Shaman
     note-ptBR Fale com Gearcutter Cogspinner |only Shaman
     vendor |only Shaman |opt
+    note-enUS Buy a [Bronze Tube] |only Shaman
+    note-ptBR Compre um [Bronze Tube] |only Shaman
     note-enUS This is a limited supply item. Skip this step if Gearcutter Cogspinner doesn't have one |only Shaman
     note-ptBR Este é um item de estoque limitado. Pule esta etapa se Gearcutter Cogspinner não tiver um |only Shaman
     zone 1453
+    note-enUS Enter the Deeprun Tram. Take the tram to Stormwind
+    note-ptBR Entre no Deeprun Tram. Pegue o bonde para Stormwind
     note-enUS Level your [First Aid] if needed while waiting for the tram
     note-ptBR Suba seu [First Aid], se necessário, enquanto espera o bonde
     note-enUS You will need your [First Aid] to be 80 for a quest at level 24 |only Rogue !Dwarf
@@ -3089,17 +3423,25 @@ step
     only Mage
     goto 1453 @874.32,-9014.67 10 |only Mage
     goto 1453 @885.34,-9006.15
+    note-enUS Travel to the Mage Tower |only Mage
+    note-ptBR Vá até Mage Tower |only Mage
     note-enUS Talk to Elsharin
     note-ptBR Fale com Elsharin
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     path seq 1453 @988.44,-8942.15 |only Warlock
     goto 1453 @1015.33,-8978.9 15 |only Warlock
     goto 1453 @1029.98,-8971.01
+    note-enUS Travel to The Slaughtered Lamb and go downstairs |only Warlock
+    note-ptBR Vá até The Slaughtered Lamb e desça as escadas |only Warlock
     note-enUS Talk to Ursula Deline
     note-ptBR Fale com Ursula Deline
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock Priest
     path seq 1453 @807.64,-8880.84
@@ -3116,9 +3458,13 @@ step
     goto 1453 @809.52,-8579.22 20 |only Paladin Priest
     path seq 1453 @859.13,-8559.14
     goto 1453 @861.14,-8573.03
+    note-enUS Travel to the Stormwind Cathedral |only Paladin Priest
+    note-ptBR Vá até Stormwind Cathedral |only Paladin Priest
     note-enUS Talk to Arthur the Faithful
     note-ptBR Fale com Arthur the Faithful
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Human Paladin
     goto 1453 @845.8,-8545.8
@@ -3139,6 +3485,8 @@ step
     note-enUS Talk to Brother Joshua
     note-ptBR Fale com Brother Joshua
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     ifcomplete 399
     goto 1453 @719.67,-8550.3
@@ -3159,6 +3507,8 @@ step
     note-enUS Talk to Billibub Cogspinner
     note-ptBR Fale com Billibub Cogspinner
     vendor |opt
+    note-enUS Buy a [Bronze Tube]
+    note-ptBR Compre um [Bronze Tube]
     note-enUS This is a limited supply item. Skip this step if Billibub Cogspinner doesn't have one
     note-ptBR Este é um item de estoque limitado. Pule esta etapa se Billibub Cogspinner não tiver um
     note-enUS Talk to Osborne
@@ -3166,12 +3516,18 @@ step
     note-enUS Ensure you train [Lockpicking] as well as you will need it for your Rogue class quest soon
     note-ptBR Treine também [Lockpicking], pois vai precisar dele em breve para sua missão de classe de Ladino
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
     train 1804
+    note-enUS Train [Pick Lock]
+    note-ptBR Treine [Pick Lock]
 step
     only Rogue
     path seq 1453 @374.11,-8762.88 @326.66,-8818.01 |only Rogue
     goto 1453 @323.43,-8817.83 5 |only Rogue
     goto 1453 @362.55,-8819.8
+    note-enUS Enter the SI:7 Headquarters. Travel up stairs toward Renzik "The Shiv" |only Rogue
+    note-ptBR Entre no SI:7 Headquarters. Suba as escadas em direção a Renzik "The Shiv" |only Rogue
     note-enUS Talk to Renzik "The Shiv"
     note-ptBR Fale com Renzik "The Shiv"
     accept 2281
@@ -3182,14 +3538,22 @@ step
     note-enUS Talk to Wu or Ilsa
     note-ptBR Fale com Wu ou Ilsa
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage Rogue Warlock Druid Warrior Paladin
     goto 1453 @613.12,-8795.96
     note-enUS Talk to Woo Ping
     note-ptBR Fale com Woo Ping
     train 201 |only Mage Rogue Warlock
+    note-enUS Train 1h Swords |only Mage Rogue Warlock
+    note-ptBR Treine 1h Swords |only Mage Rogue Warlock
     train 1180 |only Mage Druid
+    note-enUS Train Daggers |only Mage Druid
+    note-ptBR Treine Daggers |only Mage Druid
     train 202 |only Warrior Paladin
+    note-enUS Train 2h Swords |only Warrior Paladin
+    note-ptBR Treine 2h Swords |only Warrior Paladin
 step
     goto 1453 @566.6,-8845.5
     note-enUS Equip the [Kris] |only Rogue
@@ -3201,6 +3565,8 @@ step
 step
     goto 1453 @568.3,-8862.2
     use 277198
+    note-enUS Use the [Gatehouse Shipment] in front of the Gatehouse Door upstairs
+    note-ptBR Use o [Gatehouse Shipment] na frente da Gatehouse Door no andar de cima
     objective 97222/1
 step
     goto 1453 @566.6,-8845.5
@@ -3214,9 +3580,17 @@ step
     note-enUS Talk to Dungar Longdrink
     note-ptBR Fale com Dungar Longdrink
     fp |only !Nightelf |opt
+    note-enUS Fly to Redridge Mountains |only !Nightelf
+    note-ptBR Voe para Redridge Mountains |only !Nightelf
     fp |only Nightelf |opt
+    note-enUS Get the Stormwind Flight Path |only Nightelf
+    note-ptBR Pegue o ponto de voo de Stormwind |only Nightelf
     zone 1429 |only Nightelf |opt
+    note-enUS Exit Stormwind |only Nightelf
+    note-ptBR Saia de Stormwind |only Nightelf
     zone 1433 |only Nightelf |opt
+    note-enUS Travel to Redridge Mountains |only Nightelf
+    note-ptBR Vá até Redridge Mountains |only Nightelf
     note-enUS Talk to Guard Parker
     note-ptBR Fale com Guard Parker
     accept 244
@@ -3233,6 +3607,8 @@ step
     note-enUS Talk to Ariena Stormfeather
     note-ptBR Fale com Ariena Stormfeather
     fp
+    note-enUS Get the Redridge Mountains flight path
+    note-ptBR Pegue o ponto de voo de Redridge Mountains
 step
     goto 1433 @-2298.06,-9284.04
     note-enUS Talk to Marshal Marris
@@ -3442,14 +3818,22 @@ step
 step
     goto 1433 @-2634.54,-9588.54
     level 20 |only !Rogue
+    note-enUS Grind until you are 7687 xp away from level 20 |only !Rogue
+    note-ptBR Mate monstros até faltarem 7687 xp para o nível 20 |only !Rogue
     level 20 |only Rogue
+    note-enUS Grind until you are 10012 xp away from level 20 |only Rogue
+    note-ptBR Mate monstros até faltarem 10012 xp para o nível 20 |only Rogue
 step
     only Rogue
     goto 1433 51.85,45.12
+    note-enUS Travel to Alther's Mill |only Rogue
+    note-ptBR Vá até Alther's Mill |only Rogue
     note-enUS You MUST do this for your [Poisons] quest later
     note-ptBR Você PRECISA fazer isto para sua missão de [Poisons] mais tarde
     note-enUS Stand on the waypoint location. Position your camera and cursor until you can click 3 Practice Lockboxes at once without having to move anything
     note-ptBR Fique no local do waypoint. Ajuste a câmera e o cursor até conseguir clicar em 3 Practice Lockboxes de uma vez sem mover nada
+    note-enUS Open the Practice Lockboxes on the ground in Alther's Mill until your [Lockpicking] skill is 80
+    note-ptBR Abra as Practice Lockboxes no chão em Alther's Mill até sua habilidade de [Lockpicking] chegar a 80
 step
     only Rogue
     goto 1433 @-2700.75,-9222.07
@@ -3458,6 +3842,8 @@ step
     objective 2282/1
 step
     goto 1433 @-2298.06,-9284.04 150
+    note-enUS Travel to Lakeshire
+    note-ptBR Vá até Lakeshire
     note-enUS Talk to Marshal Marris
     note-ptBR Fale com Marshal Marris
     turnin 20
@@ -3492,6 +3878,8 @@ step
     note-enUS Talk to Innkeeper Brianna
     note-ptBR Fale com Innkeeper Brianna
     home
+    note-enUS Set your hearthstone to Lakeshire
+    note-ptBR Defina sua pedra de regresso em Lakeshire
 step
     goto 1433 @-2062.96,-9209.62
     note-enUS Talk to Chef Breanna
@@ -3523,6 +3911,8 @@ step
     turnin 3741
 step
     goto 1433 @-2237.93,-9443.6
+    note-enUS Destroy the [Certificate of Thievery]. You don't need it |only Rogue
+    note-ptBR Destrua o [Certificate of Thievery]. Você não precisa dele |only Rogue
     note-enUS Talk to Deputy Feldon
     note-ptBR Fale com Deputy Feldon
     turnin 246
@@ -3530,14 +3920,22 @@ step
 step
     goto 1433 @-2634.54,-9588.54
     level 20
+    note-enUS Grind until you are level 20
+    note-ptBR Mate monstros até o nível 20
 step
     only Druid
     goto 1438 @965.8,8780.95 |only Nightelf !Druid
     goto 1457 @2564.6,10179.8
+    note-enUS Cast Teleport: Moonglade |only Druid
+    note-ptBR Lance Teleport: Moonglade |only Druid
     note-enUS Talk to Silva Fil'naveth |only Druid
     note-ptBR Fale com Silva Fil'naveth |only Druid
     fly 1438 |only Druid |opt
+    note-enUS Fly to Darnassus |only Druid
+    note-ptBR Voe para Darnassus |only Druid
     zone 1457 |only Nightelf !Druid |opt
+    note-enUS Take the purple portal into Darnassus |only Nightelf !Druid
+    note-ptBR Pegue o portal roxo para Darnassus |only Nightelf !Druid
     note-enUS Talk to Mathrengyl Bearwalker
     note-ptBR Fale com Mathrengyl Bearwalker
     accept 98393
@@ -3568,6 +3966,8 @@ step
     only Druid
     goto 1450 @-3046.7,7534.4 |only Druid
     goto 1450 @-3117.4,7455.3
+    note-enUS Head to the Stormrage Barrow Dens |only Druid
+    note-ptBR Vá até Stormrage Barrow Dens |only Druid
     note-enUS Go deep into the cave, travel across the bridge, look for a cat statue inside an alcove and click on the small orb next to the statue
     note-ptBR Vá até o fundo da caverna, atravesse a ponte, procure uma estátua de gato dentro de uma alcova e clique no pequeno orbe ao lado da estátua
     note-enUS Loot Relic of the Claw
@@ -3619,9 +4019,13 @@ step
     note-enUS Talk to Silva Fil'naveth |only Druid
     note-ptBR Fale com Silva Fil'naveth |only Druid
     fly 1438 |only Druid |opt
+    note-enUS Fly to Darnassus |only Druid
+    note-ptBR Voe para Darnassus |only Druid
     note-enUS Talk to Silva Fil'naveth |only Druid
     note-ptBR Fale com Silva Fil'naveth |only Druid
     fly 1438 |only Druid |opt
+    note-enUS Fly to Darnassus |only Druid
+    note-ptBR Voe para Darnassus |only Druid
     note-enUS Talk to Mathrengyl Bearwalker
     note-ptBR Fale com Mathrengyl Bearwalker
     turnin 98397
@@ -3632,18 +4036,26 @@ step
     goto 1453 @1015.33,-8978.9 15 |only Warlock
     goto 1453 @1029.98,-8971.01
     hearth |only Druid |opt
+    note-enUS Hearth to Lakeshire |only Druid
+    note-ptBR Use a pedra de regresso para Lakeshire |only Druid
     note-enUS Talk to Ariena Stormfeather
     note-ptBR Fale com Ariena Stormfeather
     fly 1453 |opt
+    note-enUS Fly to Stormwind City
+    note-ptBR Voe para Stormwind City
     note-enUS Equip the [Longsword] |only Rogue
     note-ptBR Equipe a [Longsword] |only Rogue
     use 923 |only Rogue |opt
     note-enUS Equip the [Dacian Falx] |only Warrior Paladin
     note-ptBR Equipe a [Dacian Falx] |only Warrior Paladin
     use 922 |only Warrior Paladin |opt
+    note-enUS Travel to The Slaughtered Lamb and go downstairs |only Warlock
+    note-ptBR Vá até The Slaughtered Lamb e desça as escadas |only Warlock
     note-enUS Talk to Ursula Deline
     note-ptBR Fale com Ursula Deline
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Warlock
     goto 1453 @1041.54,-8983.29
@@ -3654,15 +4066,21 @@ step
     only Mage
     goto 1453 @874.32,-9014.67 10 |only Mage
     goto 1453 @885.34,-9006.15
+    note-enUS Travel to the Mage Tower |only Mage
+    note-ptBR Vá até Mage Tower |only Mage
     note-enUS Talk to Elsharin
     note-ptBR Fale com Elsharin
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Mage
     goto 1453 @847.56,-8991.9
     note-enUS Talk to Larimaine
     note-ptBR Fale com Larimaine
     train 3561
+    note-enUS Train [Teleport: Stormwind]
+    note-ptBR Treine [Teleport: Stormwind]
 step
     goto 1453 @1093.3,-8779.02
     note-enUS Talk to Argos Nightwhisper
@@ -3672,6 +4090,8 @@ step
     only Paladin
     goto 1453 @809.52,-8579.22 20 |only Paladin Priest
     goto 1453 @845.95,-8545.7
+    note-enUS Travel to the Stormwind Cathedral |only Paladin Priest
+    note-ptBR Vá até Stormwind Cathedral |only Paladin Priest
     note-enUS Talk to Duthorian Rall. He will give you the [Tome of Valor]
     note-ptBR Fale com Duthorian Rall. Ele vai lhe dar o [Tome of Valor]
     collect 6776 1 |quest 1649
@@ -3690,23 +4110,31 @@ step
     note-enUS Talk to Arthur the Faithful
     note-ptBR Fale com Arthur the Faithful
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Priest
     goto 1453 @862.89,-8519.61
     note-enUS Talk to Brother Joshua
     note-ptBR Fale com Brother Joshua
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     goto 1453 @377.61,-8752.3
     note-enUS Talk to Osborne
     note-ptBR Fale com Osborne
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Rogue
     path seq 1453 @374.11,-8762.88 @326.66,-8818.01 |only Rogue
     goto 1453 @323.43,-8817.83 5 |only Rogue
     goto 1453 @362.28,-8815.23
+    note-enUS Enter the SI:7 Headquarters. Travel up stairs toward Master Mathias Shaw |only Rogue
+    note-ptBR Entre no SI:7 Headquarters. Suba as escadas em direção a Master Mathias Shaw |only Rogue
     note-enUS Talk to Master Mathias Shaw
     note-ptBR Fale com Master Mathias Shaw
     accept 2360
@@ -3717,11 +4145,15 @@ step
     note-enUS Talk to Wu or Ilsa
     note-ptBR Fale com Wu ou Ilsa
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     only Nightelf Rogue
     ifonquest 2360
     goto 1436 @1037.42,-10628.27 5
     zone 1436
+    note-enUS Travel to Westfall
+    note-ptBR Vá até Westfall
     note-enUS Fly there if you already have the Westfall Flight Path
     note-ptBR Voe para lá se já tiver o caminho de voo de Westfall
 step
@@ -3731,12 +4163,16 @@ step
     note-enUS Talk to Thor
     note-ptBR Fale com Thor
     fp
+    note-enUS Get the Westfall flight path
+    note-ptBR Pegue o ponto de voo de Westfall
 step
     only !Nightelf Rogue
     goto 1453 @490.03,-8835.82
     note-enUS Talk to Dungar Longdrink
     note-ptBR Fale com Dungar Longdrink
     fly 1436
+    note-enUS Fly to Westfall
+    note-ptBR Voe para Westfall
 step
     only !Dwarf Rogue
     path seq 1431 @404.03,-11014.47 @432.11,-10878.75
@@ -3802,10 +4238,18 @@ step
 step
     only !Dwarf Rogue
     collect 6452 1
+    note-enUS Craft an [Anti-Venom]
+    note-ptBR Crie um [Anti-Venom]
     train 7934
 step
     only !Dwarf Rogue
+    note-enUS Use the [Anti-Venom] in your bags to remove the [Touch of Zanzil] debuff
+    note-ptBR Use o [Anti-Venom] nas suas bolsas para remover o debuff [Touch of Zanzil]
     use 6452
+step
+    only Dwarf Rogue
+    note-enUS Cast [Stoneform] to remove the [Touch of Zanzil] debuff
+    note-ptBR Lance [Stoneform] para remover o debuff [Touch of Zanzil]
 step
     only !Dwarf Rogue
     goto 1436 @1037.42,-10628.27 |only Rogue
@@ -3815,11 +4259,17 @@ step
     note-enUS Talk to Thor |only Rogue
     note-ptBR Fale com Thor |only Rogue
     fly 1453 |only Rogue |opt
+    note-enUS Fly to Stormwind |only Rogue
+    note-ptBR Voe para Stormwind |only Rogue
+    note-enUS Travel toward Shaina Fuller |only !Dwarf Rogue
+    note-ptBR Vá em direção a Shaina Fuller |only !Dwarf Rogue
     note-enUS Talk to Shaina Fuller
     note-ptBR Fale com Shaina Fuller
     note-enUS If you have a Paladin or Druid friend, ask them to remove the [Touch of Zanzil] for you instead
     note-ptBR Se tiver um amigo Paladino ou Druida, peça que ele remova o [Touch of Zanzil] para você
     skill firstaid 80
+    note-enUS Level your [First Aid] to 80
+    note-ptBR Suba seu [First Aid] até 80
 step
     only !Dwarf Rogue
     goto 1453 43.07,26.16
@@ -3828,18 +4278,26 @@ step
     note-enUS If you have a Paladin or Druid friend, ask them to remove the [Touch of Zanzil] for you instead
     note-ptBR Se tiver um amigo Paladino ou Druida, peça que ele remova o [Touch of Zanzil] para você
     train 7934
+    note-enUS Train [Anti-Venom]
+    note-ptBR Treine [Anti-Venom]
 step
     only !Dwarf Rogue
     collect 6452 1
+    note-enUS Craft an [Anti-Venom]
+    note-ptBR Crie um [Anti-Venom]
     train 7934
 step
     only !Dwarf Rogue
+    note-enUS Use the [Anti-Venom] in your bags to remove the [Touch of Zanzil] debuff
+    note-ptBR Use o [Anti-Venom] nas suas bolsas para remover o debuff [Touch of Zanzil]
     use 6452
 step
     only Rogue
     path seq 1453 @374.11,-8762.88 @326.66,-8818.01 |only Rogue
     goto 1453 @323.43,-8817.83 10 |only Rogue
     goto 1453 @362.28,-8815.23
+    note-enUS Enter the SI:7 Headquarters. Travel up stairs toward Master Mathias Shaw |only Rogue
+    note-ptBR Entre no SI:7 Headquarters. Suba as escadas em direção a Master Mathias Shaw |only Rogue
     note-enUS Talk to Master Mathias Shaw
     note-ptBR Fale com Master Mathias Shaw
     note-enUS Remember to re-equip your main weapon if you switched to a [Dagger] earlier |only Rogue
@@ -3854,6 +4312,8 @@ step
 step
     path seq 1429 @84.61,-9457.95
     goto 1429 @87.73,-9456.79
+    note-enUS Travel to Goldshire
+    note-ptBR Vá até Goldshire
     note-enUS Talk to Smith Argus
     note-ptBR Fale com Smith Argus
     turnin 118
@@ -3861,6 +4321,8 @@ step
 step
     path seq 1429 @-727.57,-9555.16
     goto 1429 @-728.26,-9553.08
+    note-enUS Travel to the Tower of Azora. Ascend the tower
+    note-ptBR Vá até Tower of Azora. Suba a torre
     note-enUS Talk to Theocritus at the top
     note-ptBR Fale com Theocritus no topo
     accept 94
@@ -3869,7 +4331,11 @@ step
     path seq 1433 @-1716.28,-9623.29
     goto 1433 @-2243.14,-9259.43
     zone 1433 |opt
+    note-enUS Travel to Redridge
+    note-ptBR Vá até Redridge
     fp |opt
+    note-enUS Fly to Redridge
+    note-ptBR Voe para Redridge
     note-enUS If you're in Goldshire it will be faster to Fly from Stormwind
     note-ptBR Se estiver em Goldshire, será mais rápido voar de Stormwind
     note-enUS If you're at the Tower of Azora simply run to Redridge
@@ -4139,12 +4605,16 @@ step
     path seq 1440 @-12.7,4150.17
     goto 1440 @128.01,3305.31
     zone 1440 |opt
+    note-enUS Travel south to Ashenvale
+    note-ptBR Vá para o sul até Ashenvale
     note-enUS Kill and loot Ghostpaw Runners you encounter while questing. Keep any [Lean Wolf Flanks] you get. You will need 10 for a cooking quest later
     note-ptBR Mate e saqueie os Ghostpaw Runners que encontrar durante as missões. Guarde os [Lean Wolf Flanks] que conseguir. Você precisará de 10 para uma missão de culinária depois
     collect 1015 10 |opt
     note-enUS Escort Kerlonian to Maestra's Post in Ashenvale
     note-ptBR Escolte Kerlonian até Maestra's Post em Ashenvale
     use 13536
+    note-enUS Use the [Horn of Awakening] whenever Kerlonian falls asleep next to him
+    note-ptBR Use o [Horn of Awakening] sempre que Kerlonian adormecer, ao lado dele
     note-enUS Avoid running on the main road as much as possible. Enemies will only spawn if you're on the road
     note-ptBR Evite correr pela estrada principal o máximo possível. Os inimigos só surgem se você estiver na estrada
     objective 5321/2
@@ -4184,6 +4654,8 @@ step
 step
     goto 1440 @-102.08,3492.89
     level 20
+    note-enUS Keep killing Dark Strand mobs until you have enough xp to reach level 20
+    note-ptBR Continue matando mobs de Dark Strand até ter xp suficiente para chegar ao nível 20
 step
     goto 1440 @189.71,3185.77
     note-enUS Talk to Delgren the Purifier
@@ -4192,6 +4664,8 @@ step
 step
     goto 1440 @-138.99,3806.92
     level 20
+    note-enUS Grind to level 20
+    note-ptBR Mate monstros até o nível 20
 step
     goto 1440 @175.87,3189.61
     note-enUS Talk to Orendil Broadleaf
@@ -4230,6 +4704,8 @@ step
 step
     only Hunter
     goto 1440 @522.9,2716.1 30
+    note-enUS Head up the ramp to the north-west
+    note-ptBR Suba a rampa a noroeste
 step
     only Hunter
     goto 1440 @663.38,2365.17
@@ -4239,17 +4715,25 @@ step
     note-enUS Talk to Bolyun
     note-ptBR Fale com Bolyun
     trainer
+    note-enUS Train your pet skills
+    note-ptBR Treine your pet skills
 step
     only Hunter
     note-enUS Talk to Alenndaar Lapidaar
     note-ptBR Fale com Alenndaar Lapidaar
     trainer
+    note-enUS Train your class skills
+    note-ptBR Treine your class skills
     train 5118
+    note-enUS Train [Aspect of the Cheetah]
+    note-ptBR Treine [Aspect of the Cheetah]
 step
     goto 1440 @-283.73,2827.92
     note-enUS Talk to Daelyshia
     note-ptBR Fale com Daelyshia
     fp
+    note-enUS Get the Astranaar Flight Path
+    note-ptBR Pegue o ponto de voo de Astranaar
 step
     goto 1440 @-299.3,2796.01
     note-enUS Talk to Shindrell Swiftfire
@@ -4277,11 +4761,15 @@ step
     note-enUS Talk to Innkeeper Kimlya
     note-ptBR Fale com Innkeeper Kimlya
     home
+    note-enUS Set your Hearthstone to Astranaar
+    note-ptBR Defina sua pedra de regresso em Astranaar
 step
     goto 1440 @-410.6,2758.73
     note-enUS Talk to Maliynn
     note-ptBR Fale com Maliynn
     vendor
+    note-enUS Buy food and water if necessary
+    note-ptBR Compre comida e água se necessário
 step
     goto 1440 @-454.43,2682.24
     note-enUS Talk to Pelturas Whitemoon
@@ -4294,6 +4782,8 @@ step
     note-enUS Talk to Haljan Oakheart
     note-ptBR Fale com Haljan Oakheart
     vendor
+    note-enUS Restock on Ammo if necessary
+    note-ptBR Reabasteça a munição se necessário
 step
     goto 1440 @-974,2890.19
     note-enUS Save up to 6 Gooey Spider Legs looted from the Spiders in the zone. You will need them for a quest later
@@ -4319,6 +4809,12 @@ step
     ifonquest 973
     path seq 1440 @-126.3,2203.69 @-99.78,2305.17 @114.17,2337.45
     goto 1440 @242.76,2340.53
+    note-enUS Head to the base of the mountain
+    note-ptBR Vá até a base da montanha
+    note-enUS Run straight north while climbing the mountain
+    note-ptBR Corra reto para o norte enquanto sobe a montanha
+    note-enUS Climb the hill next to the big tree to the right of the Fire Scar Shrine entrance
+    note-ptBR Suba a colina ao lado da árvore grande, à direita da entrada do Fire Scar Shrine
     note-enUS Jump over the tree root and hug the right to avoid aggroing mobs
     note-ptBR Pule a raiz da árvore e mantenha-se à direita para não atrair inimigos
     note-enUS Kill Ilkrud Magthrull. Loot him for his Tome
@@ -4418,12 +4914,18 @@ step
 step
     only Dwarf Hunter Human Hunter
     hearth
+    note-enUS Hearth to Auberdine
+    note-ptBR Use a pedra de regresso para Auberdine
 step
     only !Dwarf !Hunter
     goto 1440 @-284.31,2828.69
+    note-enUS Die on the eastern side of the lake and spirit res at Astranaar |only !Dwarf !Hunter
+    note-ptBR Morra no lado leste do lago e ressuscite com o spirit healer em Astranaar |only !Dwarf !Hunter
     note-enUS Talk to Daelyshia
     note-ptBR Fale com Daelyshia
     fly 1439
+    note-enUS Fly to Darkshore
+    note-ptBR Voe para Darkshore
 step
     goto 1439 @489.35,6506.76
     note-enUS Talk to Archaeologist Hollee
@@ -4434,6 +4936,8 @@ step
     ifonquest 995
     goto 1439 39.37,43.48
     vendor |opt
+    note-enUS Restock/Resupply
+    note-ptBR Reabasteça/Compre suprimentos
     note-enUS Talk to Terenthis
     note-ptBR Fale com Terenthis
     turnin 995
@@ -4456,18 +4960,26 @@ step
     note-enUS Talk to Caylais Moonfeather
     note-ptBR Fale com Caylais Moonfeather
     fly 1438
+    note-enUS Fly to Teldrassil
+    note-ptBR Voe para Teldrassil
 step
     only Hunter
     goto 1438 @968.9,8795.34
     goto 1457 @2511.04,10178.01
     zone 1457 |opt
+    note-enUS Take the purple portal into Darnassus
+    note-ptBR Pegue o portal roxo para Darnassus
     note-enUS Talk to Jocaste
     note-ptBR Fale com Jocaste
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1457 @2515.03,9940.5
     note-enUS Talk to Garryeth
     note-ptBR Fale com Garryeth
+    note-enUS Deposit the following items into your bank
+    note-ptBR Deposite os seguintes itens no seu banco
     note-enUS [Elixir of Water Breathing] -5996
     note-ptBR [Elixir of Water Breathing] -5996
     note-enUS [Murloc Fins] -1468
@@ -4482,7 +4994,11 @@ step
     note-enUS Talk to Ilyenia Moonfire
     note-ptBR Fale com Ilyenia Moonfire
     train 264
+    note-enUS Train Bows
+    note-ptBR Treine Bows
     train 227
+    note-enUS Train Staves
+    note-ptBR Treine Staves
 step
     ifonquest 741
     goto 1438 @2607.86,9641.94
@@ -4499,16 +5015,22 @@ step
 step
     only !Dwarf !Hunter
     hearth
+    note-enUS Hearth to Astranaar
+    note-ptBR Use a pedra de regresso para Astranaar
 step
     only Dwarf Hunter Human Hunter
     goto 1457 @2626.51,9946.11
     zone 1438
+    note-enUS Travel through the purple portal to Rut'theran Village
+    note-ptBR Atravesse o portal roxo até Rut'theran Village
 step
     only Dwarf Hunter Human Hunter
     goto 1438 @841.56,8640.79
     note-enUS Talk to Vesprystus
     note-ptBR Fale com Vesprystus
     fly 1440
+    note-enUS Fly to Ashenvale
+    note-ptBR Voe para Ashenvale
 ]==])
 
 register([==[
@@ -4531,14 +5053,20 @@ register([==[
 step
     only Druid
     goto 1450 @-2593.82,7867.06
+    note-enUS Cast Teleport: Moonglade |only Druid
+    note-ptBR Lance Teleport: Moonglade |only Druid
     note-enUS Go to Moonglade
     note-ptBR Vá para Moonglade
     note-enUS Talk to Loganaar
     note-ptBR Fale com Loganaar
     trainer
+    note-enUS Train your class spells
+    note-ptBR Treine your class spells
 step
     goto 1439 @504.41,6402.39
     hearth |opt
+    note-enUS Hearth to Auberdine
+    note-ptBR Use a pedra de regresso para Auberdine
     note-enUS Click the Wanted Poster
     note-ptBR Clique no Wanted Poster
     accept 4740
@@ -4569,11 +5097,15 @@ step
     goto 1439 43.55,76.29 80
     note-enUS If you equip the [Enchanted Moonstalker Cloak], make sure you save your current cloak for later as the [Enchanted Moonstalker Cloak] is lost upon a later turn in
     note-ptBR Se equipar o [Enchanted Moonstalker Cloak], guarde sua capa atual para depois, pois o [Enchanted Moonstalker Cloak] é perdido em uma entrega futura
+    note-enUS Equip the [Enchanted Moonstalker Cloak] If it's better than your current Cloak
+    note-ptBR Equipe a [Enchanted Moonstalker Cloak] se for melhor que sua capa atual
     note-enUS Kill Grizzled Thistle Bears. Loot them for their Scalps
     note-ptBR Mate Grizzled Thistle Bears. Saqueie-os para obter os escalpos
     note-enUS Be careful as they cast [Ravage] an instant attack dealing 20-40 damage and knocking you down for 2 seconds
     note-ptBR Cuidado, eles lançam [Ravage], um ataque instantâneo que causa 20-40 de dano e derruba você por 2 segundos
     objective 1003/1 |opt
+    note-enUS Travel to the Grove of the Ancients
+    note-ptBR Vá até Grove of the Ancients
     note-enUS Talk to Onu
     note-ptBR Fale com Onu
     turnin 952 |only Nightelf
@@ -4582,6 +5114,8 @@ step
 step
     ifonquest 944
     goto 1439 @417.3,4575.82 100
+    note-enUS Travel to The Master's Glaive
+    note-ptBR Vá até The Master's Glaive
 step
     goto 1439 @390.7,4542.7
     note-enUS Kill Twilight Disciples and Twilight Thugs. Loot them for the [Book: The Powers Below]
@@ -4592,6 +5126,8 @@ step
     objective 944/1
 step
     goto 1439 @417.3,4575.82
+    note-enUS Use the [Phial of Scrying] and place it on the ground
+    note-ptBR Use o [Phial of Scrying] e coloque-o no chão
     use 5251 |opt
     note-enUS Click the Scrying Bowl on the ground
     note-ptBR Clique na Scrying Bowl no chão
@@ -4751,8 +5287,12 @@ step
     note-enUS Kerlonian will follow you and occasionally help in combat. Make sure you don't lose him as he will stop moving when he falls asleep. You have 25 minutes to reach Ashenvale and complete this quest
     note-ptBR Kerlonian seguirá você e às vezes ajudará em combate. Não o perca, pois ele para de andar quando adormece. Você tem 25 minutos para chegar a Ashenvale e concluir esta missão
     use 13536 |opt
+    note-enUS Use the [Horn of Awakening] whenever Kerlonian falls asleep while standing next to him to wake him up
+    note-ptBR Use o [Horn of Awakening] sempre que Kerlonian adormecer, em pé ao lado dele, para acordá-lo
     note-enUS Avoid running on the main road as much as possible. Enemies will only spawn if you're on the road
     note-ptBR Evite correr pela estrada principal o máximo possível. Os inimigos só surgem se você estiver na estrada
+    note-enUS Travel toward Volcor in the Cave
+    note-ptBR Vá em direção a Volcor na Cave
     note-enUS Talk to Volcor
     note-ptBR Fale com Volcor
     turnin 993
@@ -4768,9 +5308,13 @@ step
     path seq 1440 @-12.7,4150.17
     goto 1440 @128.01,3305.31
     zone 1440 |opt
+    note-enUS Travel south to Ashenvale
+    note-ptBR Vá para o sul até Ashenvale
     note-enUS Escort Kerlonian to Maestra's Post in Ashenvale
     note-ptBR Escolte Kerlonian até Maestra's Post em Ashenvale
     use 13536
+    note-enUS Use the [Horn of Awakening] whenever Kerlonian falls asleep next to him
+    note-ptBR Use o [Horn of Awakening] sempre que Kerlonian adormecer, ao lado dele
     note-enUS Avoid running on the main road as much as possible. Enemies will only spawn if you're on the road
     note-ptBR Evite correr pela estrada principal o máximo possível. Os inimigos só surgem se você estiver na estrada
     objective 5321/2
@@ -4799,6 +5343,8 @@ step
 step
     goto 1440 @-102.08,3492.89
     level 20
+    note-enUS Keep killing Dark Strand mobs until you have enough xp to reach level 20
+    note-ptBR Continue matando mobs de Dark Strand até ter xp suficiente para chegar ao nível 20
 step
     ifonquest 1010
     path seq 1440 @-203.58,3849.97 @-2.9,3737.73
@@ -4842,6 +5388,8 @@ step
 step
     goto 1440 @-138.99,3806.92
     level 20
+    note-enUS Grind to level 20
+    note-ptBR Mate monstros até o nível 20
 step
     goto 1440 @175.87,3189.61
     note-enUS Talk to Orendil Broadleaf
@@ -4874,9 +5422,13 @@ step
     accept 1020
 step
     goto 1440 @-283.73,2827.92
+    note-enUS Travel to Astranaar
+    note-ptBR Vá até Astranaar
     note-enUS Talk to Daelyshia
     note-ptBR Fale com Daelyshia
     fp
+    note-enUS Get the Astranaar Flight Path
+    note-ptBR Pegue o ponto de voo de Astranaar
 step
     goto 1440 @-299.3,2796.01
     note-enUS Talk to Shindrell Swiftfire
@@ -4904,6 +5456,8 @@ step
     note-enUS Talk to Innkeeper Kimlya
     note-ptBR Fale com Innkeeper Kimlya
     home
+    note-enUS Set your Hearthstone to Astranaar
+    note-ptBR Defina sua pedra de regresso em Astranaar
 step
     goto 1440 @-454.43,2682.24
     note-enUS Talk to Pelturas Whitemoon

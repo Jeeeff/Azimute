@@ -367,7 +367,9 @@ def emit_gotos(gotos, loop):
     return lines
 
 
-REDUNDANT_TEXT = re.compile(r"^(Accept|Turn ?in)\b", re.I)
+# Textos de comando que não viram dica: redundantes ("Accept X"), macros do RXP
+# ("/cast ...") e links que só funcionam no RXP ("CLICK HERE ...").
+REDUNDANT_TEXT = re.compile(r"^(Accept|Turn ?in)\b|^/|^CLICK HERE", re.I)
 
 
 def parse_steps(body_lines):
@@ -990,7 +992,7 @@ def main():
         "## Notes: Forever leveling guides for Azimute. Based on the RestedXP guides (CC BY-NC-SA 4.0), see CREDITS.md.",
         "## Notes-ptBR: Guias de up do Forever para o Azimute. Baseados nos guias do RestedXP (CC BY-NC-SA 4.0), ver CREDITS.md.",
         "## Author: Azimute (adaptação dos guias do RestedXP)",
-        "## Version: 0.10.0",
+        "## Version: 0.11.0",
         "## Dependencies: Azimute",
         "## IconTexture: Interface\Icons\INV_Misc_Book_09",
         "## Category: Quests",
