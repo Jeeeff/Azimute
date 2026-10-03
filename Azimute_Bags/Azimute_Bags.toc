@@ -5,7 +5,7 @@
 ## Notes-ptBR: Todas as bolsas (e o banco) numa janela só, com busca, organizar e nível de item. Funciona sem o Azimute.
 ## Author: jeeeff
 ## X-License: GPL-3.0-or-later
-## Version: 0.1.0
+## Version: 0.1.1
 ## IconTexture: Interface\Icons\INV_Misc_Bag_08
 ## Category: Inventory
 ## Category-ptBR: Inventário

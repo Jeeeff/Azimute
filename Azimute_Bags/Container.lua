@@ -177,6 +177,14 @@ function Container:Button(bag, slot)
         button.emptyBg:SetAlpha(0.6)
         button.ilvl = button:CreateFontString(nil, "OVERLAY", "NumberFontNormalSmall")
         button.ilvl:SetPoint("TOPLEFT", 2, -2)
+        -- seta verde de melhoria (indicador de equipamento do Azimute, se ligado)
+        button.upgrade = button:CreateTexture(nil, "OVERLAY", nil, 7)
+        button.upgrade:SetSize(14, 14)
+        button.upgrade:SetPoint("TOPRIGHT", -1, -1)
+        if not (button.upgrade.SetAtlas and button.upgrade:SetAtlas("bags-greenarrow")) then
+            button.upgrade:SetTexture("Interface\\Buttons\\UI-MicroStream-Green")
+        end
+        button.upgrade:Hide()
         self.buttons[bag][slot] = button
     end
     return button
@@ -277,6 +285,8 @@ function Container:UpdateButton(button, bag, slot)
     button.emptyBg:SetShown(not texture)
     local level = B.db.itemLevel and ItemLevelText(link, quality)
     button.ilvl:SetText(level or "")
+    local upgrade = link and AzimuteAPI and AzimuteAPI.IsUpgrade and AzimuteAPI.IsUpgrade(link)
+    button.upgrade:SetShown(upgrade and true or false)
 end
 
 function Container:UpdateItems()

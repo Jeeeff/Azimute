@@ -39,6 +39,21 @@ if WITH_CORE then
     local found = false
     for _, module in ipairs(NS.modules) do if module.name == B.L["TITLE"] then found = true end end
     check(found, "aparece no menu de módulos do Azimute")
+    -- seta de melhoria vem do indicador de equipamento do Azimute
+    AzimuteAPI.RegisterStatWeights({ ["Warrior Speedrun 1-60 - Arms"] = { Class = "Warrior", Spec = "Arms", Kind = "Speedrun",
+        MIN_LEVEL = 1, MAX_LEVEL = 60, RESISTANCE0_NAME = 0.035, ITEM_MOD_STRENGTH_SHORT = 2 } })
+    NS.Engine.player.class, NS.Engine.player.level = "WARRIOR", 10
+    S.itemData["luva-velha"] = { equipLoc = "INVTYPE_HAND", subclassID = 1, stats = { RESISTANCE0_NAME = 6 } }
+    S.itemData["luva-nova"] = { equipLoc = "INVTYPE_HAND", subclassID = 1, stats = { RESISTANCE0_NAME = 11 } }
+    S.equipped[10] = "luva-velha"
+    S.bagItems[0] = { [1] = { itemName = "Luvas Enfeitadas", link = "luva-nova", id = 5 }, [2] = { itemName = "Pedra", link = "item:hs", id = 6948 } }
+    B.bags:SetShown(true); S.RunTimers()
+    check(B.bags.buttons[0][1].upgrade._shown, "seta de melhoria na luva melhor (bolsas unificadas)")
+    check(not B.bags.buttons[0][2].upgrade._shown, "item comum sem seta")
+    AzimuteDB.bagArrows = false
+    B.bags:UpdateItems()
+    check(not B.bags.buttons[0][1].upgrade._shown, "opção das setas desligada no Azimute: some")
+    AzimuteDB.bagArrows = true
     return
 end
 
