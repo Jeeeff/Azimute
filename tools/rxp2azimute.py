@@ -367,6 +367,9 @@ def emit_gotos(gotos, loop):
     return lines
 
 
+REDUNDANT_TEXT = re.compile(r"^(Accept|Turn ?in)\b", re.I)
+
+
 def parse_steps(body_lines):
     steps = []
     step = None
@@ -407,6 +410,14 @@ def parse_steps(body_lines):
             cmd, rest = m.group(1), m.group(2)
             args = rest.split(">>")[0].strip()
             convert_command(step, cmd, args, cond_tokens)
+            # Texto depois de ">>" num comando é a instrução do passo ("Pegue o barril
+            # no chão", "Entre na caverna"). Só "Accept X"/"Turn in X" são redundantes.
+            if ">>" in rest:
+                text = clean_text(rest.split(">>", 1)[1])
+                if text and not REDUNDANT_TEXT.match(text):
+                    suffix = (" |only " + " ".join(cond_tokens)) if cond_tokens else ""
+                    step.lines.append("note-enUS " + text + suffix)
+                    stats["instrução de comando mantida"] += 1
         elif body.startswith(">>") or body.startswith("+"):
             text = clean_text(body.lstrip(">+ "))
             if text:

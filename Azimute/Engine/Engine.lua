@@ -267,7 +267,9 @@ local CHECKS = {
 
 -- Objetivo vale para o personagem (only) e para o idioma (note-enUS...).
 function Engine:GoalApplies(goal)
-    return Matches(goal.only) and (goal.locale == nil or goal.locale == ns.locale)
+    local locale = goal.locale
+    return Matches(goal.only) and (locale == nil or locale == ns.locale
+        or (locale == "enUS" and not goal.translated)) -- sem tradução: mostra em inglês
 end
 
 -- true/false para objetivos verificáveis; nil para os só informativos
@@ -416,7 +418,10 @@ function Engine:Next()
     while index <= #guide.steps and not StepApplies(guide.steps[index]) do
         index = index + 1
     end
-    self:SetStep(index, true)
+    -- Revendo passos (voltou com ◀): avança de um em um, mostrando os feitos.
+    -- No passo atual (ex.: pulando um passo travado): pula também os que já
+    -- estão feitos e para no próximo que falta, em vez de "andar em círculos".
+    self:SetStep(index, self.hold)
     self:RequestEvaluate()
 end
 

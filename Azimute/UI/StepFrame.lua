@@ -523,9 +523,29 @@ function UI:Refresh()
                     end
                 end
             end
+            -- A instrução principal fica visível mesmo no modo compacto: a primeira
+            -- nota depois do primeiro objetivo concreto obrigatório (ex.: "Pegue o
+            -- barril no chão" logo após "Use o Barril"); sem isso, a primeira nota.
+            local primary
+            if hideNotes then
+                local afterConcrete, firstNote = false, nil
+                for _, goal in ipairs(step.goals) do
+                    if Engine:GoalApplies(goal) then
+                        if goal.type == "note" then
+                            firstNote = firstNote or goal
+                            if afterConcrete and not primary then
+                                primary = goal
+                            end
+                        elseif not QUIET_GOALS[goal.type] and not goal.optional then
+                            afterConcrete = true
+                        end
+                    end
+                end
+                primary = primary or firstNote
+            end
             for _, goal in ipairs(step.goals) do
                 if Engine:GoalApplies(goal) then
-                    if goal.type == "note" and hideNotes then
+                    if goal.type == "note" and hideNotes and goal ~= primary then
                         notes[#notes + 1] = goal.text
                     else
                         entries[#entries + 1] = GoalEntry(goal)

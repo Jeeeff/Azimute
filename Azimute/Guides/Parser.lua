@@ -399,6 +399,12 @@ local function ParseStepLine(step, line)
             warning = ApplyModifier(goal, modifier) or warning
         end
     end
+    -- "note-enUS X" seguido de "note-ptBR Y" = par traduzido. Sem tradução, a
+    -- nota em inglês aparece em qualquer idioma (melhor que sumir).
+    local previous = step.goals[#step.goals]
+    if goal.locale and goal.locale ~= "enUS" and previous and previous.locale == "enUS" then
+        previous.translated = true
+    end
     step.goals[#step.goals + 1] = goal
     return warning
 end

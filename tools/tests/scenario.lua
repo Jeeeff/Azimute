@@ -427,7 +427,8 @@ check(lines[2]:find("Fale com o Mordo") and lines[3]:find("dica em todos"), "not
 AzimuteDB.compactNotes = true
 ns.UI:Refresh()
 lines = UILines()
-check(#lines == 2 and #ns.UI.hiddenNotes == 2 and ns.UI.frame.infoButton._shown, "modo compacto: dicas atrás do ícone i (" .. #lines .. " linhas)")
+check(#lines == 3 and lines[2]:find("Fale com o Mordo") and #ns.UI.hiddenNotes == 1 and ns.UI.frame.infoButton._shown,
+    "modo compacto: instrução principal visível, a dica extra atrás do ícone i (" .. #lines .. " linhas)")
 check(ns.UI.frame.rows[1].map == 1420, "linha do 'vá até' abre o mapa ao clicar")
 AzimuteDB.collapsed = true
 ns.UI:Refresh()
@@ -483,13 +484,16 @@ Q.onQuest[1001], Q.onQuest[1002], Q.onQuest[1004] = nil, true, nil
 ns.Engine:LoadGuide("nav.teste", 1, true); S.RunTimers()
 check(ns.Engine.stepIndex == 1, "começa no passo 1 (pendente)")
 ns.Engine:Next(); S.RunTimers()
-check(ns.Engine.stepIndex == 2, "avançar mostra o passo 2 mesmo já concluído")
+check(ns.Engine.stepIndex == 4, "pular o passo atual também pula os já feitos (2) e o de outra classe (3)")
+check(not UILines()[1]:find("Passo já concluído"), "passo pendente não mostra o aviso")
+-- revisão: voltar com ◀ mostra o passo feito; ▶ anda de um em um
+ns.Engine:Prev(); S.RunTimers()
+check(ns.Engine.stepIndex == 2, "voltar mostra o passo 2 mesmo já concluído")
 check(UILines()[1]:find("Passo já concluído"), "aviso de passo concluído na janela")
 S.FireEvent("QUEST_LOG_UPDATE"); S.RunTimers()
-check(ns.Engine.stepIndex == 2, "fica no passo concluído até o jogador avançar")
+check(ns.Engine.stepIndex == 2, "fica no passo revisado até o jogador avançar")
 ns.Engine:Next(); S.RunTimers()
-check(ns.Engine.stepIndex == 4, "pula só o passo de outra classe (Mago)")
-check(not UILines()[1]:find("Passo já concluído"), "passo pendente não mostra o aviso")
+check(ns.Engine.stepIndex == 4, "na revisão, avançar vai ao próximo que vale (pula o de Mago)")
 Q.onQuest[1004] = true
 S.FireEvent("QUEST_ACCEPTED", 1004); S.RunTimers()
 check(ns.Engine.stepIndex == 5, "passo pendente volta a avançar sozinho quando concluído")
@@ -1385,3 +1389,26 @@ check(not F2:IsActive(), "clicar em 'Voltar ao guia' sai da missão")
 ns.Nav:SetManualTarget(1421, 0.5, 0.5, { title = "Algum lugar" }); S.RunTimers()
 ns.Engine:LoadGuide("azimute.teste.deathknell", 1, true); S.RunTimers()
 check(ns.Nav:Manual() == nil, "escolher um guia também cancela o destino avulso")
+
+print("\n== Instrução principal e nota sem tradução ==")
+ns.Registry:Register([==[
+#id barril.teste
+step
+    goto 1413 50,50
+    note-enUS Kill Water Seekers
+    note-ptBR Mate Water Seekers
+    objective 871/1 |opt
+    use 4926
+    note-enUS Loot Chen's Empty Keg from the ground and start the quest
+    note-enUS You can get it later if it's not there
+    note-ptBR Você pode pegá-lo depois se não estiver lá
+    collect 4926 1 |quest 819
+    accept 819
+]==], "teste", true)
+AzimuteDB.compactNotes = true
+ns.Engine:LoadGuide("barril.teste", 1, true); S.RunTimers()
+local texts = table.concat(UILines(), " | ")
+check(texts:find("Loot Chen's Empty Keg from the ground"), "instrução sem tradução aparece (em inglês) e fica visível: " .. texts)
+check(not texts:find("You can get it later"), "a versão em inglês da nota traduzida não aparece")
+local hidden = table.concat(ns.UI.hiddenNotes, " | ")
+check(hidden:find("Mate Water Seekers") and hidden:find("Você pode pegá"), "dicas extras atrás do i: " .. hidden)
