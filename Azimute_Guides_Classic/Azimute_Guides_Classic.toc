@@ -1,0 +1,39 @@
+## Interface: 16001
+## Title: Azimute - Classic Guides 30-60
+## Title-ptBR: Azimute - Guias Clássicos 30-60
+## Notes: Classic 30-60 leveling routes for Azimute, based on Guidelime_Zarant (GPL-3.0). See CREDITS.md.
+## Notes-ptBR: Rotas de up 30-60 do Clássico para o Azimute, baseadas no Guidelime_Zarant (GPL-3.0). Ver CREDITS.md.
+## Author: Azimute (adaptação dos guias de Zarant)
+## Version: 0.2.0
+## Dependencies: Azimute
+## IconTexture: Interface\Icons\INV_Misc_Book_11
+## Category: Quests
+## X-License: GPL-3.0
+
+Guides\Classic_Horde_30_40.lua
+Guides\Classic_Horde_40_45.lua
+Guides\Classic_Horde_45_50.lua
+Guides\Classic_Horde_50_55.lua
+Guides\Classic_Horde_55_60.lua
+Guides\Classic_Alliance_27_29_Wetlands.lua
+Guides\Classic_Alliance_29_32_Duskwood.lua
+Guides\Classic_Alliance_32_32_Hillsbrad.lua
+Guides\Classic_Alliance_32_34_1kNeedles.lua
+Guides\Classic_Alliance_34_35_STV.lua
+Guides\Classic_Alliance_35_37_Desolace.lua
+Guides\Classic_Alliance_37_38_STV.lua
+Guides\Classic_Alliance_38_39_Swamp.lua
+Guides\Classic_Alliance_39_40_Alterac_Arathi.lua
+Guides\Classic_Alliance_40_40_Dustwallow.lua
+Guides\Classic_Alliance_40_41_Badlands.lua
+Guides\Classic_Alliance_41_43_STV.lua
+Guides\Classic_Alliance_43_48_Feralas.lua
+Guides\Classic_Alliance_48_49_Tanaris.lua
+Guides\Classic_Alliance_49_51_STV_BL_SG.lua
+Guides\Classic_Alliance_51_52_Hinterlands_WPL.lua
+Guides\Classic_Alliance_52_53_Felwood_Feralas_Azshara.lua
+Guides\Classic_Alliance_53_54_Ungoro.lua
+Guides\Classic_Alliance_54_56_Felwood_Winterspring.lua
+Guides\Classic_Alliance_56_57_BS.lua
+Guides\Classic_Alliance_57_59_WPL_EPL.lua
+Guides\Classic_Alliance_59_60.lua

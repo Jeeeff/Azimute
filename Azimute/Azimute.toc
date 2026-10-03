@@ -1,0 +1,50 @@
+## Interface: 16001, 120100, 120105
+## Title: Azimute
+## Title-ptBR: Azimute - Guia de Up
+## Notes: Leveling and quest guide for WoW: Forever, with arrow, routes and community guides.
+## Notes-ptBR: Guia de up e missões para o WoW: Forever, com seta, rotas e guias da comunidade.
+## Author: jeeeff
+## X-License: GPL-3.0-or-later
+## Version: 0.21.0
+## IconTexture: Interface\Icons\INV_Misc_Map_01
+## Category: Quests
+## Category-ptBR: Missões
+## OptionalDeps: TomTom
+## AddonCompartmentFunc: Azimute_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: Azimute_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: Azimute_OnAddonCompartmentLeave
+## SavedVariables: AzimuteDB
+## SavedVariablesPerCharacter: AzimuteCharDB
+
+Locales.lua
+Core\Init.lua
+Data\Names.lua
+Data\Dungeons.lua
+Guides\Parser.lua
+Guides\Registry.lua
+Guides\IO.lua
+Data\DungeonQuests.lua
+Engine\Engine.lua
+Engine\Focus.lua
+Nav\Position.lua
+Nav\Router.lua
+Nav\TomTomBridge.lua
+Nav\Arrow.lua
+Nav\Navigator.lua
+Nav\Corpse.lua
+Nav\MapLines.lua
+Guides\Recorder.lua
+UI\StepFrame.lua
+UI\ImportFrame.lua
+UI\GuidePicker.lua
+UI\DungeonPanel.lua
+UI\Options.lua
+UI\MinimapButton.lua
+Automation\AutoQuest.lua
+Automation\ItemButton.lua
+Automation\Gear.lua
+Automation\Trainer.lua
+Automation\Vendor.lua
+Core\Report.lua
+Core\Diag.lua
+Core\Commands.lua

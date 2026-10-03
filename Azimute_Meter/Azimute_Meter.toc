@@ -1,0 +1,18 @@
+## Interface: 16001, 120100, 120105
+## Title: Azimute - Meter
+## Title-ptBR: Azimute - Medidor de Dano
+## Notes: Group damage/healing meter for WoW: Forever (reads the game's own combat data). Works without Azimute.
+## Notes-ptBR: Medidor de dano e cura do grupo para o WoW: Forever (usa os dados de combate do próprio jogo). Funciona sem o Azimute.
+## Author: jeeeff
+## X-License: GPL-3.0-or-later
+## Version: 0.1.0
+## IconTexture: Interface\Icons\Ability_DualWield
+## Category: Combat
+## Category-ptBR: Combate
+## OptionalDeps: Azimute
+## SavedVariables: AzimuteMeterDB
+
+Locales.lua
+Meter.lua
+Window.lua
+Options.lua

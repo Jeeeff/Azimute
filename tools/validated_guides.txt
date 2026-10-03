@@ -1,0 +1,4 @@
+# Guias do pacote Forever já conferidos no jogo.
+# Uma linha por prefixo do #id (ex.: forever.a.13-15-westfall ou forever.a.).
+# Ao rodar tools/rxp2azimute.py, esses guias saem com "#status validated".
+# Guias fora da lista ficam sem selo. Só marque o que alguém realmente jogou.

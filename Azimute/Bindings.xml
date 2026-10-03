@@ -1,0 +1,4 @@
+<Bindings>
+    <Binding name="CLICK AzimuteItemButton:LeftButton" header="AZIMUTE" category="ADDONS">
+    </Binding>
+</Bindings>

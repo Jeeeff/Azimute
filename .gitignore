@@ -1,0 +1,18 @@
+# Gerados
+dist/
+__pycache__/
+*.pyc
+
+# Backup local do nome antigo (GuiaUp)
+_backup_GuiaUp_antigo/
+
+# Fonte dos guias do RXP: é outro repositório git (baixe com o comando do CLAUDE.md)
+tools/sources/rxpguides/
+
+# LuaJIT para os testes: instale com  python -m pip install --target tools/tests/pylibs lupa
+tools/tests/pylibs/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

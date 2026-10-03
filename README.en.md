@@ -1,0 +1,67 @@
+# Azimute
+
+A leveling guide for **WoW: Forever**, with a Portuguese-first interface. It shows the current step in
+a window, points you in the right direction with an arrow, marks points on the map and, if you want,
+accepts and turns in quests for you.
+
+> **Status: beta.** Azimute started as a tool for me and my friends. The Forever beta only lets you
+> level up to a certain point, so **the guides above level 30 have not been checked in the game yet**
+> (see "Guide coverage"). Some steps will be wrong: please use the report button.
+
+## What it does
+
+- Guide window with the current step, progress, recommended reward and tips (compact mode by default).
+- Direction arrow and map pin; optional TomTom integration.
+- Suggested routes when they save time: flights, boats, zeppelins and hearthstone.
+- Automatic quest accept and turn-in (optional; SHIFT cancels any automation).
+- Safe item button, gear suggestions per spec, spells to train and their cost.
+- Dungeon quest panel where you choose which quests to add to the guide.
+- Guide picker that recommends a guide for your race, class, faction and level.
+- **Community guides:** route recorder, editor, import and export through `!AZ1!` codes.
+- Interface in Portuguese and English. Quest, NPC, item and zone names come from the game, in your
+  client's language.
+- Everything automatic can be turned off in Options. The addon sends no data outside the game.
+
+## Guide coverage
+
+| Range | Source | Status |
+|---|---|---|
+| 1 to ~30 (Alliance up to 32), Alliance and Horde, per race | RestedXP, adapted to Forever | Base tested in simulation only; in-game checking under way |
+| ~30 to 60 | Guidelime_Zarant (made for Classic) | **Experimental**: not checked in Forever, tagged `[experimental]` |
+| Mage AoE 1-22, Skyborne 1-14, Herbalism/Mining/Skinning 1-300 | RestedXP | Same as the 1-30 range |
+
+Not available yet: guides for other classes, dungeon routes (quests only), Alliance level 22 and the
+new Forever content at level 60.
+
+## Installation
+
+1. Copy the `Azimute`, `Azimute_Guides_Forever` and `Azimute_Guides_Classic` folders into the Forever
+   client's `Interface\AddOns` folder (in the beta, `_classic_beta_\Interface\AddOns`).
+2. Start the game and type `/azimute` to see the commands. **A new addon folder only shows up after restarting the game.**
+
+Useful commands: `/azimute guides` (picker), `/azimute show` / `hide`, `/azimute next` / `prev`,
+`/azimute report`, `/azimute record` and `/azimute export` (Portuguese aliases also work).
+
+## Reporting a problem
+
+Use the bug icon on the guide window or `/azimute report`. Copy the text (Ctrl+C) and paste it in the
+project's support channel, saying what went wrong on the last line.
+<!-- TODO: add the support channel link (issues/Discord) here before publishing -->
+
+## Licenses and credits
+
+| Part | License | Origin |
+|---|---|---|
+| `Azimute` (code) | GPL-3.0-or-later (`Azimute/LICENSE.txt`) | Original code |
+| `Azimute_Guides_Forever` (guides) | CC BY-NC-SA 4.0 | Guides from [RestedXP](https://github.com/RestedXP/RXPGuides), converted automatically |
+| ↳ dungeon quests | MIT | Forever Dungeon Quests, by Sundee |
+| ↳ trainer spells | MIT | What's Training, by fusionpit |
+| `Azimute_Guides_Classic` (guides) | GPL-3.0 | Guidelime_Zarant, by Zarant |
+
+RestedXP guides may only be used non-commercially, which is why Azimute is free. RestedXP and the other
+authors do not endorse Azimute. Details in the `CREDITS.md` inside each package.
+
+World of Warcraft and WoW: Forever are trademarks of Blizzard Entertainment. This project is not
+affiliated with Blizzard.
+
+Copyright (C) 2026 jeeeff. Want to help? See [CONTRIBUTING.md](CONTRIBUTING.md).

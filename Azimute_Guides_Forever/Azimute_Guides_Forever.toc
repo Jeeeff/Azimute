@@ -1,0 +1,38 @@
+## Interface: 16001
+## Title: Azimute - Forever Guides
+## Title-ptBR: Azimute - Guias do Forever
+## Notes: Forever leveling guides for Azimute. Based on the RestedXP guides (CC BY-NC-SA 4.0), see CREDITS.md.
+## Notes-ptBR: Guias de up do Forever para o Azimute. Baseados nos guias do RestedXP (CC BY-NC-SA 4.0), ver CREDITS.md.
+## Author: Azimute (adaptação dos guias do RestedXP)
+## Version: 0.10.0
+## Dependencies: Azimute
+## IconTexture: Interface\Icons\INV_Misc_Book_09
+## Category: Quests
+## X-License: CC BY-NC-SA 4.0
+
+DungeonQuests.lua
+ClassSpells.lua
+FlightTimes.lua
+StatWeights.lua
+Guides\Forever_Alliance_1_10_NightElf.lua
+Guides\Forever_Alliance_1_13_Human.lua
+Guides\Forever_Alliance_1_14_DwarfGnome.lua
+Guides\Forever_Alliance_11_20.lua
+Guides\Forever_Alliance_ADV_AoE_Mage_1_22.lua
+Guides\Forever_Alliance_Mage_1_12.lua
+Guides\Forever_Alliance_Mage_12_21.lua
+Guides\Forever_Horde_01_12_Durotar.lua
+Guides\Forever_Horde_01_14_Undead.lua
+Guides\Forever_Horde_1_12_Mulgore.lua
+Guides\Forever_Horde_12_22_Barrens.lua
+Guides\Forever_Horde_Mage_12_21.lua
+Guides\Forever_Skyborne.lua
+Guides\Forever_Dungeon_Alliance_1_13_Human.lua
+Guides\Forever_Dungeon_Alliance_1_14_DwarfGnome.lua
+Guides\Forever_Dungeon_Alliance_11_20.lua
+Guides\Forever_Dungeon_Horde_12_22_Barrens.lua
+Guides\Forever_Extra_Horde_20_30.lua
+Guides\Forever_Extra_Alliance_23_30.lua
+Guides\Forever_Extra_Herbalism.lua
+Guides\Forever_Extra_Mining.lua
+Guides\Forever_Extra_Skinning.lua
