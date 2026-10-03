@@ -198,8 +198,8 @@ step
     accept 1125
 step
     goto 1451 51.8,38.6
-    note-enUS Head to Cenarion Hold-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
-    note-ptBR Vá até Cenarion Hold-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
+    note-enUS Head to Cenarion Hold
+    note-ptBR Vá até Cenarion Hold
     accept 8277
     note-enUS Talk to the goblin at the 2nd floor of the inn Accept
     note-ptBR Fale com o goblin no 2º andar da estalagem. Aceite
@@ -252,7 +252,8 @@ step
     note-enUS Turn in Accept -Hive in the Tower
     note-ptBR Entregue. Aceite -Hive in the Tower
 step
-    note-enUS From this point forward, stop questing in silithus and skip straight to the part 2 of this guide once you have enough XP to ding from turn ins You need about 55k xp total, assuming you haven't skipped any quests-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
+    note-enUS From this point forward, stop questing in silithus and skip straight to the part 2 of this guide once you have enough XP to ding from turn ins You need about 55k xp total, assuming you haven't skipped any quests
+    note-ptBR A partir daqui, pare de fazer missões em Silithus e vá direto para a parte 2 deste guia quando tiver XP para subir de nível ao entregar. Você precisa de cerca de 55k de XP no total, se não pulou nenhuma missão
 step
     note-enUS 48540 if you don't have reliquary of purity (pre Dire Maul)
     note-ptBR 48540 se você não tiver o reliquary of purity (pré Dire Maul)
@@ -430,8 +431,8 @@ step
     note-enUS Turn in (3000xp) -Under the Chitin Was...
     note-ptBR Entregue (3000xp) -Under the Chitin Was...
 step
-    note-enUS Fly to Felwood ang grind fulborgs if you don't have enough XP to ding 60 from quest turn ins in Darnassus-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
-    note-ptBR Voe até Felwood e faça grind de fulborgs se não tiver XP suficiente para chegar ao 60 com as entregas de missão em Darnassus-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
+    note-enUS Fly to Felwood ang grind fulborgs if you don't have enough XP to ding 60 from quest turn ins in Darnassus
+    note-ptBR Voe até Felwood e faça grind de fulborgs se não tiver XP suficiente para chegar ao 60 com as entregas de missão em Darnassus
 step
     fly 1438
 step

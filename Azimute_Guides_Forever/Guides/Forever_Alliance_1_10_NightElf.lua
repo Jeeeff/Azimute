@@ -456,6 +456,7 @@ step
     only Priest
     goto 1438 @800.5,10454.9
     note-enUS Talk to Shanda
+    note-ptBR Fale com Shanda
     turnin 97979
 step
     ifcomplete 457
@@ -1484,6 +1485,7 @@ step
     goto 1457 @2572.3,10185.8 |only Druid Nightelf
     goto 1457 @2563.92,10179.04
     note-enUS Talk to Denatharion |only Druid Nightelf
+    note-ptBR Fale com Denatharion |only Druid Nightelf
     accept 5923 |only Druid Nightelf |opt
     note-enUS Talk to Mathrengyl Bearwalker on the middle level
     note-ptBR Fale com Mathrengyl Bearwalker no nível do meio

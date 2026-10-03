@@ -67,8 +67,12 @@ def parse_goto(value):
 ADDON_SUFFIX = re.compile(r"\s*-?[A-Z_]*>>.*$")  # "-BAG_UPDATE>>Crystals_Tanaris49" (função do Zarant)
 
 
+# "-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation" (eventos do Zarant, sem ">>")
+EVENT_SUFFIX = re.compile(r"-(?:[A-Z_]{4,}|On[A-Za-z]+)(?:,(?:[A-Z_]{4,}|On[A-Za-z]+))+\s*$")
+
+
 def strip_suffix(text):
-    return ADDON_SUFFIX.sub("", text).strip()
+    return EVENT_SUFFIX.sub("", ADDON_SUFFIX.sub("", text)).strip()
 
 
 def clean_note(text):

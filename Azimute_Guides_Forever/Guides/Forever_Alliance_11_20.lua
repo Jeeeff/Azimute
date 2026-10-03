@@ -267,6 +267,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -295,6 +296,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -319,6 +321,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1531,6 +1534,7 @@ step
     only Nightelf
     goto 1453 @1194.5,-8332.1
     note-enUS Talk to Manifest Clerk Philmor
+    note-ptBR Fale com Manifest Clerk Philmor
     accept 97220
 step
     only Nightelf
@@ -1608,6 +1612,7 @@ step
     only Nightelf
     goto 1453 @568.7,-8848.7
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97220
     accept 97222
 step
@@ -1621,6 +1626,7 @@ step
     only Nightelf
     goto 1453 @566.9,-8847.8
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97222
 step
     only Human
@@ -1860,6 +1866,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1888,6 +1895,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1912,6 +1920,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -3418,6 +3427,7 @@ step
     only !Shaman
     goto 1453 @1193.1,-8328.9
     note-enUS Talk to Manifest Clerk Philmor
+    note-ptBR Fale com Manifest Clerk Philmor
     accept 97220
 step
     only Mage
@@ -3560,6 +3570,7 @@ step
     note-ptBR Equipe o [Kris] |only Rogue
     use 2209 |only Rogue |opt
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97220
     accept 97222
 step
@@ -3571,6 +3582,7 @@ step
 step
     goto 1453 @566.6,-8845.5
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97222
 step
     goto 1453 @490.12,-8835.67

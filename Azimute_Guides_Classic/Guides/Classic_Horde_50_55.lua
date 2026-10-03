@@ -94,15 +94,15 @@ step
     note-enUS Turn in if you find an Imperfect Draenethyst Fragment
     note-ptBR Entregue se encontrar um Imperfect Draenethyst Fragment
 step
-    note-enUS Collect the following items: 14 Vulture Gizzard 11 Basilisk Brain 6 Scorpok Pincer 6 Blasted Boar Lung 5 Snickerfang Jowl -BAG_UPDATE,OnStepActivation
-    note-ptBR Colete os seguintes itens: 14 Vulture Gizzard 11 Basilisk Brain 6 Scorpok Pincer 6 Blasted Boar Lung 5 Snickerfang Jowl -BAG_UPDATE,OnStepActivation
+    note-enUS Collect the following items: 14 Vulture Gizzard 11 Basilisk Brain 6 Scorpok Pincer 6 Blasted Boar Lung 5 Snickerfang Jowl
+    note-ptBR Colete os seguintes itens: 14 Vulture Gizzard 11 Basilisk Brain 6 Scorpok Pincer 6 Blasted Boar Lung 5 Snickerfang Jowl
     accept 2585
     turnin 2585
     note-enUS Turn in once you have: 3 Scorpok Pincer 2 Vulture Gizzard 1 Blasted Boar Lung
     note-ptBR Entregue quando tiver: 3 Scorpok Pincer 2 Vulture Gizzard 1 Blasted Boar Lung
 step
-    note-enUS Collect the following items: 12 Vulture Gizzard 11 Basilisk Brain 3 Scorpok Pincer 5 Blasted Boar Lung 5 Snickerfang Jowl -BAG_UPDATE,OnStepActivation
-    note-ptBR Colete os seguintes itens: 12 Vulture Gizzard 11 Basilisk Brain 3 Scorpok Pincer 5 Blasted Boar Lung 5 Snickerfang Jowl -BAG_UPDATE,OnStepActivation
+    note-enUS Collect the following items: 12 Vulture Gizzard 11 Basilisk Brain 3 Scorpok Pincer 5 Blasted Boar Lung 5 Snickerfang Jowl
+    note-ptBR Colete os seguintes itens: 12 Vulture Gizzard 11 Basilisk Brain 3 Scorpok Pincer 5 Blasted Boar Lung 5 Snickerfang Jowl
     accept 2583
     turnin 2583
     accept 2581

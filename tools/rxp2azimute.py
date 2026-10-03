@@ -646,7 +646,8 @@ def render(guide, ids_by_name):
             # Tradução pt-BR da dica, se existir no dicionário.
             if line.startswith("note-enUS "):
                 m = re.match(r"^note-enUS (.*?)((?: \|(?:only|opt)[^|]*)*)$", line)
-                translated = NOTES_PT.get(m.group(1)) if m else None
+                # com e sem o "::ID do NPC" (o pacote final mostra só o nome)
+                translated = m and (NOTES_PT.get(m.group(1)) or NOTES_PT.get(re.sub(r"::\d+", "", m.group(1))))
                 if translated:
                     out.append("    note-ptBR " + re.sub(r"::\d+", "", translated) + m.group(2))
                     stats["dica traduzida"] += 1

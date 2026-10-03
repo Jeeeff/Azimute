@@ -4,7 +4,7 @@
 ## Notes: Classic 30-60 leveling routes for Azimute, based on Guidelime_Zarant (GPL-3.0). See CREDITS.md.
 ## Notes-ptBR: Rotas de up 30-60 do Clássico para o Azimute, baseadas no Guidelime_Zarant (GPL-3.0). Ver CREDITS.md.
 ## Author: Azimute (adaptação dos guias de Zarant)
-## Version: 0.2.0
+## Version: 0.1.0
 ## Dependencies: Azimute
 ## IconTexture: Interface\Icons\INV_Misc_Book_11
 ## Category: Quests

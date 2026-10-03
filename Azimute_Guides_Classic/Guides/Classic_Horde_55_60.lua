@@ -739,8 +739,8 @@ step
     accept 1125
 step
     goto 1451 51.8,38.6
-    note-enUS Head to Cenarion Hold-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
-    note-ptBR Vá até Cenarion Hold-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
+    note-enUS Head to Cenarion Hold
+    note-ptBR Vá até Cenarion Hold
     accept 8277
     note-enUS Talk to the goblin at the 2nd floor of the inn Accept
     note-ptBR Fale com o goblin no 2º andar da estalagem. Aceite
@@ -793,7 +793,8 @@ step
     note-enUS Turn in Accept -Hive in the Tower
     note-ptBR Entregue. Aceite -Hive in the Tower
 step
-    note-enUS From this point forward, stop questing in silithus and skip straight to the part 2 of this guide once you have enough XP to ding from turn ins You need about 55k xp total, assuming you haven't skipped any quests-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
+    note-enUS From this point forward, stop questing in silithus and skip straight to the part 2 of this guide once you have enough XP to ding from turn ins You need about 55k xp total, assuming you haven't skipped any quests
+    note-ptBR A partir daqui, pare de fazer missões em Silithus e vá direto para a parte 2 deste guia quando tiver XP para subir de nível ao entregar. Você precisa de cerca de 55k de XP no total, se não pulou nenhuma missão
 step
     goto 1451 23.5,13.7
     objective 8284/1
@@ -972,8 +973,8 @@ step
     note-enUS Turn in (3000xp) -Under the Chitin Was...
     note-ptBR Entregue (3000xp) -Under the Chitin Was...
 step
-    note-enUS Make sure you are 15.100xp away from level 60 before flying to Felwood, grind fulborgs in northern felwood if you have to-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
-    note-ptBR Certifique-se de estar a 15.100xp do nível 60 antes de voar para Felwood, farme fulborgs no norte de felwood se precisar-PLAYER_XP_UPDATE,QUEST_LOG_UPDATE,OnStepActivation,OnStepCompletion
+    note-enUS Make sure you are 15.100xp away from level 60 before flying to Felwood, grind fulborgs in northern felwood if you have to
+    note-ptBR Certifique-se de estar a 15.100xp do nível 60 antes de voar para Felwood, farme fulborgs no norte de felwood se precisar
 step
     fly 1448
 step

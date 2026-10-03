@@ -369,8 +369,8 @@ step
     note-enUS Grind raptors until you find A Mangled Journal Accept
     note-ptBR Faça grind de raptors até encontrar A Mangled Journal Aceite
 step
-    note-enUS Make sure you have 7 crystals of each color -BAG_UPDATE,OnStepActivation
-    note-ptBR Certifique-se de ter 7 cristais de cada cor -BAG_UPDATE,OnStepActivation
+    note-enUS Make sure you have 7 crystals of each color
+    note-ptBR Certifique-se de ter 7 cristais de cada cor
 step
     hearth |opt
     note-enUS Hearth back to tanaris Alternatively you can run to tanaris, throw away your HS and unstuck to Gadgetzan

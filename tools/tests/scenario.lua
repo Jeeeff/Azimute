@@ -1412,3 +1412,20 @@ check(texts:find("Loot Chen's Empty Keg from the ground"), "instrução sem trad
 check(not texts:find("You can get it later"), "a versão em inglês da nota traduzida não aparece")
 local hidden = table.concat(ns.UI.hiddenNotes, " | ")
 check(hidden:find("Mate Water Seekers") and hidden:find("Você pode pegá"), "dicas extras atrás do i: " .. hidden)
+
+print("\n== Dica do equipamento: porcentagem só quando faz sentido ==")
+local G3 = ns.Gear
+local savedClass3 = ns.Engine.player.class
+ns.Engine.player.class, ns.Engine.player.level = "WARRIOR", 10
+AzimuteCharDB.gearSpec = nil
+S.talentGroups = {}
+S.itemData["luva-6"] = { equipLoc = "INVTYPE_HAND", subclassID = 1, stats = { RESISTANCE0_NAME = 6 } }
+S.itemData["luva-11"] = { equipLoc = "INVTYPE_HAND", subclassID = 1, stats = { RESISTANCE0_NAME = 11 } }
+S.itemData["luva-forca"] = { equipLoc = "INVTYPE_HAND", subclassID = 1, stats = { ITEM_MOD_STRENGTH_SHORT = 4, RESISTANCE0_NAME = 8 } }
+S.equipped[10] = "luva-6"
+check(G3:TooltipText("luva-11"):find("melhoria pequena"), "só armadura contra só armadura: 'melhoria pequena', sem +83%: " .. G3:TooltipText("luva-11"))
+check(G3:TooltipText("luva-forca"):find("melhoria grande"), "atual fraco, novo com Força: 'melhoria grande'")
+S.equipped[10] = "luva-forca"
+S.itemData["luva-forca2"] = { equipLoc = "INVTYPE_HAND", subclassID = 1, stats = { ITEM_MOD_STRENGTH_SHORT = 6, RESISTANCE0_NAME = 8 } }
+check(G3:TooltipText("luva-forca2"):find("melhoria %+%d+%%"), "itens com atributos: mostra a porcentagem")
+ns.Engine.player.class = savedClass3

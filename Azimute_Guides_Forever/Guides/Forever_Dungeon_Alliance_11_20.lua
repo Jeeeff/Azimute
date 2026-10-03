@@ -991,6 +991,7 @@ step
     only Nightelf
     goto 1453 @1194.5,-8332.1
     note-enUS Talk to Manifest Clerk Philmor
+    note-ptBR Fale com Manifest Clerk Philmor
     accept 97220
 step
     only Nightelf
@@ -1068,6 +1069,7 @@ step
     only Nightelf
     goto 1453 @568.7,-8848.7
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97220
     accept 97222
 step
@@ -1081,6 +1083,7 @@ step
     only Nightelf
     goto 1453 @566.9,-8847.8
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97222
 step
     goto 1453 @673.58,-8867.76
@@ -1262,6 +1265,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1288,6 +1292,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1306,6 +1311,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1665,6 +1671,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1705,6 +1712,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1729,6 +1737,7 @@ step
 step
     goto 1436 @1213.4,-10153.8
     note-enUS Talk to Ozwin Ironsprocket
+    note-ptBR Fale com Ozwin Ironsprocket
     accept 92909
     turnin 92909
 step
@@ -1896,10 +1905,12 @@ step
 step
     goto 1453 @1193.1,-8328.9
     note-enUS Talk to Manifest Clerk Philmor
+    note-ptBR Fale com Manifest Clerk Philmor
     accept 97220
 step
     goto 1453 @566.6,-8845.5
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97220
     accept 97222
 step
@@ -1911,6 +1922,7 @@ step
 step
     goto 1453 @566.6,-8845.5
     note-enUS Talk to Elaine Trias
+    note-ptBR Fale com Elaine Trias
     turnin 97222
 step
     path seq 1453 @562.3,-8385.3
@@ -2692,18 +2704,21 @@ step
     note-enUS Fly to Loch Modan |only Shaman
     note-ptBR Voe para Loch Modan |only Shaman
     note-enUS Talk to Norric Lochthane
+    note-ptBR Fale com Norric Lochthane
     turnin 94494
     accept 94495
 step
     only Shaman
     goto 1432 @-3146,-4837.5
     note-enUS Talk to Norric Lochthane
+    note-ptBR Fale com Norric Lochthane
     accept 94495
 step
     only Shaman
     ifonquest 468
     goto 1432 @-2695.5,-4678.6
     note-enUS Talk to Mountaineer Rockgar
+    note-ptBR Fale com Mountaineer Rockgar
     turnin 468
 step
     only Shaman
@@ -2714,7 +2729,9 @@ step
     note-enUS Travel through Dun Algaz to Wetlands |only Shaman
     note-ptBR Passe por Dun Algaz até Wetlands |only Shaman
     note-enUS Travel up the ramp toward Hervdana Saegrund inside the cave |only Shaman
+    note-ptBR Suba a rampa em direção a Hervdana Saegrund dentro da caverna |only Shaman
     note-enUS Talk to Hervdana Saegrund
+    note-ptBR Fale com Hervdana Saegrund
     turnin 94495
     accept 94497
 step
@@ -2730,7 +2747,9 @@ step
     goto 1437 @-3098.2,-4242.6 7 |only Shaman
     goto 1437 @-3109.3,-4257.5
     note-enUS Travel back up the ramp toward Hervdana Saegrund inside the cave |only Shaman
+    note-ptBR Suba de volta a rampa em direção a Hervdana Saegrund dentro da caverna |only Shaman
     note-enUS Talk to Hervdana Saegrund
+    note-ptBR Fale com Hervdana Saegrund
     turnin 94497
     accept 94499
 ]==])

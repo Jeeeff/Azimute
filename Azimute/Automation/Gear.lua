@@ -339,7 +339,7 @@ function Gear:IsUpgrade(link)
         return false
     end
     local percent = current > 0 and (diff / current * 100) or 100
-    return true, percent, diff
+    return true, percent, diff, current
 end
 
 ------------------------------------------------------------------------
@@ -405,6 +405,8 @@ end)
 -- Dica do item (tooltip): "Azimute: melhoria +12%"
 ------------------------------------------------------------------------
 
+local SMALL_SCORE = 1.5 -- nota de um item com ~1 ponto de atributo principal
+
 local function AddTooltipLine(tooltip)
     if not ns.db.gearTooltip or not ns.db.gearAdvisor or not tooltip.GetItem then
         return
@@ -413,9 +415,23 @@ local function AddTooltipLine(tooltip)
     if not link or ns.IsSecret(link) then
         return
     end
-    local upgrade, percent = Gear:IsUpgrade(link)
+    local text = Gear:TooltipText(link)
+    if text then
+        tooltip:AddLine(text, 0.2, 1, 0.2)
+    end
+end
+
+-- Linha "Azimute: melhoria +12% (Armas)" para a dica (ou nil se não é melhoria).
+function Gear:TooltipText(link)
+    local upgrade, percent, diff, current = Gear:IsUpgrade(link)
     if upgrade then
-        tooltip:AddLine(L["GEAR_TOOLTIP_UPGRADE"]:format(percent) .. " |cff999999(" .. Gear.SpecName(Gear:CurrentSpec()) .. ")|r", 0.2, 1, 0.2)
+        -- Item atual quase sem atributos (ex.: só armadura): a porcentagem
+        -- exagera ("+83%" por 5 de armadura), então mostra sem número.
+        local text = L["GEAR_TOOLTIP_UPGRADE"]:format(percent)
+        if (current or 0) < SMALL_SCORE then
+            text = (diff or 0) < SMALL_SCORE and L["GEAR_TOOLTIP_UPGRADE_SMALL"] or L["GEAR_TOOLTIP_UPGRADE_BIG"]
+        end
+        return text .. " |cff999999(" .. Gear.SpecName(Gear:CurrentSpec()) .. ")|r"
     end
 end
 

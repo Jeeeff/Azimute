@@ -173,6 +173,7 @@ step
     goto 1432 @-2846.1,-5657.6 15 |only Shaman
     goto 1432 @-2880.9,-5701.5
     note-enUS Travel up the mountain trail toward Braldir Ashmantle |only Shaman
+    note-ptBR Suba a trilha da montanha em direção a Braldir Ashmantle |only Shaman
     note-enUS Talk to Braldir Ashmantle
     note-ptBR Fale com Braldir Ashmantle
     turnin 94465
@@ -351,6 +352,7 @@ step
     goto 1432 @-2846.1,-5657.6 15 |only Shaman
     goto 1432 @-2880.9,-5701.5
     note-enUS Travel up the mountain trail toward Braldir Ashmantle again |only Shaman
+    note-ptBR Suba a trilha da montanha em direção a Braldir Ashmantle novamente |only Shaman
     note-enUS Talk to Braldir Ashmantle
     note-ptBR Fale com Braldir Ashmantle
     turnin 94466
