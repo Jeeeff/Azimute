@@ -21,6 +21,18 @@ com uma seta, marca os pontos no mapa e, se você quiser, aceita e entrega as mi
   do seu cliente.
 - Tudo que é automático pode ser desligado em Opções. O addon não envia nenhum dado para fora do jogo.
 
+### Módulos que vêm junto (independentes)
+
+Cada um é um addon separado: dá para desligar na lista de addons sem afetar o guia, e se um deles der
+erro o guia continua funcionando.
+
+- **Azimute Medidor** (`/azm`): dano, DPS, cura, interrupções, mortes etc. do grupo, usando os dados de
+  combate do próprio jogo; luta atual, total e anteriores; detalhes por feitiço; relatório no chat.
+  Durante a luta o jogo esconde os números exatos dos addons, então porcentagem, relatório e detalhes
+  aparecem quando o combate acaba.
+- **Azimute Bolsas** (`/azb`): todas as bolsas numa janela só (e o banco também), com busca, organizar,
+  espaços livres, ouro e nível de item. A tecla B abre a janela nova (dá para desligar nas opções).
+
 ## Cobertura dos guias
 
 | Faixa | Origem | Situação |
@@ -34,8 +46,9 @@ conteúdo novo do Forever no nível 60.
 
 ## Instalação
 
-1. Copie as pastas `Azimute`, `Azimute_Guides_Forever` e `Azimute_Guides_Classic` para a pasta
-   `Interface\AddOns` do cliente do Forever (no beta, `_classic_beta_\Interface\AddOns`).
+1. Extraia o zip e copie as pastas `Azimute`, `Azimute_Guides_Forever`, `Azimute_Guides_Classic`,
+   `Azimute_Meter` e `Azimute_Bags` para a pasta `Interface\AddOns` do cliente do Forever (no beta,
+   `World of Warcraft\_classic_beta_\Interface\AddOns`). Os dois últimos são opcionais.
 2. Abra o jogo e digite `/azimute` para ver os comandos. **Pasta nova de addon só aparece reiniciando o jogo.**
 
 Comandos úteis: `/azimute guias` (seletor), `/azimute mostrar` / `esconder`, `/azimute avancar` /
@@ -45,7 +58,7 @@ Comandos úteis: `/azimute guias` (seletor), `/azimute mostrar` / `esconder`, `/
 
 Use o ícone de inseto na janela do guia ou `/azimute reportar`. Copie o texto (Ctrl+C) e cole no canal de
 suporte do projeto, escrevendo o que deu errado na última linha.
-<!-- TODO: colocar aqui o link do canal de suporte (issues/Discord) antes de publicar -->
+Canal de suporte: [issues do GitHub](https://github.com/Jeeeff/Azimute/issues).
 
 ## Licenças e créditos
 
@@ -56,6 +69,7 @@ suporte do projeto, escrevendo o que deu errado na última linha.
 | ↳ missões de masmorra | MIT | Forever Dungeon Quests, de Sundee |
 | ↳ feitiços de treinador | MIT | What's Training, de fusionpit |
 | `Azimute_Guides_Classic` (guias) | GPL-3.0 | Guidelime_Zarant, de Zarant |
+| `Azimute_Meter`, `Azimute_Bags` (código) | GPL-3.0-or-later | Código próprio |
 
 Os guias do RestedXP só podem ser usados sem fins comerciais, por isso o Azimute é gratuito. O RestedXP e
 os demais autores não endossam o Azimute. Detalhes em `CREDITS.md` dentro de cada pacote.

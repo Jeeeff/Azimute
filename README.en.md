@@ -22,6 +22,17 @@ accepts and turns in quests for you.
   client's language.
 - Everything automatic can be turned off in Options. The addon sends no data outside the game.
 
+### Bundled modules (independent)
+
+Each one is a separate addon: you can disable it in the addon list without affecting the guide, and if
+one of them errors the guide keeps working.
+
+- **Azimute Meter** (`/azm`): group damage, DPS, healing, interrupts, deaths etc., using the game's own
+  combat data; current, overall and previous fights; spell details; chat report. During combat the game
+  hides exact numbers from addons, so percentages, reports and details show up when combat ends.
+- **Azimute Bags** (`/azb`): all bags (and the bank) in one window, with search, sort, free slots, gold
+  and item level. The B key opens the new window (can be turned off in the options).
+
 ## Guide coverage
 
 | Range | Source | Status |
@@ -35,8 +46,9 @@ new Forever content at level 60.
 
 ## Installation
 
-1. Copy the `Azimute`, `Azimute_Guides_Forever` and `Azimute_Guides_Classic` folders into the Forever
-   client's `Interface\AddOns` folder (in the beta, `_classic_beta_\Interface\AddOns`).
+1. Extract the zip and copy the `Azimute`, `Azimute_Guides_Forever`, `Azimute_Guides_Classic`,
+   `Azimute_Meter` and `Azimute_Bags` folders into the Forever client's `Interface\AddOns` folder (in the
+   beta, `World of Warcraft\_classic_beta_\Interface\AddOns`). The last two are optional.
 2. Start the game and type `/azimute` to see the commands. **A new addon folder only shows up after restarting the game.**
 
 Useful commands: `/azimute guides` (picker), `/azimute show` / `hide`, `/azimute next` / `prev`,
@@ -46,7 +58,7 @@ Useful commands: `/azimute guides` (picker), `/azimute show` / `hide`, `/azimute
 
 Use the bug icon on the guide window or `/azimute report`. Copy the text (Ctrl+C) and paste it in the
 project's support channel, saying what went wrong on the last line.
-<!-- TODO: add the support channel link (issues/Discord) here before publishing -->
+Support channel: [GitHub issues](https://github.com/Jeeeff/Azimute/issues).
 
 ## Licenses and credits
 
@@ -57,6 +69,7 @@ project's support channel, saying what went wrong on the last line.
 | ↳ dungeon quests | MIT | Forever Dungeon Quests, by Sundee |
 | ↳ trainer spells | MIT | What's Training, by fusionpit |
 | `Azimute_Guides_Classic` (guides) | GPL-3.0 | Guidelime_Zarant, by Zarant |
+| `Azimute_Meter`, `Azimute_Bags` (code) | GPL-3.0-or-later | Own code |
 
 RestedXP guides may only be used non-commercially, which is why Azimute is free. RestedXP and the other
 authors do not endorse Azimute. Details in the `CREDITS.md` inside each package.
