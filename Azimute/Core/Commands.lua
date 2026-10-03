@@ -146,11 +146,11 @@ local function Spec(arg)
         Gear:UpdateBags()
     end
     local current, source = Gear:CurrentSpec()
-    ns.Print(L["SPEC_CURRENT"]:format(class, current ~= "" and current or "-",
+    ns.Print(L["SPEC_CURRENT"]:format(class, Gear.SpecName(current),
         ns.Engine.player.level or UnitLevel("player")) .. " " .. L["SPEC_SOURCE_" .. (source or "default")])
     local list = {}
     for i, spec in ipairs(specs) do
-        list[i] = ("%d. %s"):format(i, spec ~= "" and spec or class)
+        list[i] = ("%d. %s"):format(i, spec ~= "" and Gear.SpecName(spec) or class)
     end
     ns.Print(L["SPEC_LIST"]:format(table.concat(list, ", ")))
 end

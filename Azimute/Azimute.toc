@@ -46,6 +46,7 @@ UI\MinimapButton.lua
 Automation\AutoQuest.lua
 Automation\ItemButton.lua
 Automation\Gear.lua
+Automation\StatWeights.lua
 Automation\Trainer.lua
 Automation\Vendor.lua
 Core\Report.lua

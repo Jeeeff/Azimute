@@ -665,13 +665,13 @@ check(not IB.button._shown, "sem o item na bolsa: botão some")
 print("\n== Indicador de equipamento ==")
 local G = ns.Gear
 AzimuteAPI.RegisterStatWeights({
-    ["Warrior Speedrun 20-29"] = { Class = "Warrior", Kind = "Speedrun", MIN_LEVEL = 20, MAX_LEVEL = 29,
+    ["Warrior Speedrun 20-29"] = { Class = "Warrior", Spec = "Arms", Kind = "Speedrun", MIN_LEVEL = 20, MAX_LEVEL = 29,
         ITEM_MOD_STRENGTH_SHORT = 2, ITEM_MOD_STAMINA_SHORT = 1, ITEM_MOD_INTELLECT_SHORT = 0,
         ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 10, RESISTANCE0_NAME = 0.05 },
 })
 S.player.level = 23
 ns.Engine.player.level = 23
-check(G:Profile() and G:Profile().MIN_LEVEL == 20, "perfil do Guerreiro nível 20-29 escolhido")
+check(G:Profile() and G:Profile().MIN_LEVEL == 20, "perfil do pacote (Guerreiro 20-29) ganha dos pesos próprios")
 S.itemData["peito-atual"] = { equipLoc = "INVTYPE_CHEST", subclassID = 3, stats = { ITEM_MOD_STRENGTH_SHORT = 5, RESISTANCE0_NAME = 100 } }
 S.itemData["peito-forte"] = { equipLoc = "INVTYPE_CHEST", subclassID = 3, stats = { ITEM_MOD_STRENGTH_SHORT = 9, RESISTANCE0_NAME = 120 } }
 S.itemData["peito-int"]   = { equipLoc = "INVTYPE_CHEST", subclassID = 1, stats = { ITEM_MOD_INTELLECT_SHORT = 20 } }
@@ -1271,3 +1271,37 @@ found = false
 for _, l in ipairs(UILines()) do if l:find("XP/h") then found = true end end
 check(not found, "opção desligada: some")
 AzimuteDB.pace = true
+
+print("\n== Pesos próprios: tanque, cura, guerreiro, ladino e caçador ==")
+local G2 = ns.Gear
+local savedClass2, savedLevel2 = ns.Engine.player.class, ns.Engine.player.level
+AzimuteCharDB.gearSpec = nil
+ns.Engine.player.level = 25
+-- guerreiro com mais pontos em Proteção: perfil de tanque
+ns.Engine.player.class = "WARRIOR"
+S.talentGroups = { { traitNodeGroupID = 13, currencyInfos = { { spent = 8 } } } } -- 3ª aba = Proteção
+local spec, source = G2:CurrentSpec()
+check(spec == "Protection" and source == "talents", "guerreiro com talentos de Proteção: " .. tostring(spec))
+check(G2:Profile() and G2:Profile().Source == "azimute" and G2:Profile().RESISTANCE0_NAME == 0.12, "usa os pesos de tanque do Azimute")
+S.itemData["peito-tanque"] = { equipLoc = "INVTYPE_CHEST", subclassID = 3, stats = { ITEM_MOD_STAMINA_SHORT = 8, RESISTANCE0_NAME = 200 } }
+S.itemData["peito-dps"]    = { equipLoc = "INVTYPE_CHEST", subclassID = 3, stats = { ITEM_MOD_STRENGTH_SHORT = 8, RESISTANCE0_NAME = 120 } }
+check(G2:Score("peito-tanque") > G2:Score("peito-dps"), "tanque prefere Vigor e armadura a Força")
+check(G2.SpecName("Protection") == "Proteção (tanque)", "nome em português com o papel")
+S.talentGroups = {}
+spec = G2:CurrentSpec()
+check(spec == "Arms", "guerreiro sem talentos: Armas (DPS) por padrão")
+check(G2:Score("peito-dps") > G2:Score("peito-tanque"), "DPS prefere Força")
+-- caçador: arco com o peso de arma à distância
+ns.Engine.player.class = "HUNTER"
+S.itemData["arco-bom"]   = { equipLoc = "INVTYPE_RANGED", classID = 2, stats = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 10 } }
+S.itemData["espada-boa"] = { equipLoc = "INVTYPE_WEAPON", classID = 2, stats = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 10 } }
+check(G2:Score("arco-bom") == 140 and G2:Score("espada-boa") == 20, "caçador: DPS do arco vale 14, da espada 2")
+-- paladino: as especializações de tanque e cura aparecem no /azimute spec
+ns.Engine.player.class = "PALADIN"
+local specs = table.concat(G2:SpecsForClass("PALADIN"), ",")
+check(specs:find("Protection") and specs:find("Holy"), "paladino pode escolher Proteção e Sagrado: " .. specs)
+-- varinha de conjurador (pesos no estilo do RXP, com _RANGED = 14)
+local mage = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 1, ITEM_MOD_DAMAGE_PER_SECOND_SHORT_RANGED = 14 }
+S.itemData["varinha"] = { equipLoc = "INVTYPE_RANGEDRIGHT", classID = 2, stats = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 12 } }
+check(G2:Score("varinha", mage) == 168, "varinha usa o peso de arma à distância (12 x 14)")
+ns.Engine.player.class, ns.Engine.player.level = savedClass2, savedLevel2

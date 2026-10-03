@@ -24,6 +24,9 @@ local DEFAULT_SPECS = {
     PRIEST = { "Shadow", "Discipline" },
     SHAMAN = { "Enhancement", "Elemental" },
     WARLOCK = { "Affliction", "Destruction" },
+    WARRIOR = { "Arms" },
+    ROGUE = { "Combat" },
+    HUNTER = { "Marksmanship" },
 }
 
 -- Espaços de equipamento por tipo de item (INVTYPE_*).
@@ -60,6 +63,20 @@ function Gear:RegisterProfiles(profiles)
     end
 end
 
+-- Nome para mostrar (traduzido) e o papel: "Proteção (tanque)", "Sagrado (cura)".
+local ROLE = { Protection = "tank", ["Feral Combat (Tank)"] = "tank", Holy = "heal", Restoration = "heal" }
+function Gear.SpecName(spec)
+    if not spec or spec == "" then
+        return "-"
+    end
+    local name = (L["SPEC_NAMES"] ~= "SPEC_NAMES" and L["SPEC_NAMES"][spec]) or spec
+    local role = ROLE[spec]
+    if role then
+        name = name .. " (" .. L["ROLE_" .. role:upper()] .. ")"
+    end
+    return name
+end
+
 function Gear:SpecsForClass(class)
     local specs = {}
     local seen = {}
@@ -85,6 +102,9 @@ local TREES = {
     DRUID = { "Balance", "Feral Combat", "Restoration" },
     SHAMAN = { "Elemental", "Enhancement", "Restoration" },
     PALADIN = { "Holy", "Protection", "Retribution" },
+    WARRIOR = { "Arms", "Fury", "Protection" },
+    ROGUE = { "Assassination", "Combat", "Subtlety" },
+    HUNTER = { "Beast Mastery", "Marksmanship", "Survival" },
 }
 
 -- Pontos gastos em cada aba de talentos (Forever: C_Traits). nil se indisponível.
@@ -172,18 +192,19 @@ function Gear:Profile()
     local level = ns.Engine.player.level or UnitLevel("player")
     local spec = self:CurrentSpec()
     local kind = ns.db.gearHardcore and "Hardcore" or "Speedrun"
-    local fallback
+    -- Prioridade: pesos do pacote (RXP) no tipo certo > pacote em outro tipo >
+    -- pesos próprios do Azimute (Automation/StatWeights.lua).
+    local best, bestRank
     for _, profile in ipairs(self.profiles) do
-        if profile.Class:upper() == class and strtrim(profile.Spec or "") == (spec or "") then
-            if level >= (profile.MIN_LEVEL or 1) and level <= (profile.MAX_LEVEL or 999) then
-                if profile.Kind == kind then
-                    return profile
-                end
-                fallback = fallback or profile
+        if profile.Class:upper() == class and strtrim(profile.Spec or "") == (spec or "")
+            and level >= (profile.MIN_LEVEL or 1) and level <= (profile.MAX_LEVEL or 999) then
+            local rank = (profile.Source == "azimute" and 0 or 2) + (profile.Kind == kind and 1 or 0)
+            if not bestRank or rank > bestRank then
+                best, bestRank = profile, rank
             end
         end
     end
-    return fallback
+    return best
 end
 
 ------------------------------------------------------------------------
@@ -207,6 +228,12 @@ end
 
 local SPELL_DAMAGE_STATS = { ITEM_MOD_SPELL_POWER = true, ITEM_MOD_SPELL_DAMAGE_DONE = true }
 
+-- Arma à distância (varinha, arco, arma de fogo, arremesso): o jogo informa o
+-- DPS com o mesmo nome da arma corpo a corpo; os pesos têm um nome próprio
+-- (_RANGED), bem mais alto para conjuradores (varinha) e caçadores.
+local RANGED_SLOTS = { INVTYPE_RANGED = true, INVTYPE_RANGEDRIGHT = true, INVTYPE_THROWN = true }
+local DPS = "ITEM_MOD_DAMAGE_PER_SECOND_SHORT"
+
 -- Soma peso x valor de cada atributo do item. nil se não der para avaliar.
 function Gear:Score(link, profile)
     profile = profile or self:Profile()
@@ -217,9 +244,13 @@ function Gear:Score(link, profile)
     if not stats then
         return nil
     end
+    local ranged = RANGED_SLOTS[select(9, ItemInfo(link)) or ""]
     local score = 0
     for stat, value in pairs(stats) do
         local weight = not SPELL_DAMAGE_STATS[stat] and profile[stat]
+        if stat == DPS and ranged and type(profile[DPS .. "_RANGED"]) == "number" then
+            weight = profile[DPS .. "_RANGED"]
+        end
         if type(weight) == "number" and type(value) == "number" and not ns.IsSecret(value) then
             score = score + weight * value
         end
@@ -384,7 +415,7 @@ local function AddTooltipLine(tooltip)
     end
     local upgrade, percent = Gear:IsUpgrade(link)
     if upgrade then
-        tooltip:AddLine(L["GEAR_TOOLTIP_UPGRADE"]:format(percent), 0.2, 1, 0.2)
+        tooltip:AddLine(L["GEAR_TOOLTIP_UPGRADE"]:format(percent) .. " |cff999999(" .. Gear.SpecName(Gear:CurrentSpec()) .. ")|r", 0.2, 1, 0.2)
     end
 end
 

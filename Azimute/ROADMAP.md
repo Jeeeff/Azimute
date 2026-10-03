@@ -366,6 +366,18 @@ Azimute_Guides_Forever/     guias carregados sob demanda (LoadOnDemand), separad
   77 guias (eram 67), 343 dicas novas traduzidas (`notes_ptBR_part10.json`).
 - Recomendado: rota com masmorras só ganha quando o personagem escolheu masmorras.
 
+## Indicador de equipamento: correções e pesos próprios (03/10/2026)
+- **Dano mágico era ignorado:** o jogo devolve `ITEM_MOD_SPELL_POWER`/`ITEM_MOD_SPELL_DAMAGE_DONE` (1 a menos que a
+  dica) e os pesos do RXP chamam de `STAT_SPELLDAMAGE`; agora soma o valor + 1 (como o RXP). Bug visto no jogo:
+  cinto de +3 Vigor aparecia como +85% contra um de +4 dano mágico.
+- **Varinha/arco usavam o peso de corpo a corpo:** DPS de arma à distância (`INVTYPE_RANGED*`, `THROWN`) usa
+  `ITEM_MOD_DAMAGE_PER_SECOND_SHORT_RANGED` (14 para conjuradores e caçadores).
+- **Pesos próprios** (`Automation/StatWeights.lua`, GPL, `Source = "azimute"`, nível 1-60): Guerreiro
+  (Armas/Fúria/Proteção), Ladino, Caçador, Paladino Proteção e Sagrado, Sacerdote Sagrado, Druida Restauração e
+  "Feral Combat (Tank)", Xamã Restauração. Estimativas pelas fórmulas do Classic na escala do RXP. Os do pacote
+  (RXP) sempre ganham quando existem para a mesma especialização.
+- Especialização em português e com papel no `/azimute spec` e na dica ("melhoria +12% (Proteção (tanque))").
+
 ## Módulos independentes (03/10/2026): Azimute_Meter 0.1.0 e Azimute_Bags 0.1.0
 Pedido do autor: bolsas unificadas e medidor de dano dentro do pacote, cada um podendo ser desligado e
 sem derrubar o guia se quebrar. Cada um é um addon separado (pasta, .toc, SavedVariables e comando
