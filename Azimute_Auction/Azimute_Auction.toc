@@ -1,0 +1,16 @@
+## Interface: 16001, 120100, 120105
+## Title: Azimute - Auction
+## Title-ptBR: Azimute - Leilão
+## Notes: Full auction house scan, auction prices in item tooltips and the value of your bags. Works without Azimute.
+## Notes-ptBR: Varredura completa da casa de leilões, preço de leilão na dica dos itens e valor das bolsas. Funciona sem o Azimute.
+## Author: jeeeff
+## X-License: GPL-3.0-or-later
+## Version: 0.1.0
+## IconTexture: Interface\Icons\INV_Misc_Coin_02
+## Category: Auction & Economy
+## Category-ptBR: Leilão e economia
+## OptionalDeps: Azimute
+## SavedVariables: AzimuteAuctionDB
+
+Locales.lua
+Auction.lua

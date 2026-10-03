@@ -366,6 +366,24 @@ Azimute_Guides_Forever/     guias carregados sob demanda (LoadOnDemand), separad
   77 guias (eram 67), 343 dicas novas traduzidas (`notes_ptBR_part10.json`).
 - Recomendado: rota com masmorras só ganha quando o personagem escolheu masmorras.
 
+## Qualidade de vida (03/10/2026): Utilidades, Raros, Leilão, ritmo de up, voos no caminho
+- **Azimute_Utils** (`/azu`): zoom máximo da câmera (CVar, o menu do Forever para em 2.0), ID de item/feitiço e alvo
+  na dica, nível de item nos espaços do personagem, coordenadas no mapa-múndi, avisos (bolsa cheia, durabilidade,
+  pedra de regresso), Alt+clique compra pilha, e automáticos sociais desligados por padrão (duelo, convite de
+  desconhecido, ressurreição, invocação). Cada recurso num arquivo, registrado com `U:Feature` e rodando em pcall.
+  Fora da lista porque o jogo já tem: "abrir tudo" do correio, esconder grifos (Modo de Edição), preço de venda e
+  guilda na dica, Shift+clique para escolher quantidade no vendedor.
+- **Azimute_Rares** (`/azr`): vignettes do minimapa + `UnitClassification` (placas de nome, alvo, mouse), aviso
+  sem repetir por 10 min, histórico, `/azr ir` (seta do Azimute via `AzimuteAPI.GoTo` ou pino do jogo).
+- **Azimute_Auction** (`/azl`): varredura completa (`C_AuctionHouse.ReplicateItems`, índice a partir de 0, a cada
+  15 min), menor preço por unidade por reino-facção, preço e idade na dica, aviso "vendedor paga mais", valor das
+  bolsas. O formulário de venda do Forever já sugere o menor preço, por isso não mexemos nele.
+- **Ritmo de up** (`Engine/Pace.lua`): XP/h, tempo até o nível e missões/h dos últimos 30 min, linha no fim da
+  janela do guia e `/azimute ritmo`.
+- **Liberar voos no caminho** (`pickupFlightPathsOnWay`): mestre de voo desconhecido que acrescenta até 400 jardas
+  (ou 20% do trajeto) vira desvio da seta; desiste se o jogador se afastar.
+- **Ícone próprio** (rosa dos ventos) em `Azimute/Media/Icon.tga` (botão do minimapa, menu de addons, .toc).
+
 ## Indicador de equipamento: correções e pesos próprios (03/10/2026)
 - **Dano mágico era ignorado:** o jogo devolve `ITEM_MOD_SPELL_POWER`/`ITEM_MOD_SPELL_DAMAGE_DONE` (1 a menos que a
   dica) e os pesos do RXP chamam de `STAT_SPELLDAMAGE`; agora soma o valor + 1 (como o RXP). Bug visto no jogo:

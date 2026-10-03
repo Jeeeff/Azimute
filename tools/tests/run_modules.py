@@ -51,7 +51,8 @@ def run(module, scenario, with_core=False):
 
 for module, scenario in [("Azimute_Meter", "scenario_meter.lua"), ("Azimute_Bags", "scenario_bags.lua"),
                          ("Azimute_Utils", "scenario_utils.lua"),
-                         ("Azimute_Rares", "scenario_rares.lua")]:
+                         ("Azimute_Rares", "scenario_rares.lua"),
+                         ("Azimute_Auction", "scenario_auction.lua")]:
     if not os.path.exists(os.path.join(ROOT, module, module + ".toc")):
         continue
     run(module, scenario, with_core=False)

@@ -263,3 +263,28 @@ function UnitIsDead(u) return S.units[u] and S.units[u].dead or false end
 SOUNDKIT = { RAID_WARNING = 8959 }
 S.sounds = 0
 function PlaySound() S.sounds = S.sounds + 1 end
+
+------------------------------------------------------------------------
+-- Leilão: varredura completa
+------------------------------------------------------------------------
+S.replicate = {}
+S.replicateCalls = 0
+C_AuctionHouse = {
+    ReplicateItems = function() S.replicateCalls = S.replicateCalls + 1 end,
+    GetNumReplicateItems = function() return #S.replicate end,
+    GetReplicateItemInfo = function(i)
+        local a = S.replicate[i + 1] -- índice começa em 0
+        if not a then return nil end
+        return a.name, 1, a.count, 1, true, 1, 0, 0, 0, a.buyout, 0, false, nil, nil, nil, 0, a.itemID, true
+    end,
+}
+function GetRealmName() return "Ossada" end
+AuctionHouseFrame = S.NewFrame("AuctionHouseFrame")
+S.sellPrices = {}
+local getItemInfo = C_Item.GetItemInfo
+C_Item.GetItemInfo = function(x)
+    if type(x) == "number" then
+        return "Item" .. x, nil, 1, 1, 1, "x", "y", 20, "", 1, S.sellPrices[x] or 0
+    end
+    return getItemInfo(x)
+end
