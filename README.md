@@ -15,7 +15,9 @@ com uma seta, marca os pontos no mapa e, se você quiser, aceita e entrega as mi
 - Aceitar e entregar missões automaticamente (opcional; SHIFT cancela qualquer automação).
 - Botão de item seguro, equipamento sugerido por especialização, feitiços para treinar e custo.
 - Painel de missões de masmorra que você escolhe incluir no guia.
-- Seletor de guias que recomenda o guia pela sua raça, classe, facção e nível.
+- Seletor de guias que recomenda o guia pela sua raça, classe, facção, nível e missões que você já tem.
+- Ritmo de up (XP por hora e tempo até o próximo nível) e liberação dos voos que ficam no caminho.
+- Indicador de equipamento por classe, especialização e papel (tanque e cura incluídos).
 - **Guias da comunidade:** gravador de rotas, editor, importar e exportar por código `!AZ1!`.
 - Interface em português e inglês. Nomes de missão, NPC, item e zona vêm do próprio jogo, no idioma
   do seu cliente.
@@ -31,7 +33,15 @@ erro o guia continua funcionando.
   Durante a luta o jogo esconde os números exatos dos addons, então porcentagem, relatório e detalhes
   aparecem quando o combate acaba.
 - **Azimute Bolsas** (`/azb`): todas as bolsas numa janela só (e o banco também), com busca, organizar,
-  espaços livres, ouro e nível de item. A tecla B abre a janela nova (dá para desligar nas opções).
+  espaços livres, ouro, nível de item e a seta verde de melhoria. A tecla B abre a janela nova.
+- **Azimute Utilidades** (`/azu`): zoom máximo da câmera, ID de item e alvo nas dicas, nível de item na
+  janela do personagem, coordenadas no mapa-múndi, avisos (bolsa cheia, equipamento quebrando, pedra de
+  regresso pronta), Alt+clique compra uma pilha no vendedor e automáticos sociais opcionais (recusar
+  duelos e convites de desconhecidos, aceitar ressurreição e invocação; todos desligados por padrão).
+- **Azimute Raros** (`/azr`): avisa quando um monstro raro (ou tesouro) aparece por perto e leva a seta
+  até ele.
+- **Azimute Leilão** (`/azl`): varredura completa da casa de leilões, preço de leilão na dica de qualquer
+  item, aviso quando o vendedor paga mais e valor das suas bolsas.
 
 ## Cobertura dos guias
 
@@ -46,9 +56,9 @@ conteúdo novo do Forever no nível 60.
 
 ## Instalação
 
-1. Extraia o zip e copie as pastas `Azimute`, `Azimute_Guides_Forever`, `Azimute_Guides_Classic`,
-   `Azimute_Meter` e `Azimute_Bags` para a pasta `Interface\AddOns` do cliente do Forever (no beta,
-   `World of Warcraft\_classic_beta_\Interface\AddOns`). Os dois últimos são opcionais.
+1. Extraia o zip e copie todas as pastas `Azimute*` para a pasta `Interface\AddOns` do cliente do Forever
+   (no beta, `World of Warcraft\_classic_beta_\Interface\AddOns`). Só `Azimute` e um pacote de guias são
+   necessários; Medidor, Bolsas, Utilidades, Raros e Leilão são opcionais.
 2. Abra o jogo e digite `/azimute` para ver os comandos. **Pasta nova de addon só aparece reiniciando o jogo.**
 
 Comandos úteis: `/azimute guias` (seletor), `/azimute mostrar` / `esconder`, `/azimute avancar` /
@@ -69,7 +79,7 @@ Canal de suporte: [issues do GitHub](https://github.com/Jeeeff/Azimute/issues).
 | ↳ missões de masmorra | MIT | Forever Dungeon Quests, de Sundee |
 | ↳ feitiços de treinador | MIT | What's Training, de fusionpit |
 | `Azimute_Guides_Classic` (guias) | GPL-3.0 | Guidelime_Zarant, de Zarant |
-| `Azimute_Meter`, `Azimute_Bags` (código) | GPL-3.0-or-later | Código próprio |
+| `Azimute_Meter`, `Azimute_Bags`, `Azimute_Utils`, `Azimute_Rares`, `Azimute_Auction` | GPL-3.0-or-later | Código próprio |
 
 Os guias do RestedXP só podem ser usados sem fins comerciais, por isso o Azimute é gratuito. O RestedXP e
 os demais autores não endossam o Azimute. Detalhes em `CREDITS.md` dentro de cada pacote.

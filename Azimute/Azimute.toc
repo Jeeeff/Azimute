@@ -7,7 +7,7 @@
 ## X-License: GPL-3.0-or-later
 ## X-Curse-Project-ID: 1725129
 ## X-Website: https://github.com/Jeeeff/Azimute
-## Version: 0.21.0
+## Version: 0.22.0
 ## IconTexture: Interface\AddOns\Azimute\Media\Icon
 ## Category: Quests
 ## Category-ptBR: Missões

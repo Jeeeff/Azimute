@@ -12,7 +12,10 @@
 
 ### Bundled modules (independent addons — disable any of them without affecting the guide)
 - **Azimute Meter** (`/azm`): group damage, DPS, healing, interrupts, deaths and more, using the game's own combat data. During combat the game hides exact numbers from addons, so percentages and spell details appear after the fight.
-- **Azimute Bags** (`/azb`): all bags and the bank in one window, with search, sort, free slots, gold and item level.
+- **Azimute Bags** (`/azb`): all bags and the bank in one window, with search, sort, free slots, gold, item level and upgrade arrows.
+- **Azimute Utilities** (`/azu`): max camera zoom, item IDs and target in tooltips, item level on the character window, world map coordinates, alerts (bags full, gear breaking, hearthstone ready), Alt+click buys a full stack, optional social automation (all off by default).
+- **Azimute Rares** (`/azr`): warns when a rare creature or treasure is nearby and leads the arrow there.
+- **Azimute Auction** (`/azl`): full auction house scan, auction price on item tooltips, vendor-vs-auction hint and the value of your bags.
 
 ### Guide coverage (beta)
 - Levels 1-30, Alliance and Horde, per race: adapted from the RestedXP guides.
