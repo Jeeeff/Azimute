@@ -96,3 +96,10 @@ Interface do Forever (para conferir API): ramo `forever` de github.com/Gethe/wow
 - Tudo que for automático é opção (Settings) e pode ser desligado; SHIFT cancela automações.
 - Nada é comprado/aceito sem o jogador saber (ex.: "Treinar tudo" é botão, recompensa automática é opcional).
 - Ao mudar algo: teste novo em `tools/tests/scenario.lua`, rodar os dois testes, subir versão, copiar.
+
+## Publicação
+- GitHub: https://github.com/Jeeeff/Azimute (público). CurseForge: projeto 1725129 (fora do programa de
+  recompensas por causa do CC BY-NC-SA dos guias). Textos e logo da página em `tools/curseforge/`.
+- Lançar versão: subir `## Version` nos .toc, rodar os 3 testes, commit, `git tag -a vX.Y.Z -m "changelog"` e
+  `git push --follow-tags`. A Action `.github/workflows/release.yml` testa, monta o zip, cria a release no
+  GitHub e envia ao CurseForge (precisa do segredo `CF_API_KEY` no repositório; sem ele só pula o envio).

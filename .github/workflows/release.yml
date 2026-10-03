@@ -1,0 +1,80 @@
+# Publica uma versão nova a cada tag vX.Y.Z:
+#   1. roda os testes fora do jogo
+#   2. monta o zip (tools/package.py)
+#   3. cria a release no GitHub com o zip
+#   4. envia o zip ao CurseForge (projeto 1725129) pela API de upload
+#
+# Segredo necessário (Settings > Secrets and variables > Actions):
+#   CF_API_KEY  - token gerado em https://legacy.curseforge.com/account/api-tokens
+# Variável opcional: CF_GAME_VERSION (padrão "1.60.1", versão do WoW: Forever no CurseForge)
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      CF_PROJECT_ID: "1725129"
+      CF_GAME_VERSION: ${{ vars.CF_GAME_VERSION || '1.60.1' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Testes
+        run: |
+          python -m pip install --target tools/tests/pylibs lupa
+          PYTHONIOENCODING=utf-8 python tools/tests/run_tests.py > test.log 2>&1 || (tail -40 test.log; exit 1)
+          PYTHONIOENCODING=utf-8 python tools/tests/run_pack.py > pack.log 2>&1 || (tail -40 pack.log; exit 1)
+          PYTHONIOENCODING=utf-8 python tools/tests/run_modules.py > modules.log 2>&1 || (tail -40 modules.log; exit 1)
+          tail -1 test.log; tail -1 modules.log
+
+      - name: Zip
+        id: zip
+        run: |
+          python tools/package.py
+          ZIP=$(ls dist/*.zip | head -1)
+          echo "zip=$ZIP" >> "$GITHUB_OUTPUT"
+          # changelog: mensagem anotada da tag (ou o assunto do último commit)
+          git tag -l --format='%(contents)' "$GITHUB_REF_NAME" > CHANGELOG.txt
+          [ -s CHANGELOG.txt ] || git log -1 --format=%s > CHANGELOG.txt
+
+      - name: Release no GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" "${{ steps.zip.outputs.zip }}" \
+            --title "Azimute ${GITHUB_REF_NAME#v}" --notes-file CHANGELOG.txt --prerelease
+
+      - name: Envio ao CurseForge
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+        run: |
+          if [ -z "$CF_API_KEY" ]; then echo "CF_API_KEY não configurado: pulando o CurseForge"; exit 0; fi
+          VERSION_ID=$(curl -sf -H "X-Api-Token: $CF_API_KEY" https://wow.curseforge.com/api/game/versions \
+            | python -c "import json,sys,os; v=[x['id'] for x in json.load(sys.stdin) if x['name']==os.environ['CF_GAME_VERSION']]; print(v[0] if v else '')")
+          if [ -z "$VERSION_ID" ]; then echo "versão $CF_GAME_VERSION não encontrada no CurseForge"; exit 1; fi
+          export VERSION_ID
+          python - <<'PY' > metadata.json
+          import json, os
+          print(json.dumps({
+              "changelog": open("CHANGELOG.txt", encoding="utf-8").read(),
+              "changelogType": "markdown",
+              "displayName": "Azimute " + os.environ["GITHUB_REF_NAME"].lstrip("v"),
+              "gameVersions": [int(os.environ["VERSION_ID"])],
+              "releaseType": "release",
+          }))
+          PY
+          curl -sf -H "X-Api-Token: $CF_API_KEY" \
+            -F "metadata=<metadata.json" -F "file=@${{ steps.zip.outputs.zip }}" \
+            "https://wow.curseforge.com/api/projects/$CF_PROJECT_ID/upload-file"
+          echo
+        shell: bash
