@@ -341,9 +341,15 @@ end
 
 local DETOUR_RADIUS = 250  -- jardas: "chegou na cidade"
 local DETOUR_CANCEL = 450  -- afastou-se sem pegar: desiste até o próximo login
+-- Voos "no caminho" até o alvo do guia: só vale se o alvo está longe e o
+-- desvio é pequeno (até ON_WAY_EXTRA jardas ou ON_WAY_RATIO do trajeto).
+local ON_WAY_MIN_TRIP = 600
+local ON_WAY_EXTRA = 400
+local ON_WAY_RATIO = 0.2
 Router.skippedDetours = {}
 
-function Router:SetDetour(node, cancelled)
+-- onWay = desvio a caminho do alvo (não "chegou na cidade"); extra = jardas a mais.
+function Router:SetDetour(node, cancelled, onWay, extra)
     local old = self.detour
     if old == node then
         return
@@ -352,8 +358,17 @@ function Router:SetDetour(node, cancelled)
         self.skippedDetours[old.id] = true
     end
     self.detour = node
+    self.detourOnWay = onWay or nil
+    self.detourStart = nil
     if node then
-        ns.Print(L["ROUTE_NEW_FP"]:format(node.name or "?"))
+        if onWay then
+            local mapID, px, py = ns.Position.Player()
+            local here = mapID and World(mapID, px, py)
+            self.detourStart = here and Distance(here, node.pos)
+            ns.Print(L["ROUTE_NEW_FP_WAY"]:format(node.name or "?", math.floor((extra or 0) + 0.5)))
+        else
+            ns.Print(L["ROUTE_NEW_FP"]:format(node.name or "?"))
+        end
     end
     if ns.Nav then
         ns.Nav.waypointKey = false
@@ -385,9 +400,14 @@ function Router:CheckNewFlightPath()
     local detour = self.detour
     if detour then
         local distance = Distance(here, detour.pos)
+        -- desvio no caminho começa longe: desiste se o jogador se afastar dele
+        local limit = DETOUR_CANCEL
+        if self.detourOnWay and self.detourStart then
+            limit = math.max(DETOUR_CANCEL, self.detourStart + 200)
+        end
         if known[detour.id] then
             self:SetDetour(nil)
-        elseif not distance or distance > DETOUR_CANCEL then
+        elseif not distance or distance > limit then
             self:SetDetour(nil, true)
         end
         return
@@ -402,6 +422,41 @@ function Router:CheckNewFlightPath()
             end
         end
     end
+    if ns.db.pickupFlightPathsOnWay then
+        local node, extra = self:FlightPathOnWay(here, times, known)
+        if node then
+            self:SetDetour(node, false, true, extra)
+        end
+    end
+end
+
+-- Mestre de voo da facção, ainda não conhecido, que fica no caminho até o
+-- alvo atual da seta (guia, missão ou destino avulso). Devolve o nó e quantas
+-- jardas o desvio acrescenta (o de menor acréscimo).
+function Router:FlightPathOnWay(here, times, known)
+    local target = ns.Nav and ns.Nav:CurrentTarget()
+    if not target or target.corpse or target.detour or UnitOnTaxi("player") then
+        return nil
+    end
+    local goal = World(target.mapID, target.x, target.y)
+    local trip = goal and Distance(here, goal)
+    if not trip or trip < ON_WAY_MIN_TRIP then
+        return nil
+    end
+    local allowed = math.max(ON_WAY_EXTRA, trip * ON_WAY_RATIO)
+    local best, bestExtra
+    for nodeID, node in pairs(taxiNodes) do
+        if times[nodeID] and not known[nodeID] and not self.skippedDetours[nodeID] then
+            local toNode, nodeToGoal = Distance(here, node.pos), Distance(node.pos, goal)
+            if toNode and nodeToGoal then
+                local extra = toNode + nodeToGoal - trip
+                if extra <= allowed and (not bestExtra or extra < bestExtra) then
+                    best, bestExtra = node, extra
+                end
+            end
+        end
+    end
+    return best, bestExtra
 end
 
 -- Alvo da seta enquanto houver um caminho de voo novo para pegar.
@@ -415,7 +470,7 @@ end
 -- Texto para a janela: "Voe de Brill para Orgrimmar (economiza ~3 min)".
 function Router:Instruction()
     if self.detour then
-        return L["ROUTE_NEW_FP"]:format(self.detour.name or "?")
+        return L[self.detourOnWay and "ROUTE_NEW_FP_WAY_LINE" or "ROUTE_NEW_FP"]:format(self.detour.name or "?")
     end
     local plan = self.plan
     if not plan then

@@ -23,6 +23,9 @@ local APPLY = {
     useTomTom = RefreshNavigation,
     mapPin = RefreshNavigation,
     routes = RefreshNavigation,
+    pickupFlightPathsOnWay = function()
+        ns.Router:CheckNewFlightPath()
+    end,
     pickupFlightPaths = function()
         ns.Router:CheckNewFlightPath()
     end,
@@ -76,6 +79,7 @@ local SECTIONS = {
             { "mapPin", "OPT_MAP", "OPT_MAP_TIP" },
             { "routes", "OPT_ROUTES", "OPT_ROUTES_TIP" },
             { "pickupFlightPaths", "OPT_PICKUP_FP", "OPT_PICKUP_FP_TIP" },
+            { "pickupFlightPathsOnWay", "OPT_PICKUP_FP_WAY", "OPT_PICKUP_FP_WAY_TIP" },
             { "autoFly", "OPT_AUTO_FLY", "OPT_AUTO_FLY_TIP" },
             { "corpseGuide", "OPT_CORPSE", "OPT_CORPSE_TIP" },
             { "pace", "OPT_PACE", "OPT_PACE_TIP" },

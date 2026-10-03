@@ -552,7 +552,7 @@ local count, dungeonCount = 0, 0
 for key in pairs(S.settings) do
     if key:match("^%u+$") then dungeonCount = dungeonCount + 1 else count = count + 1 end
 end
-check(count == 28, "28 opções registradas (" .. count .. ")")
+check(count == 29, "29 opções registradas (" .. count .. ")")
 check(S.settings.autoSellJunk and S.settings.autoRepair, "opções de vender lixo e reparar registradas")
 check(S.settings.autoSellJunk.name == "Vender itens cinza automaticamente" and S.settings.autoSellJunk.default == false,
     "vender lixo: rótulo em pt-BR e desligado por padrão")
@@ -760,10 +760,12 @@ S.tookTaxi = nil
 S.FireEvent("TAXIMAP_OPENED")
 check(S.tookTaxi == nil, "opção desligada: não voa sozinho")
 -- voo não conhecido não entra na rota
+AzimuteDB.pickupFlightPathsOnWay = false
 AzimuteCharDB.knownTaxi = { [1] = true }
 ns.Router.lastPlanPos = nil
 S.Tick()
 check(ns.Nav.routed == nil, "voo desconhecido não é usado")
+AzimuteDB.pickupFlightPathsOnWay = true
 AzimuteDB.routes = false
 
 print("\n== Caminho de voo novo ao chegar na cidade ==")
@@ -1305,3 +1307,47 @@ local mage = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 1, ITEM_MOD_DAMAGE_PER_SECOND_
 S.itemData["varinha"] = { equipLoc = "INVTYPE_RANGEDRIGHT", classID = 2, stats = { ITEM_MOD_DAMAGE_PER_SECOND_SHORT = 12 } }
 check(G2:Score("varinha", mage) == 168, "varinha usa o peso de arma à distância (12 x 14)")
 ns.Engine.player.class, ns.Engine.player.level = savedClass2, savedLevel2
+
+print("\n== Liberar voos no caminho ==")
+if ns.Nav:Manual() then ns.Nav:ClearManual() end
+AzimuteDB.routes, AzimuteDB.pickupFlightPaths, AzimuteDB.pickupFlightPathsOnWay = true, true, true
+AzimuteAPI.RegisterFlightTimes({ Horde = { [3] = { [4] = 60 }, [4] = { [3] = 60 } } })
+S.taxi = {
+    { nodeID = 3, name = "Pouso no Caminho", map = 1415, x = 0.50, y = 0.53 },
+    { nodeID = 4, name = "Pouso Fora", map = 1415, x = 0.50, y = 0.95 },
+}
+S.FireEvent("PLAYER_ENTERING_WORLD"); S.RunTimers()
+AzimuteCharDB.knownTaxi = {}
+ns.Router.skippedDetours = {}
+ns.Router:SetDetour(nil)
+ns.Registry:Register([==[
+#id rota.caminho
+step
+    goto 1421 90,50
+]==], "teste", true)
+S.player.map, S.player.x, S.player.y = 1421, 0.10, 0.50
+ns.Engine:LoadGuide("rota.caminho", 1, true); S.RunTimers()
+ns.Router:CheckNewFlightPath()
+check(ns.Router.detour and ns.Router.detour.id == 3, "voo desconhecido quase no caminho vira desvio")
+check(ns.Router:Instruction():find("No caminho: libere o voo de Pouso no Caminho"), "janela: " .. tostring(ns.Router:Instruction()))
+check(ns.Nav:CurrentTarget().detour, "seta vai primeiro ao mestre de voo do caminho")
+-- andou até lá e pegou o voo: volta ao guia, não pede o que está fora do caminho
+S.player.x, S.player.y = 0.50, 0.53
+AzimuteCharDB.knownTaxi[3] = true
+ns.Router:CheckNewFlightPath()
+check(ns.Router.detour == nil, "voo liberado: volta ao alvo do guia (o de fora do caminho não é pedido)")
+-- ainda longe do desvio, mas se afastando dele: desiste
+AzimuteCharDB.knownTaxi = {}
+S.player.x, S.player.y = 0.10, 0.50
+ns.Router:CheckNewFlightPath()
+check(ns.Router.detour and ns.Router.detour.id == 3, "desvio de novo")
+S.player.x, S.player.y = 0.05, 0.05 -- ~660 jardas do voo (começou a 400; limite 400 + 200)
+ns.Router:CheckNewFlightPath()
+check(ns.Router.detour == nil and ns.Router.skippedDetours[3], "afastou-se do desvio: desiste dele")
+-- opção desligada
+ns.Router.skippedDetours = {}
+AzimuteDB.pickupFlightPathsOnWay = false
+S.player.x, S.player.y = 0.10, 0.50
+ns.Router:CheckNewFlightPath()
+check(ns.Router.detour == nil, "opção desligada: não desvia")
+AzimuteDB.pickupFlightPathsOnWay = true
