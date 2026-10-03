@@ -145,6 +145,31 @@ function Meter:Sessions()
     return ok and list or {}
 end
 
+-- Duração da luta em segundos (nil se o jogo não informar ou vier secreta).
+function Meter:Duration(session)
+    local duration = session and session.durationSeconds
+    if M.Positive(duration) then
+        return duration
+    end
+    local segment = M.db.segment
+    if type(segment) == "number" then
+        for _, info in ipairs(self:Sessions()) do
+            if info.sessionID == segment and M.Positive(info.durationSeconds) then
+                return info.durationSeconds
+            end
+        end
+        return nil
+    end
+    if C_DamageMeter and C_DamageMeter.GetSessionDurationSeconds then
+        local sessionType = segment == "overall" and SESSION.Overall or SESSION.Current
+        local ok, value = pcall(C_DamageMeter.GetSessionDurationSeconds, sessionType)
+        if ok and M.Positive(value) then
+            return value
+        end
+    end
+    return nil
+end
+
 function Meter:SegmentLabel()
     local segment = M.db.segment
     if segment == "overall" then
@@ -225,7 +250,12 @@ function Meter:ReportLines(count)
         local source = sources[i]
         local name, amount = source.name, source.totalAmount
         if mode.perSecond == "primary" then
-            amount = source.amountPerSecond
+            local duration = self:Duration(session)
+            if M.Positive(duration) and not M.IsSecret(amount) then
+                amount = (amount or 0) / duration
+            else
+                amount = source.amountPerSecond
+            end
         end
         if M.IsSecret(name) or M.IsSecret(amount) then
             return nil, "REPORT_COMBAT"
@@ -252,7 +282,8 @@ function Meter:Report(channel)
     return true
 end
 
--- Nome sem o reino ("Fulano-Reino" -> "Fulano"); secreto passa como está.
+-- Nome sem o reino ("Fulano-Reino" ou "Fulano Reino" -> "Fulano"; nome de
+-- personagem não tem espaço). Secreto passa como está.
 function M.ShortName(name)
     if name == nil then
         return "?"
@@ -260,7 +291,7 @@ function M.ShortName(name)
     if M.IsSecret(name) then
         return name
     end
-    return (name:match("^[^%-]+")) or name
+    return (name:match("^[^%-%s]+")) or name
 end
 
 ------------------------------------------------------------------------
@@ -345,6 +376,8 @@ end
 M:RegisterEvent("DAMAGE_METER_COMBAT_SESSION_UPDATED", Update)
 M:RegisterEvent("DAMAGE_METER_CURRENT_SESSION_UPDATED", Update)
 M:RegisterEvent("DAMAGE_METER_RESET", Update)
+-- O jogo avisa quando a restrição de addons acaba (números deixam de ser secretos).
+M:RegisterEvent("ADDON_RESTRICTION_STATE_CHANGED", Update)
 M:RegisterEvent("GROUP_ROSTER_UPDATE", function()
     M:Fire("VISIBILITY")
 end)

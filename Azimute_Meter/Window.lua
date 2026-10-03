@@ -25,6 +25,20 @@ local function ClassColor(classFile)
     return 0.55, 0.55, 0.55
 end
 
+-- Valor por segundo. O campo amountPerSecond do jogo chega errado no Forever
+-- (ex.: 104 de dano -> 0,00002/s, como se a luta durasse semanas), então,
+-- com números liberados, calculamos total / duração da luta. Em combate
+-- (secretos) só o modo DPS/HPS usa o valor do jogo; nos outros fica de fora.
+local function PerSecond(mode, amount, rawPerSecond, duration)
+    if amount ~= nil and not M.IsSecret(amount) and M.Positive(duration) then
+        return amount / duration
+    end
+    if mode.perSecond == "primary" then
+        return rawPerSecond
+    end
+    return nil
+end
+
 -- Texto do valor: "12,3 mil (450,2)" + porcentagem quando os números são normais.
 local function ValueText(mode, amount, perSecond, total)
     local main, extra = amount, perSecond
@@ -203,6 +217,21 @@ function Window:GetBar(index)
     return bar
 end
 
+-- Enquanto houver número "lacrado" na tela, redesenha a cada segundo até o
+-- jogo liberar (pode demorar alguns segundos depois do combate).
+function Window:WatchSecrets(hasSecret)
+    if hasSecret and not self.secretTicker then
+        self.secretTicker = C_Timer.NewTicker(1, function()
+            if Window.frame:IsShown() and not InCombatLockdown() then
+                Window:Refresh()
+            end
+        end)
+    elseif not hasSecret and self.secretTicker then
+        self.secretTicker:Cancel()
+        self.secretTicker = nil
+    end
+end
+
 function Window:VisibleBars()
     return math.max(1, math.floor((M.db.height - HEADER - 4) / (M.db.barHeight + 1)))
 end
@@ -240,6 +269,8 @@ function Window:Refresh()
 
     local maxAmount = session and session.maxAmount
     local total = session and session.totalAmount
+    local duration = session and Meter:Duration(session)
+    local hasSecret = M.IsSecret(maxAmount) or M.IsSecret(total)
     local shown = 0
     for i = 1, visible do
         local source = sources[i + self.offset]
@@ -271,13 +302,15 @@ function Window:Refresh()
             else
                 bar.name:SetText(("%d. %s"):format(i + self.offset, name))
             end
-            bar.value:SetText(ValueText(mode, amount, source.amountPerSecond, total))
+            bar.value:SetText(ValueText(mode, amount, PerSecond(mode, amount, source.amountPerSecond, duration), total))
+            hasSecret = hasSecret or M.IsSecret(amount) or M.IsSecret(source.name)
             bar:Show()
         end
     end
     for i = shown + 1, #frame.bars do
         frame.bars[i]:Hide()
     end
+    self:WatchSecrets(hasSecret)
     if self.breakdown:IsShown() then
         self:ShowBreakdown(self.breakdown.source)
     end
@@ -358,7 +391,8 @@ function Window:ShowBreakdown(source)
                 row.icon:SetTexture(texture or 134400)
                 local name = C_Spell and C_Spell.GetSpellName and C_Spell.GetSpellName(spell.spellID)
                 row.name:SetText(name or spell.creatureName or "?")
-                row.value:SetText(ValueText(mode, spell.totalAmount, spell.amountPerSecond, data.totalAmount))
+                row.value:SetText(ValueText(mode, spell.totalAmount,
+                    PerSecond(mode, spell.totalAmount, spell.amountPerSecond, Meter:Duration(Meter:Session())), data.totalAmount))
                 row:Show()
             else
                 row:Hide()

@@ -21,9 +21,10 @@ if WITH_CORE then
 end
 
 local W = M.Window
-S.dm.current = { maxAmount = 3000, totalAmount = 5000, combatSources = {
-    { name = "Jeeff-Ossada", sourceGUID = "Player-1", classFilename = "WARLOCK", specIconID = 136145, totalAmount = 3000, amountPerSecond = 150, isLocalPlayer = true },
-    { name = "Thrall", sourceGUID = "Player-2", classFilename = "SHAMAN", specIconID = 0, totalAmount = 2000, amountPerSecond = 100 },
+-- amountPerSecond vem errado do jogo no Forever (minúsculo): o medidor calcula total / duração (20 s)
+S.dm.current = { maxAmount = 3000, totalAmount = 5000, durationSeconds = 20, combatSources = {
+    { name = "Jeeff-Ossada", sourceGUID = "Player-1", classFilename = "WARLOCK", specIconID = 136145, totalAmount = 3000, amountPerSecond = 2.4e-05, isLocalPlayer = true },
+    { name = "Thrall", sourceGUID = "Player-2", classFilename = "SHAMAN", specIconID = 0, totalAmount = 2000, amountPerSecond = 1.6e-05 },
 } }
 S.FireEvent("DAMAGE_METER_COMBAT_SESSION_UPDATED", 0, 1)
 S.RunTimers()
@@ -105,3 +106,13 @@ local saved = C_DamageMeter
 C_DamageMeter = nil
 check(pcall(function() W:Refresh() end), "sem C_DamageMeter não dá erro")
 C_DamageMeter = saved
+
+-- números ainda lacrados depois do combate: redesenha sozinho quando o jogo libera
+M.db.segment = "current"
+S.dm.secret = true
+W:Refresh()
+check(issecretvalue(bars[1].name._text) and W.secretTicker ~= nil, "ainda lacrado fora do combate: fica tentando de novo")
+S.dm.secret = false
+S.Tick()
+check(bars[1].name._text == "1. Jeeff" and W.secretTicker == nil, "jogo liberou: redesenha com tudo e para de tentar")
+check(bars[1].value._text == "3.0K (150) 60%", "por segundo calculado pela duração: " .. tostring(bars[1].value._text))

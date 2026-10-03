@@ -44,7 +44,8 @@ Enum.DamageMeterSessionType = { Overall = 0, Current = 1, Expired = 2 }
 S.dm = { available = true, sessions = {}, current = nil, overall = nil, calls = {}, resets = 0, secret = false }
 local function MaybeSecret(session)
     if not session or not S.dm.secret then return session end
-    local copy = { maxAmount = Secret(session.maxAmount), totalAmount = Secret(session.totalAmount), combatSources = {} }
+    local copy = { maxAmount = Secret(session.maxAmount), totalAmount = Secret(session.totalAmount),
+        durationSeconds = session.durationSeconds and Secret(session.durationSeconds), combatSources = {} }
     for i, src in ipairs(session.combatSources) do
         copy.combatSources[i] = { name = Secret(src.name), sourceGUID = Secret(src.sourceGUID), classFilename = src.classFilename,
             specIconID = src.specIconID, totalAmount = Secret(src.totalAmount), amountPerSecond = Secret(src.amountPerSecond),
