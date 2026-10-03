@@ -42,6 +42,7 @@ local ICON_DONE = "Interface\\RaidFrame\\ReadyCheck-Ready"
 local ICON_ROUTE = "Interface\\TaxiFrame\\UI-Taxi-Icon-Green"
 local ICON_TRAINER = "Interface\\Icons\\INV_Misc_Book_07"
 local ICON_CORPSE = "Interface\\TargetingFrame\\UI-TargetingFrame-Skull"
+local ICON_PACE = "Interface\\Icons\\Spell_ChargePositive"
 local ICON_INFO = "Interface\\FriendsFrame\\InformationIcon"
 
 ------------------------------------------------------------------------
@@ -531,6 +532,11 @@ function UI:Refresh()
             frame.counter:SetText("")
             entries[#entries + 1] = { icon = ICON_DONE, text = L["GUIDE_DONE"] }
         end
+    end
+    -- Ritmo de up (XP/hora, tempo até o nível) no fim, discreto.
+    local pace = not focus and not manual and ns.Pace and ns.Pace:Line()
+    if pace then
+        entries[#entries + 1] = { icon = ICON_PACE, text = "|cff9a9a9a" .. pace .. "|r" }
     end
     self.hiddenNotes = notes
     frame.progress:SetValue(progress)

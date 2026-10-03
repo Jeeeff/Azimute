@@ -7,7 +7,7 @@ local Options = {}
 U.Options = Options
 
 local SECTIONS = {
-    { "SECTION_GENERAL", { "camera", "tooltipIDs", "tooltipTarget" } },
+    { "SECTION_GENERAL", { "camera", "tooltipIDs", "tooltipTarget", "charItemLevel" } },
     { "SECTION_MAP", { "mapCoords" } },
     { "SECTION_ALERTS", { "alertBags", "alertDurability", "alertHearth" } },
     { "SECTION_MERCHANT", { "merchantStack" } },

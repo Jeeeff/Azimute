@@ -16,6 +16,7 @@ Locales.lua
 Core.lua
 Camera.lua
 Tooltip.lua
+ItemLevel.lua
 MapCoords.lua
 Alerts.lua
 Merchant.lua

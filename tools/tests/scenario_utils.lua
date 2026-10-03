@@ -118,3 +118,15 @@ before = #S.social
 S.FireEvent("DUEL_REQUESTED", "Fulano")
 check(#S.social == before, "SHIFT segurado pula a automação")
 S.npc.shift = false
+
+-- 8. nível de item na janela do personagem
+S.equipped[5] = "item:armor"
+S.itemData["item:armor"] = { equipLoc = "INVTYPE_CHEST", classID = 4, ilvl = 45, minLevel = 1 }
+local slot = S.NewFrame("CharacterChestSlot")
+slot.GetID = function() return 5 end
+PaperDollItemSlotButton_Update(slot)
+check(U.slotLabels[slot] and U.slotLabels[slot]._text == "45", "nível 45 no espaço do peito: " .. tostring(U.slotLabels[slot] and U.slotLabels[slot]._text))
+local shirt = S.NewFrame("CharacterShirtSlot")
+shirt.GetID = function() return 4 end
+PaperDollItemSlotButton_Update(shirt)
+check(U.slotLabels[shirt] == nil, "camisa fica sem número")

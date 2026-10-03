@@ -161,6 +161,7 @@ function UnitGUID(unit) if unit == "npc" then return S.npcGUID end end
 function UnitName() return "Jeeff" end
 function GetTime() return S.time end
 function date() return "202609281200" end
+function time() return S.clock or 1790000000 end
 function wipe(t) for k in pairs(t) do t[k] = nil end return t end
 UISpecialFrames = {}
 ChatFontNormal = {}

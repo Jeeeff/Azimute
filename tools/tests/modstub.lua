@@ -246,3 +246,4 @@ function IsGuildMember() return false end
 WorldMapFrame.ScrollContainer = S.NewFrame("ScrollContainer")
 WorldMapFrame.ScrollContainer.IsMouseOver = function() return S.mouseOverMap or false end
 WorldMapFrame.ScrollContainer.GetNormalizedCursorPosition = function() return 0.5, 0.25 end
+function PaperDollItemSlotButton_Update(button) end

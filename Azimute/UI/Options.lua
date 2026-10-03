@@ -41,6 +41,9 @@ local APPLY = {
     minimapButton = function()
         ns.MinimapButton:Refresh()
     end,
+    pace = function()
+        ns.UI:Refresh()
+    end,
     corpseGuide = function()
         ns.Corpse:Update()
     end,
@@ -75,6 +78,7 @@ local SECTIONS = {
             { "pickupFlightPaths", "OPT_PICKUP_FP", "OPT_PICKUP_FP_TIP" },
             { "autoFly", "OPT_AUTO_FLY", "OPT_AUTO_FLY_TIP" },
             { "corpseGuide", "OPT_CORPSE", "OPT_CORPSE_TIP" },
+            { "pace", "OPT_PACE", "OPT_PACE_TIP" },
         },
     },
     {

@@ -28,6 +28,7 @@ Guides\IO.lua
 Data\DungeonQuests.lua
 Engine\Engine.lua
 Engine\Focus.lua
+Engine\Pace.lua
 Nav\Position.lua
 Nav\Router.lua
 Nav\TomTomBridge.lua

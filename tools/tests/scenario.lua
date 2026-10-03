@@ -552,7 +552,7 @@ local count, dungeonCount = 0, 0
 for key in pairs(S.settings) do
     if key:match("^%u+$") then dungeonCount = dungeonCount + 1 else count = count + 1 end
 end
-check(count == 27, "27 opções registradas (" .. count .. ")")
+check(count == 28, "28 opções registradas (" .. count .. ")")
 check(S.settings.autoSellJunk and S.settings.autoRepair, "opções de vender lixo e reparar registradas")
 check(S.settings.autoSellJunk.name == "Vender itens cinza automaticamente" and S.settings.autoSellJunk.default == false,
     "vender lixo: rótulo em pt-BR e desligado por padrão")
@@ -1231,3 +1231,35 @@ check(ns.Registry:FindFor(ns.Engine.player).id == "forever.h.50-52-teste", "sem 
 AzimuteCharDB.dungeons = { RFC = true }
 check(ns.Registry:FindFor(ns.Engine.player).id == "forever.dg.h.50-52-teste", "com masmorras escolhidas: rota com masmorras")
 AzimuteCharDB.dungeons = {}
+
+print("\n== Ritmo de up ==")
+S.clock = 100000
+S.xp, S.xpMax = 1000, 5000
+function UnitXP() return S.xp end
+function UnitXPMax() return S.xpMax end
+AzimuteCharDB.pace = nil
+S.player.level = 20; ns.Engine.player.level = 20
+S.FireEvent("PLAYER_LOGIN"); S.RunTimers()
+S.xp = 1200; S.FireEvent("PLAYER_XP_UPDATE")
+check(ns.Pace:Stats() == nil, "pouco tempo medido: ainda sem ritmo")
+S.clock = S.clock + 600
+S.xp = 1600; S.FireEvent("PLAYER_XP_UPDATE")
+S.FireEvent("QUEST_TURNED_IN", 1)
+local stats = ns.Pace:Stats()
+check(stats and math.abs(stats.xpPerHour - 3600) < 1, "600 XP em 10 min = 3600 XP/h: " .. tostring(stats and stats.xpPerHour))
+check(math.abs(stats.secondsToLevel - 3400) < 1, "faltam 3400 XP: nível em ~57 min")
+check(ns.Pace:Line() == "3.600 XP/h  ·  nível em 57 min  ·  6 missões/h", "linha: " .. tostring(ns.Pace:Line()))
+-- subir de nível no meio conta o resto do nível anterior
+S.player.level = 21
+S.xp, S.xpMax = 100, 6000
+S.FireEvent("PLAYER_XP_UPDATE")
+check(math.abs(ns.Pace:Stats().xpPerHour - (600 + 3400 + 100) * 6) < 1, "XP do nível anterior conta ao subir")
+local found = false
+for _, l in ipairs(UILines()) do if l:find("XP/h") then found = true end end
+check(found, "linha do ritmo aparece na janela do guia")
+AzimuteDB.pace = false
+ns.UI:Refresh()
+found = false
+for _, l in ipairs(UILines()) do if l:find("XP/h") then found = true end end
+check(not found, "opção desligada: some")
+AzimuteDB.pace = true
