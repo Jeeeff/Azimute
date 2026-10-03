@@ -187,4 +187,62 @@ end
 function ToggleBackpack() ToggleAllBags() end
 function OpenBackpack() OpenAllBags() end
 function CloseBackpack() CloseAllBags() end
-function GetMoney() return 123456 end
+S.money = 123456
+function GetMoney() return S.money end
+
+------------------------------------------------------------------------
+-- Utilidades: câmera, dicas, mapa, avisos, vendedor, social
+------------------------------------------------------------------------
+S.cvars = { cameraDistanceMaxZoomFactor = "1.9" }
+C_CVar = { GetCVar = function(k) return S.cvars[k] end, SetCVar = function(k, v) S.cvars[k] = v end }
+
+S.tooltipCalls = {}
+Enum.TooltipDataType = { Item = 0, Spell = 1, Unit = 2 }
+TooltipDataProcessor = { AddTooltipPostCall = function(kind, fn) S.tooltipCalls[kind] = fn end }
+function S.NewTooltip(unit)
+    local tip = { lines = {} }
+    function tip:AddLine(text) table.insert(self.lines, text) end
+    function tip:GetUnit() return "X", unit end
+    return tip
+end
+S.units = {}
+function UnitExists(u) return S.units[u] ~= nil end
+function UnitName(u) return S.units[u] and S.units[u].name end
+function UnitIsUnit(a, b) return S.units[a] and S.units[a].isPlayer and b == "player" end
+function UnitIsPlayer(u) return S.units[u] and S.units[u].player end
+local unitClass = UnitClass
+function UnitClass(u) if S.units[u] then return "Guerreiro", "WARRIOR" end return unitClass(u) end
+C_ClassColor.GetClassColor = function() return { GetRGB = function() return 1, 0, 0 end, WrapTextInColorCode = function(_, t) return "|cffc79c6e" .. t .. "|r" end } end
+
+S.alerts = {}
+RaidWarningFrame = {}
+ChatTypeInfo = { RAID_WARNING = {} }
+function RaidNotice_AddMessage(_, text) table.insert(S.alerts, text) end
+S.durability = {}
+function GetInventoryItemDurability(slot) local d = S.durability[slot]; if d then return d[1], d[2] end end
+S.hearthCooldown = { 0, 0 }
+C_Container.GetItemCooldown = function() return S.hearthCooldown[1], S.hearthCooldown[2], 1 end
+
+S.merchant = {}
+MerchantFrame = S.NewFrame("MerchantFrame")
+MerchantFrame.selectedTab = 1
+C_MerchantFrame = { GetItemInfo = function(i) return S.merchant[i] end }
+function GetMerchantItemMaxStack(i) return S.merchant[i] and S.merchant[i].maxStack or 1 end
+S.bought = {}
+function BuyMerchantItem(i, q) table.insert(S.bought, i .. "x" .. q) end
+function MerchantItemButton_OnModifiedClick(self, button) end
+S.alt = false
+function IsAltKeyDown() return S.alt end
+
+S.social = {}
+function CancelDuel() table.insert(S.social, "cancelDuel") end
+function DeclineGroup() table.insert(S.social, "declineGroup") end
+function AcceptResurrect() table.insert(S.social, "acceptRes") end
+C_SummonInfo = { ConfirmSummon = function() table.insert(S.social, "summon") end, GetSummonConfirmTimeLeft = function() return 60 end }
+function StaticPopup_Hide(name) table.insert(S.social, "hide:" .. name) end
+S.friends = {}
+C_FriendList = { IsFriend = function(guid) return S.friends[guid] == true end }
+function IsGuildMember() return false end
+WorldMapFrame.ScrollContainer = S.NewFrame("ScrollContainer")
+WorldMapFrame.ScrollContainer.IsMouseOver = function() return S.mouseOverMap or false end
+WorldMapFrame.ScrollContainer.GetNormalizedCursorPosition = function() return 0.5, 0.25 end
