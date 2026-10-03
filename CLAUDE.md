@@ -81,7 +81,7 @@ PYTHONIOENCODING=utf-8 python tools/tests/run_modules.py # medidor e bolsas (soz
 Copiar para o jogo (depois de subir `## Version` no .toc):
 ```bash
 AD="/c/Program Files (x86)/World of Warcraft/_classic_beta_/Interface/AddOns"
-(cd Azimute && cp --parents Azimute.toc Bindings.xml Locales.lua Core/*.lua Data/*.lua Engine/*.lua Guides/*.lua Nav/*.lua UI/*.lua Automation/*.lua "$AD/Azimute"/)
+(cd Azimute && cp --parents Azimute.toc Bindings.xml Locales.lua Media/*.tga Core/*.lua Data/*.lua Engine/*.lua Guides/*.lua Nav/*.lua UI/*.lua Automation/*.lua "$AD/Azimute"/)
 cp -r Azimute_Guides_Forever/. "$AD/Azimute_Guides_Forever/"; cp -r Azimute_Guides_Classic/. "$AD/Azimute_Guides_Classic/"
 for m in Azimute_Meter Azimute_Bags Azimute_Utils Azimute_Rares; do mkdir -p "$AD/$m"; cp $m/*.toc $m/*.lua $m/LICENSE.txt "$AD/$m/"; done
 ```

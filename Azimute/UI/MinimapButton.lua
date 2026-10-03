@@ -9,7 +9,8 @@ local L = ns.L
 local MinimapButton = {}
 ns.MinimapButton = MinimapButton
 
-local ICON = "Interface\\Icons\\INV_Misc_Map_01"
+-- Logo do Azimute (rosa dos ventos), arte própria em Media/Icon.tga.
+local ICON = "Interface\\AddOns\\Azimute\\Media\\Icon"
 
 -- Menu do clique direito (MenuUtil do cliente moderno); sem ele, abre as opções.
 local function OpenMenu(owner)
@@ -125,9 +126,9 @@ function MinimapButton:Create()
     background:SetPoint("TOPLEFT", 7, -5)
 
     local icon = button:CreateTexture(nil, "ARTWORK")
-    icon:SetSize(17, 17)
+    icon:SetSize(20, 20)
     icon:SetTexture(ICON)
-    icon:SetPoint("TOPLEFT", 7, -6)
+    icon:SetPoint("TOPLEFT", 6, -5)
 
     local border = button:CreateTexture(nil, "OVERLAY")
     border:SetSize(53, 53)
