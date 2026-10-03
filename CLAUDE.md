@@ -47,6 +47,7 @@ Azimute_Guides_Classic/       pacote gerado: GPL-3.0 (Guidelime_Zarant), 30-60
 Azimute_Meter/                módulo INDEPENDENTE: medidor de dano/cura (C_DamageMeter), /azm, AzimuteMeterDB
 Azimute_Bags/                 módulo INDEPENDENTE: bolsas e banco unificados, /azb, AzimuteBagsDB
 Azimute_Utils/                módulo INDEPENDENTE: qualidade de vida (câmera, dicas, coordenadas, avisos, vendedor, social), /azu
+Azimute_Rares/                módulo INDEPENDENTE: aviso de raros/tesouros (vignettes + classificação), /azr
 tools/rxp2azimute.py          gera o pacote Forever (guias RXP + pesos + voos + masmorras + treino)
 tools/guidelime2azimute.py    gera o pacote Classic
 tools/sources/               fontes com licença: zarant/ (GPL-3), fdq/ (MIT), whatstraining/ (MIT)
@@ -82,7 +83,7 @@ Copiar para o jogo (depois de subir `## Version` no .toc):
 AD="/c/Program Files (x86)/World of Warcraft/_classic_beta_/Interface/AddOns"
 (cd Azimute && cp --parents Azimute.toc Bindings.xml Locales.lua Core/*.lua Data/*.lua Engine/*.lua Guides/*.lua Nav/*.lua UI/*.lua Automation/*.lua "$AD/Azimute"/)
 cp -r Azimute_Guides_Forever/. "$AD/Azimute_Guides_Forever/"; cp -r Azimute_Guides_Classic/. "$AD/Azimute_Guides_Classic/"
-for m in Azimute_Meter Azimute_Bags Azimute_Utils; do mkdir -p "$AD/$m"; cp $m/*.toc $m/*.lua $m/LICENSE.txt "$AD/$m/"; done
+for m in Azimute_Meter Azimute_Bags Azimute_Utils Azimute_Rares; do mkdir -p "$AD/$m"; cp $m/*.toc $m/*.lua $m/LICENSE.txt "$AD/$m/"; done
 ```
 Módulos (Meter, Bags): pasta, .toc, SavedVariables e comando próprios, sem `Dependencies: Azimute`
 (só `OptionalDeps`). Um erro neles não derruba o guia e vice-versa. Se o Azimute estiver ligado, eles

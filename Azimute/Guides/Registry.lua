@@ -260,6 +260,16 @@ GuiaUpAPI = AzimuteAPI
 -- menu do botão do minimapa. Eles funcionam sozinhos; isto é só um atalho.
 -- info = { name = "...", toggle = function, options = function (opcional) }
 ns.modules = {}
+-- Destino avulso vindo de um módulo (ex.: raro achado pelo Azimute_Raros):
+-- janela em "Indo até", seta e pino. Devolve true se aceitou.
+AzimuteAPI.GoTo = function(mapID, x, y, title)
+    if type(mapID) ~= "number" or type(x) ~= "number" or type(y) ~= "number" then
+        return false
+    end
+    ns.Nav:SetManualTarget(mapID, x, y, { title = title })
+    return true
+end
+
 AzimuteAPI.RegisterModule = function(info)
     if type(info) == "table" and type(info.name) == "string" and type(info.toggle) == "function" then
         ns.modules[#ns.modules + 1] = info

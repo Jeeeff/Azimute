@@ -1,0 +1,16 @@
+## Interface: 16001, 120100, 120105
+## Title: Azimute - Rares
+## Title-ptBR: Azimute - Raros
+## Notes: Alerts when a rare creature (or treasure) is nearby, with sound and a map pin. Works without Azimute.
+## Notes-ptBR: Avisa quando um monstro raro (ou tesouro) está por perto, com som e pino no mapa. Funciona sem o Azimute.
+## Author: jeeeff
+## X-License: GPL-3.0-or-later
+## Version: 0.1.0
+## IconTexture: Interface\Icons\INV_Misc_Head_Dragon_01
+## Category: Map & Minimap
+## Category-ptBR: Mapa e minimapa
+## OptionalDeps: Azimute
+## SavedVariables: AzimuteRaresDB
+
+Locales.lua
+Rares.lua

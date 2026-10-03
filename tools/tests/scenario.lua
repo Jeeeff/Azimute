@@ -690,6 +690,14 @@ S.itemData["machado2m"] = { equipLoc = "INVTYPE_2HWEAPON", classID = 2, stats = 
 S.equipped[16], S.equipped[17] = "espada1m", "escudo"
 local diff = G:Compare("machado2m")
 check(math.abs(diff - (110 - (80 + 20))) < 0.01, "2 mãos comparada com principal + escudo (diferença " .. diff .. ")")
+-- dano mágico: o jogo chama de ITEM_MOD_SPELL_POWER (1 a menos que a dica); os pesos, de STAT_SPELLDAMAGE
+local caster = { STAT_SPELLDAMAGE = 1.0, ITEM_MOD_STAMINA_SHORT = 0.5, RESISTANCE0_NAME = 0.01 }
+S.itemData["cinto-magia"] = { equipLoc = "INVTYPE_WAIST", stats = { ITEM_MOD_SPELL_POWER = 3, RESISTANCE0_NAME = 39 } }
+S.itemData["cinto-vigor"] = { equipLoc = "INVTYPE_WAIST", stats = { ITEM_MOD_STAMINA_SHORT = 3, RESISTANCE0_NAME = 16 } }
+S.itemData["cinto-velho"] = { equipLoc = "INVTYPE_WAIST", stats = { ITEM_MOD_SPELL_DAMAGE_DONE = 3, ITEM_MOD_SPELL_POWER = 3 } }
+check(math.abs(G:Score("cinto-magia", caster) - (4 + 0.39)) < 0.001, "+4 de dano mágico conta (3 do jogo + 1): " .. G:Score("cinto-magia", caster))
+check(G:Score("cinto-magia", caster) > G:Score("cinto-vigor", caster), "cinto de magia vale mais que o de +3 vigor para quem usa magia")
+check(math.abs(G:Score("cinto-velho", caster) - 4) < 0.001, "os dois nomes do mesmo atributo não somam em dobro")
 
 print("\n== Melhor recompensa de missão ==")
 S.questChoices = { "peito-int", "peito-forte", "peito-placa" }

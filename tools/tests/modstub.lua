@@ -247,3 +247,19 @@ WorldMapFrame.ScrollContainer = S.NewFrame("ScrollContainer")
 WorldMapFrame.ScrollContainer.IsMouseOver = function() return S.mouseOverMap or false end
 WorldMapFrame.ScrollContainer.GetNormalizedCursorPosition = function() return 0.5, 0.25 end
 function PaperDollItemSlotButton_Update(button) end
+
+------------------------------------------------------------------------
+-- Raros: vignettes e classificação de unidades
+------------------------------------------------------------------------
+S.vignettes = {}
+C_VignetteInfo = {
+    GetVignettes = function() local out = {} for guid in pairs(S.vignettes) do out[#out + 1] = guid end return out end,
+    GetVignetteInfo = function(guid) return S.vignettes[guid] end,
+    GetVignettePosition = function(guid) local v = S.vignettes[guid]; return v and { GetXY = function() return v.x, v.y end } end,
+}
+S.unitClass = {}
+function UnitClassification(u) return S.unitClass[u] or "normal" end
+function UnitIsDead(u) return S.units[u] and S.units[u].dead or false end
+SOUNDKIT = { RAID_WARNING = 8959 }
+S.sounds = 0
+function PlaySound() S.sounds = S.sounds + 1 end

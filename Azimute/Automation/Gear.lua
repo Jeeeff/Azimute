@@ -205,6 +205,8 @@ local function ItemInfo(link)
     return getInfo(link)
 end
 
+local SPELL_DAMAGE_STATS = { ITEM_MOD_SPELL_POWER = true, ITEM_MOD_SPELL_DAMAGE_DONE = true }
+
 -- Soma peso x valor de cada atributo do item. nil se não der para avaliar.
 function Gear:Score(link, profile)
     profile = profile or self:Profile()
@@ -217,10 +219,23 @@ function Gear:Score(link, profile)
     end
     local score = 0
     for stat, value in pairs(stats) do
-        local weight = profile[stat]
+        local weight = not SPELL_DAMAGE_STATS[stat] and profile[stat]
         if type(weight) == "number" and type(value) == "number" and not ns.IsSecret(value) then
             score = score + weight * value
         end
+    end
+    -- "Aumenta em até N o dano e a cura mágicos": o jogo devolve como
+    -- ITEM_MOD_SPELL_POWER / ITEM_MOD_SPELL_DAMAGE_DONE e com 1 a menos do que a
+    -- dica mostra; os pesos chamam de STAT_SPELLDAMAGE (mesma correção do RXP).
+    local spellDamage = 0
+    for stat in pairs(SPELL_DAMAGE_STATS) do
+        local value = stats[stat]
+        if type(value) == "number" and not ns.IsSecret(value) and value > spellDamage then
+            spellDamage = value
+        end
+    end
+    if spellDamage > 0 and type(profile.STAT_SPELLDAMAGE) == "number" then
+        score = score + profile.STAT_SPELLDAMAGE * (spellDamage + 1)
     end
     return score
 end
