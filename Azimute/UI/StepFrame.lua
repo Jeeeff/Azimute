@@ -43,6 +43,7 @@ local ICON_ROUTE = "Interface\\TaxiFrame\\UI-Taxi-Icon-Green"
 local ICON_TRAINER = "Interface\\Icons\\INV_Misc_Book_07"
 local ICON_CORPSE = "Interface\\TargetingFrame\\UI-TargetingFrame-Skull"
 local ICON_PACE = "Interface\\Icons\\Spell_ChargePositive"
+local ICON_BACK = "Interface\\Buttons\\UI-SpellbookIcon-PrevPage-Up"
 local ICON_INFO = "Interface\\FriendsFrame\\InformationIcon"
 
 ------------------------------------------------------------------------
@@ -409,6 +410,10 @@ function UI:GetRow(index)
         end)
         row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
         row:SetScript("OnClick", function(self, button)
+            if self.action then
+                self.action()
+                return
+            end
             if button == "RightButton" then
                 if self.goal then
                     ns.Engine:ToggleMark(self.goal)
@@ -533,6 +538,18 @@ function UI:Refresh()
             entries[#entries + 1] = { icon = ICON_DONE, text = L["GUIDE_DONE"] }
         end
     end
+    -- Missão selecionada / destino avulso: linha clicável para voltar ao guia
+    -- (além do X, que muita gente não vê).
+    if (focus or manual) and guide then
+        entries[#entries + 1] = { icon = ICON_BACK, text = "|cff66ccff" .. L["BACK_TO_GUIDE"] .. "|r",
+            action = function()
+                if ns.Nav:Manual() then
+                    ns.Nav:ClearManual()
+                else
+                    ns.Focus:Stop()
+                end
+            end }
+    end
     -- Ritmo de up (XP/hora, tempo até o nível) no fim, discreto.
     local pace = not focus and not manual and ns.Pace and ns.Pace:Line()
     if pace then
@@ -563,8 +580,9 @@ function UI:Refresh()
         row.icon:SetShown(icon ~= nil)
         row.map = entry.map
         row.goal = entry.goal
+        row.action = entry.action or false
         row.onEnter = entry.onEnter or ((entry.map or entry.goal) and RowTooltip) or nil
-        row:EnableMouse(row.onEnter ~= nil)
+        row:EnableMouse(row.onEnter ~= nil or row.action ~= false)
         local rowHeight = math.max(ICON_SIZE, row.text:GetStringHeight())
         row:SetHeight(rowHeight)
         row:Show()

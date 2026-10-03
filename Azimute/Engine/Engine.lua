@@ -366,6 +366,16 @@ function Engine:LoadGuide(id, stepIndex, manual)
         ns.Print(L["GUIDE_NOT_FOUND"]:format(tostring(id)))
         return false
     end
+    -- Escolher um guia = quer seguir o guia: sai da "missão selecionada" e do
+    -- destino avulso (muita gente não repara no X).
+    if manual then
+        if ns.Focus and ns.Focus:IsActive() then
+            ns.Focus:Stop()
+        end
+        if ns.Nav and ns.Nav:Manual() then
+            ns.Nav:ClearManual()
+        end
+    end
     ns.Position.ResolveGuide(guide)
     -- Chave estável de cada objetivo (passo:posição) para as marcas do jogador.
     for i, step in ipairs(guide.steps) do

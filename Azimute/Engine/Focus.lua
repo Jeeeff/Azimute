@@ -202,7 +202,13 @@ end
 
 ns:RegisterEvent("SUPER_TRACKING_CHANGED", function()
     if C_SuperTrack and C_SuperTrack.GetSuperTrackedQuestID then
-        Focus:OnUserSelect(C_SuperTrack.GetSuperTrackedQuestID())
+        local questID = C_SuperTrack.GetSuperTrackedQuestID()
+        -- Desmarcou a missão no rastreador: volta ao guia.
+        if (not questID or questID == 0) and Focus:IsActive() then
+            Focus:Stop()
+            return
+        end
+        Focus:OnUserSelect(questID)
     end
 end)
 

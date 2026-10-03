@@ -308,7 +308,8 @@ S.questsOnMap[1421] = { { questID = 600, x = 0.45, y = 0.42 } }
 S.FireEvent("QUEST_LOG_UPDATE"); S.RunTimers()
 target = ns.Nav:CurrentTarget()
 check(target and target.x == 0.45, "marcador atualizado para a entrega")
-check(UILines()[#UILines()]:find("Entregue"), "linha de entrega aparece quando pronta")
+check(UILines()[#UILines() - 1]:find("Entregue"), "linha de entrega aparece quando pronta")
+check(UILines()[#UILines()]:find("Voltar ao guia"), "linha clicável 'Voltar ao guia' no fim")
 Q.completed[600] = true; Q.onQuest[600] = nil
 S.FireEvent("QUEST_TURNED_IN", 600, 0, 0); S.RunTimers()
 check(not F:IsActive(), "entregar a missão volta ao guia")
@@ -1351,3 +1352,36 @@ S.player.x, S.player.y = 0.10, 0.50
 ns.Router:CheckNewFlightPath()
 check(ns.Router.detour == nil, "opção desligada: não desvia")
 AzimuteDB.pickupFlightPathsOnWay = true
+
+print("\n== Sair da missão selecionada sem o X ==")
+local F2 = ns.Focus
+AzimuteDB.followQuest = true
+S.time = S.time + 200
+Q.onQuest[700] = true
+Q.titles[700] = "Outra missão"
+S.questsOnMap[S.player.map] = { { questID = 700, x = 0.3, y = 0.3 } }
+S.superTracked = 700
+S.FireEvent("SUPER_TRACKING_CHANGED"); S.RunTimers()
+check(F2:IsActive() and F2.questID == 700, "missão selecionada")
+ns.Engine:LoadGuide("azimute.teste.deathknell", 1, true); S.RunTimers()
+check(not F2:IsActive() and not ns.UI.frame.title._text:find("Missão:"), "escolher um guia sai da missão selecionada")
+S.time = S.time + 200
+S.superTracked = 700
+S.FireEvent("SUPER_TRACKING_CHANGED"); S.RunTimers()
+check(F2:IsActive(), "selecionada de novo")
+S.superTracked = 0
+S.FireEvent("SUPER_TRACKING_CHANGED"); S.RunTimers()
+check(not F2:IsActive(), "desmarcar a missão no rastreador volta ao guia")
+S.time = S.time + 200
+S.superTracked = 700
+S.FireEvent("SUPER_TRACKING_CHANGED"); S.RunTimers()
+local backRow
+for _, r in ipairs(ns.UI.frame.rows) do
+    if r._shown and r.text._text and r.text._text:find("Voltar ao guia") then backRow = r end
+end
+check(backRow, "linha 'Voltar ao guia' aparece")
+backRow._scripts.OnClick(backRow, "LeftButton"); S.RunTimers()
+check(not F2:IsActive(), "clicar em 'Voltar ao guia' sai da missão")
+ns.Nav:SetManualTarget(1421, 0.5, 0.5, { title = "Algum lugar" }); S.RunTimers()
+ns.Engine:LoadGuide("azimute.teste.deathknell", 1, true); S.RunTimers()
+check(ns.Nav:Manual() == nil, "escolher um guia também cancela o destino avulso")
