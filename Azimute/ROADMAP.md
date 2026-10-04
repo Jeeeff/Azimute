@@ -441,7 +441,7 @@ o que gasta ouro vem desligado; cada módulo em arquivo próprio, e se crescer v
 | Item level no tooltip e nos itens | (uso próprio) | próximo |
 | Habilidades de arma e cidade do treinador | What's Training | a fazer; `ClassSpells.lua` não traz armas |
 | Zoom maior da câmera | Leatrix Plus | trivial (uma configuração do jogo) |
-| Bolsas unificadas | (uso próprio) | conferir antes se o cliente já tem a opção nativa |
+| Bolsas unificadas | (uso próprio) | removido (04/10/2026): o Forever já tem a opção nativa de bolsa única; ficou só o nível de item nas bolsas do jogo (Azimute_Utils) e a seta de melhoria (Azimute) |
 | Medidor de dano da party | Details / Skada | não vale: o Forever já traz medidor nativo e, no Midnight, o log de combate saiu dos addons; só dá para reapresentar `C_DamageMeter` (ex.: RocketMeter, MIT), e em combate os dados dos outros jogadores vêm parciais |
 | Loot de masmorras | AtlasLoot | conferir o Guia de Aventuras do jogo; dados de drop exigem fonte com licença |
 | Raros no mapa | Rare Scanner | baixa prioridade (só caçadores) |

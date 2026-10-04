@@ -45,8 +45,7 @@ Azimute/                      núcleo (sem dados de terceiros)
 Azimute_Guides_Forever/       pacote gerado: CC BY-NC-SA 4.0 (RestedXP) + dados MIT
 Azimute_Guides_Classic/       pacote gerado: GPL-3.0 (Guidelime_Zarant), 30-60
 Azimute_Meter/                módulo INDEPENDENTE: medidor de dano/cura (C_DamageMeter), /azm, AzimuteMeterDB
-Azimute_Bags/                 módulo INDEPENDENTE: bolsas e banco unificados, /azb, AzimuteBagsDB
-Azimute_Utils/                módulo INDEPENDENTE: qualidade de vida (câmera, dicas, coordenadas, avisos, vendedor, social), /azu
+Azimute_Utils/                módulo INDEPENDENTE: qualidade de vida (câmera, dicas, nível de item nas bolsas, coordenadas, avisos, vendedor, social), /azu
 Azimute_Rares/                módulo INDEPENDENTE: aviso de raros/tesouros (vignettes + classificação), /azr
 Azimute_Auction/              módulo INDEPENDENTE: varredura do leilão, preço na dica, valor das bolsas, /azl
 tools/rxp2azimute.py          gera o pacote Forever (guias RXP + pesos + voos + masmorras + treino)
@@ -77,16 +76,16 @@ Testar (sempre antes de copiar para o jogo):
 ```bash
 PYTHONIOENCODING=utf-8 python tools/tests/run_tests.py   # lógica do addon (simulação da API)
 PYTHONIOENCODING=utf-8 python tools/tests/run_pack.py    # carrega e lê todos os guias dos pacotes
-PYTHONIOENCODING=utf-8 python tools/tests/run_modules.py # medidor e bolsas (sozinhos e com o Azimute)
+PYTHONIOENCODING=utf-8 python tools/tests/run_modules.py # módulos (sozinhos e com o Azimute)
 ```
 Copiar para o jogo (depois de subir `## Version` no .toc):
 ```bash
 AD="/c/Program Files (x86)/World of Warcraft/_classic_beta_/Interface/AddOns"
 (cd Azimute && cp --parents Azimute.toc Bindings.xml Locales.lua Media/*.tga Core/*.lua Data/*.lua Engine/*.lua Guides/*.lua Nav/*.lua UI/*.lua Automation/*.lua "$AD/Azimute"/)
 cp -r Azimute_Guides_Forever/. "$AD/Azimute_Guides_Forever/"; cp -r Azimute_Guides_Classic/. "$AD/Azimute_Guides_Classic/"
-for m in Azimute_Meter Azimute_Bags Azimute_Utils Azimute_Rares Azimute_Auction; do mkdir -p "$AD/$m"; cp $m/*.toc $m/*.lua $m/LICENSE.txt "$AD/$m/"; done
+for m in Azimute_Meter Azimute_Utils Azimute_Rares Azimute_Auction; do mkdir -p "$AD/$m"; cp $m/*.toc $m/*.lua $m/LICENSE.txt "$AD/$m/"; done
 ```
-Módulos (Meter, Bags): pasta, .toc, SavedVariables e comando próprios, sem `Dependencies: Azimute`
+Módulos (Meter, Utils, Rares, Auction): pasta, .toc, SavedVariables e comando próprios, sem `Dependencies: Azimute`
 (só `OptionalDeps`). Um erro neles não derruba o guia e vice-versa. Se o Azimute estiver ligado, eles
 aparecem no menu do botão do minimapa via `AzimuteAPI.RegisterModule`.
 Interface do Forever (para conferir API): ramo `forever` de github.com/Gethe/wow-ui-source

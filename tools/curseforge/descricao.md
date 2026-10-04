@@ -12,8 +12,7 @@
 
 ### Bundled modules (independent addons — disable any of them without affecting the guide)
 - **Azimute Meter** (`/azm`): group damage, DPS, healing, interrupts, deaths and more, using the game's own combat data. During combat the game hides exact numbers from addons, so percentages and spell details appear after the fight.
-- **Azimute Bags** (`/azb`): all bags and the bank in one window, with search, sort, free slots, gold, item level and upgrade arrows.
-- **Azimute Utilities** (`/azu`): max camera zoom, item IDs and target in tooltips, item level on the character window, world map coordinates, alerts (bags full, gear breaking, hearthstone ready), Alt+click buys a full stack, optional social automation (all off by default).
+- **Azimute Utilities** (`/azu`): max camera zoom, item IDs and target in tooltips, item level on the character window and in the bags, world map coordinates, alerts (bags full, gear breaking, hearthstone ready), Alt+click buys a full stack, optional social automation (all off by default).
 - **Azimute Rares** (`/azr`): warns when a rare creature or treasure is nearby and leads the arrow there.
 - **Azimute Auction** (`/azl`): full auction house scan, auction price on item tooltips, vendor-vs-auction hint and the value of your bags.
 
@@ -36,5 +35,5 @@ Type `/azimute report` (or click the bug icon in the guide window), copy the tex
 
 - Janela do guia, seta, pino no mapa, rotas de voo/barco/zepelim, volta ao corpo.
 - Aceitar e entregar missões automaticamente (opcional), marcar passo como feito (clique direito).
-- Módulos independentes: **Medidor de dano** (`/azm`) e **Bolsas unificadas** (`/azb`).
+- Módulos independentes: **Medidor de dano** (`/azm`), **Utilidades** (`/azu`), **Raros** (`/azr`) e **Leilão** (`/azl`).
 - Problemas: `/azimute reportar` e abra uma issue em https://github.com/Jeeeff/Azimute/issues

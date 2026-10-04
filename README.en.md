@@ -30,10 +30,8 @@ one of them errors the guide keeps working.
 - **Azimute Meter** (`/azm`): group damage, DPS, healing, interrupts, deaths etc., using the game's own
   combat data; current, overall and previous fights; spell details; chat report. During combat the game
   hides exact numbers from addons, so percentages, reports and details show up when combat ends.
-- **Azimute Bags** (`/azb`): all bags (and the bank) in one window, with search, sort, free slots, gold,
-  item level and the green upgrade arrow. The B key opens the new window.
 - **Azimute Utilities** (`/azu`): max camera zoom, item IDs and target in tooltips, item level on the
-  character window, world map coordinates, alerts (bags full, gear breaking, hearthstone ready), Alt+click
+  character window and in the bags, world map coordinates, alerts (bags full, gear breaking, hearthstone ready), Alt+click
   buys a full stack at merchants, and optional social automation (decline duels and stranger invites,
   accept resurrection and summons; all off by default).
 - **Azimute Rares** (`/azr`): warns when a rare creature (or treasure) is nearby and leads the arrow there.
@@ -55,7 +53,7 @@ new Forever content at level 60.
 
 1. Extract the zip and copy all `Azimute*` folders into the Forever client's `Interface\AddOns` folder (in
    the beta, `World of Warcraft\_classic_beta_\Interface\AddOns`). Only `Azimute` and one guide pack are
-   required; Meter, Bags, Utilities, Rares and Auction are optional.
+   required; Meter, Utilities, Rares and Auction are optional.
 2. Start the game and type `/azimute` to see the commands. **A new addon folder only shows up after restarting the game.**
 
 Useful commands: `/azimute guides` (picker), `/azimute show` / `hide`, `/azimute next` / `prev`,
@@ -76,7 +74,7 @@ Support channel: [GitHub issues](https://github.com/Jeeeff/Azimute/issues).
 | ↳ dungeon quests | MIT | Forever Dungeon Quests, by Sundee |
 | ↳ trainer spells | MIT | What's Training, by fusionpit |
 | `Azimute_Guides_Classic` (guides) | GPL-3.0 | Guidelime_Zarant, by Zarant |
-| `Azimute_Meter`, `Azimute_Bags`, `Azimute_Utils`, `Azimute_Rares`, `Azimute_Auction` | GPL-3.0-or-later | Own code |
+| `Azimute_Meter`, `Azimute_Utils`, `Azimute_Rares`, `Azimute_Auction` | GPL-3.0-or-later | Own code |
 
 RestedXP guides may only be used non-commercially, which is why Azimute is free. RestedXP and the other
 authors do not endorse Azimute. Details in the `CREDITS.md` inside each package.

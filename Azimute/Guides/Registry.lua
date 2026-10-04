@@ -256,7 +256,7 @@ AzimuteAPI = {
 -- Nome antigo (pacotes feitos para o GuiaUp continuam funcionando).
 GuiaUpAPI = AzimuteAPI
 
--- Módulos independentes do pacote (Azimute_Meter, Azimute_Bags...) aparecem no
+-- Módulos independentes do pacote (Azimute_Meter, Azimute_Utils...) aparecem no
 -- menu do botão do minimapa. Eles funcionam sozinhos; isto é só um atalho.
 -- info = { name = "...", toggle = function, options = function (opcional) }
 ns.modules = {}

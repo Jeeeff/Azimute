@@ -131,6 +131,30 @@ shirt.GetID = function() return 4 end
 PaperDollItemSlotButton_Update(shirt)
 check(U.slotLabels[shirt] == nil, "camisa fica sem número")
 
+-- nível de item nas bolsas do próprio jogo
+ITEM_QUALITY_COLORS = ITEM_QUALITY_COLORS or {}
+ITEM_QUALITY_COLORS[3] = { hex = "|cff0070dd" }
+S.bagItems[0] = { [1] = { itemName = "Peitoral", link = "item:armor", id = 100, quality = 3 },
+                  [2] = { itemName = "Pedra", link = "item:hs", id = 6948 } }
+local function BagButton(slot)
+    local b = S.NewFrame("ItemButton")
+    b.GetBagID = function() return 0 end
+    b.GetID = function() return slot end
+    return b
+end
+local bagButtons = { BagButton(1), BagButton(2) }
+ContainerFrameCombinedBags.EnumerateValidItems = function() return ipairs(bagButtons) end
+ContainerFrameCombinedBags._shown = true
+U.UpdateBagLevels()
+check(U.bagLabels[bagButtons[1]] and U.bagLabels[bagButtons[1]]._text == "|cff0070dd45|r",
+    "bolsa do jogo: nível 45 colorido na armadura: " .. tostring(U.bagLabels[bagButtons[1]] and U.bagLabels[bagButtons[1]]._text))
+check(U.bagLabels[bagButtons[2]] == nil, "item comum sem número")
+U.db.bagItemLevel = false
+U.UpdateBagLevels()
+check(U.bagLabels[bagButtons[1]]._text == "", "opção desligada: número some")
+U.db.bagItemLevel = true
+ContainerFrameCombinedBags._shown = false
+
 -- pedra de regresso: a recarga global (1,5 s) não dispara o aviso
 S.alerts = {}
 S.hearthCooldown = { S.time, 1.5 }

@@ -492,7 +492,7 @@ function Gear:UpdateBags()
     end
 end
 
--- Para módulos (ex.: Azimute_Bags, que troca as bolsas do jogo): o item é
+-- Para módulos (ex.: uma janela de bolsas própria): o item é
 -- melhoria? Respeita as opções do indicador. Devolve true/false e a porcentagem.
 AzimuteAPI.IsUpgrade = function(link)
     if not (ns.db and ns.db.bagArrows and ns.db.gearAdvisor) or type(link) ~= "string" then

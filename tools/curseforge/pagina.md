@@ -29,7 +29,6 @@ são CC BY-NC-SA 4.0 (avisado na descrição e no CREDITS.md dentro do pacote).
 
 ### Bundled modules (independent addons — disable any of them without affecting the guide)
 - **Azimute Meter** (`/azm`): group damage, DPS, healing, interrupts, deaths and more, using the game's own combat data. During combat the game hides exact numbers from addons, so percentages and spell details appear after the fight.
-- **Azimute Bags** (`/azb`): all bags and the bank in one window, with search, sort, free slots, gold and item level.
 
 ### Guide coverage (beta)
 - Levels 1-30, Alliance and Horde, per race: adapted from the RestedXP guides.
@@ -50,5 +49,5 @@ Type `/azimute report` (or click the bug icon in the guide window), copy the tex
 
 - Janela do guia, seta, pino no mapa, rotas de voo/barco/zepelim, volta ao corpo.
 - Aceitar e entregar missões automaticamente (opcional), marcar passo como feito (clique direito).
-- Módulos independentes: **Medidor de dano** (`/azm`) e **Bolsas unificadas** (`/azb`).
+- Módulos independentes: **Medidor de dano** (`/azm`), **Utilidades** (`/azu`), **Raros** (`/azr`) e **Leilão** (`/azl`).
 - Problemas: `/azimute reportar` e abra uma issue em https://github.com/Jeeeff/Azimute/issues

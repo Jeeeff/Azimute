@@ -13,7 +13,7 @@ import sys
 import zipfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-PACKAGES = ["Azimute", "Azimute_Guides_Forever", "Azimute_Guides_Classic", "Azimute_Meter", "Azimute_Bags", "Azimute_Utils", "Azimute_Rares", "Azimute_Auction"]
+PACKAGES = ["Azimute", "Azimute_Guides_Forever", "Azimute_Guides_Classic", "Azimute_Meter", "Azimute_Utils", "Azimute_Rares", "Azimute_Auction"]
 EXCLUDE_DIRS = {"__pycache__", ".git"}
 EXCLUDE_REL = {"Azimute/Guides/Test", "Azimute/ROADMAP.md"}
 EXCLUDE_NAMES = {".DS_Store", "Thumbs.db"}
