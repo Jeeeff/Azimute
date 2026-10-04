@@ -177,9 +177,17 @@ function CreateFrame(kind, ...)
         rawset(frame, "SetAlpha", function(self, alpha) self._alpha = alpha end)
         -- o modelo do jogo tem SetMatchesSearch (apaga o item que não bate)
         rawset(frame, "SetMatchesSearch", function(self, matches) self._matches = matches end)
+        rawset(frame, "GetFrameLevel", function() return 10 end)
+        rawset(frame, "GetFrameStrata", function() return "HIGH" end)
+        rawset(frame, "GetScript", function(self, name) return self._scripts[name] end)
+        rawset(frame, "HookScript", function(self, name, fn)
+            local old = self._scripts[name]
+            self._scripts[name] = function(...) if old then old(...) end fn(...) end
+        end)
     end
     return frame
 end
+function IsModifiedClick() return S.modifiedClick or false end
 
 -- Bolsas da Blizzard: ToggleAllBags abre/fecha chamando OpenAllBags/CloseAllBags.
 ContainerFrameCombinedBags = S.NewFrame("ContainerFrameCombinedBags")

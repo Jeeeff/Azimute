@@ -5,7 +5,8 @@
 -- clicar usa/equipa/vende/deposita como nas bolsas da Blizzard. Para não
 -- "contaminar" esses cliques, cada bolsa tem um quadro-pai com SetID(bolsa) e
 -- cada botão SetID(espaço); nunca escrevemos campos que o clique lê
--- (bagID etc.).
+-- (bagID etc.). Usar o item (botão direito) passa por um botão seguro por
+-- cima do item (ver "Usar item" abaixo).
 local addonName, B = ...
 local L = B.L
 
@@ -52,6 +53,79 @@ local function ItemLevelText(link, quality)
 end
 
 ------------------------------------------------------------------------
+-- Usar item (botão direito). Abrir um caixote, beber uma poção etc. lançam
+-- um feitiço, e o jogo bloqueia isso quando o clique passa por código de
+-- addon ("Azimute_Bags tentou executar uma ação bloqueada"). Por isso, fora
+-- de combate, um botão seguro do próprio jogo fica por cima do item sob o
+-- mouse e faz "/use bolsa espaço": o mesmo que as bolsas da Blizzard (usa,
+-- equipa, vende no vendedor, guarda no banco). Os outros cliques (pegar,
+-- arrastar, shift/ctrl) seguem para o item. Em combate o botão seguro não
+-- pode ser movido, então sai antes do combate começar.
+------------------------------------------------------------------------
+
+local Overlay = {}
+B.Overlay = Overlay
+
+local function Forward(script, ...)
+    local item = Overlay.item
+    local fn = item and item:GetScript(script)
+    if fn then
+        fn(item, ...)
+    end
+end
+
+function Overlay:Get()
+    if not self.button then
+        local o = CreateFrame("Button", "AzimuteBagsUseButton", UIParent, "SecureActionButtonTemplate")
+        o:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+        o:RegisterForDrag("LeftButton")
+        o:SetAttribute("useOnKeyDown", false) -- age ao soltar, como o item
+        o:SetAttribute("type2", "macro")      -- só o direito sem modificador
+        o:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+        o:SetScript("PostClick", function(_, mouse)
+            if mouse ~= "RightButton" or IsModifiedClick() then
+                Forward("OnClick", mouse)
+            end
+        end)
+        o:SetScript("OnEnter", function() Forward("OnEnter") end)
+        o:SetScript("OnLeave", function()
+            Forward("OnLeave")
+            Overlay:Detach()
+        end)
+        o:SetScript("OnDragStart", function() Forward("OnDragStart") end)
+        o:SetScript("OnReceiveDrag", function() Forward("OnReceiveDrag") end)
+        o:Hide()
+        self.button = o
+    end
+    return self.button
+end
+
+-- bolsas negativas (chaveiro, banco principal) o "/use" não entende: ficam
+-- com o clique normal do item (lá não há o que abrir).
+function Overlay:Attach(item, bag, slot)
+    if InCombatLockdown() or bag < 0 or self.item == item then
+        return
+    end
+    local o = self:Get()
+    o:SetAttribute("macrotext2", ("/use %d %d"):format(bag, slot))
+    o:ClearAllPoints()
+    o:SetAllPoints(item)
+    o:SetFrameStrata(item:GetFrameStrata())
+    o:SetFrameLevel(item:GetFrameLevel() + 5)
+    self.item = item
+    o:Show()
+end
+
+function Overlay:Detach()
+    if not self.button or InCombatLockdown() then
+        return
+    end
+    self.button:ClearAllPoints()
+    self.button:Hide()
+    self.item = nil
+end
+
+------------------------------------------------------------------------
 -- Criação
 ------------------------------------------------------------------------
 
@@ -78,6 +152,7 @@ function Container:New(kind, title, getBags)
         self:Refresh(true)
     end)
     frame:SetScript("OnHide", function()
+        Overlay:Detach()
         if self.search then
             self.search:SetText("")
         end
@@ -187,6 +262,9 @@ function Container:Button(bag, slot)
             button.upgrade:SetTexture("Interface\\Buttons\\UI-MicroStream-Green")
         end
         button.upgrade:Hide()
+        button:HookScript("OnEnter", function(item)
+            Overlay:Attach(item, bag, slot)
+        end)
         self.buttons[bag][slot] = button
     end
     return button
@@ -409,6 +487,10 @@ B:On("LAYOUT", function()
             container:Refresh(true)
         end
     end
+end)
+-- Ainda dá para mexer no botão seguro neste evento (o combate começa logo depois).
+B:RegisterEvent("PLAYER_REGEN_DISABLED", function()
+    Overlay:Detach()
 end)
 B:On("MONEY", function()
     if B.bags and B.bags:IsShown() then

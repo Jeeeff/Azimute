@@ -84,6 +84,36 @@ check(B.bags.buttons[0][1].ilvl._text == "", "sem nível de item em item comum")
 check(B.bags.frame.free._text == "Livres: 20", "espaços livres sem contar o chaveiro: " .. tostring(B.bags.frame.free._text))
 check(B.bags.frame.money._text == "123456c", "ouro no rodapé")
 
+-- usar item: botão seguro por cima (abrir caixote não pode ser bloqueado)
+local item = B.bags.buttons[0][1]
+local clicked
+item._scripts.OnClick = function(_, mouse) clicked = mouse end
+item._scripts.OnEnter(item)
+local use = B.Overlay.button
+check(use and use._shown and B.Overlay.item == item, "item sob o mouse ganha o botão seguro")
+check(use:GetAttribute("type2") == "macro" and use:GetAttribute("macrotext2") == "/use 0 1",
+    "direito faz /use bolsa espaço: " .. tostring(use:GetAttribute("macrotext2")))
+check(use:GetAttribute("useOnKeyDown") == false, "age ao soltar o botão")
+use._scripts.PostClick(use, "RightButton")
+check(clicked == nil, "direito sem modificador não passa pelo addon")
+use._scripts.PostClick(use, "LeftButton")
+check(clicked == "LeftButton", "esquerdo (pegar) segue para o item")
+S.modifiedClick = true
+use._scripts.PostClick(use, "RightButton")
+S.modifiedClick = false
+check(clicked == "RightButton", "shift/ctrl + direito segue para o item")
+use._scripts.OnLeave(use)
+check(not use._shown and B.Overlay.item == nil, "saiu do item: botão seguro some")
+B.Overlay:Attach(B.bags.buttons[0][2], -2, 1)
+check(not use._shown, "chaveiro/banco principal: clique normal do item")
+item._scripts.OnEnter(item)
+S.FireEvent("PLAYER_REGEN_DISABLED")
+check(not use._shown, "combate começando: botão seguro sai antes do bloqueio")
+S.combat = true
+item._scripts.OnEnter(item)
+check(not use._shown, "em combate não mexe no botão seguro")
+S.combat = false
+
 -- busca
 B.bags.search:SetText("pedra")
 B.bags.search._scripts.OnTextChanged(B.bags.search)
