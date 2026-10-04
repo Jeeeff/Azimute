@@ -66,7 +66,8 @@ U:Feature({
 
 ------------------------------------------------------------------------
 -- Nível de item nas bolsas do próprio jogo (armas e armaduras). A seta de
--- melhoria fica no canto de cima (indicador do Azimute); o número, embaixo.
+-- melhoria fica no canto de cima à esquerda (indicador do Azimute); o número,
+-- no canto de cima à direita (embaixo é a quantidade da pilha).
 ------------------------------------------------------------------------
 
 local bagLabels = setmetatable({}, { __mode = "k" })
@@ -76,7 +77,7 @@ local function BagLabel(button)
     local label = bagLabels[button]
     if not label then
         label = button:CreateFontString(nil, "OVERLAY", "NumberFontNormalSmall")
-        label:SetPoint("BOTTOMLEFT", 2, 2)
+        label:SetPoint("TOPRIGHT", -2, -2)
         bagLabels[button] = label
     end
     return label
