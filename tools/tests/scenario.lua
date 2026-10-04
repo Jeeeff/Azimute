@@ -887,16 +887,55 @@ check(ns.DungeonQuests.Status(list[1].quests[2]) == "log", "ID em lista: missão
 Q.completed[5761] = true
 check(ns.DungeonQuests.Status(list[1].quests[1]) == "done", "missão feita")
 check(ns.DungeonQuests.DisplayName(list[1].dungeon) == "Instancia389", "nome da masmorra pelo cliente")
+local savedLevel5 = ns.Engine.player.level
+ns.Engine.player.level = 14
+check(ns.DungeonQuests.LevelStatus(list[1].dungeon, 14) == "ideal" and ns.DungeonQuests.LevelStatus(list[1].dungeon, 8) == "early"
+    and ns.DungeonQuests.LevelStatus(list[1].dungeon, 10) == "hard" and ns.DungeonQuests.LevelStatus(list[1].dungeon, 25) == "easy",
+    "situação pelo nível: cedo demais / difícil / ideal / fácil demais")
 ns.DungeonPanel:Toggle()
 local rows = 0
 for _, r in ipairs(ns.DungeonPanel.frame.rows) do if r._shown then rows = rows + 1 end end
 check(rows == 3, "painel: cabeçalho + 2 missões (" .. rows .. ")")
+check(ns.DungeonPanel.frame.rows[1].right._text:find("seu nível"), "faixa de nível colorida com a situação: " .. ns.DungeonPanel.frame.rows[1].right._text)
+-- entrada: pelo jogo (ícones do mapa) e, sem o jogo, posição aproximada
+C_EncounterJournal = { GetDungeonEntrancesForMap = function(mapID)
+    if mapID == 1454 then return { { name = "Instancia389", position = { GetXY = function() return 0.52, 0.49 end }, journalInstanceID = 226 } } end
+    return {}
+end }
+C_Map.GetMapChildrenInfo = function(continent) return continent == 1414 and { { mapID = 1454 } } or {} end
+Enum = Enum or {}
+Enum.UIMapType = { Zone = 3 }
+ns.DungeonEntrances.cache = nil
+ns.DungeonPanel.frame.rows[1].go._scripts.OnClick(ns.DungeonPanel.frame.rows[1].go)
+check(ns.Nav:Manual() and ns.Nav:Manual().x == 0.52 and ns.Nav:Manual().info.lines[1] == "Entrada da masmorra", "Entrada: seta até a porta (posição do jogo)")
+ns.Nav:ClearManual()
+C_EncounterJournal = nil
+ns.DungeonEntrances.cache = nil
+local approx = ns.DungeonEntrances:Find("Wailing Caverns", "Caverna Ululante")
+check(approx and approx.approx and approx.mapID == 1413, "sem o jogo: posição aproximada conhecida")
+check(ns.DungeonEntrances:Find("Excavation Site", "Excavation Site") == nil, "masmorra sem posição conhecida: nil (avisa no chat)")
+-- procurar grupo abre o buscador do jogo
+local opened
+function LFGVanilla_ToggleFrame(tab) opened = tab end
+C_AddOns.IsAddOnLoaded = function() return true end
+check(ns.DungeonEntrances.OpenGroupFinder() and opened == 2, "Procurar grupo abre o buscador do jogo (aba de busca)")
+-- só do meu nível
+ns.Engine.player.level = 30
+ns.DungeonPanel:Refresh()
+check(ns.DungeonPanel.frame.rows[1].text._text:find("Nenhuma masmorra"), "nível 30: Ragefire some do filtro 'só do meu nível'")
+AzimuteDB.dungeonsMyLevel = false
+ns.DungeonPanel:Refresh()
+check(ns.DungeonPanel.frame.rows[1].right._text:find("fácil demais"), "filtro desligado: mostra todas, marcando 'fácil demais'")
+AzimuteDB.dungeonsMyLevel = true
+ns.Engine.player.level = 14
+ns.DungeonPanel:Refresh()
 ns.DungeonPanel.frame.rows[1].check:SetChecked(true)
 ns.DungeonPanel.frame.rows[1].check._scripts.OnClick(ns.DungeonPanel.frame.rows[1].check)
 check(AzimuteCharDB.dungeons.RFC == true, "marcar no painel inclui a masmorra no guia")
 ns.DungeonPanel.frame.rows[2]._scripts.OnClick()
 check(ns.Nav.manual and ns.Nav.manual.mapID == 1454, "clicar na missão guia até quem a dá")
 ns.Nav:ClearManual()
+ns.Engine.player.level = savedLevel5
 
 print("\n== Passos de masmorra nos guias ==")
 ns.Registry:Register([==[

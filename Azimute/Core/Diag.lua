@@ -172,6 +172,14 @@ function Diag:Run()
         ej.ok = ok
     end
     report.encounterJournal = ej
+    -- entradas de masmorra informadas pelo jogo (painel "Masmorras")
+    ns.DungeonEntrances:Scan()
+    local entrances = {}
+    for name in pairs(ns.DungeonEntrances.cache or {}) do
+        entrances[#entrances + 1] = name
+    end
+    table.sort(entrances)
+    report.dungeonEntrances = entrances
     ns.db.diag = report
 
     ns.Print(L["DIAG_HEADER"]:format(report.build, tostring(interface)))
@@ -190,6 +198,7 @@ function Diag:Run()
         end
     end
     ns.Print(L["DIAG_EJ"]:format(tostring(ej.tiers), #ej.dungeons))
+    ns.Print(L["DIAG_ENTRANCES"]:format(#entrances))
     ns.Print(L["DIAG_SAVED"])
     return report
 end

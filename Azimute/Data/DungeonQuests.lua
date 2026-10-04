@@ -120,6 +120,43 @@ function DungeonQuests.Fits(quest)
     return true
 end
 
+-- Situação da masmorra para o nível do jogador (faixas dos dados):
+-- "early" (cedo demais), "hard" (difícil), "ideal", "easy" (fácil demais) ou nil.
+function DungeonQuests.LevelStatus(dungeon, level)
+    local levels = dungeon.levels
+    if type(levels) ~= "table" or not levels.medium then
+        return nil
+    end
+    if level < (levels.hard or levels.medium) then
+        return "early"
+    elseif level < levels.medium then
+        return "hard"
+    elseif level <= (levels.easy or levels.atLevel or 60) then
+        return "ideal"
+    end
+    return "easy"
+end
+
+-- Todas as masmorras (com as missões que valem para o personagem, mesmo que
+-- nenhuma), pela ordem de nível.
+function DungeonQuests:AllForPlayer()
+    local list = {}
+    for _, dungeon in ipairs(self.dungeons) do
+        local quests = {}
+        for _, quest in ipairs(dungeon.quests) do
+            if self.Fits(quest) then
+                quests[#quests + 1] = quest
+            end
+        end
+        list[#list + 1] = { dungeon = dungeon, quests = quests }
+    end
+    table.sort(list, function(a, b)
+        local la, lb = a.dungeon.levels or {}, b.dungeon.levels or {}
+        return (la.medium or 99) < (lb.medium or 99)
+    end)
+    return list
+end
+
 -- Masmorras com pelo menos uma missão para o personagem, pela ordem de nível.
 function DungeonQuests:ForPlayer()
     local list = {}

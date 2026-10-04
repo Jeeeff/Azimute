@@ -26,6 +26,7 @@ Guides\Parser.lua
 Guides\Registry.lua
 Guides\IO.lua
 Data\DungeonQuests.lua
+Data\DungeonEntrances.lua
 Engine\Engine.lua
 Engine\Focus.lua
 Engine\Pace.lua
