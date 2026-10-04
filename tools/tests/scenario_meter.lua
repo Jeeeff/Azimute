@@ -145,6 +145,20 @@ W:ShowBreakdown(bars[1].source)
 check(W.breakdown.rows[1].name._text == "Lobo" and W.breakdown.toggle._text == "Feitiços", "painel mostra os alvos e o botão volta aos feitiços")
 W.breakdown.view = "spells"
 
+-- mouse e clique na barra (scripts da própria barra: "self" é a janela)
+local tooltipBar
+local barTooltip = W.BarTooltip
+W.BarTooltip = function(win, bar) tooltipBar = { win = win, bar = bar } end
+bars[1]._scripts.OnEnter(bars[1])
+check(tooltipBar and tooltipBar.win == W and tooltipBar.bar == bars[1], "passar o mouse na barra mostra a dica (sem erro)")
+W.BarTooltip = barTooltip
+local shown
+local showBreakdown = W.ShowBreakdown
+W.ShowBreakdown = function(win, source) shown = source end
+bars[1]._scripts.OnMouseUp(bars[1], "LeftButton")
+check(shown == bars[1].source, "clicar na barra abre os detalhes do jogador")
+W.ShowBreakdown = showBreakdown
+
 -- dano evitável: mortal em vermelho, evitável em laranja
 S.dm.breakdown["Player-1"].combatSpells[1].isDeadly = true
 S.dm.breakdown["Player-1"].combatSpells[2].isAvoidable = true

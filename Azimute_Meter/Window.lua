@@ -197,15 +197,16 @@ function Window:GetBar(index)
         bar.value:SetJustifyH("RIGHT")
         bar.name:SetPoint("RIGHT", bar.value, "LEFT", -4, 0)
         bar:EnableMouse(true)
-        bar:SetScript("OnMouseUp", function(self, button)
+        -- (self aqui é a janela; a barra vem como "b")
+        bar:SetScript("OnMouseUp", function(b, button)
             if button == "RightButton" then
                 self:OpenMenu(frame.header)
             else
-                self:ShowBreakdown(self.source)
+                self:ShowBreakdown(b.source)
             end
         end)
-        bar:SetScript("OnEnter", function(self)
-            self:BarTooltip(self)
+        bar:SetScript("OnEnter", function(b)
+            self:BarTooltip(b)
         end)
         bar:SetScript("OnLeave", function() GameTooltip:Hide() end)
         frame.bars[index] = bar
