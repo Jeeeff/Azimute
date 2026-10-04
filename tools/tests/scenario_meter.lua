@@ -200,3 +200,18 @@ S.dm.secret = true
 M.Personal:Update()
 check(issecretvalue(M.Personal.frame.text._text), "em combate: mostra o total lacrado direto no texto")
 S.dm.secret = false
+
+-- segunda janela: modo próprio (cura por padrão), escondida até ligar
+local W2 = M.Window2
+check(W2 and not W2.frame._shown, "segunda janela existe e começa escondida")
+SlashCmdList.AZIMUTEMETER("2")
+check(W2.frame._shown and M.db.secondWindow, "/azm 2 mostra a segunda janela")
+S.dm.byType[T.HealingDone] = { totalAmount = 100, maxAmount = 100, combatSources = { { name = "Thrall", classFilename = "SHAMAN", totalAmount = 100 } } }
+W2:Refresh()
+W:Refresh()
+check(W2.frame.title._text:find("^Cura") and W.frame.title._text:find("^Dano"), "cada janela com seu modo: " .. W2.frame.title._text .. " / " .. W.frame.title._text)
+check(W2.frame.bars[1].name._text == "1. Thrall", "segunda janela mostra a cura")
+M.Meter:SetMode(4, W2.cfg)
+check(M.db.modeIndex == 1 and M.db.window2.modeIndex == 4, "trocar o modo de uma não muda a outra")
+SlashCmdList.AZIMUTEMETER("2")
+check(not W2.frame._shown, "/azm 2 esconde")

@@ -366,6 +366,21 @@ Azimute_Guides_Forever/     guias carregados sob demanda (LoadOnDemand), separad
   77 guias (eram 67), 343 dicas novas traduzidas (`notes_ptBR_part10.json`).
 - Recomendado: rota com masmorras só ganha quando o personagem escolheu masmorras.
 
+## Depois da 0.22.0 (03/10/2026)
+- **Medidor 0.3.0** (ideias do Details! que ainda funcionam no Midnight/Forever): recap de morte pelo `deathRecapID` +
+  `C_DeathRecap` (painel, botão "Recap do jogo" = `OpenDeathRecapUI`, resumo no chat), dano por alvo (sessão
+  `EnemyDamageTaken` + `combatSpellDetails.unitName`), evitável/mortal destacados, dica da barra com os 3 feitiços
+  principais, lutas salvas (dano/cura, 15 últimas, sobrevivem ao /reload), mostrador pessoal, segunda janela
+  (`M.windows`, cada uma com `cfg` próprio; `Meter:View()` diz de qual janela são o modo e a luta).
+- **Treino:** habilidades de arma que faltam e a capital do mestre de armas (Classic 1.12; só aparece se o
+  personagem conhece alguma habilidade de arma).
+- **Equipamento:** porcentagem só quando o item atual tem atributos ("melhoria pequena/grande" para itens só
+  com armadura).
+- **Guias:** instruções `>>` dos comandos recuperadas e todas as dicas traduzidas (0 em inglês); nota sem
+  tradução aparece em inglês; ▶ pula passos feitos; "Voltar ao guia".
+- **Saque por chefe:** a interface do Guia de Aventuras não carrega no Forever (`AllowLoadGameType standard, classic`);
+  o `/azimute diag` agora lista o que `EJ_*` devolve para decidir se dá para ler o saque do próprio jogo.
+
 ## Qualidade de vida (03/10/2026): Utilidades, Raros, Leilão, ritmo de up, voos no caminho
 - **Azimute_Utils** (`/azu`): zoom máximo da câmera (CVar, o menu do Forever para em 2.0), ID de item/feitiço e alvo
   na dica, nível de item nos espaços do personagem, coordenadas no mapa-múndi, avisos (bolsa cheia, durabilidade,

@@ -5,7 +5,7 @@
 ## Notes-ptBR: Medidor de dano e cura do grupo para o WoW: Forever (usa os dados de combate do próprio jogo). Funciona sem o Azimute.
 ## Author: jeeeff
 ## X-License: GPL-3.0-or-later
-## Version: 0.2.0
+## Version: 0.3.0
 ## IconTexture: Interface\Icons\Ability_DualWield
 ## Category: Combat
 ## Category-ptBR: Combate

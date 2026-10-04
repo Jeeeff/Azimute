@@ -30,6 +30,8 @@ M.DEFAULTS = {
     personal = false,     -- mostrador pequeno com o seu dano/DPS
     personalPoint = { "CENTER", "CENTER", 0, -160 },
     history = {},         -- lutas salvas (dano e cura)
+    secondWindow = false, -- segunda janela (ex.: cura ao lado do dano)
+    window2 = { point = { "RIGHT", "RIGHT", -40, 110 }, width = 250, height = 170, modeIndex = 3, segment = "current", shown = true },
 }
 
 ------------------------------------------------------------------------
@@ -91,17 +93,22 @@ Meter.MODES = {
     { type = TYPE.EnemyDamageTaken, label = "MODE_ENEMY", perSecond = "secondary" },
 }
 
-function Meter:Mode()
-    return self.MODES[M.db.modeIndex] or self.MODES[1]
+-- Configuração da janela que está pedindo os dados (modo e luta próprios).
+function Meter:View()
+    return self.view or M.db
 end
 
-function Meter:SetMode(index)
-    M.db.modeIndex = index
+function Meter:Mode()
+    return self.MODES[self:View().modeIndex] or self.MODES[1]
+end
+
+function Meter:SetMode(index, cfg)
+    (cfg or self:View()).modeIndex = index
     M:Fire("UPDATE")
 end
 
-function Meter:SetSegment(segment)
-    M.db.segment = segment
+function Meter:SetSegment(segment, cfg)
+    (cfg or self:View()).segment = segment
     M:Fire("UPDATE")
 end
 
@@ -129,7 +136,7 @@ function Meter:Session()
         return nil
     end
     local mode = self:Mode()
-    local segment = M.db.segment
+    local segment = Meter:View().segment
     local saved = type(segment) == "string" and tonumber(segment:match("^saved:(%d+)$"))
     if saved then
         return self:SavedSession(saved)
@@ -160,7 +167,7 @@ function Meter:Duration(session)
     if M.Positive(duration) then
         return duration
     end
-    local segment = M.db.segment
+    local segment = Meter:View().segment
     if type(segment) == "number" then
         for _, info in ipairs(self:Sessions()) do
             if info.sessionID == segment and M.Positive(info.durationSeconds) then
@@ -180,14 +187,14 @@ function Meter:Duration(session)
 end
 
 function Meter:SegmentLabel()
-    local segment = M.db.segment
+    local segment = Meter:View().segment
     local saved = type(segment) == "string" and tonumber(segment:match("^saved:(%d+)$"))
     if saved then
         local fight = M.db.history[saved]
         if fight then
             return L["SEG_SAVED_ITEM"]:format(fight.zone or "?", math.floor((fight.duration or 0) / 60), math.floor((fight.duration or 0) % 60))
         end
-        M.db.segment = "current"
+        Meter:View().segment = "current"
     end
     if segment == "overall" then
     elseif type(segment) == "number" then
@@ -197,7 +204,7 @@ function Meter:SegmentLabel()
             end
         end
         -- luta antiga sumiu (o jogo descartou): volta para a atual
-        M.db.segment = "current"
+        Meter:View().segment = "current"
     end
     return L["SEG_CURRENT"]
 end
@@ -208,14 +215,14 @@ function Meter:Breakdown(source)
     if not self:Available() then
         return nil, "error"
     end
-    if type(M.db.segment) == "string" and M.db.segment:find("^saved:") then
+    if type(Meter:View().segment) == "string" and Meter:View().segment:find("^saved:") then
         return nil, "saved"
     end
     if not source or M.IsSecret(source.sourceGUID) or not source.sourceGUID then
         return nil, "secret"
     end
     local mode = self:Mode()
-    local segment = M.db.segment
+    local segment = Meter:View().segment
     local ok, result
     if type(segment) == "number" then
         ok, result = pcall(C_DamageMeter.GetCombatSessionSourceFromID, segment, mode.type, source.sourceGUID, source.sourceCreatureID)
@@ -234,6 +241,9 @@ function Meter:Reset()
         pcall(C_DamageMeter.ResetAllCombatSessions)
     end
     M.db.segment = "current"
+    if M.db.window2 then
+        M.db.window2.segment = "current"
+    end
     M:Fire("UPDATE")
 end
 
@@ -244,7 +254,7 @@ end
 ------------------------------------------------------------------------
 
 local function SessionOfType(meterType)
-    local segment = M.db.segment
+    local segment = Meter:View().segment
     local ok, session
     if type(segment) == "number" then
         ok, session = pcall(C_DamageMeter.GetCombatSessionFromID, segment, meterType)
@@ -256,7 +266,7 @@ local function SessionOfType(meterType)
 end
 
 local function EnemySpells(creatureID)
-    local segment = M.db.segment
+    local segment = Meter:View().segment
     local ok, result
     if type(segment) == "number" then
         ok, result = pcall(C_DamageMeter.GetCombatSessionSourceFromID, segment, TYPE.EnemyDamageTaken, nil, creatureID)
@@ -272,7 +282,7 @@ function Meter:Targets(source)
     if not self:Available() or not source then
         return nil, "error"
     end
-    if type(M.db.segment) == "string" and M.db.segment:find("^saved:") then
+    if type(Meter:View().segment) == "string" and Meter:View().segment:find("^saved:") then
         return nil, "saved"
     end
     local player = source.name
@@ -572,6 +582,8 @@ local function CopyDefaults(db, defaults)
     for key, value in pairs(defaults) do
         if db[key] == nil then
             db[key] = type(value) == "table" and CopyTable(value) or value
+        elseif key == "window2" and type(db[key]) == "table" then
+            CopyDefaults(db[key], value)
         end
     end
     return db
@@ -675,6 +687,9 @@ SlashCmdList.AZIMUTEMETER = function(input)
     command = (command or ""):lower()
     if command == "" then
         M.Window:Toggle()
+    elseif command == "2" then
+        M.db.secondWindow = not M.db.secondWindow
+        M.Window2:UpdateVisibility()
     elseif command == "reset" or command == "zerar" then
         Meter:Reset()
         M.Print(L["RESET_DONE"])

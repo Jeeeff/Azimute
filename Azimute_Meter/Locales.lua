@@ -50,6 +50,8 @@ local enUS = {
     OPT_DEATH_SUMMARY_TIP = "When you die, shows in chat the hit that took the most health (and who did it).",
     OPT_PERSONAL = "Personal DPS display",
     OPT_PERSONAL_TIP = "A small movable line with your damage during the fight and your DPS after it.",
+    OPT_SECOND = "Second window",
+    OPT_SECOND_TIP = "Opens a second meter window with its own mode and fight (e.g. healing next to damage). Also /azm 2.",
     OPTIONS = "Options",
     LOCK = "Lock window",
     EMPTY = "No combat data yet.",
@@ -76,6 +78,7 @@ local enUS = {
     HELP = {
         "/azm - show/hide the meter",
         "/azm reset - reset all fights",
+        "/azm 2 - show/hide the second window",
         "/azm report [party|raid|say|guild|instance] - report the top 5 to chat",
         "/azm options - open the options",
     },
@@ -126,6 +129,8 @@ local ptBR = {
     OPT_DEATH_SUMMARY_TIP = "Ao morrer, mostra no chat o golpe que mais tirou vida (e de quem).",
     OPT_PERSONAL = "Mostrador do seu DPS",
     OPT_PERSONAL_TIP = "Uma linha pequena e móvel com o seu dano durante a luta e o seu DPS no fim.",
+    OPT_SECOND = "Segunda janela",
+    OPT_SECOND_TIP = "Abre uma segunda janela do medidor com modo e luta próprios (ex.: cura ao lado do dano). Também /azm 2.",
     OPTIONS = "Opções",
     LOCK = "Travar janela",
     EMPTY = "Ainda não há dados de combate.",
@@ -152,6 +157,7 @@ local ptBR = {
     HELP = {
         "/azm - mostra/esconde o medidor",
         "/azm zerar - zera todas as lutas",
+        "/azm 2 - mostra/esconde a segunda janela",
         "/azm relatar [grupo|raide|dizer|guilda|instancia] - manda os 5 primeiros no chat",
         "/azm opcoes - abre as opções",
     },

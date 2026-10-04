@@ -14,6 +14,7 @@ local CHECKBOXES = {
     { "resetOnInstance", "OPT_RESET_INSTANCE", "OPT_RESET_INSTANCE_TIP" },
     { "deathSummary", "OPT_DEATH_SUMMARY", "OPT_DEATH_SUMMARY_TIP" },
     { "personal", "OPT_PERSONAL", "OPT_PERSONAL_TIP" },
+    { "secondWindow", "OPT_SECOND", "OPT_SECOND_TIP" },
 }
 
 local SLIDERS = {
@@ -22,17 +23,16 @@ local SLIDERS = {
 }
 
 local function Apply(key)
-    local Window = M.Window
     if key == "personal" then
         M.Personal:Apply()
     elseif key == "deathSummary" then
         return
     elseif key == "locked" then
-        Window:ApplyLock()
+        M.EachWindow("ApplyLock")
     elseif key == "scale" or key == "barHeight" or key == "specIcons" then
-        Window:ApplyLayout()
+        M.EachWindow("ApplyLayout")
     else
-        Window:UpdateVisibility()
+        M.EachWindow("UpdateVisibility")
     end
 end
 

@@ -4,8 +4,13 @@ local addonName, M = ...
 local L = M.L
 local Meter = M.Meter
 
+-- Molde de janela: M.windows[1] é a principal (configuração em M.db) e
+-- M.windows[2] a segunda, opcional (configuração em M.db.window2). Cada uma
+-- tem modo, luta, posição e tamanho próprios.
 local Window = {}
-M.Window = Window
+Window.__index = Window
+M.WindowClass = Window
+M.windows = {}
 
 local HEADER = 22
 local GOLD = { 0.85, 0.68, 0.25 }
@@ -65,9 +70,10 @@ end
 -- Criação
 ------------------------------------------------------------------------
 
-function Window:Create()
-    local db = M.db
-    local frame = CreateFrame("Frame", "AzimuteMeterFrame", UIParent, "BackdropTemplate")
+function Window:Create(suffix)
+    self.suffix = suffix
+    local db = self.cfg
+    local frame = CreateFrame("Frame", "AzimuteMeterFrame" .. (suffix or ""), UIParent, "BackdropTemplate")
     Backdrop(frame)
     frame:SetSize(db.width, db.height)
     frame:SetScale(db.scale or 1)
@@ -87,15 +93,15 @@ function Window:Create()
     frame:SetScript("OnDragStop", function(f)
         f:StopMovingOrSizing()
         local point, _, relativePoint, x, y = f:GetPoint(1)
-        M.db.point = { point, relativePoint, x, y }
+        self.cfg.point = { point, relativePoint, x, y }
     end)
     frame:SetScript("OnMouseWheel", function(_, delta)
-        Window:Scroll(-delta)
+        self:Scroll(-delta)
     end)
     frame:EnableMouseWheel(true)
     frame:SetScript("OnSizeChanged", function(f, width, height)
-        M.db.width, M.db.height = math.floor(width + 0.5), math.floor(height + 0.5)
-        Window:Refresh()
+        self.cfg.width, self.cfg.height = math.floor(width + 0.5), math.floor(height + 0.5)
+        self:Refresh()
     end)
     local p = db.point
     frame:SetPoint(p[1], UIParent, p[2], p[3], p[4])
@@ -107,7 +113,7 @@ function Window:Create()
     frame.header:SetHeight(HEADER - 2)
     frame.header:RegisterForClicks("LeftButtonUp", "RightButtonUp")
     frame.header:SetScript("OnClick", function(button)
-        Window:OpenMenu(button)
+        self:OpenMenu(button)
     end)
     frame.header:RegisterForDrag("LeftButton")
     frame.header:SetScript("OnDragStart", function() frame:GetScript("OnDragStart")(frame) end)
@@ -141,7 +147,7 @@ function Window:Create()
     end)
     frame.resetButton:SetPoint("RIGHT", -4, 0)
     frame.reportButton = SmallButton("Interface\\ChatFrame\\UI-ChatIcon-Chat-Up", L["REPORT"], function(button)
-        Window:OpenReportMenu(button)
+        self:OpenReportMenu(button)
     end)
     frame.reportButton:SetPoint("RIGHT", frame.resetButton, "LEFT", -4, 0)
 
@@ -193,13 +199,13 @@ function Window:GetBar(index)
         bar:EnableMouse(true)
         bar:SetScript("OnMouseUp", function(self, button)
             if button == "RightButton" then
-                Window:OpenMenu(frame.header)
+                self:OpenMenu(frame.header)
             else
-                Window:ShowBreakdown(self.source)
+                self:ShowBreakdown(self.source)
             end
         end)
         bar:SetScript("OnEnter", function(self)
-            Window:BarTooltip(self)
+            self:BarTooltip(self)
         end)
         bar:SetScript("OnLeave", function() GameTooltip:Hide() end)
         frame.bars[index] = bar
@@ -218,8 +224,8 @@ end
 function Window:WatchSecrets(hasSecret)
     if hasSecret and not self.secretTicker then
         self.secretTicker = C_Timer.NewTicker(1, function()
-            if Window.frame:IsShown() and not InCombatLockdown() then
-                Window:Refresh()
+            if self.frame:IsShown() and not InCombatLockdown() then
+                self:Refresh()
             end
         end)
     elseif not hasSecret and self.secretTicker then
@@ -229,7 +235,7 @@ function Window:WatchSecrets(hasSecret)
 end
 
 function Window:VisibleBars()
-    return math.max(1, math.floor((M.db.height - HEADER - 4) / (M.db.barHeight + 1)))
+    return math.max(1, math.floor((self.cfg.height - HEADER - 4) / (M.db.barHeight + 1)))
 end
 
 function Window:Scroll(delta)
@@ -242,6 +248,7 @@ end
 ------------------------------------------------------------------------
 
 function Window:Refresh()
+    Meter.view = self.cfg
     local frame = self.frame
     if not frame then
         return
@@ -322,7 +329,7 @@ local MAX_ROWS = 12
 local RED, ORANGE = { 0.9, 0.2, 0.2 }, { 1, 0.55, 0.1 }
 
 function Window:CreateBreakdown()
-    local panel = CreateFrame("Frame", "AzimuteMeterBreakdown", self.frame, "BackdropTemplate")
+    local panel = CreateFrame("Frame", "AzimuteMeterBreakdown" .. (self.suffix or ""), self.frame, "BackdropTemplate")
     Backdrop(panel, 0.92)
     panel:SetSize(280, 200)
     panel:SetPoint("TOPRIGHT", self.frame, "TOPLEFT", -4, 0)
@@ -348,7 +355,7 @@ function Window:CreateBreakdown()
             return
         end
         panel.view = panel.view == "targets" and "spells" or "targets"
-        Window:ShowBreakdown(panel.source)
+        self:ShowBreakdown(panel.source)
     end)
     panel.message = panel:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
     panel.message:SetPoint("TOPLEFT", 6, -28)
@@ -484,6 +491,7 @@ local function DeathEntries(source)
 end
 
 function Window:ShowBreakdown(source)
+    Meter.view = self.cfg
     local panel = self.breakdown
     if not source then
         panel:Hide()
@@ -520,6 +528,7 @@ end
 
 -- Dica ao passar o mouse na barra: os 3 feitiços principais (depois do combate).
 function Window:BarTooltip(bar)
+    Meter.view = self.cfg
     local source = bar.source
     GameTooltip:SetOwner(bar, "ANCHOR_LEFT")
     local name = M.ShortName(source and source.name)
@@ -545,23 +554,23 @@ end
 
 function Window:OpenMenu(owner)
     if not (MenuUtil and MenuUtil.CreateContextMenu) then
-        Meter:SetMode(M.db.modeIndex % #Meter.MODES + 1)
+        Meter:SetMode(self.cfg.modeIndex % #Meter.MODES + 1, self.cfg)
         return
     end
     MenuUtil.CreateContextMenu(owner, function(_, root)
         root:CreateTitle(L["MENU_MODE"])
         for index, mode in ipairs(Meter.MODES) do
-            root:CreateRadio(L[mode.label], function() return M.db.modeIndex == index end, function()
-                Meter:SetMode(index)
+            root:CreateRadio(L[mode.label], function() return self.cfg.modeIndex == index end, function()
+                Meter:SetMode(index, self.cfg)
             end)
         end
         root:CreateDivider()
         root:CreateTitle(L["MENU_SEGMENT"])
-        root:CreateRadio(L["SEG_CURRENT"], function() return M.db.segment == "current" end, function()
-            Meter:SetSegment("current")
+        root:CreateRadio(L["SEG_CURRENT"], function() return self.cfg.segment == "current" end, function()
+            Meter:SetSegment("current", self.cfg)
         end)
-        root:CreateRadio(L["SEG_OVERALL"], function() return M.db.segment == "overall" end, function()
-            Meter:SetSegment("overall")
+        root:CreateRadio(L["SEG_OVERALL"], function() return self.cfg.segment == "overall" end, function()
+            Meter:SetSegment("overall", self.cfg)
         end)
         local fights = Meter:Sessions()
         if #fights > 0 then
@@ -572,8 +581,8 @@ function Window:OpenMenu(owner)
                 if info.durationSeconds and not M.IsSecret(info.durationSeconds) then
                     label = ("%s (%d:%02d)"):format(label, math.floor(info.durationSeconds / 60), math.floor(info.durationSeconds % 60))
                 end
-                submenu:CreateRadio(label, function() return M.db.segment == info.sessionID end, function()
-                    Meter:SetSegment(info.sessionID)
+                submenu:CreateRadio(label, function() return self.cfg.segment == info.sessionID end, function()
+                    Meter:SetSegment(info.sessionID, self.cfg)
                 end)
             end
         end
@@ -585,15 +594,15 @@ function Window:OpenMenu(owner)
                 local ago = math.floor((time() - (fight.time or time())) / 60)
                 local label = ("%s (%d:%02d) - %s"):format(fight.zone or "?", math.floor((fight.duration or 0) / 60),
                     math.floor((fight.duration or 0) % 60), L["AGO_MIN"]:format(ago))
-                submenu:CreateRadio(label, function() return M.db.segment == segment end, function()
-                    Meter:SetSegment(segment)
+                submenu:CreateRadio(label, function() return self.cfg.segment == segment end, function()
+                    Meter:SetSegment(segment, self.cfg)
                 end)
             end
         end
         root:CreateDivider()
         root:CreateCheckbox(L["LOCK"], function() return M.db.locked end, function()
             M.db.locked = not M.db.locked
-            Window:ApplyLock()
+            self:ApplyLock()
         end)
         root:CreateButton(L["RESET"], function()
             Meter:Reset()
@@ -604,6 +613,7 @@ function Window:OpenMenu(owner)
 end
 
 function Window:OpenReportMenu(owner)
+    Meter.view = self.cfg
     if not (MenuUtil and MenuUtil.CreateContextMenu) then
         Meter:Report(M.FindChannel(""))
         return
@@ -630,7 +640,7 @@ end
 
 function Window:ShouldShow()
     local db = M.db
-    if not db.shown then
+    if not self.cfg.shown or (self == M.Window2 and not db.secondWindow) then
         return false
     end
     if db.onlyInGroup and not ((IsInGroup and IsInGroup()) or (IsInRaid and IsInRaid())) then
@@ -656,7 +666,7 @@ function Window:UpdateVisibility()
 end
 
 function Window:Toggle()
-    M.db.shown = not M.db.shown
+    self.cfg.shown = not self.cfg.shown
     self:UpdateVisibility()
 end
 
@@ -668,17 +678,35 @@ function Window:ApplyLayout()
     end
 end
 
+local function New(cfg, suffix)
+    local window = setmetatable({ cfg = cfg }, Window)
+    window:Create(suffix)
+    M.windows[#M.windows + 1] = window
+    return window
+end
+
+local function Each(method, ...)
+    for _, window in ipairs(M.windows) do
+        window[method](window, ...)
+    end
+end
+M.EachWindow = Each
+
 M:On("INIT", function()
-    Window:Create()
+    -- a principal usa os campos de M.db; a segunda, M.db.window2
+    M.Window = New(M.db, "")
+    M.Window2 = New(M.db.window2, "2")
 end)
 M:On("LOGIN", function()
-    Window:UpdateVisibility()
+    Each("UpdateVisibility")
 end)
 M:On("UPDATE", function()
-    if Window.frame and Window.frame:IsShown() then
-        Window:Refresh()
+    for _, window in ipairs(M.windows) do
+        if window.frame and window.frame:IsShown() then
+            window:Refresh()
+        end
     end
 end)
 M:On("VISIBILITY", function()
-    Window:UpdateVisibility()
+    Each("UpdateVisibility")
 end)
