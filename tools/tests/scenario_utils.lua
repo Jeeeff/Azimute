@@ -63,7 +63,7 @@ local items = {}
 for slot = 1, 18 do items[slot] = { itemName = "x" } end
 S.bagItems[0] = items
 S.FireEvent("BAG_UPDATE_DELAYED")
-check(S.alerts[#S.alerts] == "Bolsas quase cheias: restam 4 espaços", "aviso de bolsa quase cheia: " .. tostring(S.alerts[#S.alerts]))
+check(S.alerts[#S.alerts] == "Bolsas quase cheias: restam 4 espaços (sem contar o chaveiro)", "aviso de bolsa quase cheia: " .. tostring(S.alerts[#S.alerts]))
 local count = #S.alerts
 S.FireEvent("BAG_UPDATE_DELAYED")
 check(#S.alerts == count, "não repete o mesmo aviso")
@@ -130,3 +130,11 @@ local shirt = S.NewFrame("CharacterShirtSlot")
 shirt.GetID = function() return 4 end
 PaperDollItemSlotButton_Update(shirt)
 check(U.slotLabels[shirt] == nil, "camisa fica sem número")
+
+-- pedra de regresso: a recarga global (1,5 s) não dispara o aviso
+S.alerts = {}
+S.hearthCooldown = { S.time, 1.5 }
+U.CheckHearth()
+S.hearthCooldown = { 0, 0 }
+U.CheckHearth()
+check(#S.alerts == 0, "recarga global de 1,5 s não dispara 'pedra pronta'")

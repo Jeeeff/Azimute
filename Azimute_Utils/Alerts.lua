@@ -6,6 +6,7 @@ local L = U.L
 local BAG_WARN = 4          -- espaços livres
 local DURABILITY_WARN = 0.2 -- 20%
 local HEARTHSTONE = 6948
+local GCD_MAX = 2 -- segundos
 
 function U.Alert(text)
     if RaidNotice_AddMessage and RaidWarningFrame and ChatTypeInfo then
@@ -98,7 +99,8 @@ local function HearthReady()
     if start == nil or U.IsSecret(start) or U.IsSecret(duration) then
         return nil
     end
-    return start == 0 or duration == 0 or (start + duration - GetTime()) <= 0
+    -- recarga global (1,5 s ao lançar qualquer feitiço) não conta como recarga da pedra
+    return start == 0 or duration <= GCD_MAX or (start + duration - GetTime()) <= 0
 end
 
 local function CheckHearth()

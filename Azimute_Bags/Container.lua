@@ -16,6 +16,8 @@ local TOP = 54   -- título + busca
 local BOTTOM = 26 -- rodapé (livres + ouro)
 local GOLD = { 0.85, 0.68, 0.25 }
 local EMPTY_SLOT = "Interface\\PaperDoll\\UI-Backpack-EmptySlot"
+local KEYRING = (Enum and Enum.BagIndex and Enum.BagIndex.Keyring) or -1
+local LABEL_HEIGHT = 16
 
 local Container = {}
 Container.__index = Container
@@ -198,19 +200,42 @@ function Container:Columns()
     return self.kind == "bank" and B.db.bankColumns or B.db.columns
 end
 
+-- Título "Chaveiro": o chaveiro começa numa linha própria, com espaços
+-- apagados, para não parecer espaço livre das bolsas.
+function Container:KeyringLabel()
+    if not self.keyringLabel then
+        self.keyringLabel = self.frame.content:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+        self.keyringLabel:SetText(L["KEYRING"])
+    end
+    return self.keyringLabel
+end
+
 function Container:Layout()
     local columns = math.max(4, self:Columns())
-    local index = 0
+    local index, extra = 0, 0
     local used = {}
+    if self.keyringLabel then
+        self.keyringLabel:Hide()
+    end
     for _, bag in ipairs(self.getBags()) do
         used[bag] = true
         local holder = self:Holder(bag)
         holder:Show()
+        local keyring = bag == KEYRING
+        if keyring and index > 0 then
+            index = math.ceil(index / columns) * columns -- começa linha nova
+            local label = self:KeyringLabel()
+            label:ClearAllPoints()
+            label:SetPoint("TOPLEFT", self.frame.content, "TOPLEFT", 2, -(index / columns) * (SLOT + GAP) - extra - 2)
+            label:Show()
+            extra = extra + LABEL_HEIGHT
+        end
         for slot = 1, B.NumSlots(bag) do
             local button = self:Button(bag, slot)
             local row, column = math.floor(index / columns), index % columns
             button:ClearAllPoints()
-            button:SetPoint("TOPLEFT", self.frame.content, "TOPLEFT", column * (SLOT + GAP), -row * (SLOT + GAP))
+            button:SetPoint("TOPLEFT", self.frame.content, "TOPLEFT", column * (SLOT + GAP), -row * (SLOT + GAP) - extra)
+            button.emptyBg:SetAlpha(keyring and 0.25 or 0.6)
             button:Show()
             index = index + 1
         end
@@ -228,7 +253,7 @@ function Container:Layout()
     end
     local rows = math.max(1, math.ceil(index / columns))
     local width = PAD * 2 + columns * SLOT + (columns - 1) * GAP
-    local height = TOP + rows * SLOT + (rows - 1) * GAP + BOTTOM + 4
+    local height = TOP + rows * SLOT + (rows - 1) * GAP + BOTTOM + 4 + extra
     self.frame:SetSize(math.max(width, 200), height)
     self.dirty = false
 end
