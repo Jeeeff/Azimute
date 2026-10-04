@@ -1,4 +1,4 @@
-"""Testa os módulos independentes do pacote (medidor, utilidades, raros, leilão) fora do jogo.
+"""Testa os módulos independentes do pacote (medidor, utilidades, raros, leilão, rotação) fora do jogo.
 
 Cada módulo roda num LuaJIT separado, SEM o Azimute carregado, para provar que
 funciona sozinho; depois um segundo teste carrega junto com o Azimute para
@@ -52,7 +52,8 @@ def run(module, scenario, with_core=False):
 for module, scenario in [("Azimute_Meter", "scenario_meter.lua"),
                          ("Azimute_Utils", "scenario_utils.lua"),
                          ("Azimute_Rares", "scenario_rares.lua"),
-                         ("Azimute_Auction", "scenario_auction.lua")]:
+                         ("Azimute_Auction", "scenario_auction.lua"),
+                         ("Azimute_Rotation", "scenario_rotation.lua")]:
     if not os.path.exists(os.path.join(ROOT, module, module + ".toc")):
         continue
     run(module, scenario, with_core=False)

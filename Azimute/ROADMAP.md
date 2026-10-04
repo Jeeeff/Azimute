@@ -483,3 +483,14 @@ Modificadores: `|q q/n`, `|only ...`, `|opt` (não segura o passo). Cabeçalhos 
 - https://github.com/max-ri/Guidelime/wiki/WriteAGuide · https://github.com/max-ri/Guidelime/wiki/PublishAGuide
 - https://github.com/Azeroth-Pilot-Reloaded/APR-Route-Recorder
 - https://github.com/Gethe/wow-ui-source/blob/live/Interface/AddOns/Blizzard_APIDocumentationGenerated/EncodingUtilDocumentation.lua
+
+## Azimute_Rotation 0.1.0 (04/10/2026)
+- Módulo independente `/azrot`: ordem de golpes para as 9 classes (28 rotações, druida feral gato e urso),
+  texto próprio em pt/en; nível de treino gerado por `tools/rotation_levels.py` a partir do What's Training (MIT).
+- Especialização pela aba de talentos com mais pontos (ou escolhida: `/azrot 1-4`).
+- Barra ao vivo em combate: só usa o que não é secreto (`C_Spell.IsSpellUsable`), o giro da recarga pelo
+  objeto de duração (`GetSpellCooldownDuration` + `SetCooldownFromDurationObject`) e brilho no próximo golpe
+  só quando recarga/efeito no alvo vierem legíveis. O Combate Assistido da Blizzard vem desligado no Forever
+  (`InterfaceOverrides.HasAssistedCombat` = false).
+- A primeira atualização de cada luta grava em `AzimuteRotationDB.diag` o que veio secreto (`/azrot diag`):
+  decidir a próxima versão da barra com isso.

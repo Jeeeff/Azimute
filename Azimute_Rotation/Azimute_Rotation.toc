@@ -1,0 +1,21 @@
+## Interface: 16001, 120100, 120105
+## Title: Azimute - Rotation
+## Title-ptBR: Azimute - Rotação
+## Notes: Rotation priority for every class and specialization (leveling), with a live icon bar in combat. Works without Azimute.
+## Notes-ptBR: Prioridade de golpes para cada classe e especialização (para upar), com barra de ícones ao vivo em combate. Funciona sem o Azimute.
+## Author: jeeeff
+## X-License: GPL-3.0-or-later (trainer levels: What's Training, MIT)
+## Version: 0.1.0
+## IconTexture: Interface\Icons\Ability_DualWield
+## Category: Combat
+## Category-ptBR: Combate
+## OptionalDeps: Azimute
+## SavedVariables: AzimuteRotationDB
+## SavedVariablesPerCharacter: AzimuteRotationCharDB
+
+Locales.lua
+Core.lua
+Data.lua
+Levels.lua
+Panel.lua
+Live.lua

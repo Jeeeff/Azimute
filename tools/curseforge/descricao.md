@@ -15,6 +15,7 @@
 - **Azimute Utilities** (`/azu`): max camera zoom, item IDs and target in tooltips, item level on the character window and in the bags, world map coordinates, alerts (bags full, gear breaking, hearthstone ready), Alt+click buys a full stack, optional social automation (all off by default).
 - **Azimute Rares** (`/azr`): warns when a rare creature or treasure is nearby and leads the arrow there.
 - **Azimute Auction** (`/azl`): full auction house scan, auction price on item tooltips, vendor-vs-auction hint and the value of your bags.
+- **Azimute Rotation** (`/azrot`): ability priority for every class and specialization (leveling), with a live icon bar in combat.
 
 ### Guide coverage (beta)
 - Levels 1-30, Alliance and Horde, per race: adapted from the RestedXP guides.
@@ -35,5 +36,5 @@ Type `/azimute report` (or click the bug icon in the guide window), copy the tex
 
 - Janela do guia, seta, pino no mapa, rotas de voo/barco/zepelim, volta ao corpo.
 - Aceitar e entregar missões automaticamente (opcional), marcar passo como feito (clique direito).
-- Módulos independentes: **Medidor de dano** (`/azm`), **Utilidades** (`/azu`), **Raros** (`/azr`) e **Leilão** (`/azl`).
+- Módulos independentes: **Medidor de dano** (`/azm`), **Utilidades** (`/azu`), **Raros** (`/azr`), **Leilão** (`/azl`) e **Rotação** (`/azrot`).
 - Problemas: `/azimute reportar` e abra uma issue em https://github.com/Jeeeff/Azimute/issues

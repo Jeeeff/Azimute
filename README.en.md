@@ -37,6 +37,9 @@ one of them errors the guide keeps working.
 - **Azimute Rares** (`/azr`): warns when a rare creature (or treasure) is nearby and leads the arrow there.
 - **Azimute Auction** (`/azl`): full auction house scan, auction price on any item tooltip, a warning
   when the vendor pays more, and the value of your bags.
+- **Azimute Rotation** (`/azrot`): ability priority for every class and specialization (leveling), showing
+  what you know and when you learn the rest, plus a live icon bar in combat (dims what you cannot use and
+  shows cooldowns; in Forever the game hides part of combat from addons).
 
 ## Guide coverage
 
@@ -74,7 +77,7 @@ Support channel: [GitHub issues](https://github.com/Jeeeff/Azimute/issues).
 | ↳ dungeon quests | MIT | Forever Dungeon Quests, by Sundee |
 | ↳ trainer spells | MIT | What's Training, by fusionpit |
 | `Azimute_Guides_Classic` (guides) | GPL-3.0 | Guidelime_Zarant, by Zarant |
-| `Azimute_Meter`, `Azimute_Utils`, `Azimute_Rares`, `Azimute_Auction` | GPL-3.0-or-later | Own code |
+| `Azimute_Meter`, `Azimute_Utils`, `Azimute_Rares`, `Azimute_Auction`, `Azimute_Rotation` | GPL-3.0-or-later | Own code (trainer levels: What's Training, MIT) |
 
 RestedXP guides may only be used non-commercially, which is why Azimute is free. RestedXP and the other
 authors do not endorse Azimute. Details in the `CREDITS.md` inside each package.

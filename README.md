@@ -40,6 +40,9 @@ erro o guia continua funcionando.
   até ele.
 - **Azimute Leilão** (`/azl`): varredura completa da casa de leilões, preço de leilão na dica de qualquer
   item, aviso quando o vendedor paga mais e valor das suas bolsas.
+- **Azimute Rotação** (`/azrot`): ordem de golpes para cada classe e especialização (para upar), com o
+  que já sabe e quando aprende o resto, e uma barra de ícones ao vivo em combate (apaga o que não dá
+  para usar e mostra a recarga; no Forever o jogo esconde parte do combate dos addons).
 
 ## Cobertura dos guias
 
@@ -77,7 +80,7 @@ Canal de suporte: [issues do GitHub](https://github.com/Jeeeff/Azimute/issues).
 | ↳ missões de masmorra | MIT | Forever Dungeon Quests, de Sundee |
 | ↳ feitiços de treinador | MIT | What's Training, de fusionpit |
 | `Azimute_Guides_Classic` (guias) | GPL-3.0 | Guidelime_Zarant, de Zarant |
-| `Azimute_Meter`, `Azimute_Utils`, `Azimute_Rares`, `Azimute_Auction` | GPL-3.0-or-later | Código próprio |
+| `Azimute_Meter`, `Azimute_Utils`, `Azimute_Rares`, `Azimute_Auction`, `Azimute_Rotation` | GPL-3.0-or-later | Código próprio (níveis de treino: What's Training, MIT) |
 
 Os guias do RestedXP só podem ser usados sem fins comerciais, por isso o Azimute é gratuito. O RestedXP e
 os demais autores não endossam o Azimute. Detalhes em `CREDITS.md` dentro de cada pacote.
