@@ -324,7 +324,7 @@ S.herbSkill = 1
 function GetProfessions() return 1, nil end
 function GetProfessionInfo(i) return "Herborismo", 0, S.herbSkill, 300, 0, 0, 182 end
 
-function GetRealZoneText(id) return "Instancia" .. id end
+function GetRealZoneText(id) return id and ("Instancia" .. id) or "Zona Atual" end
 
 S.money = 0
 function GetMoney() return S.money end

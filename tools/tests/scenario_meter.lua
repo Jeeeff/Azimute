@@ -116,3 +116,87 @@ S.dm.secret = false
 S.Tick()
 check(bars[1].name._text == "1. Jeeff" and W.secretTicker == nil, "jogo liberou: redesenha com tudo e para de tentar")
 check(bars[1].value._text == "3.0K (150) 60%", "por segundo calculado pela duração: " .. tostring(bars[1].value._text))
+
+-- ===== Recursos inspirados no Details! =====
+S.dm.secret = false
+M.db.segment = "current"
+local T = M.Meter.TYPE
+
+-- dica da barra: 3 feitiços principais com porcentagem
+local tipLines = {}
+GameTooltip.AddDoubleLine = function(_, a, b) table.insert(tipLines, a .. " " .. b) end
+W:BarTooltip(bars[1])
+check(tipLines[1] == "Feitiço686 2.0K (67%)", "dica da barra com os feitiços principais: " .. tostring(tipLines[1]))
+
+-- alvos: dano do jogador em cada monstro
+S.dm.byType = { [T.EnemyDamageTaken] = { totalAmount = 3500, maxAmount = 2000, combatSources = {
+    { name = "Kobold", sourceCreatureID = 6, totalAmount = 2000 },
+    { name = "Lobo", sourceCreatureID = 299, totalAmount = 1500 },
+} } }
+S.dm.enemies = {
+    [6] = { combatSpells = { { spellID = 686, totalAmount = 1200, combatSpellDetails = { unitName = "Jeeff-Ossada", amount = 1200 } },
+                             { spellID = 403, totalAmount = 800, combatSpellDetails = { unitName = "Thrall", amount = 800 } } } },
+    [299] = { combatSpells = { { spellID = 172, totalAmount = 1500, combatSpellDetails = { unitName = "Jeeff-Ossada", amount = 1500 } } } },
+}
+local targets = M.Meter:Targets(bars[1].source)
+check(#targets == 2 and targets[1].name == "Lobo" and targets[1].amount == 1500 and targets[2].amount == 1200, "alvos do jogador (dano em cada monstro)")
+W.breakdown.view = "targets"
+W:ShowBreakdown(bars[1].source)
+check(W.breakdown.rows[1].name._text == "Lobo" and W.breakdown.toggle._text == "Feitiços", "painel mostra os alvos e o botão volta aos feitiços")
+W.breakdown.view = "spells"
+
+-- dano evitável: mortal em vermelho, evitável em laranja
+S.dm.breakdown["Player-1"].combatSpells[1].isDeadly = true
+S.dm.breakdown["Player-1"].combatSpells[2].isAvoidable = true
+M.Meter:SetMode(9) -- dano evitável sofrido (índice no menu)
+local colors = {}
+W.breakdown.rows[1].SetStatusBarColor = function(_, r) colors[1] = r end
+W.breakdown.rows[2].SetStatusBarColor = function(_, r, g) colors[2] = g end
+W:ShowBreakdown(bars[1].source)
+check(colors[1] == 0.9 and colors[2] == 0.55, "evitável/mortal destacados em laranja/vermelho")
+M.Meter:SetMode(1)
+
+-- recap de morte (modo Mortes)
+S.dm.byType[T.Deaths] = { totalAmount = 1, maxAmount = 1, combatSources = {
+    { name = "Jeeff-Ossada", sourceGUID = "Player-1", classFilename = "WARLOCK", totalAmount = 1, deathRecapID = 42, isLocalPlayer = true } } }
+S.recaps[42] = { max = 500, events = {
+    { spellName = "Mordida", sourceName = "Lobo", amount = 120, currentHP = 0 },
+    { spellName = "Garra", sourceName = "Lobo", amount = 200, currentHP = 120 },
+} }
+local events, maxHealth = M.Meter:DeathRecap({ deathRecapID = 42 })
+check(#events == 2 and maxHealth == 500 and events[2].killing, "recap de morte lido do jogo (maior golpe destacado)")
+local deathsIndex
+for i, mode in ipairs(M.Meter.MODES) do if mode.type == T.Deaths then deathsIndex = i end end
+M.Meter:SetMode(deathsIndex)
+W:ShowBreakdown(S.dm.byType[T.Deaths].combatSources[1])
+check(W.breakdown.view == "death" and W.breakdown.rows[2].value._text:find("%-200") , "modo Mortes: painel mostra o recap")
+W.breakdown.toggle._scripts.OnClick(W.breakdown.toggle)
+check(S.openedRecap == 42, "botão abre o recap do próprio jogo")
+M.Meter:SetMode(1)
+S.printed = {}
+M.Meter:AnnounceDeath()
+check(S.printed[1] and S.printed[1]:find("Maior golpe: Garra de Lobo"), "resumo da morte no chat: " .. tostring(S.printed[1]))
+
+-- histórico salvo
+S.dm.byType[T.Deaths] = nil
+S.dm.duration = 30
+M.db.history = {}
+S.dm.byType[T.HealingDone] = { totalAmount = 100, maxAmount = 100, combatSources = { { name = "Thrall", classFilename = "SHAMAN", totalAmount = 100 } } }
+check(M.Meter:SaveFight() and #M.db.history == 1, "luta salva depois do combate")
+S.dm.secret = true
+check(not M.Meter:SaveFight(), "números ainda lacrados: espera para salvar")
+S.dm.secret = false
+M.Meter:SetSegment("saved:1")
+check(W.frame.title._text:find("Dano %- ") and bars[1].name._text == "1. Jeeff", "luta salva aparece na janela")
+check(select(2, M.Meter:Breakdown(bars[1].source)) == "saved", "luta salva não tem detalhes por feitiço (avisa)")
+M.Meter:SetSegment("current")
+
+-- mostrador pessoal
+M.db.personal = true
+M.Personal:Apply()
+M.Personal:Update()
+check(M.Personal.frame._shown and M.Personal.frame.text._text == "Seu DPS: 100 (3.0K)", "mostrador pessoal: " .. tostring(M.Personal.frame.text._text))
+S.dm.secret = true
+M.Personal:Update()
+check(issecretvalue(M.Personal.frame.text._text), "em combate: mostra o total lacrado direto no texto")
+S.dm.secret = false

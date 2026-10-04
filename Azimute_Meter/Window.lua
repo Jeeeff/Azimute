@@ -199,11 +199,7 @@ function Window:GetBar(index)
             end
         end)
         bar:SetScript("OnEnter", function(self)
-            GameTooltip:SetOwner(self, "ANCHOR_LEFT")
-            local name = M.ShortName(self.source and self.source.name)
-            GameTooltip:SetText(M.IsSecret(name) and L["TITLE"] or name)
-            GameTooltip:AddLine(L["CLICK_HINT"], 0.7, 0.7, 0.7)
-            GameTooltip:Show()
+            Window:BarTooltip(self)
         end)
         bar:SetScript("OnLeave", function() GameTooltip:Hide() end)
         frame.bars[index] = bar
@@ -317,29 +313,174 @@ function Window:Refresh()
 end
 
 ------------------------------------------------------------------------
--- Painel de feitiços
+-- Painel de detalhes: feitiços, alvos (dano em cada monstro) e, no modo
+-- Mortes, o recap da morte (o que acertou e com quanta vida).
 ------------------------------------------------------------------------
+
+local ROW_HEIGHT = 16
+local MAX_ROWS = 12
+local RED, ORANGE = { 0.9, 0.2, 0.2 }, { 1, 0.55, 0.1 }
 
 function Window:CreateBreakdown()
     local panel = CreateFrame("Frame", "AzimuteMeterBreakdown", self.frame, "BackdropTemplate")
     Backdrop(panel, 0.92)
-    panel:SetSize(260, 200)
+    panel:SetSize(280, 200)
     panel:SetPoint("TOPRIGHT", self.frame, "TOPLEFT", -4, 0)
     panel:EnableMouse(true)
     panel.title = panel:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
     panel.title:SetPoint("TOPLEFT", 6, -6)
-    panel.title:SetPoint("RIGHT", -24, 0)
+    panel.title:SetPoint("RIGHT", -90, 0)
     panel.title:SetJustifyH("LEFT")
+    panel.title:SetWordWrap(false)
     local close = CreateFrame("Button", nil, panel, "UIPanelCloseButton")
     close:SetSize(20, 20)
     close:SetPoint("TOPRIGHT", 0, 0)
+    -- alterna feitiços / alvos (modos de dano) ou abre o recap do jogo (Mortes)
+    panel.toggle = CreateFrame("Button", nil, panel, "UIPanelButtonTemplate")
+    panel.toggle:SetSize(70, 18)
+    panel.toggle:SetPoint("TOPRIGHT", close, "TOPLEFT", -2, -1)
+    panel.toggle:SetScript("OnClick", function()
+        if panel.view == "death" then
+            local id = panel.source and panel.source.deathRecapID
+            if id and OpenDeathRecapUI then
+                OpenDeathRecapUI(id)
+            end
+            return
+        end
+        panel.view = panel.view == "targets" and "spells" or "targets"
+        Window:ShowBreakdown(panel.source)
+    end)
     panel.message = panel:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
-    panel.message:SetPoint("TOPLEFT", 6, -26)
+    panel.message:SetPoint("TOPLEFT", 6, -28)
     panel.message:SetPoint("RIGHT", -6, 0)
     panel.message:SetJustifyH("LEFT")
     panel.rows = {}
+    panel.view = "spells"
     panel:Hide()
     self.breakdown = panel
+end
+
+function Window:BreakdownRow(i)
+    local panel = self.breakdown
+    local row = panel.rows[i]
+    if not row then
+        row = CreateFrame("StatusBar", nil, panel)
+        row:SetStatusBarTexture(BAR_TEXTURE)
+        row:SetHeight(ROW_HEIGHT)
+        row:SetPoint("TOPLEFT", panel, "TOPLEFT", 4, -(26 + (i - 1) * (ROW_HEIGHT + 1)))
+        row:SetPoint("RIGHT", panel, "RIGHT", -4, 0)
+        row.icon = row:CreateTexture(nil, "OVERLAY")
+        row.icon:SetSize(14, 14)
+        row.icon:SetPoint("LEFT", 1, 0)
+        row.value = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+        row.value:SetPoint("RIGHT", -3, 0)
+        row.name = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+        row.name:SetPoint("LEFT", row.icon, "RIGHT", 3, 0)
+        row.name:SetPoint("RIGHT", row.value, "LEFT", -4, 0)
+        row.name:SetJustifyH("LEFT")
+        row.name:SetWordWrap(false)
+        panel.rows[i] = row
+    end
+    return row
+end
+
+-- entries = { { icon, name, value, amount, max, color } }
+function Window:FillBreakdown(entries, message)
+    local panel = self.breakdown
+    panel.message:SetText(message or "")
+    panel.message:SetShown(#entries == 0)
+    for i = 1, MAX_ROWS do
+        local entry = entries[i]
+        if entry then
+            local row = self:BreakdownRow(i)
+            local maxAmount = entry.max
+            if maxAmount ~= nil and (M.IsSecret(maxAmount) or maxAmount > 0) then
+                row:SetMinMaxValues(0, maxAmount)
+            else
+                row:SetMinMaxValues(0, 1)
+            end
+            row:SetValue(entry.amount or 0)
+            local color = entry.color or GOLD
+            row:SetStatusBarColor(color[1], color[2], color[3], 0.6)
+            row.icon:SetTexture(entry.icon or 134400)
+            row.name:SetText(entry.name or "?")
+            row.value:SetText(entry.value or "")
+            row:Show()
+        elseif panel.rows[i] then
+            panel.rows[i]:Hide()
+        end
+    end
+    panel:SetHeight(34 + math.max(1, math.min(#entries, MAX_ROWS)) * (ROW_HEIGHT + 1))
+end
+
+local DAMAGE_TYPES = { [Meter.TYPE.DamageDone] = true, [Meter.TYPE.Dps] = true }
+local TAKEN_TYPES = { [Meter.TYPE.DamageTaken] = true, [Meter.TYPE.AvoidableDamageTaken] = true }
+
+local function ProblemText(problem)
+    if problem == "secret" then
+        return L["BREAKDOWN_SECRET"]
+    elseif problem == "saved" then
+        return L["BREAKDOWN_SAVED"]
+    end
+    return L["BREAKDOWN_EMPTY"]
+end
+
+local function SpellEntries(source, mode)
+    local data, problem = Meter:Breakdown(source)
+    if not data then
+        return {}, ProblemText(problem)
+    end
+    local entries = {}
+    local duration = Meter:Duration(Meter:Session())
+    for _, spell in ipairs(data.combatSpells or {}) do
+        local texture = C_Spell and C_Spell.GetSpellTexture and C_Spell.GetSpellTexture(spell.spellID)
+        local name = C_Spell and C_Spell.GetSpellName and C_Spell.GetSpellName(spell.spellID)
+        local color
+        -- dano sofrido: o que dava para evitar em laranja, o que é mortal em vermelho
+        if TAKEN_TYPES[mode.type] then
+            if spell.isDeadly == true then
+                color = RED
+            elseif spell.isAvoidable == true then
+                color = ORANGE
+            end
+        end
+        entries[#entries + 1] = {
+            icon = texture, name = name or spell.creatureName or "?", amount = spell.totalAmount, max = data.maxAmount,
+            value = ValueText(mode, spell.totalAmount, PerSecond(mode, spell.totalAmount, spell.amountPerSecond, duration), data.totalAmount),
+            color = color,
+        }
+    end
+    return entries, #entries == 0 and L["BREAKDOWN_EMPTY"] or nil
+end
+
+local function TargetEntries(source)
+    local targets, problem = Meter:Targets(source)
+    if not targets then
+        return {}, ProblemText(problem)
+    end
+    local entries = {}
+    local top = targets[1] and targets[1].amount or 0
+    for _, target in ipairs(targets) do
+        entries[#entries + 1] = { icon = 136243, name = target.name, amount = target.amount, max = top, value = M.Abbrev(target.amount) }
+    end
+    return entries, #entries == 0 and L["BREAKDOWN_EMPTY"] or nil
+end
+
+local function DeathEntries(source)
+    local events, maxHealth = Meter:DeathRecap(source)
+    if not events then
+        return {}, L["DEATH_NONE"]
+    end
+    local entries = {}
+    for _, event in ipairs(events) do
+        local percent = (maxHealth and maxHealth > 0 and event.hp) and ("%d%%"):format(event.hp / maxHealth * 100) or ""
+        entries[#entries + 1] = {
+            icon = event.icon, name = event.source and ("%s |cff999999(%s)|r"):format(event.spell, event.source) or event.spell,
+            amount = event.amount or 0, max = maxHealth, value = ("-%s  %s"):format(M.Abbrev(event.amount or 0), percent),
+            color = event.killing and RED or nil,
+        }
+    end
+    return entries
 end
 
 function Window:ShowBreakdown(source)
@@ -349,58 +490,53 @@ function Window:ShowBreakdown(source)
         return
     end
     panel.source = source
-    panel.title:SetText(L["BREAKDOWN_TITLE"]:format(M.ShortName(source.name)))
-    local data, problem = Meter:Breakdown(source)
-    local spells = data and data.combatSpells or {}
-    panel.message:SetText(problem == "secret" and L["BREAKDOWN_SECRET"] or (#spells == 0 and L["BREAKDOWN_EMPTY"] or ""))
-    panel.message:SetShown(#spells == 0)
     local mode = Meter:Mode()
-    local maxRows = 10
-    for i = 1, maxRows do
-        local spell = spells[i]
-        local row = panel.rows[i]
-        if spell and not row then
-            row = CreateFrame("StatusBar", nil, panel)
-            row:SetStatusBarTexture(BAR_TEXTURE)
-            row:SetStatusBarColor(GOLD[1], GOLD[2], GOLD[3], 0.6)
-            row:SetHeight(16)
-            row:SetPoint("TOPLEFT", panel, "TOPLEFT", 4, -(24 + (i - 1) * 17))
-            row:SetPoint("RIGHT", panel, "RIGHT", -4, 0)
-            row.icon = row:CreateTexture(nil, "OVERLAY")
-            row.icon:SetSize(14, 14)
-            row.icon:SetPoint("LEFT", 1, 0)
-            row.value = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-            row.value:SetPoint("RIGHT", -3, 0)
-            row.name = row:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-            row.name:SetPoint("LEFT", row.icon, "RIGHT", 3, 0)
-            row.name:SetPoint("RIGHT", row.value, "LEFT", -4, 0)
-            row.name:SetJustifyH("LEFT")
-            row.name:SetWordWrap(false)
-            panel.rows[i] = row
-        end
-        if row then
-            if spell then
-                local maxAmount = data.maxAmount
-                if maxAmount ~= nil and (M.IsSecret(maxAmount) or maxAmount > 0) then
-                    row:SetMinMaxValues(0, maxAmount)
-                else
-                    row:SetMinMaxValues(0, 1)
-                end
-                row:SetValue(spell.totalAmount or 0)
-                local texture = C_Spell and C_Spell.GetSpellTexture and C_Spell.GetSpellTexture(spell.spellID)
-                row.icon:SetTexture(texture or 134400)
-                local name = C_Spell and C_Spell.GetSpellName and C_Spell.GetSpellName(spell.spellID)
-                row.name:SetText(name or spell.creatureName or "?")
-                row.value:SetText(ValueText(mode, spell.totalAmount,
-                    PerSecond(mode, spell.totalAmount, spell.amountPerSecond, Meter:Duration(Meter:Session())), data.totalAmount))
-                row:Show()
-            else
-                row:Hide()
+    local name = M.ShortName(source.name)
+    if mode.type == Meter.TYPE.Deaths then
+        panel.view = "death"
+    elseif panel.view == "death" or (panel.view == "targets" and not DAMAGE_TYPES[mode.type]) then
+        panel.view = "spells"
+    end
+    local entries, message
+    if panel.view == "death" then
+        panel.title:SetText(L["DEATH_TITLE"]:format(name))
+        panel.toggle:SetText(L["DEATH_GAME_RECAP"])
+        panel.toggle:SetShown(source.deathRecapID ~= nil and OpenDeathRecapUI ~= nil)
+        entries, message = DeathEntries(source)
+    elseif panel.view == "targets" then
+        panel.title:SetText(L["TARGETS_TITLE"]:format(name))
+        panel.toggle:SetText(L["VIEW_SPELLS"])
+        panel.toggle:Show()
+        entries, message = TargetEntries(source)
+    else
+        panel.title:SetText(L["BREAKDOWN_TITLE"]:format(name))
+        panel.toggle:SetText(L["VIEW_TARGETS"])
+        panel.toggle:SetShown(DAMAGE_TYPES[mode.type] and true or false)
+        entries, message = SpellEntries(source, mode)
+    end
+    self:FillBreakdown(entries, message)
+    panel:Show()
+end
+
+-- Dica ao passar o mouse na barra: os 3 feitiços principais (depois do combate).
+function Window:BarTooltip(bar)
+    local source = bar.source
+    GameTooltip:SetOwner(bar, "ANCHOR_LEFT")
+    local name = M.ShortName(source and source.name)
+    GameTooltip:SetText(M.IsSecret(name) and L["TITLE"] or name)
+    local data = source and Meter:Breakdown(source)
+    local total = data and data.totalAmount
+    if data and M.Positive(total) then
+        for i = 1, math.min(3, #(data.combatSpells or {})) do
+            local spell = data.combatSpells[i]
+            local spellName = C_Spell and C_Spell.GetSpellName and C_Spell.GetSpellName(spell.spellID) or spell.creatureName or "?"
+            if not M.IsSecret(spell.totalAmount) and not M.IsSecret(spellName) then
+                GameTooltip:AddDoubleLine(spellName, ("%s (%.0f%%)"):format(M.Abbrev(spell.totalAmount), 100 * spell.totalAmount / total), 1, 1, 1, 1, 1, 1)
             end
         end
     end
-    panel:SetHeight(30 + math.max(1, math.min(#spells, maxRows)) * 17)
-    panel:Show()
+    GameTooltip:AddLine(L["CLICK_HINT"], 0.7, 0.7, 0.7)
+    GameTooltip:Show()
 end
 
 ------------------------------------------------------------------------
@@ -438,6 +574,19 @@ function Window:OpenMenu(owner)
                 end
                 submenu:CreateRadio(label, function() return M.db.segment == info.sessionID end, function()
                     Meter:SetSegment(info.sessionID)
+                end)
+            end
+        end
+        local saved = M.db.history or {}
+        if #saved > 0 then
+            local submenu = root:CreateButton(L["SEG_SAVED"])
+            for index, fight in ipairs(saved) do
+                local segment = "saved:" .. index
+                local ago = math.floor((time() - (fight.time or time())) / 60)
+                local label = ("%s (%d:%02d) - %s"):format(fight.zone or "?", math.floor((fight.duration or 0) / 60),
+                    math.floor((fight.duration or 0) % 60), L["AGO_MIN"]:format(ago))
+                submenu:CreateRadio(label, function() return M.db.segment == segment end, function()
+                    Meter:SetSegment(segment)
                 end)
             end
         end

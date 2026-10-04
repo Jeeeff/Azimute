@@ -26,6 +26,10 @@ M.DEFAULTS = {
     onlyInCombat = false,
     specIcons = true,
     resetOnInstance = false,
+    deathSummary = true,  -- ao morrer, linha no chat com o maior golpe
+    personal = false,     -- mostrador pequeno com o seu dano/DPS
+    personalPoint = { "CENTER", "CENTER", 0, -160 },
+    history = {},         -- lutas salvas (dano e cura)
 }
 
 ------------------------------------------------------------------------
@@ -69,6 +73,7 @@ local TYPE = (Enum and Enum.DamageMeterType) or {
     Dispels = 6, DamageTaken = 7, AvoidableDamageTaken = 8, Deaths = 9, EnemyDamageTaken = 10,
 }
 local SESSION = (Enum and Enum.DamageMeterSessionType) or { Overall = 0, Current = 1, Expired = 2 }
+Meter.TYPE, Meter.SESSION = TYPE, SESSION
 
 -- perSecond = "primary" (DPS/HPS: o valor por segundo vem primeiro),
 -- "secondary" (entre parênteses) ou nil (contagens: interrupções, mortes...).
@@ -125,6 +130,10 @@ function Meter:Session()
     end
     local mode = self:Mode()
     local segment = M.db.segment
+    local saved = type(segment) == "string" and tonumber(segment:match("^saved:(%d+)$"))
+    if saved then
+        return self:SavedSession(saved)
+    end
     local ok, session
     if segment == "overall" then
         ok, session = pcall(C_DamageMeter.GetCombatSessionFromType, SESSION.Overall, mode.type)
@@ -172,8 +181,15 @@ end
 
 function Meter:SegmentLabel()
     local segment = M.db.segment
+    local saved = type(segment) == "string" and tonumber(segment:match("^saved:(%d+)$"))
+    if saved then
+        local fight = M.db.history[saved]
+        if fight then
+            return L["SEG_SAVED_ITEM"]:format(fight.zone or "?", math.floor((fight.duration or 0) / 60), math.floor((fight.duration or 0) % 60))
+        end
+        M.db.segment = "current"
+    end
     if segment == "overall" then
-        return L["SEG_OVERALL"]
     elseif type(segment) == "number" then
         for _, info in ipairs(self:Sessions()) do
             if info.sessionID == segment then
@@ -191,6 +207,9 @@ end
 function Meter:Breakdown(source)
     if not self:Available() then
         return nil, "error"
+    end
+    if type(M.db.segment) == "string" and M.db.segment:find("^saved:") then
+        return nil, "saved"
     end
     if not source or M.IsSecret(source.sourceGUID) or not source.sourceGUID then
         return nil, "secret"
@@ -216,6 +235,215 @@ function Meter:Reset()
     end
     M.db.segment = "current"
     M:Fire("UPDATE")
+end
+
+------------------------------------------------------------------------
+-- Alvos: em quem um jogador bateu (mesmo truque do Details no Midnight:
+-- a sessão "dano nos inimigos" lista cada monstro, e os feitiços de cada um
+-- dizem quem causou o dano).
+------------------------------------------------------------------------
+
+local function SessionOfType(meterType)
+    local segment = M.db.segment
+    local ok, session
+    if type(segment) == "number" then
+        ok, session = pcall(C_DamageMeter.GetCombatSessionFromID, segment, meterType)
+    else
+        local sessionType = segment == "overall" and SESSION.Overall or SESSION.Current
+        ok, session = pcall(C_DamageMeter.GetCombatSessionFromType, sessionType, meterType)
+    end
+    return ok and session or nil
+end
+
+local function EnemySpells(creatureID)
+    local segment = M.db.segment
+    local ok, result
+    if type(segment) == "number" then
+        ok, result = pcall(C_DamageMeter.GetCombatSessionSourceFromID, segment, TYPE.EnemyDamageTaken, nil, creatureID)
+    else
+        local sessionType = segment == "overall" and SESSION.Overall or SESSION.Current
+        ok, result = pcall(C_DamageMeter.GetCombatSessionSourceFromType, sessionType, TYPE.EnemyDamageTaken, nil, creatureID)
+    end
+    return ok and result and result.combatSpells or {}
+end
+
+-- { { name = monstro, amount = dano do jogador nele }, ... } (maior primeiro) ou nil, motivo.
+function Meter:Targets(source)
+    if not self:Available() or not source then
+        return nil, "error"
+    end
+    if type(M.db.segment) == "string" and M.db.segment:find("^saved:") then
+        return nil, "saved"
+    end
+    local player = source.name
+    if M.IsSecret(player) or not player then
+        return nil, "secret"
+    end
+    local session = SessionOfType(TYPE.EnemyDamageTaken)
+    if not session or M.IsSecret(session.totalAmount) then
+        return nil, "secret"
+    end
+    local byEnemy = {}
+    for _, enemy in ipairs(session.combatSources or {}) do
+        local creatureID = enemy.sourceCreatureID
+        if creatureID and not M.IsSecret(creatureID) and not M.IsSecret(enemy.name) then
+            local total = 0
+            for _, spell in ipairs(EnemySpells(creatureID)) do
+                local details = spell.combatSpellDetails
+                local amount = details and details.amount
+                if details and details.unitName == player and type(amount) == "number" and not M.IsSecret(amount) then
+                    total = total + amount
+                end
+            end
+            if total > 0 then
+                local name = enemy.name or "?"
+                byEnemy[name] = (byEnemy[name] or 0) + total
+            end
+        end
+    end
+    local list = {}
+    for name, amount in pairs(byEnemy) do
+        list[#list + 1] = { name = name, amount = amount }
+    end
+    table.sort(list, function(a, b) return a.amount > b.amount end)
+    return list
+end
+
+------------------------------------------------------------------------
+-- Recap de morte (modo Mortes): o que acertou e com quanta vida.
+------------------------------------------------------------------------
+
+-- { { spell, source, amount, hp, icon, killing }, ... }, vidaMáxima  ou nil.
+function Meter:DeathRecap(source)
+    local id = source and source.deathRecapID
+    if not id or M.IsSecret(id) or id == 0 or not (C_DeathRecap and C_DeathRecap.GetRecapEvents) then
+        return nil
+    end
+    if C_DeathRecap.HasRecapEvents and not C_DeathRecap.HasRecapEvents(id) then
+        return nil
+    end
+    local events = C_DeathRecap.GetRecapEvents(id) or {}
+    local maxHealth = C_DeathRecap.GetRecapMaxHealth and C_DeathRecap.GetRecapMaxHealth(id)
+    if M.IsSecret(maxHealth) then
+        maxHealth = nil
+    end
+    local list = {}
+    for i, event in ipairs(events) do
+        local function Safe(value)
+            return (value ~= nil and not M.IsSecret(value)) and value or nil
+        end
+        local spell = Safe(event.spellName) or (event.spellId and C_Spell.GetSpellName(event.spellId)) or L["DEATH_MELEE"]
+        if M.IsSecret(spell) then
+            spell = "?"
+        end
+        list[#list + 1] = {
+            spell = spell, source = Safe(event.sourceName), amount = Safe(event.amount), hp = Safe(event.currentHP),
+            icon = event.spellId and not M.IsSecret(event.spellId) and C_Spell.GetSpellTexture(event.spellId) or nil,
+        }
+    end
+    if #list == 0 then
+        return nil
+    end
+    -- destaca o golpe que mais tirou vida
+    local biggest
+    for _, event in ipairs(list) do
+        if event.amount and (not biggest or event.amount > biggest.amount) then
+            biggest = event
+        end
+    end
+    if biggest then
+        biggest.killing = true
+    end
+    return list, maxHealth
+end
+
+-- Ao morrer: uma linha no chat com o golpe que mais tirou vida (opcional).
+function Meter:AnnounceDeath()
+    if not M.db.deathSummary then
+        return
+    end
+    local ok, session = pcall(C_DamageMeter.GetCombatSessionFromType, SESSION.Current, TYPE.Deaths)
+    if not ok or not session then
+        return
+    end
+    for _, source in ipairs(session.combatSources or {}) do
+        if source.isLocalPlayer == true then
+            local events = self:DeathRecap(source)
+            local worst
+            for _, event in ipairs(events or {}) do
+                if event.amount and (not worst or event.amount > worst.amount) then
+                    worst = event
+                end
+            end
+            if worst then
+                M.Print(L["DEATH_SUMMARY"]:format(worst.spell, worst.source or "?", M.Abbrev(worst.amount)))
+            end
+            return
+        end
+    end
+end
+
+------------------------------------------------------------------------
+-- Histórico salvo: depois de cada luta (com os números já liberados) guarda
+-- dano e cura de cada um. Sobrevive ao /reload e ao logout.
+------------------------------------------------------------------------
+
+local HISTORY_SIZE = 15
+local HISTORY_TYPES = { [TYPE.DamageDone] = "damage", [TYPE.HealingDone] = "healing" }
+
+local function Snapshot(meterType)
+    local ok, session = pcall(C_DamageMeter.GetCombatSessionFromType, SESSION.Current, meterType)
+    if not ok or not session or M.IsSecret(session.totalAmount) then
+        return nil
+    end
+    local sources = {}
+    for _, source in ipairs(session.combatSources or {}) do
+        if M.IsSecret(source.name) or M.IsSecret(source.totalAmount) then
+            return nil
+        end
+        sources[#sources + 1] = { name = source.name, classFilename = source.classFilename, totalAmount = source.totalAmount,
+            specIconID = source.specIconID, isLocalPlayer = source.isLocalPlayer }
+    end
+    return { combatSources = sources, totalAmount = session.totalAmount, maxAmount = session.maxAmount }
+end
+
+-- Devolve true quando salvou; false enquanto os números ainda estão lacrados.
+function Meter:SaveFight()
+    local duration = C_DamageMeter.GetSessionDurationSeconds and C_DamageMeter.GetSessionDurationSeconds(SESSION.Current)
+    if M.IsSecret(duration) then
+        return false
+    end
+    if not duration or duration < 5 then
+        return true -- luta curta demais: não vale guardar
+    end
+    local fight = { time = time(), duration = duration, zone = GetRealZoneText and GetRealZoneText() or "?" }
+    for meterType, key in pairs(HISTORY_TYPES) do
+        local snap = Snapshot(meterType)
+        if not snap then
+            return false
+        end
+        fight[key] = snap
+    end
+    if #fight.damage.combatSources == 0 then
+        return true
+    end
+    table.insert(M.db.history, 1, fight)
+    while #M.db.history > HISTORY_SIZE do
+        table.remove(M.db.history)
+    end
+    return true
+end
+
+-- Luta salva no formato de sessão (para a janela mostrar). Só dano/cura.
+function Meter:SavedSession(index)
+    local fight = M.db.history[index]
+    local key = fight and HISTORY_TYPES[self:Mode().type]
+    if not key then
+        return nil
+    end
+    local session = fight[key]
+    session.durationSeconds = fight.duration
+    return session
 end
 
 ------------------------------------------------------------------------
@@ -385,9 +613,24 @@ M:RegisterEvent("PLAYER_REGEN_DISABLED", function()
     M.inCombat = true
     M:Fire("VISIBILITY")
 end)
+-- Depois do combate, guarda a luta quando o jogo liberar os números
+-- (tenta de novo a cada 2 s, por até 20 s).
+local function SaveWhenReady(tries)
+    if Meter:Available() and not Meter:SaveFight() and tries > 0 then
+        C_Timer.After(2, function() SaveWhenReady(tries - 1) end)
+    end
+end
+
+M:RegisterEvent("PLAYER_DEAD", function()
+    C_Timer.After(1.5, function()
+        pcall(Meter.AnnounceDeath, Meter)
+    end)
+end)
+
 M:RegisterEvent("PLAYER_REGEN_ENABLED", function()
     M.inCombat = false
     M.combatEndedAt = GetTime()
+    C_Timer.After(1, function() SaveWhenReady(10) end)
     -- Fora de combate os números deixam de ser secretos: redesenha com tudo.
     C_Timer.After(1, function()
         M:Fire("UPDATE")

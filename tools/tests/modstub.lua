@@ -57,15 +57,20 @@ C_DamageMeter = {
     IsDamageMeterAvailable = function() return S.dm.available, S.dm.available and "" or "nível baixo" end,
     GetCombatSessionFromType = function(sessionType, meterType)
         S.dm.calls[#S.dm.calls + 1] = "type:" .. sessionType .. ":" .. meterType
+        if S.dm.byType and S.dm.byType[meterType] and sessionType == 1 then
+            return MaybeSecret(S.dm.byType[meterType])
+        end
         return MaybeSecret(sessionType == 0 and S.dm.overall or S.dm.current)
     end,
+    GetSessionDurationSeconds = function() return S.dm.secret and Secret(S.dm.duration) or S.dm.duration end,
     GetCombatSessionFromID = function(id, meterType)
         S.dm.calls[#S.dm.calls + 1] = "id:" .. id .. ":" .. meterType
         return MaybeSecret(S.dm.byID and S.dm.byID[id])
     end,
     GetAvailableCombatSessions = function() return S.dm.sessions end,
-    GetCombatSessionSourceFromType = function(sessionType, meterType, guid)
+    GetCombatSessionSourceFromType = function(sessionType, meterType, guid, creatureID)
         if issecretvalue(guid) then error("GUID secreto vindo de addon") end
+        if creatureID then return S.dm.enemies and S.dm.enemies[creatureID] end
         return S.dm.breakdown and S.dm.breakdown[guid]
     end,
     GetCombatSessionSourceFromID = function(id, meterType, guid)
@@ -288,3 +293,12 @@ C_Item.GetItemInfo = function(x)
     end
     return getItemInfo(x)
 end
+
+S.recaps = {}
+C_DeathRecap = {
+    HasRecapEvents = function(id) return S.recaps[id] ~= nil end,
+    GetRecapEvents = function(id) return S.recaps[id] and S.recaps[id].events end,
+    GetRecapMaxHealth = function(id) return S.recaps[id] and S.recaps[id].max end,
+}
+S.openedRecap = nil
+function OpenDeathRecapUI(id) S.openedRecap = id end

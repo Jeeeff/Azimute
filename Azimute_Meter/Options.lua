@@ -12,6 +12,8 @@ local CHECKBOXES = {
     { "onlyInCombat", "OPT_COMBAT", "OPT_COMBAT_TIP" },
     { "specIcons", "OPT_SPEC_ICONS", "OPT_SPEC_ICONS_TIP" },
     { "resetOnInstance", "OPT_RESET_INSTANCE", "OPT_RESET_INSTANCE_TIP" },
+    { "deathSummary", "OPT_DEATH_SUMMARY", "OPT_DEATH_SUMMARY_TIP" },
+    { "personal", "OPT_PERSONAL", "OPT_PERSONAL_TIP" },
 }
 
 local SLIDERS = {
@@ -21,7 +23,11 @@ local SLIDERS = {
 
 local function Apply(key)
     local Window = M.Window
-    if key == "locked" then
+    if key == "personal" then
+        M.Personal:Apply()
+    elseif key == "deathSummary" then
+        return
+    elseif key == "locked" then
         Window:ApplyLock()
     elseif key == "scale" or key == "barHeight" or key == "specIcons" then
         Window:ApplyLayout()
