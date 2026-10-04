@@ -152,6 +152,26 @@ function Diag:Run()
             report.enums[name] = false
         end
     end
+    -- Guia de Aventuras: existe com dados das masmorras clássicas? (para o
+    -- futuro "saque por chefe"; a interface dele não carrega no Forever)
+    local ej = { tiers = false, dungeons = {} }
+    if EJ_GetNumTiers and EJ_SelectTier and EJ_GetInstanceByIndex then
+        local ok = pcall(function()
+            ej.tiers = EJ_GetNumTiers()
+            for tier = 1, ej.tiers or 0 do
+                EJ_SelectTier(tier)
+                for index = 1, 40 do
+                    local instanceID, name = EJ_GetInstanceByIndex(index, false)
+                    if not instanceID then
+                        break
+                    end
+                    ej.dungeons[#ej.dungeons + 1] = ("%d:%s"):format(instanceID, tostring(name))
+                end
+            end
+        end)
+        ej.ok = ok
+    end
+    report.encounterJournal = ej
     ns.db.diag = report
 
     ns.Print(L["DIAG_HEADER"]:format(report.build, tostring(interface)))
@@ -169,6 +189,7 @@ function Diag:Run()
             ns.Print(L["DIAG_EVENT"]:format(event))
         end
     end
+    ns.Print(L["DIAG_EJ"]:format(tostring(ej.tiers), #ej.dungeons))
     ns.Print(L["DIAG_SAVED"])
     return report
 end

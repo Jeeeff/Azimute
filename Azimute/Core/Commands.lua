@@ -187,6 +187,13 @@ local function TrainingCommand()
     for _, spell in ipairs(soon) do
         print(("  %s (%d) - %s"):format(ns.Names.Spell(spell.id) or spell.id, spell.level, ns.Trainer.Money(spell.cost)))
     end
+    local weapons = ns.db.weaponHints and ns.Trainer:MissingWeapons()
+    if weapons and #weapons > 0 then
+        ns.Print(L["TRAINER_WEAPONS"])
+        for _, weapon in ipairs(weapons) do
+            print(("  %s - %s"):format(ns.Names.Spell(weapon.id) or weapon.id, weapon.cities))
+        end
+    end
 end
 
 local COMMANDS = {

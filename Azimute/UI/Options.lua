@@ -94,6 +94,7 @@ local SECTIONS = {
             { "followQuest", "OPT_FOLLOW", "OPT_FOLLOW_TIP" },
             { "itemButton", "OPT_ITEM_BUTTON", "OPT_ITEM_BUTTON_TIP" },
             { "trainerHints", "OPT_TRAINER", "OPT_TRAINER_TIP" },
+            { "weaponHints", "OPT_WEAPONS", "OPT_WEAPONS_TIP" },
         },
     },
     {

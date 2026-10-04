@@ -557,7 +557,7 @@ local count, dungeonCount = 0, 0
 for key in pairs(S.settings) do
     if key:match("^%u+$") then dungeonCount = dungeonCount + 1 else count = count + 1 end
 end
-check(count == 29, "29 opções registradas (" .. count .. ")")
+check(count == 30, "30 opções registradas (" .. count .. ")")
 check(S.settings.autoSellJunk and S.settings.autoRepair, "opções de vender lixo e reparar registradas")
 check(S.settings.autoSellJunk.name == "Vender itens cinza automaticamente" and S.settings.autoSellJunk.default == false,
     "vender lixo: rótulo em pt-BR e desligado por padrão")
@@ -1429,3 +1429,16 @@ S.equipped[10] = "luva-forca"
 S.itemData["luva-forca2"] = { equipLoc = "INVTYPE_HAND", subclassID = 1, stats = { ITEM_MOD_STRENGTH_SHORT = 6, RESISTANCE0_NAME = 8 } }
 check(G3:TooltipText("luva-forca2"):find("melhoria %+%d+%%"), "itens com atributos: mostra a porcentagem")
 ns.Engine.player.class = savedClass3
+
+print("\n== Habilidades de arma ==")
+local savedClass4 = ns.Engine.player.class
+ns.Engine.player.class = "WARLOCK"
+S.player.faction = "Horde"
+S.known = {}
+check(ns.Trainer:MissingWeapons() == nil, "sem nenhuma habilidade de arma conhecida: o sistema não existe, não mostra nada")
+S.known = { [227] = true } -- conhece Cajados
+local weapons = ns.Trainer:MissingWeapons()
+check(weapons and #weapons == 2 and weapons[1].id == 201 and weapons[1].cities == "Mapa1458", "bruxo: falta Espadas (Undercity) e Adagas")
+check(weapons[2].id == 1180 and weapons[2].cities == "Mapa1454, Mapa1458", "Adagas em Orgrimmar e Undercity")
+ns.Engine.player.class = savedClass4
+S.known = {}

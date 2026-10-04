@@ -99,6 +99,77 @@ function Trainer:Line()
     return text
 end
 
+------------------------------------------------------------------------
+-- Habilidades de arma (mestre de armas nas capitais). Só aparece se o
+-- personagem conhece alguma habilidade de arma (no preset moderno do
+-- Forever o sistema pode não existir). Dados do Classic 1.12: conferir.
+------------------------------------------------------------------------
+
+local AXE, AXE2, MACE, MACE2, POLEARM, SWORD, SWORD2 = 196, 197, 198, 199, 200, 201, 202
+local STAFF, BOW, GUN, DAGGER, THROWN, CROSSBOW, FIST = 227, 264, 266, 1180, 2567, 5011, 15590
+local ALL_WEAPONS = { AXE, AXE2, MACE, MACE2, POLEARM, SWORD, SWORD2, STAFF, BOW, GUN, DAGGER, THROWN, CROSSBOW, FIST }
+
+local CLASS_WEAPONS = {
+    WARRIOR = { AXE, AXE2, MACE, MACE2, POLEARM, SWORD, SWORD2, STAFF, DAGGER, FIST, BOW, GUN, CROSSBOW, THROWN },
+    PALADIN = { AXE, AXE2, MACE, MACE2, POLEARM, SWORD, SWORD2 },
+    HUNTER = { AXE, AXE2, POLEARM, SWORD, SWORD2, STAFF, DAGGER, FIST, BOW, GUN, CROSSBOW, THROWN },
+    ROGUE = { DAGGER, SWORD, MACE, FIST, BOW, GUN, CROSSBOW, THROWN },
+    PRIEST = { MACE, STAFF, DAGGER },
+    SHAMAN = { AXE, AXE2, MACE, MACE2, STAFF, DAGGER, FIST },
+    MAGE = { SWORD, STAFF, DAGGER },
+    WARLOCK = { SWORD, STAFF, DAGGER },
+    DRUID = { MACE, MACE2, STAFF, DAGGER, FIST },
+}
+
+-- Mestres de armas por facção: mapa da capital e o que ensinam.
+local MASTERS = {
+    Horde = {
+        { map = 1454, skills = { BOW, DAGGER, FIST, AXE, AXE2, STAFF, THROWN } },    -- Orgrimmar (Sayoc, Hanashi)
+        { map = 1456, skills = { GUN, MACE, MACE2, STAFF } },                       -- Thunder Bluff (Ansekhwa)
+        { map = 1458, skills = { CROSSBOW, DAGGER, SWORD, SWORD2, POLEARM } },      -- Undercity (Archibald)
+    },
+    Alliance = {
+        { map = 1453, skills = { CROSSBOW, DAGGER, POLEARM, STAFF, SWORD, SWORD2 } }, -- Stormwind (Woo Ping)
+        { map = 1455, skills = { FIST, GUN, AXE, AXE2, MACE, MACE2, CROSSBOW, DAGGER, THROWN } }, -- Ironforge
+        { map = 1457, skills = { BOW, DAGGER, FIST, STAFF, THROWN } },              -- Darnassus (Ilyenia)
+    },
+}
+
+-- { { id, cities = "Orgrimmar, Undercity" }, ... } ou nil (sistema ausente).
+function Trainer:MissingWeapons()
+    local class = ns.Engine.player.class or select(2, UnitClass("player"))
+    local allowed = CLASS_WEAPONS[class]
+    if not allowed then
+        return nil
+    end
+    local knowsAny = false
+    for _, id in ipairs(ALL_WEAPONS) do
+        if Knows(id) then
+            knowsAny = true
+            break
+        end
+    end
+    if not knowsAny then
+        return nil
+    end
+    local masters = MASTERS[UnitFactionGroup("player") or ""] or {}
+    local missing = {}
+    for _, id in ipairs(allowed) do
+        if not Knows(id) then
+            local cities = {}
+            for _, master in ipairs(masters) do
+                for _, skill in ipairs(master.skills) do
+                    if skill == id then
+                        cities[#cities + 1] = ns.Names.Zone(master.map)
+                    end
+                end
+            end
+            missing[#missing + 1] = { id = id, cities = table.concat(cities, ", ") }
+        end
+    end
+    return missing
+end
+
 -- Dica com a lista (nomes traduzidos pelo cliente).
 function Trainer:FillTooltip(tooltip)
     local now, soon = self:Summary()
@@ -115,6 +186,14 @@ function Trainer:FillTooltip(tooltip)
         for _, spell in ipairs(soon) do
             tooltip:AddDoubleLine(("%s (%d)"):format(ns.Names.Spell(spell.id) or ("#" .. spell.id), spell.level),
                 Money(spell.cost), 0.7, 0.7, 0.7, 0.7, 0.7, 0.7)
+        end
+    end
+    local weapons = ns.db.weaponHints and self:MissingWeapons()
+    if weapons and #weapons > 0 then
+        tooltip:AddLine(" ")
+        tooltip:AddLine(L["TRAINER_WEAPONS"])
+        for _, weapon in ipairs(weapons) do
+            tooltip:AddDoubleLine(ns.Names.Spell(weapon.id) or ("#" .. weapon.id), weapon.cities, 1, 1, 1, 0.7, 0.7, 0.7)
         end
     end
 end
