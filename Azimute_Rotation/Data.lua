@@ -17,7 +17,6 @@
 --   util     situacional (interromper, prender, fugir)
 --   heal     cura
 --   pet      ajudante
--- A barra ao vivo usa: opener, dot, main, reactive, execute, filler.
 local addonName, R = ...
 
 R.ROTATIONS = {}

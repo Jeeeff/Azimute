@@ -41,8 +41,7 @@ erro o guia continua funcionando.
 - **Azimute Leilão** (`/azl`): varredura completa da casa de leilões, preço de leilão na dica de qualquer
   item, aviso quando o vendedor paga mais e valor das suas bolsas.
 - **Azimute Rotação** (`/azrot`): ordem de golpes para cada classe e especialização (para upar), com o
-  que já sabe e quando aprende o resto, e uma barra de ícones ao vivo em combate (apaga o que não dá
-  para usar e mostra a recarga; no Forever o jogo esconde parte do combate dos addons).
+  que já sabe e quando aprende o resto.
 
 ## Cobertura dos guias
 

@@ -4,12 +4,7 @@ local addonName, R = ...
 local L = R.L
 
 R.DEFAULTS = {
-    live = true,        -- barra ao vivo em combate
-    liveAlways = false, -- barra também fora de combate
-    locked = true,
     panelPoint = { "CENTER", "CENTER", -300, 60 },
-    barPoint = { "CENTER", "CENTER", 0, -190 },
-    diag = nil,         -- o que o jogo deixou ler na última luta
 }
 
 function R.IsSecret(value)
@@ -212,6 +207,10 @@ R:RegisterEvent("ADDON_LOADED", function(name)
         return
     end
     AzimuteRotationDB = CopyDefaults(AzimuteRotationDB or {}, R.DEFAULTS)
+    -- 0.1.0 tinha a barra ao vivo (retirada): limpa o que ela guardava
+    for _, key in ipairs({ "live", "liveAlways", "locked", "barPoint", "diag" }) do
+        AzimuteRotationDB[key] = nil
+    end
     AzimuteRotationCharDB = AzimuteRotationCharDB or {}
     R.db, R.char = AzimuteRotationDB, AzimuteRotationCharDB
     R:Fire("INIT")
@@ -253,21 +252,6 @@ function R:ChooseSpec(index)
     self:Fire("CHANGED")
 end
 
-function R:PrintDiag()
-    local diag = self.db.diag
-    if not diag then
-        R.Print(L["DIAG_NONE"])
-        return
-    end
-    R.Print(L["DIAG_TITLE"])
-    for _, key in ipairs({ "usable", "cooldown", "duration", "aura", "assisted" }) do
-        local value = diag[key]
-        local text = value == "ok" and L["DIAG_OK"] or value == "secret" and L["DIAG_SECRET"]
-            or value == "missing" and L["DIAG_MISSING"] or tostring(value)
-        print(L["DIAG_LINE"]:format(L["DIAG_NAMES"][key], text))
-    end
-end
-
 SLASH_AZIMUTEROTATION1 = "/azrot"
 SLASH_AZIMUTEROTATION2 = "/azrotacao"
 SlashCmdList.AZIMUTEROTATION = function(input)
@@ -277,11 +261,6 @@ SlashCmdList.AZIMUTEROTATION = function(input)
         R.Panel:Toggle()
     elseif number then
         R:ChooseSpec(number)
-    elseif command == "bar" or command == "barra" then
-        R.db.live = not R.db.live
-        R:Fire("CHANGED")
-    elseif command == "diag" then
-        R:PrintDiag()
     else
         for _, line in ipairs(L["HELP"]) do
             R.Print(line)

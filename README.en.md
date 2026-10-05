@@ -38,8 +38,7 @@ one of them errors the guide keeps working.
 - **Azimute Auction** (`/azl`): full auction house scan, auction price on any item tooltip, a warning
   when the vendor pays more, and the value of your bags.
 - **Azimute Rotation** (`/azrot`): ability priority for every class and specialization (leveling), showing
-  what you know and when you learn the rest, plus a live icon bar in combat (dims what you cannot use and
-  shows cooldowns; in Forever the game hides part of combat from addons).
+  what you know and when you learn the rest.
 
 ## Guide coverage
 

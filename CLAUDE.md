@@ -48,7 +48,7 @@ Azimute_Meter/                módulo INDEPENDENTE: medidor de dano/cura (C_Dama
 Azimute_Utils/                módulo INDEPENDENTE: qualidade de vida (câmera, dicas, nível de item nas bolsas, coordenadas, avisos, vendedor, social), /azu
 Azimute_Rares/                módulo INDEPENDENTE: aviso de raros/tesouros (vignettes + classificação), /azr
 Azimute_Auction/              módulo INDEPENDENTE: varredura do leilão, preço na dica, valor das bolsas, /azl
-Azimute_Rotation/             módulo INDEPENDENTE: rotação por classe/especialização + barra ao vivo, /azrot
+Azimute_Rotation/             módulo INDEPENDENTE: rotação por classe/especialização (painel), /azrot
 tools/rxp2azimute.py          gera o pacote Forever (guias RXP + pesos + voos + masmorras + treino)
 tools/guidelime2azimute.py    gera o pacote Classic
 tools/rotation_levels.py      gera Azimute_Rotation/Levels.lua (nível de treino, What's Training) e confere Data.lua

@@ -77,30 +77,6 @@ local function Create()
         frame.rows[i] = row
     end
 
-    frame.live = CreateFrame("CheckButton", nil, frame, "UICheckButtonTemplate")
-    frame.live:SetSize(22, 22)
-    frame.live.label = frame.live:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-    frame.live.label:SetPoint("LEFT", frame.live, "RIGHT", 2, 0)
-    frame.live.label:SetText(L["LIVE"])
-    frame.live:SetScript("OnClick", function(button)
-        R.db.live = button:GetChecked() and true or false
-        R:Fire("CHANGED")
-    end)
-    frame.live:SetScript("OnEnter", function(button)
-        GameTooltip:SetOwner(button, "ANCHOR_TOP")
-        GameTooltip:SetText(L["LIVE"])
-        GameTooltip:AddLine(L["LIVE_TIP"], 1, 1, 1, true)
-        GameTooltip:Show()
-    end)
-    frame.live:SetScript("OnLeave", function() GameTooltip:Hide() end)
-
-    frame.move = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
-    frame.move:SetSize(100, 20)
-    frame.move:SetScript("OnClick", function()
-        R.db.locked = not R.db.locked
-        R:Fire("CHANGED")
-    end)
-
     frame:Hide()
     frame:SetScript("OnShow", function() Panel:Update() end)
     return frame
@@ -207,14 +183,7 @@ function Panel:Update()
             row:Hide()
         end
     end
-    local bottom = top + #spec.steps * ROW + 6
-    frame.live:ClearAllPoints()
-    frame.live:SetPoint("TOPLEFT", 10, -bottom)
-    frame.live:SetChecked(R.db.live)
-    frame.move:ClearAllPoints()
-    frame.move:SetPoint("TOPRIGHT", -10, -bottom - 1)
-    frame.move:SetText(R.db.locked and L["UNLOCK"] or L["LOCK"])
-    frame:SetHeight(bottom + 30)
+    frame:SetHeight(top + #spec.steps * ROW + 10)
 end
 
 R:On("CHANGED", function()

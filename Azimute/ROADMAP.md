@@ -494,3 +494,11 @@ Modificadores: `|q q/n`, `|only ...`, `|opt` (não segura o passo). Cabeçalhos 
   (`InterfaceOverrides.HasAssistedCombat` = false).
 - A primeira atualização de cada luta grava em `AzimuteRotationDB.diag` o que veio secreto (`/azrot diag`):
   decidir a próxima versão da barra com isso.
+
+### Azimute_Rotation 0.1.1 (05/10/2026): barra ao vivo retirada
+- O usuário não gostou da barra de ícones em combate; ficou só o painel. Ideia para depois: brilho na
+  próxima habilidade, quando houver rotações melhores (fonte confiável por classe/especialização).
+- O que já se sabe para isso (código da barra no commit 0b19c5a, `Azimute_Rotation/Live.lua`):
+  `C_Spell.IsSpellUsable` não é secreto; `GetSpellCooldown` fica secreto quando as recargas são
+  restritas; auras do alvo idem; o giro da recarga sai por `GetSpellCooldownDuration` +
+  `SetCooldownFromDurationObject`. Combate Assistido da Blizzard: desligado no Forever.
